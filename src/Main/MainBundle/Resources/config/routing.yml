@@ -1,4 +1,4 @@
-main_homepage:
+accueil:
     path:     /
     defaults: { _controller: MainBundle:Default:entreprise }
 
@@ -13,3 +13,28 @@ past:
 future:
     path:     /future
     defaults: { _controller: MainBundle:Action:future }
+
+galeries:
+    path:     /galeries
+    defaults: { _controller: MainBundle:Default:galerie }
+
+origines:
+    path:     /origines
+    defaults: { _controller: MainBundle:Description:origines }
+
+lieu:
+    path:     /lieu
+    defaults: { _controller: MainBundle:Description:lieu }
+
+objectif:
+    path:     /objectif
+    defaults: { _controller: MainBundle:Description:objectif }
+
+equipe:
+    path:     /equipe
+    defaults: { _controller: MainBundle:Description:equipe }
+
+don:
+    path:     /don
+    defaults: { _controller: MainBundle:Default:don }
+

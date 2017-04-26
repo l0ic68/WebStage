@@ -1,0 +1,8 @@
+{% extends "::layout/layout.html.twig" %}
+{% block body %}
+
+    {% for lieu in lieux %}
+        <p>{{ lieu.nom }}</p>
+        <p>{{ lieu.description }}</p>
+    {% endfor %}
+{% endblock %}

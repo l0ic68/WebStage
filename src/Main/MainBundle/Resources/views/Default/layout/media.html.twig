@@ -1,0 +1,7 @@
+{% extends "::layout/layout.html.twig" %}
+{% block body %}
+
+    {% for media in medias %}
+        <img src="{{ asset(media.path) }}" width="300px" >
+    {% endfor %}
+{% endblock %}
