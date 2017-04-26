@@ -39,7 +39,11 @@ fos_user:
     from_email:
         address: "oulerich.loic@gmail.com"
         sender_name: "Oulerich loic"
+    service:
+        mailer: fos_user.mailer.twig_swift
     registration:
+        confirmation:
+            enabled: true
         form:
             type: app_user_registration
     profile:
@@ -76,6 +80,7 @@ doctrine:
 # Swiftmailer Configuration
 swiftmailer:
     transport: '%mailer_transport%'
+    encryption: '%mailer_encryption%'
     host: '%mailer_host%'
     username: '%mailer_user%'
     password: '%mailer_password%'

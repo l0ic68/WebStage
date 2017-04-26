@@ -38,3 +38,9 @@ don:
     path:     /don
     defaults: { _controller: MainBundle:Default:don }
 
+contact:
+    path:     /contact
+    defaults: { _controller: MainBundle:Default:contact }
+    requirements:
+            _method:  GET|POST
+
