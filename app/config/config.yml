@@ -2,6 +2,8 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: "@MainBundle/Resources/config/services.yml" }
+    - { resource: "@UserBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -29,6 +31,14 @@ framework:
         handler_id: ~
     fragments: ~
     http_method_override: true
+
+fos_user:
+    db_driver: orm
+    firewall_name: main
+    user_class: User\UserBundle\Entity\User
+    from_email:
+        address: "oulerich.loic@gmail.com"
+        sender_name: "Oulerich loic"
 
 # Twig Configuration
 twig:
