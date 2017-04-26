@@ -1,0 +1,8 @@
+{% extends "::layout/layout.html.twig" %}
+{% block body %}
+
+    {% for entreprise in entreprises %}
+        <p>{{ entreprise.nom }} ?</p>
+        <p>{{ entreprise.description }}</p>
+    {% endfor %}
+{% endblock %}

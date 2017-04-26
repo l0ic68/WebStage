@@ -1,0 +1,13 @@
+{% extends "::layout/layout.html.twig" %}
+{% block body %}
+
+    {% for action in actions %}
+        <p>{{ action.nom }}</p>
+        <p>{{ action.description }}</p>
+        <p>{{ action.dateDebut| date() }}</p>
+        <p>{{ action.dateFin| date() }}</p>
+        <p>{{ action.cout }}</p>
+        <p>{{ action.recolte }}</p>
+        <p>{{ action.type }}</p>
+    {% endfor %}
+{% endblock %}

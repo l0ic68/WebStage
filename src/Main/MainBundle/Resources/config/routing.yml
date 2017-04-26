@@ -1,3 +1,15 @@
 main_homepage:
-    path:     /test
-    defaults: { _controller: MainBundle:Default:index }
+    path:     /
+    defaults: { _controller: MainBundle:Default:entreprise }
+
+actual:
+    path:     /en_cours
+    defaults: { _controller: MainBundle:Action:actual }
+
+past:
+    path:     /passée
+    defaults: { _controller: MainBundle:Action:past }
+
+future:
+    path:     /future
+    defaults: { _controller: MainBundle:Action:future }

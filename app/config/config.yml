@@ -39,6 +39,12 @@ fos_user:
     from_email:
         address: "oulerich.loic@gmail.com"
         sender_name: "Oulerich loic"
+    registration:
+        form:
+            type: app_user_registration
+    profile:
+        form:
+            type: app_user_profile
 
 # Twig Configuration
 twig:

@@ -36,6 +36,13 @@ class Entreprise
     private $nom;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="page", type="string", length=255)
+     */
+    private $page;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -89,5 +96,28 @@ class Entreprise
     public function getNom()
     {
         return $this->nom;
+    }
+
+    /**
+     * Set page
+     *
+     * @param string $page
+     * @return Entreprise
+     */
+    public function setPage($page)
+    {
+        $this->page = $page;
+
+        return $this;
+    }
+
+    /**
+     * Get page
+     *
+     * @return string 
+     */
+    public function getPage()
+    {
+        return $this->page;
     }
 }
