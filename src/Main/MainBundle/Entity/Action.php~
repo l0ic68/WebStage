@@ -1,0 +1,82 @@
+<?php
+
+namespace Main\MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Action
+ *
+ * @ORM\Table(name="action")
+ * @ORM\Entity(repositoryClass="Main\MainBundle\Repository\ActionRepository")
+ */
+class Action
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text")
+     */
+    private $description;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_debut", type="datetime")
+     */
+    private $date_debut;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_fin", type="datetime")
+     */
+    private $date_fin;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="cout", type="integer")
+     */
+    private $cout;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="recolte", type="integer")
+     */
+    private $recolte;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=255)
+     */
+    private $type;
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}
