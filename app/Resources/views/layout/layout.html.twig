@@ -10,50 +10,55 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-
-            <a class="navbar-brand" href="#">Porteur de lumière</a>
-
+    <header>
+        <img src="image/logo.png" class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="imgheader">
+        <h1 class="col-xs-3 col-sm-3 col-md-3 col-lg-3">Porteur de lumière</h1>
+        <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-6 col-sm-6 col-md-6 col-lg-6" id="DivHeader">
+            <ul class="nav navbar-nav">
+                <!--  <li class="active"><a href="#">Home</a></li>-->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Qui sommes nous ?
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Nos origines </a></li>
+                        <li><a href="#">Ou agissons nous ?</a></li>
+                        <li><a href="#">Dans quel but ?</a></li>
+                        <li><a href="#">Notre équipes</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Nos actions
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Réalisé</a></li>
+                        <li><a href="#">En cours</a></li>
+                        <li><a href="#">Pour le future</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Galeries</a></li>
+                <li><a href="#">Faire un dons</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Langue
+                        <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Anglais</a></li>
+                        <li><a href="#">Français</a></li>
+                        <li><a href="#">Allemand</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-        <ul class="nav navbar-nav">
-            <!--  <li class="active"><a href="#">Home</a></li>-->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Qui sommes nous ?
-                    <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Nos origines </a></li>
-                    <li><a href="#">Ou agissons nous ?</a></li>
-                    <li><a href="#">Dans quel but ?</a></li>
-                    <li><a href="#">Notre équipes</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Nos actions
-                    <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Réalisé</a></li>
-                    <li><a href="#">En cours</a></li>
-                    <li><a href="#">Pour le future</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Galeries</a></li>
-            <li><a href="#">Faire un dons</a></li>
-            <li><a href="#">Contact</a></li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Langue
-                    <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Anglais</a></li>
-                    <li><a href="#">Français</a></li>
-                    <li><a href="#">Allemand</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</nav>
+    </header>
+    <div class="push"></div>
+
 {% block body %}{% endblock %}
+
+    <div class="pushf"></div>
+    <footer class="footer navbar-fixed-bottom">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">Tous droits réservé - Porteurs de lumière &copy 2017,	Association à but non lucrative</div>
+        <a href="link" class="col-xs-6 col-sm-6 col-md-6 col-lg-6"><p id="Mentions">Mentions légales</p></a>
+    </footer>
 
 <!----------- Footer ------------>
 <script src="{{ asset ('js/jquery.js') }}"></script>
