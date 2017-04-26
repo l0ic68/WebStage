@@ -1,0 +1,49 @@
+<div class="container white">
+    <div class="row">
+        <div class="container white percent100">
+            <div class="col-lg-12">
+                <div class="padder-t2">
+                    <h1>My account</h1>
+                    <div class="horiz-divider"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container white percent100">
+            <div class="col-lg-12 padder-t2 padder-b2">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    {% if app.request.attributes.get('_route') == 'fos_user_profile_show' %}
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="{{ path('fos_user_profile_show') }}" role="tab">Profile</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('fos_user_profile_show') }}" role="tab">Profile</a>
+                    </li>
+                    {% endif %}
+                    {% if app.request.attributes.get('_route') == 'fos_user_profile_edit' %}
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="{{ path('fos_user_profile_edit') }}" role="tab">Edit</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item ">
+                        <a class="nav-link" href="{{ path('fos_user_profile_edit') }}" role="tab">Edit</a>
+                    </li>
+                    {% endif %}
+                    {% if app.request.attributes.get('_route') == 'cart' %}
+                        <li class="nav-item active">
+                            <a class="nav-link active" href="{{ path('cart') }}" role="tab">Cart</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{ path('cart') }}" role="tab">Cart</a>
+                        </li>
+                    {% endif %}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

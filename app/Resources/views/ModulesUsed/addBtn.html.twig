@@ -1,0 +1,21 @@
+<!-- Floating Action Button -->
+<div class="menu pmd-floating-action"  role="navigation">
+    {% if is_granted('ROLE_ADMIN') %}
+    <a class="pmd-floating-action-btn btn btn-sm pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-default" data-title="Idea" href="{{ path('add_idea') }}">
+        <span class="pmd-floating-hidden">Idea</span>
+        <i class="fa fa-lightbulb-o gray-form" aria-hidden="true"></i>
+    </a>
+    <a class="pmd-floating-action-btn btn btn-sm pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-default" data-title="Event" href="{{ path('add_event') }}">
+        <span class="pmd-floating-hidden">Event</span>
+        <i class="fa fa-calendar gray-form" aria-hidden="true"></i>
+    </a>
+    <a class="pmd-floating-action-btn btn btn-sm pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-default" data-title="Product" href="{{ path('add_product') }}">
+        <span class="pmd-floating-hidden">Event</span>
+        <i class="fa fa-gift gray-form" aria-hidden="true"></i>
+    </a>
+    {% endif %}
+    <a class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-primary rounded-circle btn-round" data-title="Add" href="{{ path('add_idea') }}">
+        <span class="pmd-floating-hidden">Primary</span>
+        <i class="fa fa-plus"></i>
+    </a>
+</div>

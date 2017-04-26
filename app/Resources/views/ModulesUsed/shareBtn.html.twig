@@ -1,0 +1,33 @@
+<button id="share-button" class="btn-danger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <i class="fa fa-share fa-2x" aria-hidden="true"></i>
+</button>
+<div class="dropdown-menu dropdown-menu-right" id="share-buttons">
+    <!-- Facebook -->
+    <a href="http://www.facebook.com/sharer.php?u={{ app.request.uri }}" target="_blank">
+        <img class="dropdown-item" src="{{ asset('img/facebook.png') }}" alt="Facebook" />
+    </a>
+
+    <!-- Twitter -->
+    <a href="https://twitter.com/share?url={{ app.request.uri }}&amp;text=Student%20Union&amp;hashtags=studentunion" target="_blank">
+        <img class="dropdown-item" src="{{ asset('img/twitter.png') }}" alt="Twitter" />
+    </a>
+    <!-- Google+ -->
+    <a href="https://plus.google.com/share?url={{ app.request.uri }}" target="_blank">
+        <img class="dropdown-item" src="{{ asset('img/google.png') }}" alt="Google" />
+    </a>
+
+    <!-- Reddit -->
+    <a href="http://reddit.com/submit?url={{ app.request.uri }}&amp;title=Simple Share Buttons" target="_blank">
+        <img class="dropdown-item" src="{{ asset('img/reddit.png') }}" alt="Reddit" />
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:?Subject=Simple Share Buttons&amp;Body=I%20saw%20this%20and%20thought%20of%20you!%20 {{ app.request.uri }}">
+        <img class="dropdown-item" src="{{ asset('img/email.png') }}" alt="Email" />
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ app.request.uri }}" target="_blank">
+        <img class="dropdown-item" src="{{ asset('img/linkedin.png') }}" alt="LinkedIn" />
+    </a>
+</div>
