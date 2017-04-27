@@ -6,6 +6,8 @@
     position:relative;
 }
 
+
+
 header
 {
     position: fixed;
@@ -54,34 +56,49 @@ h1
 
 #imgheader
 {
-    width: 100px;
-    height: 100px;
+    width: 7vw;
+    height: 7vh;
 }
 
 
-#NomHomePage
+#MotHomePage
 {
-    margin-top: 3.8%;
+    display: inline-block;
     border: 3px black solid;
     text-align: center;
-    white-space: nowrap
+    white-space: nowrap;
+    padding: 1%;
 }
 
 #DescriptionHomePage
 {
+    vertical-align:middle;
+    display: inline-block;
     text-align: center;
     border: 3px black solid;
+    max-width: 600px;
+    margin-left: 5%;
+    padding: 1%;
 }
 
 #DivHomePage
 {
-    margin-top: 5%;
+    margin: 5%;
+}
+
+#Mycarousel
+{
+    width: 969.99px;
+    height: 545.61px;
 }
 
 .ImageCarousel
 {
-    width: 1300px;
-    height: 1300px;
+
+    max-height:545.61px;
+    max-width:969.99px;
+    width: 969.99px;
+    height: 545.61px;
 }
 
 #Bvn
@@ -97,24 +114,67 @@ h1
     background-color: white;
     box-shadow: 1px 1px 12px #555;
     height: 100%;
-    padding-top: 5vh;
+    padding-top: 4vh;
 }
 
 #BoutonBar
 {
-    width: 40px;
-    height: 40px;
+    vertical-align:middle;
+    border:3px black solid;
+    height: 30px;
+    width:30px;
+    display: inline-block;
+    margin-left: 1.5vw;
 }
 
-.MotsBar
+#MotsBar
 {
     white-space: nowrap;
+    display: inline-block;
     color: red;
+    margin-left: 2.5vw;
+    font-size: medium;
 
 }
 
-#Mycarousel
+
+
+#FirstBar
 {
-    width:885.33;
-    height:497.98;
+    padding-bottom: 1.5vh;
+    border-bottom: 1px black solid;
+
+}
+
+#BoutonNewsBar
+{
+    text-align: center;
+    margin: 3vh;
+    border:1px black solid;
+    border-radius: 2px;
+    background-color: gray;
+}
+
+#BoutonNewsBar:hover
+{
+    background-color: white;
+}
+
+#SecondBar
+{
+    text-align: center;
+    margin-top: 1.5vh;
+    border-bottom: 1px black solid;
+}
+
+#ThirdBar
+{
+    text-align: center;
+    margin-top: 1.5vh;
+}
+
+.ImgBar
+{
+    padding: 7%;
+    display: inline-block
 }
