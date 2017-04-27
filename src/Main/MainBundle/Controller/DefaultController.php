@@ -24,7 +24,9 @@ class DefaultController extends Controller
 
     public function DonAction()
     {
-        return $this->render('MainBundle:Default:layout\don.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $dons = $em->getRepository('MainBundle:Entreprise')->findByPage('don');
+        return $this->render('MainBundle:Default:layout\don.html.twig',array('dons'=> $dons));
     }
 
     public function contactAction()

@@ -1,4 +1,8 @@
 {% extends "::layout/layout.html.twig" %}
 {% block body %}
-    <p>Faire un don</p>
+
+    {% for don in dons %}
+        <p>{{ don.nom }} ?</p>
+        <p>{{ don.description }}</p>
+    {% endfor %}
 {% endblock %}
