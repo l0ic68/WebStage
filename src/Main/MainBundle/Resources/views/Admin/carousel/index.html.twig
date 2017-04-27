@@ -1,0 +1,39 @@
+{% extends "::layout/layout.html.twig" %}
+
+{% block body %}
+    <h1>Carousels list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Ordre</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for carousel in carousels %}
+            <tr>
+                <td><a href="{{ path('admin_carousel_show', { 'id': carousel.id }) }}">{{ carousel.id }}</a></td>
+                <td>{{ carousel.ordre }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_carousel_show', { 'id': carousel.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_carousel_edit', { 'id': carousel.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_carousel_new') }}">Create a new carousel</a>
+        </li>
+    </ul>
+{% endblock %}

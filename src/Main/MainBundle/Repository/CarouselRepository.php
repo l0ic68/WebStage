@@ -12,4 +12,12 @@ use Doctrine\ORM\EntityRepository;
  */
 class CarouselRepository extends EntityRepository
 {
+    public function byOrder()
+    {
+        $qb = $this->createQueryBuilder('u')
+        ->select('u')
+        ->where('u.ordre != 0');
+        return $qb->getQuery()->getResult();
+    }
 }
+

@@ -1,0 +1,24 @@
+admin_carousel_index:
+    path:     /
+    defaults: { _controller: "MainBundle:CarouselAdmin:index" }
+    methods:  GET
+
+admin_carousel_show:
+    path:     /{id}/show
+    defaults: { _controller: "MainBundle:CarouselAdmin:show" }
+    methods:  GET
+
+admin_carousel_new:
+    path:     /new
+    defaults: { _controller: "MainBundle:CarouselAdmin:new" }
+    methods:  [GET, POST]
+
+admin_carousel_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MainBundle:CarouselAdmin:edit" }
+    methods:  [GET, POST]
+
+admin_carousel_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MainBundle:CarouselAdmin:delete" }
+    methods:  DELETE

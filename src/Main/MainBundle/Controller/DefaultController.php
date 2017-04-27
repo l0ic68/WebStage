@@ -13,8 +13,8 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $entreprises = $em->getRepository('MainBundle:Description')->findByPage('accueil');
-        $active = $em->getRepository('MainBundle:Carousel')->findOneByOrdre('1');
-        $images = $em->getRepository('MainBundle:Carousel')->findByOrdre('2','3','4','5');
+        $active = $em->getRepository('MainBundle:Carousel')->findOneByOrdre('0');
+        $images = $em->getRepository('MainBundle:Carousel')->ByOrder();
         return $this->render('MainBundle:Default:layout\accueil.html.twig',array('entreprises'=> $entreprises,'active'=>$active,"images" => $images));
     }
 

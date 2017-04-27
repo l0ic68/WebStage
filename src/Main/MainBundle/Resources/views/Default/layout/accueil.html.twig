@@ -13,10 +13,9 @@
         <!-- Indicators -->
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-            <li data-target="#myCarousel" data-slide-to="4"></li>
+    {% for image in images %}
+            <li data-target="#myCarousel" data-slide-to="{{ image.ordre }}"></li>
+    {% endfor %}
         </ol>
 
         <!-- Wrapper for slides -->
@@ -27,6 +26,7 @@
             {% for image in images %}
             <div class="item">
                 <img class="ImageCarousel" src="{{ asset(image.media.path) }}" alt="Los Angeles">
+
             </div>
                 {% endfor %}
         </div>
