@@ -1,3 +1,19 @@
+main_admin_description:
+    resource: "@MainBundle/Resources/config/Adminrouting/descriptionAdmin.yml"
+    prefix:   /admin/description
+
+main_admin_action:
+    resource: "@MainBundle/Resources/config/Adminrouting/actionAdmin.yml"
+    prefix:   /admin/action
+
+main_admin_media:
+    resource: "@MainBundle/Resources/config/Adminrouting/mediaAdmin.yml"
+    prefix:   /admin/media
+
+main_admin_news:
+    resource: "@MainBundle/Resources/config/Adminrouting/newsAdmin.yml"
+    prefix:   /admin/news
+
 accueil:
     path:     /
     defaults: { _controller: MainBundle:Default:entreprise }
@@ -37,6 +53,10 @@ equipe:
 don:
     path:     /don
     defaults: { _controller: MainBundle:Default:don }
+
+dlmedia:
+    pattern: /dlmedia
+    defaults: { _controller: MainBundle:DlMedia:dlmedia }
 
 contact:
     path:     /contact

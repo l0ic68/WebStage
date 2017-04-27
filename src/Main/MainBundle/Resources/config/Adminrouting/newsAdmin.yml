@@ -1,0 +1,24 @@
+admin_news_index:
+    path:     /
+    defaults: { _controller: "MainBundle:NewsAdmin:index" }
+    methods:  GET
+
+admin_news_show:
+    path:     /{id}/show
+    defaults: { _controller: "MainBundle:NewsAdmin:show" }
+    methods:  GET
+
+admin_news_new:
+    path:     /new
+    defaults: { _controller: "MainBundle:NewsAdmin:new" }
+    methods:  [GET, POST]
+
+admin_news_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MainBundle:NewsAdmin:edit" }
+    methods:  [GET, POST]
+
+admin_news_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MainBundle:NewsAdmin:delete" }
+    methods:  DELETE

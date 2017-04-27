@@ -1,0 +1,51 @@
+{% extends "::layout/layout.html.twig" %}
+
+{% block body %}
+    <h1>Actions list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Date_debut</th>
+                <th>Date_fin</th>
+                <th>Cout</th>
+                <th>Recolte</th>
+                <th>Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for action in actions %}
+            <tr>
+                <td><a href="{{ path('admin_action_show', { 'id': action.id }) }}">{{ action.id }}</a></td>
+                <td>{{ action.nom }}</td>
+                <td>{{ action.description }}</td>
+                <td>{% if action.datedebut %}{{ action.datedebut|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if action.datefin %}{{ action.datefin|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ action.cout }}</td>
+                <td>{{ action.recolte }}</td>
+                <td>{{ action.type }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('admin_action_show', { 'id': action.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_action_edit', { 'id': action.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_action_new') }}">Create a new action</a>
+        </li>
+    </ul>
+{% endblock %}
