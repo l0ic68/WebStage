@@ -4,6 +4,7 @@ namespace Main\MainBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Main\MainBundle\Entity\Contact;
+use Main\MainBundle\Entity\Carousel;
 use Main\MainBundle\Form\ContactType;
 
 class DefaultController extends Controller
@@ -12,7 +13,9 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $entreprises = $em->getRepository('MainBundle:Description')->findByPage('accueil');
-        return $this->render('MainBundle:Default:layout\accueil.html.twig',array('entreprises'=> $entreprises));
+        $active = $em->getRepository('MainBundle:Carousel')->findOneByOrdre('1');
+        $images = $em->getRepository('MainBundle:Carousel')->findByOrdre('2','3','4','5');
+        return $this->render('MainBundle:Default:layout\accueil.html.twig',array('entreprises'=> $entreprises,'active'=>$active,"images" => $images));
     }
 
     public function GalerieAction()

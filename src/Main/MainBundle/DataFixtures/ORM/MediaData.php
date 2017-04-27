@@ -129,6 +129,31 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $ramen->setUrl('ramen.png');
         $manager->persist($ramen);
 
+        $carouselMedia1 = new Media();
+        $carouselMedia1->setPath('/img/ramen.png');
+        $carouselMedia1->setUrl('ramen.png');
+        $manager->persist($carouselMedia1);
+
+        $carouselMedia2 = new Media();
+        $carouselMedia2->setPath('/img/tshirt.png');
+        $carouselMedia2->setUrl('ramen.png');
+        $manager->persist($carouselMedia2);
+
+        $carouselMedia3 = new Media();
+        $carouselMedia3->setPath('/img/car.png');
+        $carouselMedia3->setUrl('ramen.png');
+        $manager->persist($carouselMedia3);
+
+        $carouselMedia4 = new Media();
+        $carouselMedia4->setPath('/img/vk.png');
+        $carouselMedia4->setUrl('ramen.png');
+        $manager->persist($carouselMedia4);
+
+        $carouselMedia5 = new Media();
+        $carouselMedia5->setPath('/img/ramen.png');
+        $carouselMedia5->setUrl('ramen.png');
+        $manager->persist($carouselMedia5);
+
         $manager->flush();
 
         $this->addReference('academie_cathedrale',$academie_cathedrale);
@@ -153,6 +178,11 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $this->addReference('car',$car);
         $this->addReference('tshirt',$tshirt);
         $this->addReference('ramen',$ramen);
+        $this->addReference('carouselMedia1',$carouselMedia1);
+        $this->addReference('carouselMedia2',$carouselMedia2);
+        $this->addReference('carouselMedia3',$carouselMedia3);
+        $this->addReference('carouselMedia4',$carouselMedia4);
+        $this->addReference('carouselMedia5',$carouselMedia5);
     }
 
     public function getOrder()

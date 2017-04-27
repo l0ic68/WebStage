@@ -1,3 +1,11 @@
+#main
+{
+    max-width:1500px;
+    min-height:100%;
+    margin:0 auto;
+    position:relative;
+}
+
 header
 {
     position: fixed;
@@ -19,15 +27,8 @@ header, .push
 
 footer
 {
-    position: fixed;
-    bottom: 0;
-    z-index: 1;
-    background-color: white;
-    background-color: white;
-    padding-right: 1.5vw;
-    padding-top: 0.5vw;
-    width: 100%;
-    box-shadow: 1px 1px 12px #555;
+
+
 }
 
 footer, .pushf
@@ -44,6 +45,8 @@ h1
     white-space: nowrap
 }
 
+
+
 #Mentions
 {
     text-align: right;
@@ -51,6 +54,67 @@ h1
 
 #imgheader
 {
-    width: 7vw;
-    height: 7vh;
+    width: 100px;
+    height: 100px;
+}
+
+
+#NomHomePage
+{
+    margin-top: 3.8%;
+    border: 3px black solid;
+    text-align: center;
+    white-space: nowrap
+}
+
+#DescriptionHomePage
+{
+    text-align: center;
+    border: 3px black solid;
+}
+
+#DivHomePage
+{
+    margin-top: 5%;
+}
+
+.ImageCarousel
+{
+    width: 1300px;
+    height: 1300px;
+}
+
+#Bvn
+{
+    margin: 2%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.Panier
+{
+    float: right;
+    background-color: white;
+    box-shadow: 1px 1px 12px #555;
+    height: 100%;
+    padding-top: 5vh;
+}
+
+#BoutonBar
+{
+    width: 40px;
+    height: 40px;
+}
+
+.MotsBar
+{
+    white-space: nowrap;
+    color: red;
+
+}
+
+#Mycarousel
+{
+    width:885.33;
+    height:497.98;
 }

@@ -58,7 +58,7 @@ class DescriptionAdminController extends Controller
     {
         $deleteForm = $this->createDeleteForm($description);
 
-        return $this->render('entreprise/show.html.twig', array(
+        return $this->render('MainBundle:Admin:description/show.html.twig', array(
             'description' => $description,
             'delete_form' => $deleteForm->createView(),
         ));
