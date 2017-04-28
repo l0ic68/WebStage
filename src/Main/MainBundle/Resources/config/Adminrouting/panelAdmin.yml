@@ -1,0 +1,4 @@
+admin_panel:
+    path:     /
+    defaults: { _controller: "MainBundle:Default:admin" }
+
