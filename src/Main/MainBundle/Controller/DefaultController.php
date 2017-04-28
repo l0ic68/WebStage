@@ -58,4 +58,9 @@ class DefaultController extends Controller
 
         return $this->render('MainBundle:Contact:contact.html.twig',array('form'=>$form->createView()));
     }
+
+    public function AdminAction()
+    {
+        return $this->render('MainBundle:Admin:admin_pages.html.twig');
+    }
 }

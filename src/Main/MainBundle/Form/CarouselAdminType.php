@@ -13,7 +13,7 @@ class CarouselAdminType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('ordre')->add('media');
+        $builder->add('ordre')->add('media', new MediaType(), array('required' => false));
     }
     
     /**

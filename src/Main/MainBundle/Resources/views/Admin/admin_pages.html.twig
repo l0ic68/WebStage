@@ -1,0 +1,11 @@
+{% extends "::layout/layout.html.twig" %}
+{% block body %}
+
+    <a href="{{ path('admin_carousel_index') }}"> <button type="button" class="btn btn-default">Carousel Panel</button></a>
+    <a href="{{ path('admin_media_index') }}"> <button type="button" class="btn btn-default">Media Panel</button></a>
+    <a href="{{ path('admin_news_index') }}"> <button type="button" class="btn btn-default">News Panel</button></a>
+    <a href="{{ path('admin_description_index') }}"> <button type="button" class="btn btn-default">Description Panel</button></a>
+    <a href="{{ path('admin_action_index') }}"> <button type="button" class="btn btn-default">Action Panel</button></a>
+
+
+{% endblock %}

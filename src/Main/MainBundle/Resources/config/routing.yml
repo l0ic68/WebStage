@@ -18,6 +18,10 @@ main_admin_carousel:
     resource: "@MainBundle/Resources/config/Adminrouting/carouselAdmin.yml"
     prefix:   /admin/carousel
 
+admin:
+    resource: "@MainBundle/Resources/config/Adminrouting/panelAdmin.yml"
+    prefix:   /admin
+
 accueil:
     path:     /
     defaults: { _controller: MainBundle:Default:entreprise }
