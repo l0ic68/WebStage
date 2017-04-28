@@ -11,12 +11,13 @@
 </head>
 <body>
     <header>
+
         <a href="{{ path("accueil") }}">
-        <img src="{{ asset('img/logo.png') }}" class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="imgheader">
-        <h1 class="col-xs-3 col-sm-3 col-md-3 col-lg-3">Porteur de lumière</h1>
+        <img src="{{ asset('img/logo.png') }}" class="hidden-xs col-sm-1 col-md-1 col-lg-1" id="imgheader">
+        <h1 class="col-xs-9 hidden-sm hidden-md col-lg-3">Porteur de lumière</h1>
         </a>
-        <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-6 col-sm-6 col-md-6 col-lg-6" id="DivHeader">
-            <ul class="nav navbar-nav">
+        <div class="hidden-xs col-sm-10 col-md-10 col-lg-7" id="DivHeader">
+            <ul class="nav navbar-nav" id="ListeDivHeader">
                 <!--  <li class="active"><a href="#">Home</a></li>-->
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Qui sommes nous ?

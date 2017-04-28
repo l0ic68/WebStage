@@ -1,12 +1,7 @@
 #main
 {
-    max-width:1500px;
-    min-height:100%;
-    margin:0 auto;
-    position:relative;
+
 }
-
-
 
 header
 {
@@ -26,6 +21,115 @@ header, .push
 {
     height: 10vh;
 }
+
+#imgheader
+{
+    width: 7vw;
+    height: 7vh;
+    margin-left: 5vw;
+}
+
+#DivHeader
+{
+
+}
+
+#ListeDivHeader
+{
+    float: right;
+    margin-right: 6vw;
+    white-space: nowrap;
+}
+
+#TitreHeader
+{
+    padding-left: 3.5vw;
+}
+
+
+@media screen and (max-width: 1450px)
+{
+    #ListeDivHeader
+    {
+        float: right;
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 1350px)
+{
+    #imgheader
+    {
+        width: 7vw;
+        height: 7vh;
+        margin-left: 0vw;
+    }
+
+    #DivHeader
+    {
+        float: right;
+    }
+}
+
+@media screen and (max-width: 1196px)
+{
+    #DivHeader
+    {
+        float: none;
+
+    }
+}
+
+@media screen and (max-width: 1196px)
+{
+    #TitreHeader
+    {
+        padding-left: 0px;
+    }
+}
+
+/* ---------------------------Barre pour portables--------------------------- */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/* ---------------------------Barre pour portables--------------------------- */
 
 footer
 {
@@ -54,12 +158,6 @@ h1
     text-align: right;
 }
 
-#imgheader
-{
-    width: 7vw;
-    height: 7vh;
-}
-
 
 #MotHomePage
 {
@@ -86,19 +184,10 @@ h1
     margin: 5%;
 }
 
-#Mycarousel
-{
-    width: 969.99px;
-    height: 545.61px;
-}
-
 .ImageCarousel
 {
-
-    max-height:545.61px;
-    max-width:969.99px;
-    width: 969.99px;
-    height: 545.61px;
+    width: 1300px;
+    height: 1300px;
 }
 
 #Bvn
@@ -137,13 +226,16 @@ h1
 
 }
 
-
+#Mycarousel
+{
+    width:885.33;
+    height:497.98;
+}
 
 #FirstBar
 {
     padding-bottom: 1.5vh;
     border-bottom: 1px black solid;
-
 }
 
 #BoutonNewsBar
@@ -177,4 +269,38 @@ h1
 {
     padding: 7%;
     display: inline-block
+}
+
+#MotHomePage
+{
+    display: inline-block;
+    border: 3px black solid;
+    text-align: center;
+    white-space: nowrap;
+    padding: 1%;
+    color: red;
+    min-height: 39px;
+    min-width: 139px;
+}
+
+#DescriptionHomePage
+{
+    vertical-align:middle;
+    display: inline-block;
+    text-align: center;
+    border: 3px black solid;
+    max-width: 600px;
+    margin-left: 5%;
+    padding: 1%;
+}
+
+#DivHomePage
+{
+    margin: 5%;
+}
+
+.TexteHomePage
+{
+    text-align: right;
+
 }
