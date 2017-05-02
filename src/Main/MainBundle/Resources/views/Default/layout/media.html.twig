@@ -1,7 +1,12 @@
 {% extends "::layout/layout.html.twig" %}
 {% block body %}
 
+<div id="Media" class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
     {% for media in medias %}
-        <img src="{{ asset(media.path) }}" width="300px" >
+        <div id="DivImgMedia" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <img id="ImgMedia" src="{{ asset(media.path) }}">
+        </div>
     {% endfor %}
+</div>
+
 {% endblock %}

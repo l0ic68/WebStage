@@ -364,3 +364,37 @@ footer
     justify-content: center;
 }
 /* -------------------- !Membres! -------------------- */
+
+
+
+/* -------------------- Media -------------------- */
+
+#DivImgMedia
+{
+    width: 300px ;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 12px #555;
+    margin: 4%;
+}
+
+#ImgMedia
+{
+    width: 80%;
+    height: 80%;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+@media screen and (max-width: 760px)
+{
+    #Media
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+/* -------------------- !Media! -------------------- */
