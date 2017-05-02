@@ -30,8 +30,9 @@ header, .push
 
 #imgheader
 {
-    width: 10%;
-}
+    width: 100px;
+    min-width: 100px;
+}1
 
 #TitreHeader
 {
