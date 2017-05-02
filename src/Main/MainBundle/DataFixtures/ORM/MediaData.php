@@ -154,6 +154,11 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $carouselMedia5->setUrl('ramen.png');
         $manager->persist($carouselMedia5);
 
+        $equipe_groupe = new Media();
+        $equipe_groupe->setPath('img/logo.png');
+        $equipe_groupe->setUrl('logo.png');
+        $manager->persist($equipe_groupe);
+
         $manager->flush();
 
         $this->addReference('academie_cathedrale',$academie_cathedrale);
@@ -183,6 +188,7 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $this->addReference('carouselMedia3',$carouselMedia3);
         $this->addReference('carouselMedia4',$carouselMedia4);
         $this->addReference('carouselMedia5',$carouselMedia5);
+        $this->addReference('equipe_groupe',$equipe_groupe);
     }
 
     public function getOrder()

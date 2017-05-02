@@ -27,10 +27,10 @@ class DescriptionController extends Controller
         return $this->render('MainBundle:Description:layout\objectif.html.twig',array('objectifs'=> $objectifs));
     }
 
-    public function EquipeAction()
+    public function MembresAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $equipes = $em->getRepository('UserBundle:User')->findAll();
-        return $this->render('MainBundle:Description:layout\equipe.html.twig',array('equipes'=> $equipes));
+        $membres = $em->getRepository('MainBundle:Membres')->findAll();
+        return $this->render('MainBundle:Description:layout\membres.html.twig',array('membres'=> $membres));
     }
 }

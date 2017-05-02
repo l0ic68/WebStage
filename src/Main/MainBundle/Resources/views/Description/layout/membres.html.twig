@@ -1,0 +1,32 @@
+{% extends "::layout/layout.html.twig" %}
+{% block body %}
+{% set t = 0 %}
+    {% for membre in membres %}
+        {%  if t == 0 %}
+<section class="Membres col-xs-12 col-sm-12 col-md-12 col-lg-10">
+    <img src="{{ asset(membre.media.path) }}" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <p>{{ membre.nom }}</p>
+        <p>{{ membre.prenom }}</p>
+    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-8">
+        {{ membre.description }}
+    </div>
+</section>
+            {% set t = 1 %}
+{% else %}
+    <section class="Membres2 col-xs-12 col-sm-12 col-md-12 col-lg-10">
+        <p>{{ membre.nom }}</p>
+        <p>{{ membre.prenom }}</p>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-8">
+            {{ membre.description }}
+        </div>
+        <img src="{{ asset(membre.media.path) }}" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+    </section>
+    {% set t = 0 %}
+{% endif %}
+    {% endfor %}
+{% endblock %}
+
+
+
+
+

@@ -1,95 +1,65 @@
-#main
+#container
 {
-
+    min-height: 100%;
+    position: relative;
 }
 
+html, body
+{
+    height: 100%;
+}
+
+/* -------------------- Header -------------------- */
 header
 {
     position: fixed;
     top: 0;
     z-index: 1;
     background-color: white;
-    padding: 1em;
     width: 100%;
-    padding-left: 2vw;
     box-shadow: 1px 1px 12px #555;
-    text-align: center;
-    display : block;
+    display: flex;
+    align-items: center;
 }
 
 header, .push
 {
-    height: 10vh;
+    height: 12vh;
+
 }
 
 #imgheader
 {
-    width: 7vw;
-    height: 7vh;
-    margin-left: 5vw;
-}
-
-#DivHeader
-{
-
-}
-
-#ListeDivHeader
-{
-    float: right;
-    margin-right: 6vw;
-    white-space: nowrap;
+    width: 10%;
 }
 
 #TitreHeader
 {
-    padding-left: 3.5vw;
+    margin: 0;
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
 }
 
-
-@media screen and (max-width: 1450px)
-{
-    #ListeDivHeader
-    {
-        float: right;
-        margin-right: 0px;
-    }
-}
-
-@media screen and (max-width: 1350px)
-{
-    #imgheader
-    {
-        width: 7vw;
-        height: 7vh;
-        margin-left: 0vw;
-    }
-
-    #DivHeader
-    {
-        float: right;
-    }
-}
-
-@media screen and (max-width: 1196px)
-{
-    #DivHeader
-    {
-        float: none;
-
-    }
-}
-
-@media screen and (max-width: 1196px)
+@media screen and (max-width: 760px)
 {
     #TitreHeader
     {
-        padding-left: 0px;
+        margin: auto;
     }
 }
 
-/* ---------------------------Barre pour portables--------------------------- */
+#DivHeader
+{
+    display: flex;
+    white-space: nowrap;
+    justify-content: center;
+}
+/* -------------------- !Header! -------------------- */
 
+
+
+/* -------------------- SideNav -------------------- */
 .sidenav {
     height: 100%;
     width: 0;
@@ -128,92 +98,65 @@ header, .push
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
 }
+/* -------------------- !SideNav! -------------------- */
 
-/* ---------------------------Barre pour portables--------------------------- */
 
+
+/* -------------------- Footer -------------------- */
 footer
 {
-
-
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    box-shadow: 1px 1px 12px #555;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    background-color: white;
 }
-
-footer, .pushf
-{
-    height: 4.2vh;
-}
-
-
-h1
-{
-    color: rgb(111, 157, 232);
-    margin-top: 0;
-    padding-top: 0.5vh;
-    white-space: nowrap
-}
-
-
 
 #Mentions
 {
+    display: block;
     text-align: right;
 }
 
-
-#MotHomePage
+#Droits, #Mentions
 {
-    display: inline-block;
-    border: 3px black solid;
-    text-align: center;
     white-space: nowrap;
-    padding: 1%;
 }
+/* -------------------- !Footer! -------------------- */
 
-#DescriptionHomePage
-{
-    vertical-align:middle;
-    display: inline-block;
-    text-align: center;
-    border: 3px black solid;
-    max-width: 600px;
-    margin-left: 5%;
-    padding: 1%;
-}
 
-#DivHomePage
-{
-    margin: 5%;
-}
 
-.ImageCarousel
-{
-    width: 1300px;
-    height: 1300px;
-}
-
-#Bvn
-{
-    margin: 2%;
-    margin-top: 4%;
-    margin-bottom: 4%;
-}
-
+/* -------------------- Barre Droite -------------------- */
 .Panier
 {
-    float: right;
+    position: fixed;
+    right: 0;
     background-color: white;
     box-shadow: 1px 1px 12px #555;
+    padding-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     height: 100%;
-    padding-top: 4vh;
+}
+
+#FirstBar
+{
+    padding-bottom: 2%;
+    border-bottom: 1px black solid;
 }
 
 #BoutonBar
 {
-    vertical-align:middle;
     border:3px black solid;
     height: 30px;
     width:30px;
-    display: inline-block;
-    margin-left: 1.5vw;
 }
 
 #MotsBar
@@ -221,48 +164,19 @@ h1
     white-space: nowrap;
     display: inline-block;
     color: red;
-    margin-left: 2.5vw;
+    margin-left: 20%;
     font-size: medium;
-
 }
 
-#Mycarousel
+#AllNews
 {
-    width:885.33;
-    height:497.98;
-}
-
-#FirstBar
-{
-    padding-bottom: 1.5vh;
-    border-bottom: 1px black solid;
-}
-
-#BoutonNewsBar
-{
-    text-align: center;
-    margin: 3vh;
-    border:1px black solid;
-    border-radius: 2px;
-    background-color: gray;
-}
-
-#BoutonNewsBar:hover
-{
-    background-color: white;
+    margin-top: 5%;
 }
 
 #SecondBar
 {
     text-align: center;
-    margin-top: 1.5vh;
     border-bottom: 1px black solid;
-}
-
-#ThirdBar
-{
-    text-align: center;
-    margin-top: 1.5vh;
 }
 
 .ImgBar
@@ -271,36 +185,95 @@ h1
     display: inline-block
 }
 
+#ThirdBar
+{
+    text-align: center;
+    margin-top: 1.5vh;
+}
+/* -------------------- !Barre Droite! -------------------- */
+
+
+
+/* -------------------- Home Page -------------------- */
+#Bvn
+{
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+#Mycarousel
+{
+    width:885px;
+    height:498px;
+}
+
+.ImageCarousel
+{
+    max-width: 983px;
+    max-height : 550px;
+    width: 983px;
+    height: 550px;
+}
+
+#DivHomePage
+{
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 1196px)
+{
+    #DivHomePage
+    {
+        flex-direction: column;
+    }
+}
+
 #MotHomePage
 {
-    display: inline-block;
     border: 3px black solid;
-    text-align: center;
     white-space: nowrap;
     padding: 1%;
-    color: red;
-    min-height: 39px;
-    min-width: 139px;
 }
 
 #DescriptionHomePage
 {
-    vertical-align:middle;
-    display: inline-block;
     text-align: center;
     border: 3px black solid;
     max-width: 600px;
     margin-left: 5%;
     padding: 1%;
 }
+/* -------------------- !Home Page! -------------------- */
+/* -------------------- Origines -------------------- */
 
-#DivHomePage
+#TitreOrigine
 {
-    margin: 5%;
+    text-align: center;
+    border: 3px black solid;
+    max-width: 600px;
+    padding: 5%;
 }
 
-.TexteHomePage
-{
-    text-align: right;
+/* -------------------- !Origines! -------------------- */
 
+/* -------------------- Membres -------------------- */
+.Membres
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3%;
+    max-width: 80%
 }
+
+.Membres2
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 3%;
+    max-width: 80%
+}
+/* -------------------- !Membres! -------------------- */

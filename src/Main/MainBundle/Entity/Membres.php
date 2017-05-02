@@ -5,12 +5,12 @@ namespace Main\MainBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Entreprise
+ * Membres
  *
- * @ORM\Table(name="description")
- * @ORM\Entity(repositoryClass="Main\MainBundle\Repository\DescriptionRepository")
+ * @ORM\Table(name="membres")
+ * @ORM\Entity(repositoryClass="Main\MainBundle\Repository\MembresRepository")
  */
-class Description
+class Membres
 {
     /**
      * @var int
@@ -24,13 +24,6 @@ class Description
     /**
      * @var string
      *
-     * @ORM\Column(name="description", type="text")
-     */
-    private $description;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="nom", type="string", length=255)
      */
     private $nom;
@@ -38,15 +31,23 @@ class Description
     /**
      * @var string
      *
-     * @ORM\Column(name="page", type="string", length=255)
+     * @ORM\Column(name="prenom", type="string", length=255)
      */
-    private $page;
+    private $prenom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text")
+     */
+    private $description;
 
     /**
      * @ORM\OneToOne(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist","remove"})
      * @ORM\JoinColumn(nullable=true)
      */
     private $media;
+    
 
     /**
      * Get id
@@ -59,33 +60,10 @@ class Description
     }
 
     /**
-     * Set description
-     *
-     * @param string $description
-     * @return Description
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description
-     *
-     * @return string 
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
      * Set nom
      *
      * @param string $nom
-     * @return Description
+     * @return Membres
      */
     public function setNom($nom)
     {
@@ -105,33 +83,56 @@ class Description
     }
 
     /**
-     * Set page
+     * Set prenom
      *
-     * @param string $page
-     * @return Description
+     * @param string $prenom
+     * @return Membres
      */
-    public function setPage($page)
+    public function setPrenom($prenom)
     {
-        $this->page = $page;
+        $this->prenom = $prenom;
 
         return $this;
     }
 
     /**
-     * Get page
+     * Get prenom
      *
      * @return string 
      */
-    public function getPage()
+    public function getPrenom()
     {
-        return $this->page;
+        return $this->prenom;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return Membres
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 
     /**
      * Set media
      *
      * @param \Main\MainBundle\Entity\Media $media
-     * @return Description
+     * @return Membres
      */
     public function setMedia(\Main\MainBundle\Entity\Media $media = null)
     {

@@ -1,0 +1,51 @@
+<?php
+
+namespace Main\MainBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Equipe
+ *
+ * @ORM\Table(name="equipe")
+ * @ORM\Entity(repositoryClass="Main\MainBundle\Repository\EquipeRepository")
+ */
+class Equipe
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="string", length=255)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prenom", type="string", length=255)
+     */
+    private $prenom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="description", type="text")
+     */
+    private $description;
+
+    /**
+     * @ORM\OneToOne(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist","remove"})
+     * @ORM\JoinColumn(nullable=true)
+     */
+    private $media;
+    
+}

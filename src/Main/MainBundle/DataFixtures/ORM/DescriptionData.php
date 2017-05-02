@@ -67,6 +67,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         reconstruction de l'Irak dès aujourd'hui. Rester c'est refuser que ce pays perde l'une de ses cimposantes humaines qui forment la richesse
         d'une population multiculturelles.");
         $aujourdhui->setPage("origine");
+        $aujourdhui->setMedia($this->getReference('equipe_groupe'));
         $manager->persist($aujourdhui);
 
         $don = new Description();

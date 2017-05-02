@@ -54,9 +54,9 @@ objectif:
     path:     /objectif
     defaults: { _controller: MainBundle:Description:objectif }
 
-equipe:
-    path:     /equipe
-    defaults: { _controller: MainBundle:Description:equipe }
+membres:
+    path:     /membres
+    defaults: { _controller: MainBundle:Description:membres }
 
 don:
     path:     /don
