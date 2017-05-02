@@ -1,18 +1,18 @@
 {% extends "::layout/layout.html.twig" %}
 {% block body %}
-<section class="col-xs-10 col-sm-10 col-md-10 col-lg-10 ">
+
     {% for origine in origines %}
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <h3 id="TitreOrigine" > {{ origine.nom }} ? </h3>
-        </div>
-        {% if origine.media is not null %}
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <img src="{{ asset(origine.media.path) }}">
-        </div>
+        <section id="QuiOrigine" class="col-xs-12 col-sm-12 col-md-12 col-lg-9 ">
+            <h3 id="TitreOrigine" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> {{ origine.nom }} ? </h3>
+            {% if origine.media is not null %}
+                    <img id="ImgOrigine" class="col-xs-4 col-sm-4 col-md-4 col-lg-4" src="{{ asset(origine.media.path) }}">
             {% endif %}
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <p>{{ origine.description }}</p>
-        </div>
+            <div id="DescriptionOrigine" class="col-xs-5 col-sm-5 col-md-5 col-lg-offset-1 col-lg-5">
+            <p>{{ origine.description }}</p>
+            </div>
+        </section>
     {% endfor %}
-</section>
+
+
+
 {% endblock %}

@@ -1,8 +1,14 @@
 {% extends "::layout/layout.html.twig" %}
 {% block body %}
-
     {% for objectif in objectifs %}
-        <p>{{ objectif.nom }}</p>
-        <p>{{ objectif.description }}</p>
+        <section id="Objectif" class="col-xs-12 col-sm-12 col-md-12 col-lg-9 ">
+            <h3 id="TitreObjectif" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> {{ objectif.nom }} ? </h3>
+            {#{% if origine.media is not null %}#}
+            {#<img id="ImgOrigine" class="col-xs-4 col-sm-4 col-md-4 col-lg-4" src="{{ asset(origine.media.path) }}">#}
+            {#{% endif %}#}
+            <div id="DescriptionObjectif" class="col-xs-5 col-sm-5 col-md-5 col-lg-offset-1 col-lg-5">
+                <p>{{ objectif.description }}</p>
+            </div>
+        </section>
     {% endfor %}
 {% endblock %}

@@ -247,17 +247,97 @@ footer
     padding: 1%;
 }
 /* -------------------- !Home Page! -------------------- */
+
+
+
 /* -------------------- Origines -------------------- */
+
+#QuiOrigine
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 3%;
+
+}
 
 #TitreOrigine
 {
     text-align: center;
     border: 3px black solid;
-    max-width: 600px;
-    padding: 5%;
+    padding: 1%;
+    white-space: nowrap;
+}
+
+#ImgOrigine
+{
+    width: 30%;
+    position: absolute;
+    right: 0px;
 }
 
 /* -------------------- !Origines! -------------------- */
+
+
+
+/* -------------------- Lieu -------------------- */
+#IrakLieu
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 3%;
+
+}
+
+#TitreLieu
+{
+    text-align: center;
+    border: 3px black solid;
+    padding: 1%;
+    white-space: nowrap;
+}
+
+#ImgOrigine
+{
+    width: 30%;
+    position: absolute;
+    right: 0px;
+}
+/* -------------------- !Lieu! -------------------- */
+
+
+
+/* -------------------- Lieu -------------------- */
+#Objectif
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 3%;
+
+}
+
+#TitreObjectif
+{
+    text-align: center;
+    border: 3px black solid;
+    padding: 1%;
+    white-space: nowrap;
+}
+
+#ImgObjectif
+{
+    width: 30%;
+    position: absolute;
+    right: 0px;
+}
+/* -------------------- !Lieu! -------------------- */
+
+
 
 /* -------------------- Membres -------------------- */
 .Membres
@@ -276,5 +356,11 @@ footer
     align-items: center;
     padding: 3%;
     max-width: 80%
+}
+
+#DescriptionPhotoMembres
+{
+    display: flex;
+    justify-content: center;
 }
 /* -------------------- !Membres! -------------------- */
