@@ -20,6 +20,7 @@ header
     box-shadow: 1px 1px 12px #555;
     display: flex;
     align-items: center;
+    min-height: 82px;
 }
 
 header, .push
@@ -28,10 +29,10 @@ header, .push
 
 }
 
-#imgheader
+.imgheader
 {
-    width: 100px;
-    min-width: 100px;
+    width: 80px;
+    min-width: 80px;
 }1
 
 #TitreHeader
