@@ -60,9 +60,9 @@
             </script>
         </div>
 
-        <img src="{{ asset('img/logo.png') }}" class="hidden-xs col-sm-offset-1 col-sm-1 col-md-offset-1 col-md-1 col-lg-offset-1 col-lg-1" id="imgheader">
-        <h1 class=" col-xs-8 hidden-sm hidden-md col-lg-3" id="TitreHeader">Porteur de lumière</h1>
-        <img src="{{ asset('img/logo.png') }}" class="col-xs-1 hidden-md hidden-sm hidden-lg" id="imgheader">
+        <a href="{{ path("accueil") }}"> <img src="{{ asset('img/logo.png') }}" class="hidden-xs col-sm-offset-1 col-sm-1 col-md-offset-1 col-md-1 col-lg-offset-1 col-lg-1" id="imgheader"></a>
+        <h1 class=" col-xs-8 hidden-sm hidden-md col-lg-3" id="TitreHeader"><a href="{{ path("accueil") }}">Porteur de lumière</a></h1>
+        <a href="{{ path("accueil") }}">  <img src="{{ asset('img/logo.png') }}" class="col-xs-1 hidden-md hidden-sm hidden-lg" id="imgheader"></a>
         <nav class="hidden-xs col-sm-10 col-md-10 col-lg-7" id="DivHeader">
             <ul class="nav navbar-nav" id="ListeDivHeader" >
                 <!--  <li class="active"><a href="#">Home</a></li>-->

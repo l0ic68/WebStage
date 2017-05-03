@@ -28,7 +28,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($qui);
 
         $ou = new Description();
-        $ou->setNom("OU");
+        $ou->setNom("Ou");
         $ou->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc orci mi, 
         sollicitudin eleifend metus porttitor, aliquam euismod purus. Sed a lacinia odio, at 
         lobortis dolor. Fusce rutrum quam ut ullamcorper ultricies. Ut blandit cursus mauris, 
