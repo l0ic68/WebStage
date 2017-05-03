@@ -46,11 +46,6 @@ class CarouselData extends AbstractFixture implements OrderedFixtureInterface
         $carousel5->setMedia($this->getReference('carouselMedia5'));
         $manager->persist($carousel5);
 
-        $carousel6 = new Carousel();
-        $carousel6->setOrdre('5');
-        $carousel6->setMedia($this->getReference('vk'));
-        $manager->persist($carousel6);
-
 
 
         $manager->flush();
@@ -60,7 +55,6 @@ class CarouselData extends AbstractFixture implements OrderedFixtureInterface
         $this->addReference('carousel3',$carousel3);
         $this->addReference('carousel4',$carousel4);
         $this->addReference('carousel5',$carousel5);
-        $this->addReference('carousel6',$carousel6);
 }
 
     public function getOrder()

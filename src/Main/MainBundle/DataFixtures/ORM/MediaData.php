@@ -130,28 +130,28 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($ramen);
 
         $carouselMedia1 = new Media();
-        $carouselMedia1->setPath('/img/ramen.png');
-        $carouselMedia1->setUrl('ramen.png');
+        $carouselMedia1->setPath('/img/1.jpg');
+        $carouselMedia1->setUrl('1.jpg');
         $manager->persist($carouselMedia1);
 
         $carouselMedia2 = new Media();
-        $carouselMedia2->setPath('/img/tshirt.png');
-        $carouselMedia2->setUrl('ramen.png');
+        $carouselMedia2->setPath('/img/2.jpg');
+        $carouselMedia2->setUrl('2.jpg');
         $manager->persist($carouselMedia2);
 
         $carouselMedia3 = new Media();
-        $carouselMedia3->setPath('/img/car.png');
-        $carouselMedia3->setUrl('ramen.png');
+        $carouselMedia3->setPath('/img/3.jpg');
+        $carouselMedia3->setUrl('3.jpg');
         $manager->persist($carouselMedia3);
 
         $carouselMedia4 = new Media();
-        $carouselMedia4->setPath('/img/vk.png');
-        $carouselMedia4->setUrl('ramen.png');
+        $carouselMedia4->setPath('/img/4.jpg');
+        $carouselMedia4->setUrl('4.jpg');
         $manager->persist($carouselMedia4);
 
         $carouselMedia5 = new Media();
-        $carouselMedia5->setPath('/img/Urschenheim.jpg');
-        $carouselMedia5->setUrl('ramen.png');
+        $carouselMedia5->setPath('/img/5.jpg');
+        $carouselMedia5->setUrl('5.jpg');
         $manager->persist($carouselMedia5);
 
         $equipe_groupe = new Media();
