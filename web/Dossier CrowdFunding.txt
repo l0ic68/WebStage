@@ -1,0 +1,66 @@
+Dossier CrowdFunding 
+
+Le crowdfunding, en français financement participatif est une autre façon pour les entreprises, les particuliers de récolter des fonds pour leur projets. Dans la plupart des cas, c’est l’association d’un grand nombre de personnes investissant un petit montant qui permettent aux porteurs de projets de trouver les fonds demandés. Ce mode de financement est également un moyen de fédérer le plus grand nombre de personnes autour de son projet.
+Le financement participatif est un outil de financement alternatif, sans l'aide des acteurs traditionnels, notamment bancaires. Il permet de récolter des fonds auprès d'un large public via des plateformes de financement participatif, rendues possibles grâce à internet et aux réseaux sociaux.
+Il peut prendre la forme de dons, de prêts rémunérés ou de participations dans l'entreprise.
+Le crowdfunding séduit chaque année un public de plus en plus large.
+
+Il existe 4 type de CrowdFunding
+
+-Le crowdfunding en don ou crowdgiving
+
+		Une personne physique ou morale (une entreprise) donne une somme sans rien attendre en retour c’est un don, généralement cette catégorie de financement est propre aux actes associatifs ainsi qu’aux projets personnels.
+
+		Par exemple, pour un acte associatif, Les Restos du Cœur peuvent réaliser une campagne de financement participatif pour la construction d’un centre d’accueil. Pour un projet personnel, dans ce cas, la personne peut compter sur la campagne de financement participatif pour réaliser un tour du monde, ou une aide pour un accès à certains soins très couteux par exemple.
+
+-Le crowdfunding avec récompense ou reward based crowdfunding
+
+		Une personne physique ou morale (une entreprise) donne une somme en échange d’une récompense. Le porteur de projet a deux façons de présenter les récompenses, il peut recourir au pré-achat, c’est à dire qu’il faudra qu’un certain nombre de personnes achète le produit ou le service pour que ces derniers soient créés. Exemple : un musicien a besoin de vendre un certain nombre d’albums pour pouvoir financer l’enregistrement dudit album. En échange, les contributeurs recevront l’album.
+
+		La deuxième façon que peuvent prendre les récompenses c’est de donner en échange d’un financement, un cadeau, comme la photo du projet terminé, t-shirt promotionnel.
+
+		Par exemple, une personne veut collecter des fonds pour créer un voilier à mains nues, le fait de proposer aux contributeurs de venir passer un moment sur le bateau une fois terminé est aussi considéré comme une récompense.
+
+-L’equity crowdfunding ou investissement participatif
+
+		Une personne physique ou morale (une entreprise) accepte d’investir dans un projet à condition d’acquérir des parts dans l’entreprise financée directement ou indirectement.
+
+		Par exemple, une entreprise cherche 100 000€, une personne physique ou morale investit en contrepartie de parts de l’entreprise (le nombre de parts sociales sera calculé en fonction de l’investissement). Le contributeur devient donc « un actionnaire » de l’entreprise qu’il soutient financièrement.
+
+-Le crowdfunding en prêt ou crowdlending
+
+		Une personne physique  prête une somme afin de financer un projet. La somme prêtée doit être rendue avec ou sans intérêts, c’est au porteur de projet d’en décider.
+
+		Par exemple, un boulanger a besoin de 10 000€ pour l’achat d’un nouveau four à pain, les « prêteurs » qui apportent une certaine somme doivent être remboursés dans un délais prédéfini, avec ou sans intérêts.
+
+
+Dans le cadre de l'association, deux type de CrowdFunding sont possible:
+	
+	Le CrowdFunding en don :
+							Avantage :
+								Ca ne coute rien à l'association
+								Aucune contrainte lors de la création du projet (Réflechir à un récompense potentiel)
+							Inconvenniant :
+								Les gens se sentent moins investit dans le projet (ils auront tendance à moins donner ! INFO à Vérifier)
+	LE CrowdFunding avec récompense :
+							Avantage :
+								Les gens se sentent investit
+							Inconvénniant :
+								Ca peut couter de l'argent à l'association 
+								Il faut réflechir à une récompense potentiel
+
+La décision du type de crowdFunding peut être décider de façon arbitraire entre chaque projet
+
+Concernant maintenant les plateform de CrowdFunding,nous nous sommes basé sur plusieurs critere pour décider
+
+Le type de secteur de la plateform : 
+Le principe TOUT OU RIEN ?
+Géolocalisation
+Sommes Minimal
+
+---------------------------------
+CredoFunding :
+
+Nous pensons nous diriger vers la plateform CredoFunding, Il s'agit d'une plateform Chrétienne qui correspond au attente de l'association.
+Apres une discussion avec l'un des membres de CredoFunding, nous avons appris, qu'il n'y avait pas de montant maximum pour un projet, il suffit simplement de pouvoir le justifier 
+Ensuite, si jamais la somme n'est pas atteinte mais que le projet peut quand même avancer avec la sommes récoltées, l'association peut utiliser l'argent récuperer ipour son projet
