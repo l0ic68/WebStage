@@ -319,7 +319,7 @@ footer
 
 
 
-/* -------------------- Lieu -------------------- */
+/* -------------------- Objectif -------------------- */
 #Objectif
 {
     display: flex;
@@ -338,13 +338,7 @@ footer
     white-space: nowrap;
 }
 
-#ImgObjectif
-{
-    width: 30%;
-    position: absolute;
-    right: 0px;
-}
-/* -------------------- !Lieu! -------------------- */
+/* -------------------- !Objectifs! -------------------- */
 
 
 
@@ -407,3 +401,45 @@ footer
     }
 }
 /* -------------------- !Media! -------------------- */
+
+
+
+/* -------------------- Don -------------------- */
+#Don
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 3%;
+
+}
+
+#TitreDon
+{
+    text-align: center;
+    border: 3px black solid;
+    padding: 1%;
+    white-space: nowrap;
+}
+
+#DescriptionDon
+{
+    display: flex;
+    justify-content: center;
+}
+
+#Payment
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.NomDon
+{
+    padding: 2%;
+    border: 2px black solid;
+}
+/* -------------------- !Dons! -------------------- */

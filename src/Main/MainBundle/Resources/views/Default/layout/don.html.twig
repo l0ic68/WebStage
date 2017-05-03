@@ -1,8 +1,22 @@
 {% extends "::layout/layout.html.twig" %}
 {% block body %}
-
     {% for don in dons %}
-        <p>{{ don.nom }} ?</p>
-        <p>{{ don.description }}</p>
+        <section id="Don" class="col-xs-12 col-sm-12 col-md-12 col-lg-9 ">
+            <h3 id="TitreDon" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> {{ don.nom }}</h3>
+            <div id="DescriptionDon" class="col-xs-9 col-sm-9 col-md-9 col-lg-offset-1 col-lg-11">
+                <p>{{ don.description }}</p>
+            </div>
+        </section>
     {% endfor %}
+
+    <section id="Payment" class="col-xs-12 col-sm-12 col-md-12 col-lg-10 ">
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+            <p class="NomDon">PayPal</p>
+            <i class="fa fa-paypal fa-5x" aria-hidden="true"></i>
+        </div>
+        <div class="col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+            <p class="NomDon">Crowdfounding</p>
+            <i class="fa fa-university fa-5x" aria-hidden="true"></i>
+        </div>
+    </section>
 {% endblock %}
