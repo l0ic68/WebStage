@@ -15,28 +15,28 @@ class ContactType extends AbstractType
     {
         //ici nous allons faire notre formulaire en PHP
         $builder
-            ->add('firstname', 'text', array('label' => 'First name',
+            ->add('firstname', 'text', array('label' => 'Prenom',
                                           'attr' => array('class' => 'input-medium search-query form-control',
-                                          'placeholder' => 'First name',)))
+                                          'placeholder' => 'Prenom',)))
                                           
-            ->add('lastname', 'text', array('label' => 'Last name',
+            ->add('lastname', 'text', array('label' => 'Nom',
                                           'attr' => array('class' => 'input-medium search-query form-control',
-                                          'placeholder' => 'Last name',)))
+                                          'placeholder' => 'Nom',)))
                                           
             ->add('email', EmailType::class, array('label' => 'Email',
                                           'attr' => array('class' => 'input-medium search-query form-control',
                                           'placeholder' => 'Email Adress',)))
                                           
-            ->add('phone', 'text', array('label' => 'Phone #',
+            ->add('phone', 'text', array('label' => 'Telephone #',
                                           'attr' => array('class' => 'input-medium search-query form-control',
-                                          'placeholder' => 'Phone',)))
+                                          'placeholder' => 'Telephone',)))
                                           
             ->add('message', 'textarea', array('label' => 'Message',
                                           'attr' => array('class' => 'input-medium search-query form-control',
                                           'placeholder' => 'Your message',)))
-            ->add('Send', 'submit', array('label' => 'Send',
+            ->add('Send', 'submit', array('label' => 'Envoyer',
                                           'attr' => array('class' => 'btn btn-danger raised',
-                                          'placeholder' => 'Send',)));
+                                          'placeholder' => 'Envoyer',)));
 
     }
 
