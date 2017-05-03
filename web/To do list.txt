@@ -1,0 +1,63 @@
+To do list (non responsive) :																									Legende : 
+																												# pas urgent
+																												le reste a faire avant vendredi  
+HomePages:
+
+-Crée un compte twitter (bidon)
+#-Ajout API Twitter
+-Enlever le surligagne +couleur Titre
+-Lien Partage fontionnel
+-News (afficher les derniere news + liens vers toutes les news)
+#-Mention légale
+
+Origines :
+
+-Photo réel
+-Changer la disposition (nos valeurs en dessou de la photo)
+
+Lieux :
+
+-photo réel + texte
+-Enlever le ?
+
+But : 
+
+-Mettre du texte
+
+
+Equipe :
+
+-Titre Centrer
+-Mettre les vrai membres (photo non comprise)
+
+
+Future :
+
+-Trouvée une action Future (prendre plus d'éléve en charge)
+
+Media :
+
+-A travailler (dimension image)
+
+Don :
+
+-Faire la page
+
+Contact :
+
+-Enlever le sucess
+-Ecrire le text en FR
+-Agrandir message
+-Enlever le bouton qui traine
+-Changer le form en Z0
+
+Langue : 
+
+#Etudier trad
+
+News : 
+
+Faire la page
+
+
+
