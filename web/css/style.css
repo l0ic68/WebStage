@@ -233,6 +233,9 @@ footer
 
 #MotHomePage
 {
+    min-width: 142px;
+    min-height: 52px;
+    text-align: center;
     border: 3px black solid;
     white-space: nowrap;
     padding: 1%;
