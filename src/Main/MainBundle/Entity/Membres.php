@@ -43,7 +43,7 @@ class Membres
     private $description;
 
     /**
-     * @ORM\OneToOne(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist","remove"})
+     * @ORM\OneToOne(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist","remove"} ,options={"default":""})
      * @ORM\JoinColumn(nullable=true)
      */
     private $media;
