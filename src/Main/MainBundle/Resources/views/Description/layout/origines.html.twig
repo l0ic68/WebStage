@@ -2,15 +2,25 @@
 {% block body %}
 
     {% for origine in origines %}
+        {% if origine.media is not null %}
         <section id="QuiOrigine" class="col-xs-12 col-sm-12 col-md-12 col-lg-9 ">
             <h3 id="TitreOrigine" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> {{ origine.nom }} ? </h3>
-            {% if origine.media is not null %}
-                    <img id="ImgOrigine" class="col-xs-4 col-sm-4 col-md-4 col-lg-4" src="{{ asset(origine.media.path) }}">
-            {% endif %}
+
+                    <img id="ImgOrigine" class="col-xs-5 col-sm-5 col-md-5 col-lg-6" src="{{ asset(origine.media.path) }}">
+
             <div id="DescriptionOrigine" class="col-xs-5 col-sm-5 col-md-5 col-lg-offset-1 col-lg-5">
             <p>{{ origine.description }}</p>
             </div>
         </section>
+        {% else %}
+        <section id="QuiOrigine" class="col-xs-6 col-sm-6 col-md-6 col-lg-4 ">
+            <h3 id="TitreOrigine" class="col-xs-8 col-sm-8 col-md-8 col-lg-8"> {{ origine.nom }} ? </h3>
+
+            <div id="DescriptionOrigine" class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-2 col-lg-12">
+                <p>{{ origine.description }}</p>
+            </div>
+        </section>
+        {% endif %}
     {% endfor %}
 
 

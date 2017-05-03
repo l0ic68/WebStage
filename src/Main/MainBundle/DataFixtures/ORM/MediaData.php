@@ -155,8 +155,8 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($carouselMedia5);
 
         $equipe_groupe = new Media();
-        $equipe_groupe->setPath('img/logo.png');
-        $equipe_groupe->setUrl('logo.png');
+        $equipe_groupe->setPath('img/ImageGroupe.JPG');
+        $equipe_groupe->setUrl('ImageGroupe.JPG');
         $manager->persist($equipe_groupe);
 
         $manager->flush();

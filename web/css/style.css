@@ -33,14 +33,20 @@ header, .push
 {
     width: 80px;
     min-width: 80px;
-}1
+}
 
 #TitreHeader
 {
+    color: black;
     margin: 0;
     display: flex;
     white-space: nowrap;
     justify-content: center;
+}
+
+#TitreHeader:hover, TitreHeader:link, TitreHeader:visited, TitreHeader:active
+{
+    color: black;
 }
 
 @media screen and (max-width: 760px)
@@ -276,7 +282,6 @@ footer
 
 #ImgOrigine
 {
-    width: 30%;
     position: absolute;
     right: 0px;
 }
