@@ -25,6 +25,13 @@ class DefaultController extends Controller
         return $this->render('MainBundle:Default:layout\media.html.twig',array('medias'=> $medias));
     }
 
+    public function NewsAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $news = $em->getRepository('MainBundle:News')->findall();
+        return $this->render('MainBundle:Default:layout\news.html.twig',array('news'=> $news));
+    }
+
     public function DonAction()
     {
         $em = $this->getDoctrine()->getManager();

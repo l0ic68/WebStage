@@ -38,9 +38,13 @@ future:
     path:     /future
     defaults: { _controller: MainBundle:Action:future }
 
-galeries:
-    path:     /galeries
+galerie:
+    path:     /galerie
     defaults: { _controller: MainBundle:Default:galerie }
+
+news:
+    path:     /news
+    defaults: { _controller: MainBundle:News:news }
 
 origines:
     path:     /origines

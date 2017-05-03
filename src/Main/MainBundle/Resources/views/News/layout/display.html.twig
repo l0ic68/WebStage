@@ -1,0 +1,10 @@
+    <div id="FirstBar">
+    {% for new in news %}
+            <div>
+                <button id="BoutonBar"></button> <h3 id="MotsBar" > <p>{{ new.nom }}</p></h3>
+            </div>
+    {% endfor %}
+            <div>
+                <a type="button" class="btn btn-link " id="AllNews" href ="{{ path("news") }}">Voir toutes les news</a></button>
+            </div>
+        </div>

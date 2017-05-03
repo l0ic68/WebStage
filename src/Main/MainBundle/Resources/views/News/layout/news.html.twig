@@ -1,0 +1,8 @@
+{% extends "::layout/layout.html.twig" %}
+{% block body %}
+
+    {% for new in news %}
+        <p>{{ new.nom }}</p>
+        <p>{{ new.description }}</p>
+    {% endfor %}
+{% endblock %}
