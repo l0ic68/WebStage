@@ -158,27 +158,34 @@ footer
 {
     padding-bottom: 2%;
     border-bottom: 1px black solid;
-}
 
-#BoutonBar
-{
-    border:3px black solid;
-    height: 30px;
-    width:30px;
 }
 
 #MotsBar
 {
-    white-space: nowrap;
-    display: inline-block;
-    color: red;
-    margin-left: 20%;
+    color: black;
+    margin-left: 15%;
     font-size: medium;
+    margin-top: 0px;
 }
 
 #AllNews
 {
     margin-top: 5%;
+}
+
+#DivAllNews
+{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#OneNews
+{
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 #SecondBar
@@ -437,7 +444,7 @@ footer
     text-align: center;
 }
 
-.NomDon
+#NomDon
 {
     padding: 2%;
     border: 2px black solid;
