@@ -14,7 +14,7 @@ header
 {
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     background-color: white;
     width: 100%;
     box-shadow: 1px 1px 12px #555;
@@ -368,10 +368,19 @@ footer
     max-width: 80%
 }
 
+.DescriptionMembre
+{
+    text-align: left;
+}
+
+.DescriptionMembre2
+{
+    text-align: right;
+}
+
 #DescriptionPhotoMembres
 {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 /* -------------------- !Membres! -------------------- */
 
@@ -416,7 +425,7 @@ footer
 {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     margin: 3%;
 
@@ -428,12 +437,12 @@ footer
     border: 3px black solid;
     padding: 1%;
     white-space: nowrap;
+    margin: 3%;
 }
 
 #DescriptionDon
 {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 #Payment
@@ -450,3 +459,51 @@ footer
     border: 2px black solid;
 }
 /* -------------------- !Dons! -------------------- */
+
+
+
+/* -------------------- News -------------------- */
+#News
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3%;
+}
+
+#TitreNews
+{
+    text-align: center;
+    border: 3px black solid;
+    padding: 1%;
+    white-space: nowrap;
+}
+
+#DescriptionNews
+{
+    text-align: center;
+   margin: 0;
+}
+
+/* -------------------- !News! -------------------- */
+
+
+
+/* -------------------- Contact -------------------- */
+#MessageContact
+{
+
+    width: 130%;
+
+}
+#main_mainbundle_contact_message
+{
+    height: 200px;
+}
+
+#main_mainbundle_contact_lastname, #main_mainbundle_contact_firstname, #main_mainbundle_contact_email, #main_mainbundle_contact_phone, #main_mainbundle_contact_message
+{
+    z-index: 1;
+}
+/* -------------------- !Contact! -------------------- */

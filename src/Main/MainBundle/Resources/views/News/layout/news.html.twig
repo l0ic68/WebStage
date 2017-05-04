@@ -1,8 +1,11 @@
 {% extends "::layout/layout.html.twig" %}
 {% block body %}
-
     {% for new in news %}
-        <p>{{ new.nom }}</p>
-        <p>{{ new.description }}</p>
+        <section id="News" class="col-xs-6 col-sm-6 col-md-6 col-lg-4 ">
+            <h3 id="TitreNews" class="col-xs-9 col-sm-9 col-md-9 col-lg-9"> {{ new.nom }} ? </h3>
+            <div id="DescriptionNews" class="col-xs-10 col-sm-10 col-md-10 col-lg-offset-1 col-lg-10">
+                <p>{{ new.description }}</p>
+            </div>
+        </section>
     {% endfor %}
 {% endblock %}

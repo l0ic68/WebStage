@@ -3,19 +3,10 @@
 
     <!-- Contact -->
     <div class="container white">
-        <div class="row">
-            <div class="container white">
-                <div class="col-lg-12">
-                    <div class="padder-t2">
-                        <h1>Contact</h1>
-                        <div class="horiz-divider"></div>
-                    </div>
-                </div>
+            <div class="container white col-lg-12 padder-t2">
+                <h1>Contact</h1>
             </div>
-        </div>
-        <div class="row padder-t padder-b">
-            <div class="container white">
-                <div class="col-lg-12">
+        <div class="row padder-t padder-b container white col-lg-12">
                     <!-- Form -->
                     <form class="form-horizontal" action="{{ path('contact') }}" method="post"  {{ form_enctype(form) }} id="contact_form">
                         {{ form_start(form) }}
@@ -86,7 +77,7 @@
                                         <label class="control-label pull-right"><h4>{{ form_label(form.message) }}</h4></label>
                                     </div>
                                     <div class="col-md-4 col-lg-5 inputGroupContainer">
-                                        <div class="input-group">
+                                        <div id="MessageContact" class="input-group">
                                             {{ form_widget(form.message) }}
                                         </div>
                                     </div>
@@ -102,8 +93,6 @@
                             </div>
                         </fieldset>
                     </form>
-                </div>
-            </div>
         </div>
         <div class="row padder-b">
             <div class="row col-lg-12">
