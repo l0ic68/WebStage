@@ -196,13 +196,12 @@ footer
 
 .ImgBar
 {
-    padding: 7%;
-    display: inline-block
+    padding: 18%;
+
 }
 
 #ThirdBar
 {
-    text-align: center;
     margin-top: 1.5vh;
 }
 /* -------------------- !Barre Droite! -------------------- */

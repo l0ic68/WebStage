@@ -3,21 +3,6 @@
 
     {% render(controller('MainBundle:News:display')) %}
 
-    <div id="SecondBar">
-        <div class="ImgBar">
-            <img src="{{ asset('img/facebook.png') }}">
-        </div>
-        <div class="ImgBar">
-            <img src="{{ asset('img/twitter.png') }}">
-        </div>
-        <div class="ImgBar">
-            <img src="{{ asset('img/google.png') }}">
-        </div>
-        <div class="ImgBar">
-            <img src="{{ asset('img/email.png') }}">
-        </div>
-    </div>
-
     {% include '::ModulesUsed/ShareBtn.html.twig' %}
 </div>
 <div class="push"></div>
