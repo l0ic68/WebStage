@@ -111,6 +111,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         Suspendisse mauris ligula, fermentum sit amet dapibus non, gravida id sapien. Vestibulum imperdiet mauris elit, 
         quis ornare massa cursus eget.");
         $irakG->setPage("lieu");
+        $irakG->setMedia($this->getReference('irakG_media'));
         $manager->persist($irakG);
 
         $irakS = new Description();
@@ -123,6 +124,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         Suspendisse mauris ligula, fermentum sit amet dapibus non, gravida id sapien. Vestibulum imperdiet mauris elit, 
         quis ornare massa cursus eget.");
         $irakS->setPage("lieu");
+        $irakS->setMedia($this->getReference('kirkouk'));
         $manager->persist($irakS);
 
         $objectif = new Description();

@@ -23,6 +23,16 @@ class NewsData extends AbstractFixture implements OrderedFixtureInterface
         $new1->setDescription("Aujourd'hui est un grand jour, il s'agit du jour ou nous lançons notre site web");
         $manager->persist($new1);
 
+        $new1 = new News();
+        $new1->setNom("Lancement du System de News !!! ");
+        $new1->setDescription("Oui");
+        $manager->persist($new1);
+
+        $new1 = new News();
+        $new1->setNom("Crowdfunding");
+        $new1->setDescription("Aujourd'hui est un grand jour, il s'agit du jour ou nous lançons notre site web");
+        $manager->persist($new1);
+
         $manager->flush();
 
         $this->addReference('new1',$new1);
