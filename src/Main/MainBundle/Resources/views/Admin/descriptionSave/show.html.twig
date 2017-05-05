@@ -1,0 +1,40 @@
+{% extends "::layout/layout.html.twig" %}
+
+{% block body %}
+    <h1>Description</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ description.id }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ description.description }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ description.nom }}</td>
+            </tr>
+            <tr>
+                <th>Page</th>
+                <td>{{ description.page }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('admin_description_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('admin_description_edit', { 'id': description.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

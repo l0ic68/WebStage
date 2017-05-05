@@ -229,7 +229,7 @@ footer
     height: 550px;
 }
 
-#DivHomePage
+.DivHomePage
 {
     padding: 5%;
     display: flex;
@@ -244,7 +244,7 @@ footer
     }
 }
 
-#MotHomePage
+.MotHomePage
 {
     min-width: 142px;
     min-height: 52px;
@@ -254,7 +254,7 @@ footer
     padding: 1%;
 }
 
-#DescriptionHomePage
+.DescriptionHomePage
 {
     text-align: center;
     border: 3px black solid;
