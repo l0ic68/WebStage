@@ -2,12 +2,28 @@
 {% block body %}
 
     <!-- Contact -->
+    <div id="DivTitreContact" class="container white col-lg-12 padder-t2">
+        <h2 id="TitreContact">Contact</h2>
+    </div>
     <div class="container white">
-            <div class="container white col-lg-12 padder-t2">
-                <h1>Contact</h1>
-            </div>
         <div class="row padder-t padder-b container white col-lg-12">
                     <!-- Form -->
+                    <!-- Text input Last name -->
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-4 col-lg-4">
+                                <label class="control-label pull-right" ><h4>{{ form_label(form.lastname) }}</h4></label>
+                            </div>
+                            <div class="col-md-4 col-lg-4 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                    <!-- twig: WIDGET -->
+                                    {{ form_widget(form.lastname) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Text input First name -->
                     <form class="form-horizontal" action="{{ path('contact') }}" method="post"  {{ form_enctype(form) }} id="contact_form">
                         {{ form_start(form) }}
                         <fieldset>
@@ -26,21 +42,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Text input Last name -->
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-md-4 col-lg-4">
-                                        <label class="control-label pull-right" ><h4>{{ form_label(form.lastname) }}</h4></label>
-                                    </div>
-                                    <div class="col-md-4 col-lg-4 inputGroupContainer">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                            <!-- twig: WIDGET -->
-                                            {{ form_widget(form.lastname) }}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                             <!-- Text input Email -->
                             <div class="form-group">
                                 <div class="row">

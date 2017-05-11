@@ -3,7 +3,7 @@
 {% set t = 0 %}
     {% for membre in membres %}
         {%  if t == 0 %}
-            <section  class="Membres col-xs-12 col-sm-12 col-md-12 col-lg-10">
+            <section  class="Membres col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <figure class="col-xs-2 col-sm-2 col-md-2 col-lg-2 DescriptionMembre">
                     <img src="{{ asset(membre.media.path) }}" >
                     <figcaption id="DescriptionPhotoMembres">
@@ -16,7 +16,7 @@
             </section>
             {% set t = 1 %}
         {% else %}
-            <section class="Membres2 col-xs-12 col-sm-12 col-md-12 col-lg-10">
+            <section class="Membres2 col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-7 DescriptionMembre2">
                     {{ membre.description }}
                 </div>
