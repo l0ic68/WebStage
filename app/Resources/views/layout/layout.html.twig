@@ -68,7 +68,7 @@
             <ul class="nav navbar-nav" id="ListeDivHeader" >
                 <!--  <li class="active"><a href="#">Home</a></li>-->
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Qui sommes nous ?
+                    <a class="dropdown-toggle MotsHeader" data-toggle="dropdown" href="#">Qui sommes nous ?
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="{{ path('origines') }}">Nos origines </a></li>
@@ -78,7 +78,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Nos actions
+                    <a class="dropdown-toggle MotsHeader" data-toggle="dropdown" href="#">Nos actions
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="{{ path('past') }}">Réalisé</a></li>
@@ -86,18 +86,9 @@
                         <li><a href="{{ path('future') }}">Pour le future</a></li>
                     </ul>
                 </li>
-                <li><a href="{{ path('galerie') }}">Galeries</a></li>
-                <li><a href="{{ path('don') }}">Faire un dons</a></li>
-                <li><a href="{{ path('contact') }}">Contact</a></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Langue
-                        <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Anglais</a></li>
-                        <li><a href="#">Français</a></li>
-                        <li><a href="#">Allemand</a></li>
-                    </ul>
-                </li>
+                <li><a class="MotsHeader" href="{{ path('galerie') }}">Galeries</a></li>
+                <li><a id="DonHeader" class="MotsHeader" href="{{ path('don') }}">Faire un dons</a></li>
+                <li><a class="MotsHeader" href="{{ path('contact') }}">Contact</a></li>
             </ul>
         </nav>
     </header>
