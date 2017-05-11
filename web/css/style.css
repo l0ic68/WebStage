@@ -9,6 +9,12 @@ html, body
     height: 100%;
 }
 
+h1
+{
+    font-weight: bold;
+    color: rgb(1, 167, 217);
+}
+
 /* -------------------- Header -------------------- */
 header
 {
@@ -37,7 +43,6 @@ header, .push
 
 #TitreHeader
 {
-    color: black;
     margin: 0;
     display: flex;
     white-space: nowrap;
@@ -46,7 +51,7 @@ header, .push
 
 #TitreHeader:hover, TitreHeader:link, TitreHeader:visited, TitreHeader:active
 {
-    color: black;
+    color: rgb(1, 167, 217)
 }
 
 @media screen and (max-width: 760px)
