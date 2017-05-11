@@ -22,3 +22,24 @@ admin_description_delete:
     path:     /{id}/delete
     defaults: { _controller: "MainBundle:DescriptionAdmin:delete" }
     methods:  DELETE
+
+originesAdmin:
+    path:     /origines
+    defaults: { _controller: MainBundle:DescriptionAdmin:origines }
+
+lieuAdmin:
+    path:     /lieu
+    defaults: { _controller: MainBundle:DescriptionAdmin:lieu }
+
+objectifAdmin:
+    path:     /objectif
+    defaults: { _controller: MainBundle:DescriptionAdmin:objectif }
+
+membresAdmin:
+    path:     /membres
+    defaults: { _controller: MainBundle:DescriptionAdmin:membres }
+
+donAdmin:
+    path:     /don
+    defaults: { _controller: MainBundle:Default:don }
+

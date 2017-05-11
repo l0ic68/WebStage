@@ -3,6 +3,7 @@
 namespace Main\MainBundle\Controller;
 
 use Main\MainBundle\Entity\Description;
+use Main\MainBundle\Form\DescriptionAdminType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -119,5 +120,72 @@ class DescriptionAdminController extends Controller
             ->setMethod('DELETE')
             ->getForm()
         ;
+    }
+
+    public function OriginesAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $origines = $em->getRepository('MainBundle:Description')->findByPage('origine');
+        $description = new Description();
+        $form1 = $this->createForm(new DescriptionAdminType());
+        $form1->handleRequest($request);
+
+            // On vérifie que les valeurs entrées sont correctes
+            // (Nous verrons la validation des objets en détail dans le prochain chapitre)
+            if ($form1->isValid()) {
+                // On l'enregistre notre objet $advert dans la base de données, par exemple
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($description);
+                $em->flush();
+                return $this->redirectToRoute('originesAdmin');
+            }
+        $form2 = $this->createForm(new DescriptionAdminType());
+        $form2->handleRequest($request);
+
+        // On vérifie que les valeurs entrées sont correctes
+        // (Nous verrons la validation des objets en détail dans le prochain chapitre)
+        if ($form2->isValid()) {
+            // On l'enregistre notre objet $advert dans la base de données, par exemple
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($description);
+            $em->flush();
+            return $this->redirectToRoute('originesAdmin');
+        }
+        $form3 = $this->createForm(new DescriptionAdminType());
+        $form3->handleRequest($request);
+
+        // On vérifie que les valeurs entrées sont correctes
+        // (Nous verrons la validation des objets en détail dans le prochain chapitre)
+        if ($form3->isValid()) {
+            // On l'enregistre notre objet $advert dans la base de données, par exemple
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($description);
+            $em->flush();
+            return $this->redirectToRoute('originesAdmin');
+        }
+
+            return $this->render('MainBundle:Admin:description\origines.html.twig',array("origines"=> $origines,'form1'=>$form1->createView(),
+                'form2'=>$form2->createView(),'form3'=>$form1->createView()));
+    }
+
+    public function LieuAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $lieux = $em->getRepository('MainBundle:Description')->findByPage('lieu');
+        return $this->render('MainBundle:Description:layout\lieu.html.twig',array('lieux'=> $lieux));
+    }
+
+    public function ObjectifAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $objectifs = $em->getRepository('MainBundle:Description')->findByPage('objectif');
+        return $this->render('MainBundle:Description:layout\objectif.html.twig',array('objectifs'=> $objectifs));
+    }
+
+    public function MembresAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $membres = $em->getRepository('MainBundle:Membres')->findAll();
+        return $this->render('MainBundle:Description:layout\membres.html.twig',array('membres'=> $membres));
     }
 }
