@@ -3,20 +3,20 @@
 
     {% for origine in origines %}
         {% if origine.media is not null %}
-        <section id="QuiOrigine" class="col-xs-12 col-sm-12 col-md-12 col-lg-9 ">
-            <h3 id="TitreOrigine" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> {{ origine.nom }} ? </h3>
+        <section class="col-xs-12 col-sm-12 col-md-12 col-lg-9 QuiOrigine">
+            <h3 class="col-xs-4 col-sm-4 col-md-4 col-lg-4 TitreOrigine"> {{ origine.nom }} ? </h3>
 
-                    <img id="ImgOrigine" class="col-xs-5 col-sm-5 col-md-5 col-lg-6" src="{{ asset(origine.media.path) }}">
+                    <img  id="ImgOrigine" class="col-xs-5 col-sm-5 col-md-5 col-lg-6" src="{{ asset(origine.media.path) }}">
 
-            <div id="DescriptionOrigine" class="col-xs-5 col-sm-5 col-md-5 col-lg-offset-1 col-lg-5">
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-offset-1 col-lg-5 DescriptionOrigine">
             <p>{{ origine.description }}</p>
             </div>
         </section>
         {% else %}
-        <section id="QuiOrigine" class="col-xs-6 col-sm-6 col-md-6 col-lg-4 ">
-            <h3 id="TitreOrigine" class="col-xs-8 col-sm-8 col-md-8 col-lg-8"> {{ origine.nom }} ? </h3>
+        <section class="col-xs-6 col-sm-6 col-md-6 col-lg-4 QuiOrigine">
+            <h3 class="col-xs-8 col-sm-8 col-md-8 col-lg-8 TitreOrigine"> {{ origine.nom }} ? </h3>
 
-            <div id="DescriptionOrigine" class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-2 col-lg-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-2 col-lg-12 DescriptionOrigine">
                 <p>{{ origine.description }}</p>
             </div>
         </section>

@@ -9,10 +9,21 @@ html, body
     height: 100%;
 }
 
+body
+{
+    background-color: rgb(230, 230, 230);
+}
+
 h1
 {
-    font-weight: bold;
+    font-weight: 600;
     color: rgb(1, 167, 217);
+}
+
+h2
+{
+    font-weight: 500;
+    color: rgb(1, 117, 217);
 }
 
 .centrageD
@@ -225,6 +236,7 @@ footer
 {
     margin-top: 4%;
     margin-bottom: 4%;
+    margin-left: 8%;
 }
 
 #Mycarousel
@@ -273,6 +285,7 @@ footer
     border: 3px black solid;
     white-space: nowrap;
     padding: 1%;
+    background-color: white;
 }
 
 .DescriptionHomePage
@@ -282,6 +295,7 @@ footer
     max-width: 600px;
     margin-left: 5%;
     padding: 1%;
+    background-color: white;
 }
 /* -------------------- !Home Page! -------------------- */
 
@@ -289,7 +303,7 @@ footer
 
 /* -------------------- Origines -------------------- */
 
-#QuiOrigine
+.QuiOrigine
 {
     display: flex;
     justify-content: center;
@@ -299,7 +313,7 @@ footer
 
 }
 
-#TitreOrigine
+.TitreOrigine
 {
     text-align: center;
     border: 3px black solid;
