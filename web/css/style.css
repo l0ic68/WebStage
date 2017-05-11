@@ -9,6 +9,7 @@ html, body
     height: 100%;
 }
 
+
 body
 {
     background-color: rgb(230, 230, 230);
@@ -517,7 +518,7 @@ footer
 #DescriptionNews
 {
     text-align: center;
-   margin: 0;
+    margin: 0;
 }
 
 /* -------------------- !News! -------------------- */
