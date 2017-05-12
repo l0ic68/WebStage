@@ -1,9 +1,10 @@
 {% extends "::layout/layout.html.twig" %}
 {% block body %}
-
     {% for lieu in lieux %}
+        <div id="DivTitreContact" class="container white col-lg-12 padder-t2">
+            <h2 id="TitreContact" class="LigneTitre"><span class="LigneSpan">{{ lieu.nom }}</span></h2>
+        </div>
         <section id="IrakLieu" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-            <h3 id="TitreLieu" class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> {{ lieu.nom }}</h3>
             <div id="DescriptionLieu" class="col-xs-5 col-sm-5 col-md-5 col-lg-offset-1 col-lg-5">
                 <p>{{ lieu.description }}</p>
             </div>

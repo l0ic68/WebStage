@@ -40,6 +40,51 @@ h3
     font-weight: bold;
 }
 
+.LigneTitre
+{
+    background:linear-gradient(
+        rgb(1, 117, 217) 0%,
+        rgb(1, 117, 217) 45%,
+        whitesmoke 46%,
+        whitesmoke 54%,
+        whitesmoke 54%,
+        rgb(1, 117, 217) 54%,
+        rgb(1, 117, 217) 100%);
+    background:-webkit-linear-gradient(
+            rgb(1, 117, 217) 0%,
+            rgb(1, 117, 217) 45%,
+            whitesmoke 46%,
+            whitesmoke 54%,
+            rgb(1, 117, 217) 54%,
+            rgb(1, 117, 217) 100%);
+    background:    -moz-linear-gradient(
+            rgb(1, 117, 217) 0%,
+            rgb(1, 117, 217) 45%,
+            whitesmoke 46%,
+            whitesmoke 54%,
+            rgb(1, 117, 217) 54%,
+            rgb(1, 117, 217) 100%);
+    background:     -ms-linear-gradient(
+            rgb(1, 117, 217) 0%,
+            rgb(1, 117, 217) 45%,
+            whitesmoke 46%,
+            whitesmoke 54%,
+            rgb(1, 117, 217) 54%,
+            rgb(1, 117, 217) 100%);
+    background:      -o-linear-gradient(
+            rgb(1, 117, 217) 0%,
+            rgb(1, 117, 217) 45%,
+            whitesmoke 46%,
+            whitesmoke 54%,
+            rgb(1, 117, 217) 54%,
+            rgb(1, 117, 217) 100%);
+}
+
+.LigneSpan
+{
+    background:rgb(1, 117, 217);
+    padding:0 20px;
+}
 .centrageD
 {
     display: flex;
@@ -349,10 +394,16 @@ footer
 {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    margin: 3%;
+    align-items: center;
+    margin-bottom: 3%;
+}
 
+.QuiOrigine2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .TitreOrigine
@@ -365,8 +416,14 @@ footer
 
 #ImgOrigine
 {
-    position: absolute;
-    right: 0px;
+    width: 450px;
+}
+
+.DescriptionOrigine
+{
+    text-align: justify;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 /* -------------------- !Origines! -------------------- */
@@ -382,6 +439,7 @@ footer
     flex-direction: column;
     margin: 3%;
     margin-top: 5%;
+    margin-bottom: 10%;
 }
 
 
@@ -428,13 +486,26 @@ footer
 
 
 /* -------------------- Membres -------------------- */
+#DivTitreMembres
+{
+    background-color: rgb(1, 117, 217);
+    padding: 2%;
+    margin-bottom: 3%;
+}
+
+#TitreMembres
+{
+    color: whitesmoke;
+    text-align: center;
+}
+
 .Membres
 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 3%;
-    max-width: 80%
+    max-width: 100%
 }
 
 .Membres2
@@ -443,7 +514,13 @@ footer
     justify-content: flex-end;
     align-items: center;
     padding: 3%;
-    max-width: 80%
+    max-width: 100%
+}
+
+.ImgMembres
+{
+    display: block;
+    margin: auto;
 }
 
 .DescriptionMembre
@@ -505,7 +582,7 @@ footer
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
 }
 
 #TitreDon
@@ -537,7 +614,6 @@ footer
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: rgb(1, 117, 217);
     padding: 3%;
 }
 
@@ -584,13 +660,13 @@ footer
 {
     background-color: rgb(1, 117, 217);
     padding: 2%;
-    padding-left: 10%;
     margin-bottom: 3%;
 }
 
 #TitreContact
 {
     color: whitesmoke;
+    text-align: center;
 }
 
 
