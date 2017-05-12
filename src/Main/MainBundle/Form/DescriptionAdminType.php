@@ -14,7 +14,9 @@ class DescriptionAdminType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('description','text',array('attr' => array('class' => 'DescriptionOrigines',)))
-                ->add('nom','text',array('attr' => array('class' => 'TitreOrigines',)));
+                ->add('nom','text',array('attr' => array('class' => 'TitreOrigines',)))
+                ->add('submit','submit')
+                ->getForm();
 //                ->add('page',array('attr' => array('class' => 'custom-file-input',)));
     }
     
