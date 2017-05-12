@@ -11,11 +11,13 @@ class DescriptionAdminType extends AbstractType
     /**
      * {@inheritdoc}
      */
+    private $name = "default_name";
+
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('description','text',array('attr' => array('class' => 'DescriptionOrigines',)))
-                ->add('nom','text',array('attr' => array('class' => 'TitreOrigines',)))
-                ->add('submit','submit')
+                ->add('nom','text',array('attr' => array('class' => 'TitreOrigines')))
+                ->add('submit','submit',array('label'=>'rouge'))
                 ->getForm();
 //                ->add('page',array('attr' => array('class' => 'custom-file-input',)));
     }
@@ -36,6 +38,20 @@ class DescriptionAdminType extends AbstractType
     public function getBlockPrefix()
     {
         return 'main_mainbundle_description';
+    }
+
+    public function getName(){
+        return $this->name;
+    }
+
+    public function setName($name){
+        $this->name = $name;
+    }
+
+    public function __constructor($formname)
+    {
+        $this->name = $formname;
+        parent::__construct();
     }
 
 

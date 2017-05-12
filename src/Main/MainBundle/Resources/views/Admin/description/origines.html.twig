@@ -4,31 +4,23 @@
 <div id="TexteHomePage" class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-9 col-sm-9 col-md-9 col-lg-9">
     <div id="DivHomePage" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 DivHomePage">
         {{ form_start(form1) }}
-        {{ form_row(form1.nom) }}
-        {{ form_row(form1.description) }}
-        <input type="submit" value="Edit" />
+        <input type="submit" value="Edit1" label="form1" />
         {{ form_end(form1) }}
     </div>
-
 </div>
 <div id="TexteHomePage" class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-9 col-sm-9 col-md-9 col-lg-9">
     <div id="DivHomePage" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 DivHomePage">
         {{ form_start(form2) }}
-        {{ form_row(form2.nom) }}
-        {{ form_row(form2.description) }}
-        <input type="submit" value="Edit" />
+
+        <input type="submit" value="Edit" class="form2" />
         {{ form_end(form2) }}
     </div>
-
 </div>
 <div id="TexteHomePage" class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-9 col-sm-9 col-md-9 col-lg-9">
     <div id="DivHomePage" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 DivHomePage">
         {{ form_start(form3) }}
-        {{ form_row(form3.nom) }}
-        {{ form_row(form3.description) }}
         <input type="submit" value="Edit" />
         {{ form_end(form3) }}
     </div>
-
 </div>
 {% endblock %}
