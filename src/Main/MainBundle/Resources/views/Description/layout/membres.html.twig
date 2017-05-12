@@ -1,11 +1,14 @@
 {% extends "::layout/layout.html.twig" %}
 {% block body %}
+    <div id="DivTitreMembres" class="col-lg-12">
+        <h2 id="TitreMembres" class="LigneTitre"><span class="LigneSpan">Membres de l'association</span></h2>
+    </div>
 {% set t = 0 %}
     {% for membre in membres %}
         {%  if t == 0 %}
             <section  class="Membres col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <figure class="col-xs-2 col-sm-2 col-md-2 col-lg-2 DescriptionMembre">
-                    <img src="{{ asset(membre.media.path) }}" >
+                    <img class="ImgMembres" src="{{ asset(membre.media.path) }}" >
                     <figcaption id="DescriptionPhotoMembres">
                         <p>{{ membre.nom }} {{ membre.prenom }}</p>
                     </figcaption>
@@ -21,7 +24,7 @@
                     {{ membre.description }}
                 </div>
                 <figure class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                    <img src="{{ asset(membre.media.path) }}" >
+                    <img class="ImgMembres" src="{{ asset(membre.media.path) }}" >
                     <figcaption id="DescriptionPhotoMembres">
                         <p>{{ membre.nom }} {{ membre.prenom }}</p>
                     </figcaption>

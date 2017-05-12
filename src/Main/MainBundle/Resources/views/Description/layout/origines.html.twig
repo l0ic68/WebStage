@@ -3,26 +3,28 @@
 
     {% for origine in origines %}
         {% if origine.media is not null %}
-        <section class="col-xs-12 col-sm-12 col-md-12 col-lg-9 QuiOrigine">
-            <h3 class="col-xs-4 col-sm-4 col-md-4 col-lg-4 TitreOrigine"> {{ origine.nom }} ? </h3>
-
-                    <img  id="ImgOrigine" class="col-xs-5 col-sm-5 col-md-5 col-lg-6" src="{{ asset(origine.media.path) }}">
-
-            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-offset-1 col-lg-5 DescriptionOrigine">
-            <p>{{ origine.description }}</p>
+            <div id="DivTitreContact" class="container white col-lg-12 padder-t2">
+                <h2 id="TitreContact" class="LigneTitre"><span class="LigneSpan">{{ origine.nom  }}</span></h2>
             </div>
-        </section>
-        {% else %}
-        <section class="col-xs-6 col-sm-6 col-md-6 col-lg-4 QuiOrigine">
-            <h3 class="col-xs-8 col-sm-8 col-md-8 col-lg-8 TitreOrigine"> {{ origine.nom }} ? </h3>
+        <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 QuiOrigine">
+            {#<h3 class="col-xs-4 col-sm-4 col-md-4 col-lg-4 TitreOrigine"> {{ origine.nom }} ? </h3>#}
 
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-2 col-lg-12 DescriptionOrigine">
+            <div class="col-lg-6">
+                <p col-xs-5 col-sm-5 col-md-5 col-lg-6>{{ origine.description }}</p>
+            </div>
+                <img id="ImgOrigine" class="col-xs-5 col-sm-5 col-md-5 col-lg-6" src="{{ asset(origine.media.path) }}">
+        </section>
+
+        {% else %}
+        <section class="col-xs-6 col-sm-6 col-md-6 col-lg-6 QuiOrigine2">
+            <div id="DivTitreContact" class="container white col-lg-12 padder-t2">
+                <h2 id="TitreContact" class="LigneTitre"><span class="LigneSpan">{{ origine.nom  }}</span></h2>
+            </div>
+            {#<h3 class="col-xs-8 col-sm-8 col-md-8 col-lg-8 TitreOrigine"> {{ origine.nom }} ? </h3>#}
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 DescriptionOrigine">
                 <p>{{ origine.description }}</p>
             </div>
         </section>
         {% endif %}
     {% endfor %}
-
-
-
 {% endblock %}
