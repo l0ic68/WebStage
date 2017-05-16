@@ -2,6 +2,9 @@
 {% block body %}
 
     {% for action in actions %}
+        <div id="DivTitreContact" class="container white col-lg-12 padder-t2">
+            <h2 id="TitreContact" class="LigneTitre"><span class="LigneSpan">Action réalisé</span></h2>
+        </div>
         <p>{{ action.nom }}</p>
         <p>{{ action.description }}</p>
         <p>{{ action.dateDebut| date() }}</p>

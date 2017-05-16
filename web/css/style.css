@@ -384,6 +384,12 @@ footer
     font-size: medium;
     border-radius: 10px;
 }
+
+.imageAccueil
+{
+    padding-top: 50px;
+    max-width: 400px;
+}
 /* -------------------- !Home Page! -------------------- */
 
 
