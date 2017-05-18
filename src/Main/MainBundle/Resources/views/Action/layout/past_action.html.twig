@@ -1,16 +1,26 @@
 {% extends "::layout/layout.html.twig" %}
 {% block body %}
 
-    {% for action in actions %}
+
         <div id="DivTitreContact" class="container white col-lg-12 padder-t2">
             <h2 id="TitreContact" class="LigneTitre"><span class="LigneSpan">Action réalisé</span></h2>
         </div>
-        <p>{{ action.nom }}</p>
-        <p>{{ action.description }}</p>
-        <p>{{ action.dateDebut| date() }}</p>
-        <p>{{ action.dateFin| date() }}</p>
-        <p>{{ action.cout }}</p>
-        <p>{{ action.recolte }}</p>
-        <p>{{ action.type }}</p>
-    {% endfor %}
+        {% for action in actions %}
+            <section class="col-lg-4">
+                <div class="pastAction">
+                        <img  class ="pastActionImg" src="{{ asset(action.media.path) }}">
+                    <p class="TitreAction">{{ action.nom[:50] }}</p>
+                    <p>{{ action.dateDebut| date() }}</p>
+                    <p>{{ action.description[:150] }}...</p>
+                    <p id="TitreContact" class="LigneTitre" style="padding: 10px"><span class="LigneSpan">Lire plus</span> </p>
+
+                    {#<p>{{ action.dateFin| date() }}</p>#}
+                    {#<p>{{ action.cout }}</p>#}
+                    {#<p>{{ action.recolte }}</p>#}
+                    {#<p>{{ action.type }}</p>#}
+                </div>
+            </section>
+        {% endfor %}
+
 {% endblock %}
+

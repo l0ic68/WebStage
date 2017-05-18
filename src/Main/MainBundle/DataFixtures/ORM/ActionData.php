@@ -29,6 +29,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action1->setDateFin(new \DateTime("15-04-2016"), new \DateTimeZone('Europe/Paris'));
         $action1->setRecolte(0);
         $action1->setType("Passée");
+        $action1->setMedia($this->getReference('equipe_groupe'));
         $manager->persist($action1);
 
         $action2 = new Action();
@@ -46,17 +47,27 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action2->setDateDebut(new \DateTime("01-01-2017"), new \DateTimeZone('Europe/Paris'));
         $action2->setDateFin(new \DateTime("31-12-2017"), new \DateTimeZone('Europe/Paris'));
         $action2->setRecolte(5000);
-        $action2->setType("En cours");
+        $action2->setType("Passée");
+        $action2->setMedia($this->getReference('kirkouk'));
         $manager->persist($action2);
 
         $action3 = new Action();
-        $action3->setNom("Construction d'une voiture");
-        $action3->setDescription("Nous souhaitons construire une voiture pour les enfants défavorisé");
+        $action3->setNom("Parrainage de 50 étudiants en Architecture et Ingénierie à Kirkuk");
+        $action3->setDescription("L’université de Kirkuk donne accès aux filières suivantes : 
+        médecine; pharmacie; dentaire; ingénierie et architecture. En 2015/2016, 
+        Mgr Yousif avait accueilli 400 étudiants.  La rentrée universitaire s’annonce avec un 
+        effectif plus important de 550 étudiants. Nous avons retenus pour une nouvelle action, 
+        de soutenir les étudiants en architectes. Nos métiers, et notre sensibilité n’y sont pas étranger ! 
+        L’opération va consister à financer leur hébergement à Kirkuk; cela représente un budget de 2000 euros 
+        par an et par étudiant, soit total de 100.000 €. Les capitaux pour les  25 premiers étudiants sont en place. 
+        Nous cherchons des parrainages pour  les autres 25 étudiants. Parrainer par exemple 2 étudiants vous coûte, 
+        avoir fiscal déduit de 66 %, 1360 €  (dans la limite de 20% du revenu imposable)");
         $action3->setCout(10000);
         $action3->setDateDebut(new \DateTime("08-05-2017"), new \DateTimeZone('Europe/Paris'));
         $action3->setDateFin(new \DateTime("08-05-2017"), new \DateTimeZone('Europe/Paris'));
         $action3->setRecolte(5000);
-        $action3->setType("Future");
+        $action3->setType("Passée");
+        $action3->setMedia($this->getReference('irakG_media'));
         $manager->persist($action3);
 
         $manager->flush();
