@@ -71,6 +71,12 @@ class Action
     private $type;
 
     /**
+     * @ORM\OneToOne(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist","remove"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $media;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -239,5 +245,28 @@ class Action
     public function getType()
     {
         return $this->type;
+    }
+
+    /**
+     * Set media
+     *
+     * @param \Main\MainBundle\Entity\Media $media
+     * @return Action
+     */
+    public function setMedia(\Main\MainBundle\Entity\Media $media)
+    {
+        $this->media = $media;
+
+        return $this;
+    }
+
+    /**
+     * Get media
+     *
+     * @return \Main\MainBundle\Entity\Media 
+     */
+    public function getMedia()
+    {
+        return $this->media;
     }
 }
