@@ -44,9 +44,9 @@
                 <!-- Modal -->
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 DivHomePage">
                     <h3 class="MotHomePage" > {{ entreprise.nom }} ? </h3>
-                    <div class="DescriptionHomePage" >
-                        <div class="text{{ loop.index }}">
-                            {{ entreprise.description[:250] }} </br>read more...
+                    <div class="text{{ loop.index }}">
+                        <div class="DescriptionHomePage" >
+                                {{ entreprise.description[:250] }} <p style="font-weight: bold; margin-top: 2%;">Lire plus...</p>
                         </div>
                     </div>
 
