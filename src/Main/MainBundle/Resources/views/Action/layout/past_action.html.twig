@@ -10,9 +10,9 @@
                 <div class="pastAction">
                         <img  class ="pastActionImg" src="{{ asset(action.media.path) }}">
                     <p class="TitreAction">{{ action.nom[:50] }}</p>
-                    <p>{{ action.dateDebut| date() }}</p>
-                    <p>{{ action.description[:150] }}...</p>
-                    <p id="TitreContact" class="LigneTitre" style="padding: 10px"><span class="LigneSpan">Lire plus</span> </p>
+                    <p class="DateAction">{{ action.dateDebut| date() }}</p>
+                    <p class="DescriptionAction">{{ action.description[:150] }}...</p>
+                    <p id="TitreContact" class="LigneTitre LirePlusAction" style="padding: 10px"><span class="LigneSpan">Lire plus</span> </p>
 
                     {#<p>{{ action.dateFin| date() }}</p>#}
                     {#<p>{{ action.cout }}</p>#}

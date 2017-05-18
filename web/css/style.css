@@ -778,7 +778,7 @@ button.close:hover
 }
 /* -------------------- !Contact! -------------------- */
 
-<<<<<<< HEAD
+
 
 
 /* -------------------- Partenaire -------------------- */
@@ -837,14 +837,15 @@ button.close:hover
     background-image: none;
 }
 /* -------------------- !Partenaire! -------------------- */
-=======
-/*---------------------  Action   -------------------- */
 
+
+
+/*---------------------  Action   -------------------- */
 .pastAction
 {
     display :flex;
     flex-direction: column;
-    /*border: 2px solid black ;*/
+
     background-color: rgb(235, 235, 235);
 }
 .pastActionImg
@@ -861,4 +862,19 @@ button.close:hover
     margin : 5%;
     text-align: center;
 }
->>>>>>> c3aea4d8fb0e679911d97727de3bfad7850800f5
+.DateAction
+{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 20px;
+}
+.DescriptionAction
+{
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+
+/*---------------------  !Action!   -------------------- */
