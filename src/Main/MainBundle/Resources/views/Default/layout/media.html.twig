@@ -4,13 +4,39 @@
         <h2 id="TitreContact" class="LigneTitre"><span class="LigneSpan">Galerie</span></h2>
     </div>
 <div id="Media" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2 BarreRechercheGalerie">
+            <div class="input-group">
+                <div class="input-group-btn search-panel">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span id="search_concept">Filtrer par</span> <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#contains">Contains</a></li>
+                        <li><a href="#its_equal">It's equal</a></li>
+                        <li><a href="#greather_than">Greather than ></a></li>
+                        <li><a href="#less_than">Less than < </a></li>
+                        <li class="divider"></li>
+                        <li><a href="#all">Anything</a></li>
+                    </ul>
+                </div>
+                <input type="hidden" name="search_param" value="all" id="search_param">
+                <input type="text" class="form-control" name="x" placeholder="Recherche...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </span>
+            </div>
+        </div>
+    </div>
+
     {% for media in medias %}
         <!-- Modal -->
-        <div id="DivImgMedia" class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-            <div id="ImgMedia" >
-                <div class="text{{ loop.index }}">
+        <div id="DivImgMedia" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+            <div id="ImgMedia" class="text{{ loop.index }}">
+                {#<div class="text{{ loop.index }}">#}
                      <img id="ImgMedia" src="{{ asset(media.path) }}">
-                </div>
+                {#</div>#}
             </div>
 
             <div class="modal fade " id="{{loop.index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
@@ -39,9 +65,11 @@
                 });
             });
         </script>
-
     {% endfor %}
+            <script src="{{ asset ('js/Media.js') }}"></script>
         {% endblock %}
         </div>
     {% endfor %}
+
+
 {% endblock %}

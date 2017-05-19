@@ -6,6 +6,7 @@
     position: relative;
     background-color: rgb(235, 235, 235);
     background-color: white;
+    padding-bottom: 40px;
 }
 
 html, body
@@ -216,6 +217,8 @@ footer
     width: 100%;
     position: absolute;
     bottom: 0px;
+    left: 0px!important;
+    right: 0px!important;
     box-shadow: 1px 1px 12px #555;
     vertical-align: middle;
     display: flex;
@@ -630,15 +633,21 @@ button.close:hover
     justify-content: center;
     align-items: center;
     box-shadow: 1px 1px 12px #555;
-    margin: 4%;
+    margin: 3%;
+    margin-left: 5.5%;
+    margin-right: 5%;
+    padding: 0px;
 }
 
 #ImgMedia
 {
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 85%;
     max-width: 300px;
     max-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #ImgModalMedia
 {
@@ -649,6 +658,11 @@ button.close:hover
     width:800px;
     /*height:600px;*/
 }
+
+#Media
+{
+    background-color: white;
+}
 @media screen and (max-width: 760px)
 {
     #Media
@@ -657,6 +671,12 @@ button.close:hover
         align-items: center;
         flex-direction: column;
     }
+}
+
+.BarreRechercheGalerie
+{
+    margin-bottom: 2%;
+
 }
 /* -------------------- !Media! -------------------- */
 
