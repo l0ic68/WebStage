@@ -582,6 +582,7 @@ button.close:hover
     justify-content: flex-start;
     align-items: center;
     padding: 3%;
+    padding-bottom: 0.5%;
     max-width: 100%
 }
 
@@ -591,6 +592,7 @@ button.close:hover
     justify-content: flex-end;
     align-items: center;
     padding: 3%;
+    padding-bottom: 1%;
     max-width: 100%
 }
 
@@ -791,6 +793,11 @@ button.close:hover
     background-color: rgb(1, 117, 217);
     border-color: rgb(1, 8, 217);
 }
+
+.inputGroupContainer
+{
+    padding-top: 0.5%;
+}
 /* -------------------- !Contact! -------------------- */
 
 
@@ -890,6 +897,9 @@ button.close:hover
     margin-right: 5%;
 }
 
-
+.LirePlusAction:hover
+{
+    box-shadow: 1px 1px 12px #555;
+}
 
 /*---------------------  !Action!   -------------------- */
