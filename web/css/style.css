@@ -222,17 +222,6 @@ footer
     background-color: white;
 }
 
-#testfooter
-{
-    box-shadow: 1px 1px 12px #555;
-    vertical-align: middle;
-    display: flex;
-    align-items: center;
-    z-index: 5;
-    background-color: white;
-    height: 40px;
-}
-
 footer, .push2
 {
     height: 40px;
