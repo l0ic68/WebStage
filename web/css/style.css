@@ -6,6 +6,7 @@
     position: relative;
     background-color: rgb(235, 235, 235);
     background-color: white;
+
 }
 
 html, body
@@ -115,8 +116,9 @@ header
 header, .push
 {
     height: 12vh;
-
 }
+
+
 
 .imgheader
 {
@@ -212,16 +214,17 @@ header, .push
 /* -------------------- Footer -------------------- */
 footer
 {
-    width: 100%;
-    height: 40px;
-    position: absolute;
-    bottom: 0px;
     box-shadow: 1px 1px 12px #555;
     vertical-align: middle;
     display: flex;
     align-items: center;
-    z-index: 2;
+    z-index: 5;
     background-color: white;
+}
+
+footer, .push2
+{
+    height: 40px;
 }
 
 #Mentions
@@ -390,6 +393,11 @@ footer
     border-radius: 10px;
 }
 
+.DescriptionHomePage:hover
+{
+    cursor:  pointer;
+}
+
 .imageAccueil
 {
     padding-top: 50px;
@@ -446,10 +454,11 @@ button.close:hover
 .close
 {
     text-shadow:none;
+    color: whitesmoke;
 }
 .close:hover
 {
-    color: whitesmoke;
+    color: black;
 }
 
 /* -------------------- !Home Page! -------------------- */
@@ -573,6 +582,7 @@ button.close:hover
     justify-content: flex-start;
     align-items: center;
     padding: 3%;
+    padding-bottom: 0.5%;
     max-width: 100%
 }
 
@@ -582,6 +592,7 @@ button.close:hover
     justify-content: flex-end;
     align-items: center;
     padding: 3%;
+    padding-bottom: 1%;
     max-width: 100%
 }
 
@@ -619,15 +630,21 @@ button.close:hover
     justify-content: center;
     align-items: center;
     box-shadow: 1px 1px 12px #555;
-    margin: 4%;
+    margin: 3%;
+    margin-left: 5.5%;
+    margin-right: 5%;
+    padding: 0px;
 }
 
 #ImgMedia
 {
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 85%;
     max-width: 300px;
     max-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #ImgModalMedia
 {
@@ -638,6 +655,11 @@ button.close:hover
     width:800px;
     /*height:600px;*/
 }
+
+#Media
+{
+    background-color: white;
+}
 @media screen and (max-width: 760px)
 {
     #Media
@@ -646,6 +668,12 @@ button.close:hover
         align-items: center;
         flex-direction: column;
     }
+}
+
+.BarreRechercheGalerie
+{
+    margin-bottom: 2%;
+
 }
 /* -------------------- !Media! -------------------- */
 
@@ -765,15 +793,81 @@ button.close:hover
     background-color: rgb(1, 117, 217);
     border-color: rgb(1, 8, 217);
 }
+
+.inputGroupContainer
+{
+    padding-top: 0.5%;
+}
 /* -------------------- !Contact! -------------------- */
 
-/*---------------------  Action   -------------------- */
 
+
+
+/* -------------------- Partenaire -------------------- */
+#Partner
+{
+
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-responsive
+{
+    max-width: 30%;
+    max-height: 30%;
+    margin: auto;
+
+}
+
+.ImgPartnerCenter
+{
+
+}
+
+.multi-item-carousel .carousel-inner > .item {
+    -webkit-transition: 500ms ease-in-out left;
+    transition: 500ms ease-in-out left;
+}
+.multi-item-carousel .carousel-inner .active.left {
+    left: -33%;
+}
+.multi-item-carousel .carousel-inner .active.right {
+    left: 33%;
+}
+.multi-item-carousel .carousel-inner .next {
+    left: 33%;
+}
+.multi-item-carousel .carousel-inner .prev {
+    left: -33%;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .multi-item-carousel .carousel-inner > .item {
+        -webkit-transition: 500ms ease-in-out left;
+        transition: 500ms ease-in-out left;
+        -webkit-transition: 500ms ease-in-out all;
+        transition: 500ms ease-in-out all;
+        -webkit-backface-visibility: visible;
+        backface-visibility: visible;
+        -webkit-transform: none!important;
+        transform: none!important;
+    }
+}
+.multi-item-carousel .carouse-control.left,
+.multi-item-carousel .carouse-control.right {
+    background-image: none;
+}
+/* -------------------- !Partenaire! -------------------- */
+
+
+
+/*---------------------  Action   -------------------- */
 .pastAction
 {
     display :flex;
     flex-direction: column;
-    /*border: 2px solid black ;*/
+
     background-color: rgb(235, 235, 235);
 }
 .pastActionImg
@@ -790,3 +884,22 @@ button.close:hover
     margin : 5%;
     text-align: center;
 }
+.DateAction
+{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 20px;
+}
+.DescriptionAction
+{
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.LirePlusAction:hover
+{
+    box-shadow: 1px 1px 12px #555;
+}
+
+/*---------------------  !Action!   -------------------- */

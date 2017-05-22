@@ -25,15 +25,15 @@ class ContactType extends AbstractType
                                           
             ->add('email', EmailType::class, array('label' => 'Email',
                                           'attr' => array('class' => 'input-medium search-query form-control',
-                                          'placeholder' => 'Email Adress',)))
+                                          'placeholder' => 'Adresse Email',)))
                                           
-            ->add('phone', 'text', array('label' => 'Telephone #',
+            ->add('phone', 'text', array('label' => 'Telephone',
                                           'attr' => array('class' => 'input-medium search-query form-control',
                                           'placeholder' => 'Telephone',)))
                                           
             ->add('message', 'textarea', array('label' => 'Message',
                                           'attr' => array('class' => 'input-medium search-query form-control',
-                                          'placeholder' => 'Your message',)))
+                                          'placeholder' => 'Votre message',)))
             ->add('Send', 'submit', array('label' => 'Envoyer',
                                           'attr' => array('class' => 'btn btn-danger raised',
                                           'placeholder' => 'Envoyer',)));
