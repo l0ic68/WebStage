@@ -32,13 +32,25 @@ class UserData extends AbstractFixture implements FixtureInterface, ContainerAwa
 //        $user_loic->setMedia($this->getReference('oulerich_loic'));
         $manager->persist($user_loic);
 
+        $user_Admin = new User();
+        $user_Admin->setRoles($role);
+        $user_Admin->setNom('Admin');
+        $user_Admin->setPrenom('Admin');
+        $user_Admin->setEmail('Admin');
+        $user_Admin->setPassword($this->container->get('security.encoder_factory')->getEncoder($user_Admin)->encodePassword('AdminLoad1', $user_Admin->getSalt()));
+        $user_Admin->setEnabled(1);
+//        $user_Admin->setMedia($this->getReference('Admin'));
+        $manager->persist($user_Admin);
+
+
         $manager->flush();
 
         $this->addReference('user_loic', $user_loic);
-
+        $this->addReference('user_Admin', $user_Admin);
     }
     public function getOrder()
     {
         return 2;
     }
+
 }
