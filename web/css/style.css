@@ -46,6 +46,12 @@ h5
    margin:0px;
 }
 
+.Titre
+{
+    color: whitesmoke;
+    text-align: center;
+}
+
 .LigneTitre
 {
     background:linear-gradient(
@@ -119,11 +125,26 @@ header, .push
 }
 
 
+@media only screen and (min-width: 1198px) and (max-width: 1400px) {
+   #TitreHeader
+   {
+       display: none!important;
+   }
+}
+
+@media only screen and (min-width: 1198px) and (max-width: 1300px) {
+   #DivHeader
+   {
+       width: 100%;
+   }
+}
+
 
 .imgheader
 {
     width: 80px;
     min-width: 80px;
+    /*margin-left: 40%;*/
 }
 
 #TitreHeader
@@ -147,7 +168,7 @@ header, .push
     }
 }
 
-#DivHeader
+#DivHeader      /* Centrage Menu */
 {
     display: flex;
     white-space: nowrap;
@@ -220,10 +241,6 @@ footer
     align-items: center;
     z-index: 5;
     background-color: white;
-}
-
-footer, .push2
-{
     height: 40px;
 }
 
@@ -398,6 +415,12 @@ footer, .push2
     cursor:  pointer;
 }
 
+.LirePlusHomePage
+{
+    font-weight: bold;
+    margin-top: 2%;
+}
+
 .imageAccueil
 {
     padding-top: 50px;
@@ -430,6 +453,7 @@ footer, .push2
     padding: 5%;
     text-align: center;
     font-size: 20px;
+    margin-top: 19.5%;
 }
 button.close
 {
@@ -804,21 +828,11 @@ button.close:hover
 
 
 /* -------------------- Partenaire -------------------- */
-#Partner
-{
-
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .img-responsive
 {
     max-width: 30%;
     max-height: 30%;
     margin: auto;
-
 }
 
 .ImgPartnerCenter
