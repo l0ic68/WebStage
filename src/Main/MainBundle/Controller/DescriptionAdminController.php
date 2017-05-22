@@ -2,13 +2,10 @@
 
 namespace Main\MainBundle\Controller;
 
-use Main\MainBundle\Entity\Description;
-use Main\MainBundle\Form\description\OriginesAdminType;
 use Main\MainBundle\Form\DescriptionAdminType;
 use Main\MainBundle\Form\MediaAdminType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\EventDispatcher\Event;
 
 /**
  * DescriptionAdmin controller.
@@ -18,8 +15,6 @@ class DescriptionAdminController extends Controller
 {
     public function OriginesAction(Request $request)
     {
-
-//        $formTypeB = new DescriptionAdminType();
         $em = $this->getDoctrine()->getManager();
         $description1 = $em->getRepository('MainBundle:Description')->find('5');
         $description2 = $em->getRepository('MainBundle:Description')->find('7');
@@ -73,21 +68,77 @@ class DescriptionAdminController extends Controller
         ));
     }
 
-    public function LieuAction()
+    public function LieuAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $lieux = $em->getRepository('MainBundle:Description')->findByPage('lieu');
-        return $this->render('MainBundle:Description:layout\lieu.html.twig',array('lieux'=> $lieux));
+        $lieu1 = $em->getRepository('MainBundle:Description')->find('9');
+        $lieu2 = $em->getRepository('MainBundle:Description')->find('10');
+
+
+        $formTypeA = new DescriptionAdminType();
+        $formTypeB = new DescriptionAdminType();
+
+        $form1 = $this->get('form.factory')->createNamedBuilder('form1name',$formTypeA,$lieu1)
+            ->getForm();
+        $form2 = $this->get('form.factory')->createNamedBuilder('form2name',$formTypeB,$lieu2)
+            ->getForm();
+
+        if('POST' === $request->getMethod()) {
+            if ($request->request->has('form1name')) {
+                $form1->handleRequest($request);
+                if ($form1->isValid()) {
+                    // On l'enregistre notre objet $advert dans la base de données, par exemple
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($lieu1);
+                    $em->flush();
+                }
+            }
+            if ($request->request->has('form2name')) {
+                $form2->handleRequest($request);
+                if ($form2->isValid()) {
+                    // On l'enregistre notre objet $advert dans la base de données, par exemple
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($lieu2);
+                    $em->flush();
+                }
+            }
+        }
+
+        return $this->render('MainBundle:Admin:description\lieu.html.twig', array(
+            'form1' => $form1->createView(),
+            'form2' => $form2->createView(),
+        ));
     }
 
-    public function ObjectifAction()
+    public function ObjectifAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $objectifs = $em->getRepository('MainBundle:Description')->findByPage('objectif');
-        return $this->render('MainBundle:Description:layout\objectif.html.twig',array('objectifs'=> $objectifs));
+        $objectif = $em->getRepository('MainBundle:Description')->find('11');
+
+
+        $formTypeA = new DescriptionAdminType();
+
+        $form1 = $this->get('form.factory')->createNamedBuilder('form1name',$formTypeA,$objectif)
+            ->getForm();
+
+        if('POST' === $request->getMethod()) {
+            if ($request->request->has('form1name')) {
+                $form1->handleRequest($request);
+                if ($form1->isValid()) {
+                    // On l'enregistre notre objet $advert dans la base de données, par exemple
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($objectif);
+                    $em->flush();
+                }
+            }
+        }
+
+        return $this->render('MainBundle:Admin:description\objectif.html.twig', array(
+            'form1' => $form1->createView(),
+        ));
     }
 
-    public function MembresAction()
+    public function MembresAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $membres = $em->getRepository('MainBundle:Membres')->findAll();

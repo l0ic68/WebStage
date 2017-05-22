@@ -71,7 +71,7 @@ class Action
     private $type;
 
     /**
-     * @ORM\OneToOne(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist","remove"})
+     * @ORM\ManyToMany(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist"})
      * @ORM\JoinColumn(nullable=false)
      */
     private $media;
@@ -268,5 +268,35 @@ class Action
     public function getMedia()
     {
         return $this->media;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->media = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add media
+     *
+     * @param \Main\MainBundle\Entity\Media $media
+     * @return Action
+     */
+    public function addMedia(\Main\MainBundle\Entity\Media $media)
+    {
+        $this->media[] = $media;
+
+        return $this;
+    }
+
+    /**
+     * Remove media
+     *
+     * @param \Main\MainBundle\Entity\Media $media
+     */
+    public function removeMedia(\Main\MainBundle\Entity\Media $media)
+    {
+        $this->media->removeElement($media);
     }
 }

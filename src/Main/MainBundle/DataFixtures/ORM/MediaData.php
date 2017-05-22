@@ -84,6 +84,8 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $kirkouk->setUrl('kirkouk.png');
         $manager->persist($kirkouk);
 
+
+
         $manager->flush();
 
         $this->addReference('email',$email);

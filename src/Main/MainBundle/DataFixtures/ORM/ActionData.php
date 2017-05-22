@@ -29,7 +29,9 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action1->setDateFin(new \DateTime("15-04-2016"), new \DateTimeZone('Europe/Paris'));
         $action1->setRecolte(0);
         $action1->setType("Passée");
-        $action1->setMedia($this->getReference('equipe_groupe'));
+        $action1->addMedia($this->getReference('equipe_groupe'));
+        $action1->addMedia($this->getReference('kirkouk'));
+        $action1->addMedia($this->getReference('irakG_media'));
         $manager->persist($action1);
 
         $action2 = new Action();
@@ -48,7 +50,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action2->setDateFin(new \DateTime("31-12-2017"), new \DateTimeZone('Europe/Paris'));
         $action2->setRecolte(5000);
         $action2->setType("Passée");
-        $action2->setMedia($this->getReference('kirkouk'));
+//        $action2->addMedia($this->getReference('kirkouk'));
         $manager->persist($action2);
 
         $action3 = new Action();
@@ -67,7 +69,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action3->setDateFin(new \DateTime("08-05-2017"), new \DateTimeZone('Europe/Paris'));
         $action3->setRecolte(5000);
         $action3->setType("Passée");
-        $action3->setMedia($this->getReference('irakG_media'));
+//        $action3->addMedia($this->getReference('irakG_media'));
         $manager->persist($action3);
 
         $manager->flush();
