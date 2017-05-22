@@ -137,6 +137,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         Suspendisse mauris ligula, fermentum sit amet dapibus non, gravida id sapien. Vestibulum imperdiet mauris elit, 
         quis ornare massa cursus eget.");
         $objectif->setPage("objectif");
+        $objectif->setMedia($this->getReference('carouselMedia1'));
         $manager->persist($objectif);
 
 

@@ -11,38 +11,32 @@ use Symfony\Component\HttpFoundation\Request;
 
 class TestController extends Controller
 {
-    public function testAction(Request $request)
+    public function multiformAction(Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
-        $origine1 = $em->getRepository('MainBundle:Description')->findOneById('5');
-        $form1 = $this->createForm(new OriginesAdminType(), $origine1);
-        $form1->handleRequest($request);
-        if ($form1->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($origine1);
-            $em->flush();
-            return $this->redirectToRoute('originesAdmin');
-        }
-        return $this->render('MainBundle:Admin:description\form\form1.html.twig', array(
-            'form1' => $form1->createView(),
-        ));
+        $formTypeA = new DescriptionAdminType();
+        $formTypeB = new DescriptionAdminType();
+        $form1 = $this->get('form.factory')->createNamedBuilder($formTypeA, 'form1name')
+            ->add('foo', 'text')
+            ->getForm();
+
+        $form2 = $this->get('form.factory')->createNamedBuilder($formTypeB, 'form2name')
+            ->add('bar', 'text')
+            ->getForm();
+
+        if('POST' === $request->getMethod()) {
+
+            if ($request->request->has('form1name')) {
+                // handle the first form
+            }
+
+            if ($request->request->has('form2name')) {
+                // handle the second form
+            }
     }
 
-    public function test2Action(Request $request)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $origine2 = $em->getRepository('MainBundle:Description')->findOneById('7');
-        $form2 = $this->createForm(new OriginesAdminType(), $origine2);
-        $form2->handleRequest($request);
-        if ($form2->isSubmitted() && $form2->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($origine2);
-            $em->flush();
-            return $this->redirectToRoute('originesAdmin');
-
-        }
-        return $this->render('MainBundle:Admin:description\form\form2.html.twig', array(
-            'form2' => $form2->createView(),
-        ));
+        return array(
+            'form1' => $form1->createView(),
+            'form2' => $form2->createView()
+        );
     }
 }

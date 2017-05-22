@@ -1,0 +1,12 @@
+.TitreAdmin
+{
+    color: black;
+    text-align: center;
+}
+.DescriptionAdmin
+{
+    width: 589px;
+    height: 170px;
+    /*width: 100%;*/
+    /*height: 100%;*/
+}

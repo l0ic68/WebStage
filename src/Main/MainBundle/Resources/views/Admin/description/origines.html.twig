@@ -1,8 +1,42 @@
-{% extends "::layout/layout.html.twig" %}
+{% extends "::adminLayout/layout.html.twig" %}
 
 {% block body %}
 
-{% render(controller('MainBundle:Test:test')) %}
-{% render(controller('MainBundle:Test:test2')) %}
+    <div id="DivTitreContact" class="container white col-lg-12 padder-t2">
+        {{ form_start(form1) }}
+        <h2 id="TitreContact" class="LigneTitre"><span class="LigneSpan">   {{ form_widget(form1.nom) }}</span></h2>
+    </div>
+    <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 QuiOrigine">
+        <div class="col-lg-6">
+            {{ form_widget(form1.description) }}
+            <input type="submit" value="Modifier" />
+        </div>
+        <img id="ImgOrigine" class="col-xs-5 col-sm-5 col-md-5 col-lg-6" src="{{ asset("img/1.jpg") }}">
 
+        {{ form_end(form1) }}
+    </section>
+
+    <section class="col-xs-6 col-sm-6 col-md-6 col-lg-6 QuiOrigine2">
+        {{ form_start(form2) }}
+        <div id="DivTitreContact" class="container white col-lg-12 padder-t2">
+            <h2 id="TitreContact" class="LigneTitre"><span class="LigneSpan">{{ form_widget(form2.nom) }}</span></h2>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 DescriptionOrigine">
+            <p>{{ form_widget(form2.description) }}</p>
+        </div>
+        <input type="submit" value="Modifier" />
+        {{ form_end(form2) }}
+    </section>
+
+    <section class="col-xs-6 col-sm-6 col-md-6 col-lg-6 QuiOrigine2">
+        {{ form_start(form3) }}
+        <div id="DivTitreContact" class="container white col-lg-12 padder-t2">
+            <h2 id="TitreContact" class="LigneTitre"><span class="LigneSpan">{{ form_widget(form3.nom) }}</span></h2>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 DescriptionOrigine">
+            <p>{{ form_widget(form3.description) }}</p>
+        </div>
+        <input type="submit" value="Modifier" />
+        {{ form_end(form3) }}
+    </section>
 {% endblock %}
