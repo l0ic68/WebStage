@@ -76,11 +76,7 @@ contact:
     requirements:
             _method:  GET|POST
 
-<<<<<<< HEAD
 searchMedia:
     pattern: /searchMedia
     defaults: { _controller: MainBundle:Default:searchmedia }
-
-=======
->>>>>>> origin/master
 
