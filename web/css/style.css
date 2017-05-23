@@ -145,14 +145,6 @@ header, .push
     height: 12vh;
 }
 
-
-@media only screen and (min-width: 1198px) and (max-width: 1400px) {
-   #TitreHeader
-   {
-       display: none!important;
-   }
-}
-
 @media only screen and (min-width: 1198px) and (max-width: 1300px) {
    #DivHeader
    {
@@ -181,11 +173,40 @@ header, .push
     color: rgb(1, 167, 217)
 }
 
+@media only screen and (min-width: 1198px) and (max-width: 1400px) {
+    #TitreHeader
+    {
+        display: none!important;
+    }
+}
+
 @media screen and (max-width: 760px)
 {
     #TitreHeader
     {
         margin: auto;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    #TitreHeader
+    {
+        display: flex;
+        justify-content: center;
+        font-size: large;
+        padding: 0px;
+    }
+
+    .imgheader
+    {
+        width: 60px!important;
+        min-width: 60px!important;
+    }
+
+    .push
+    {
+        height: 13vh;
     }
 }
 
@@ -771,7 +792,7 @@ button.close:hover
 
 
 /* -------------------- Don -------------------- */
-#Don
+.Don
 {
     display: flex;
     justify-content: center;
@@ -780,7 +801,7 @@ button.close:hover
     margin-bottom: 1%;
 }
 
-#TitreDon
+.TitreDon
 {
     text-align: center;
     border: 3px black solid;
@@ -810,6 +831,20 @@ button.close:hover
     justify-content: center;
     text-align: center;
     padding: 3%;
+}
+
+@media screen and (max-width: 1000px)
+{
+    #Payment
+    {
+        flex-direction: column;
+    }
+
+    .DivImageDon
+    {
+        margin-bottom: 10%;
+    }
+
 }
 
 .NomDon

@@ -1,24 +1,24 @@
 {% extends "::layout/layout.html.twig" %}
 {% block body %}
 
-    <div id="DivTitreContact" class="container white col-lg-12 padder-t2">
-        <h2 id="TitreContact" class="LigneTitre"><span class="LigneSpan">Don</span></h2>
+    <div class="container white col-lg-12 padder-t2 DivTitre">
+        <h2 class="LigneTitre Titre"><span class="LigneSpan">Don</span></h2>
     </div>
 
     {% for don in dons %}
-        <section id="Don" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-            <div id="DescriptionDon" class="col-xs-9 col-sm-9 col-md-9 col-lg-10">
+        <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 Don">
+            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-10 DescriptionDon">
                 <p>{{ don.description }}</p>
             </div>
         </section>
     {% endfor %}
 
     <section id="Payment" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-        <div class="DivImageDon col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+        <div class="DivImageDon col-xs-4 col-sm-4 col-md-2 col-lg-2 ">
             <p class="NomDon">PayPal</p>
             <i class="fa fa-paypal fa-5x" aria-hidden="true"></i>
         </div>
-        <div class="DivImageDon col-xs-offset-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 col-xs-2 col-sm-2 col-md-2 col-lg-2 ">
+        <div class="DivImageDon col-md-offset-2 col-lg-offset-2 col-xs-4 col-sm-4 col-md-2 col-lg-2 ">
             <p class="NomDon">Crowdfounding</p>
             <i class="fa fa-university fa-5x" aria-hidden="true"></i>
         </div>
