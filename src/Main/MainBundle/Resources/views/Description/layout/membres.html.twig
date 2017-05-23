@@ -1,6 +1,6 @@
 {% extends "::layout/layout.html.twig" %}
 {% block body %}
-    <div class="DivTitre" class="col-lg-12">
+    <div class="col-lg-12 DivTitre">
         <h2 class="LigneTitre Titre"><span class="LigneSpan">Membres de l'association</span></h2>
     </div>
 {% set t = 0 %}
@@ -10,7 +10,7 @@
                 <figure class="col-xs-12 col-sm-12 col-md-2 col-lg-2 DescriptionMembre">
                     <img class="ImgMembres" src="{{ asset(membre.media.path) }}" >
                     <figcaption class="DescriptionPhotoMembres">
-                        <p>{{ membre.nom }} {{ membre.prenom }}</p>
+                        <h6>{{ membre.nom }} {{ membre.prenom }}</h6>
                     </figcaption>
                 </figure>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-7 DescriptionMembre">
@@ -23,7 +23,7 @@
                 <figure class="col-xs-12 col-sm-12 col-md-2 col-lg-2 figure1">
                     <img class="ImgMembres" src="{{ asset(membre.media.path) }}" >
                     <figcaption class="DescriptionPhotoMembres">
-                        <p>{{ membre.nom }} {{ membre.prenom }}</p>
+                        <h6>{{ membre.nom }} {{ membre.prenom }}</h6>
                     </figcaption>
                 </figure>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-7 DescriptionMembre2">
@@ -32,7 +32,7 @@
                 <figure class="col-xs-12 col-sm-12 col-md-2 col-lg-2 figure2">
                     <img class="ImgMembres" src="{{ asset(membre.media.path) }}" >
                     <figcaption class="DescriptionPhotoMembres">
-                        <p>{{ membre.nom }} {{ membre.prenom }}</p>
+                        <h6>{{ membre.nom }} {{ membre.prenom }}</h6>
                     </figcaption>
                 </figure>
             </section>
