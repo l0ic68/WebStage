@@ -3,7 +3,7 @@
 namespace Main\MainBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Main\MainBundle\Entity\Contact;
 use Main\MainBundle\Entity\Carousel;
 use Main\MainBundle\Form\ContactType;
@@ -28,26 +28,17 @@ class DefaultController extends Controller
     public function searchMediaAction()
     {
         $request = $this->container->get('request');
-        $em = $this->getDoctrine()->getManager();
-
-        if($request->isXmlHttpRequest())
-        {
         $text = $request->query->get('text');
+        $em = $this->getDoctrine()->getManager();
+        $medias = $em->getRepository('MainBundle:Media')->findByUrl($text);
 
-        $medias = $em->getRepository('MainBundle:Media')->findByUrl();
+            $content = $this->RenderView('MainBundle:Default:layout\test.html.twig', array(
+                'medias' => $medias,
+            ));
 
-        $data = ["recherche" => $medias];
-
-        $response = new Response(json_encode($data));
-        $response->headers->set('Content-Type', 'application/json');
-
+        $response = new JsonResponse();
+        $response->setData(array('classifiedList' => $content));
         return $response;
-        }
-
-        /*else
-        {
-            return new Response("Erreur");
-        }*/
     }
     public function NewsAction()
     {

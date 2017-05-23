@@ -1,0 +1,42 @@
+<div class="boucle">
+{% for media in medias %}
+<!-- Modal -->
+<div id="DivImgMedia" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
+    <div id="ImgMedia" class="text{{ loop.index }} test">
+        {#<div class="text{{ loop.index }}">#}
+        <img id="ImgMedia" src="{{ asset(media.path) }}">
+        {#</div>#}
+    </div>
+
+    <div class="modal fade " id="{{loop.index}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="modalTextHomepage"><span aria-hidden="true">    <i class="fa fa-arrow-left" aria-hidden="true"></i>     Retour</span></div>
+        </button>
+        <div class="modal-dialog" role="document">
+
+            <div class="modal-content modalMedia">
+                <div class="modal-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h3 id="TitreContact" class="LigneTitre"><span class="LigneSpan">Image </span></h3>
+                </div>
+                <div style="margin-top: 19.5%;"></div>
+                <div class="modal-body TextModalHomepage">
+                    <img id="ImgModalMedia" src="{{ asset(media.path) }}">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% block javascripts %}
+        {% for media in medias %}
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".text{{ loop.index }}").click(function(){
+                    $("#{{ loop.index }}").modal('show');
+                });
+            });
+        </script>
+        {% endfor %}
+    {% endblock %}
+</div>
+{% endfor %}
+</div>
