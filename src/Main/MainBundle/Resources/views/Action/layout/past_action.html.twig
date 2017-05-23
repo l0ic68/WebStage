@@ -1,16 +1,16 @@
 {% extends "::layout/layout.html.twig" %}
 {% block body %}
-        <div id="DivTitreContact" class="container white col-lg-12 padder-t2">
-            <h2 id="TitreContact" class="LigneTitre"><span class="LigneSpan">Action réalisé</span></h2>
+        <div class="container white col-lg-12 padder-t2 DivTitre">
+            <h2 class="LigneTitre Titre"><span class="LigneSpan">Action réalisé</span></h2>
         </div>
         {% for action in actions %}
-            <section class="col-lg-4">
+            <section class="col-lg-4 ActionRealise">
                 <div class="pastAction">
                         {#<img  class ="pastActionImg" src="{{ asset(action.media.path) }}">#}
                     <p class="TitreAction">{{ action.nom[:50] }}</p>
                     <p class="DateAction">{{ action.dateDebut| date() }}</p>
                     <p class="DescriptionAction">{{ action.description[:150] }}...</p>
-                    <p id="TitreContact" class="LigneTitre LirePlusAction" style="padding: 10px"><span class="LigneSpan">Lire plus</span> </p>
+                    <p class="Titre LigneTitre LirePlusAction" style="padding: 10px"><span class="LigneSpan">Lire plus</span> </p>
 
                     {#<p>{{ action.dateFin| date() }}</p>#}
                     {#<p>{{ action.cout }}</p>#}

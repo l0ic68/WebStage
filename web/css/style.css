@@ -49,8 +49,29 @@ h5
 .Titre
 {
     color: whitesmoke;
-    text-align: center;
+    text-align: center!important;
 }
+
+.DivTitre
+{
+    background-color: rgb(1, 117, 217);
+    padding: 2%;
+    margin-bottom: 3%;
+}
+
+@media only screen and (min-width: 765px) and (max-width: 850px) {
+    .DivTitre
+    {
+        width: 650px;
+    }
+}
+
+.Description
+{
+    text-align: justify;
+    padding-right: 5%;
+}
+
 
 .LigneTitre
 {
@@ -499,6 +520,21 @@ button.close:hover
     margin-bottom: 3%;
 }
 
+@media screen and (max-width: 1000px)
+{
+    .QuiOrigine
+    {
+       flex-direction: column;
+    }
+
+    .Description
+    {
+        margin: 2%;
+    }
+}
+
+
+
 .QuiOrigine2
 {
     display: flex;
@@ -515,16 +551,16 @@ button.close:hover
     white-space: nowrap;
 }
 
-#ImgOrigine
+.ImgOrigine
 {
-    width: 450px;
+    max-width: 450px;
+    width: 70%;
 }
 
 .DescriptionOrigine
 {
     text-align: justify;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-right: 5%;
 }
 
 /* -------------------- !Origines! -------------------- */
@@ -532,17 +568,20 @@ button.close:hover
 
 
 /* -------------------- Lieu -------------------- */
-#IrakLieu
+.IrakLieu
 {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    margin: 3%;
-    margin-top: 5%;
-    margin-bottom: 10%;
+    align-items: center;
+    margin-bottom: 3%;
 }
-
+@media screen and (max-width: 1000px)
+{
+    .IrakLieu
+    {
+        flex-direction: column;
+    }
+}
 
 #TitreLieu
 {
@@ -553,11 +592,10 @@ button.close:hover
     white-space: nowrap;
 }
 
-#ImgLieu
+.ImgLieu
 {
-    width: 25%;
-    position: absolute;
-    right: 10%;
+    max-width: 350px;
+    width: 70%;
 }
 /* -------------------- !Lieu! -------------------- */
 
@@ -572,14 +610,6 @@ button.close:hover
     flex-direction: column;
     margin: 3%;
 
-}
-
-#TitreObjectif
-{
-    text-align: center;
-    border: 3px black solid;
-    padding: 1%;
-    white-space: nowrap;
 }
 
 /* -------------------- !Objectifs! -------------------- */
@@ -619,6 +649,43 @@ button.close:hover
     padding-bottom: 1%;
     max-width: 100%
 }
+.figure1
+{
+    display: none;
+}
+
+@media screen and (max-width: 1000px)
+{
+    .Membres
+    {
+        flex-direction: column;
+    }
+
+    .Membres2
+    {
+        flex-direction: column;
+    }
+
+    .figure1
+    {
+        display: inline;
+    }
+
+    .figure2
+    {
+        display: none;
+    }
+
+    .Membres, .Membres2
+    {
+        margin-bottom: 5%;
+    }
+
+    .DescriptionMembre, .DescriptionMembre2
+    {
+        text-align: center!important;
+    }
+}
 
 .ImgMembres
 {
@@ -636,7 +703,7 @@ button.close:hover
     text-align: right;
 }
 
-#DescriptionPhotoMembres
+.DescriptionPhotoMembres
 {
     text-align: center;
 }
@@ -881,7 +948,6 @@ button.close:hover
 {
     display :flex;
     flex-direction: column;
-
     background-color: rgb(235, 235, 235);
 }
 .pastActionImg
@@ -914,6 +980,15 @@ button.close:hover
 .LirePlusAction:hover
 {
     box-shadow: 1px 1px 12px #555;
+}
+
+@media screen and (max-width: 1000px)
+{
+    .ActionRealise
+    {
+        margin-bottom: 6%;
+    }
+
 }
 
 /*---------------------  !Action!   -------------------- */

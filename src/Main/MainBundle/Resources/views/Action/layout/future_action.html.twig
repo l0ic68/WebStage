@@ -1,7 +1,7 @@
 {% extends "::layout/layout.html.twig" %}
 {% block body %}
-    <div id="DivTitreContact" class="container white col-lg-12 padder-t2">
-        <h2 id="TitreContact" class="LigneTitre"><span class="LigneSpan">Action futur</span></h2>
+    <div class="container white col-lg-12 padder-t2 DivTitre">
+        <h2 class="LigneTitre Titre"><span class="LigneSpan">Action futur</span></h2>
     </div>
     {% for action in actions %}
         <p>{{ action.nom }}</p>

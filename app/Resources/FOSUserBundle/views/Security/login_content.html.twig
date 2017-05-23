@@ -1,13 +1,13 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
  <!-- Add New -->
-<div id="DivTitreContact" class="container white col-lg-12 padder-t2">
-    <h2 id="TitreContact" class="LigneTitre"><span class="LigneSpan">Connexion</span></h2>
+<div class="container white col-lg-12 padder-t2 DivTitre">
+    <h2 class="LigneTitre Titre"><span class="LigneSpan">Connexion</span></h2>
 </div>
     <div class="container white">
         <div class="row">
             <div class="container white percent100">
-                <div class="col-lg-12">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="padder-t2">
                         <div class="horiz-divider"></div>
                     </div>
@@ -16,7 +16,7 @@
         </div>
         <div class="row">
             <div class="container white percent100">
-                <div class="col-lg-12">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="padder-t2 text-center">
                         {% if error %}
                             <div class="padder-t2 padder-b2 col-10 col-sm-8 col-md-6 col-lg-4 offset-lg-4 offset-md-3 offset-sm-2 offset-1 error">{{ error.message|trans({},'messages') }}</div>
@@ -27,7 +27,7 @@
         </div>
         <div class="row padder-t padder-b">
             <div class="container white">
-                <div class="col-lg-12">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <!-- Form -->
                     <form action="{{ path("fos_user_security_check") }}" method="post" class="form-horizontal" id="contact_form">
                         {% if csrf_token %}
@@ -37,10 +37,10 @@
                             <!-- Text input Email -->
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col-md-4 col-lg-4">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                         <label class="control-label pull-right" for="username"><h4>{{ 'Email'|trans }}</h4></label>
                                     </div>
-                                    <div class="col-md-4 col-lg-4 inputGroupContainer">
+                                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 inputGroupContainer">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                                             <!-- twig: WIDGET -->
@@ -52,10 +52,10 @@
                             <!-- Text input-->
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col-md-4 col-lg-4">
+                                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                         <label class="control-label pull-right" for="password" ><h4>{{ 'Mot de passe'|trans }}</h4></label>
                                     </div>
-                                    <div class="col-md-4 col-lg-4 inputGroupContainer">
+                                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 inputGroupContainer">
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-unlock"></i></span>
                                             <input class="form-control" name="_password" type="password" placeholder="••••••••" id="password">
@@ -64,8 +64,8 @@
                                 </div>
                             </div>
                             <div class="row padder-b2" style="padding-bottom: 2%;">
-                                <div class="col-md-4 col-lg-4"></div>
-                                <div class="col-md-4 col-lg-4 inputGroupContainer">
+                                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+                                <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 inputGroupContainer">
                                     <label class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" name="_remember_me">
                                         <span>{{ 'Se souvenir de moi' | trans}}</span>
@@ -79,8 +79,8 @@
                             <!-- Button -->
                             <div class="form-group">
                                 <div class="row">
-                                    <label class="col-md-4 col-lg-4 control-label"></label>
-                                    <div class="col-md-4 col-lg-4">
+                                    <label class="col-xs-4 col-sm-4 col-md-4 col-lg-4 control-label"></label>
+                                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
                                         <button type="submit" class="btn btn-danger raised" value="{{ 'security.login.submit'|trans }}">Connexion <i class="fa fa-sign-in"></i></button>
                                     </div>
                                 </div>
