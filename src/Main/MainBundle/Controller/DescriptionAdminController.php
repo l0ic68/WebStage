@@ -16,9 +16,9 @@ class DescriptionAdminController extends Controller
     public function OriginesAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $description1 = $em->getRepository('MainBundle:Description')->find('5');
-        $description2 = $em->getRepository('MainBundle:Description')->find('7');
-        $description3 = $em->getRepository('MainBundle:Description')->find('8');
+        $description1 = $em->getRepository('MainBundle:Description')->findOneByOrdre('5');
+        $description2 = $em->getRepository('MainBundle:Description')->findOneByOrdre('7');
+        $description3 = $em->getRepository('MainBundle:Description')->findOneByOrdre('8');
 
         $formTypeA = new DescriptionAdminType();
         $formTypeB = new DescriptionAdminType();
@@ -71,8 +71,8 @@ class DescriptionAdminController extends Controller
     public function LieuAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $lieu1 = $em->getRepository('MainBundle:Description')->find('9');
-        $lieu2 = $em->getRepository('MainBundle:Description')->find('10');
+        $lieu1 = $em->getRepository('MainBundle:Description')->findOneByOrdre('9');
+        $lieu2 = $em->getRepository('MainBundle:Description')->findOneByOrdre('10');
 
 
         $formTypeA = new DescriptionAdminType();
@@ -113,7 +113,7 @@ class DescriptionAdminController extends Controller
     public function ObjectifAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $objectif = $em->getRepository('MainBundle:Description')->find('11');
+        $objectif = $em->getRepository('MainBundle:Description')->findOneByOrdre('11');
 
 
         $formTypeA = new DescriptionAdminType();

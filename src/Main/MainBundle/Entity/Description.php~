@@ -49,6 +49,12 @@ class Description
     private $media;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="ordre", type="integer")
+     */
+    private $ordre;
+    /**
      * Get id
      *
      * @return integer 

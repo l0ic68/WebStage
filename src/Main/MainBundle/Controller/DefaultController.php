@@ -3,6 +3,7 @@
 namespace Main\MainBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 use Main\MainBundle\Entity\Contact;
 use Main\MainBundle\Entity\Carousel;
 use Main\MainBundle\Form\ContactType;
@@ -24,7 +25,30 @@ class DefaultController extends Controller
         $medias = $em->getRepository('MainBundle:Media')->findall();
         return $this->render('MainBundle:Default:layout\media.html.twig',array('medias'=> $medias));
     }
+    public function searchMediaAction()
+    {
+        $request = $this->container->get('request');
+        $em = $this->getDoctrine()->getManager();
 
+        if($request->isXmlHttpRequest())
+        {
+        $text = $request->query->get('text');
+
+        $medias = $em->getRepository('MainBundle:Media')->findByUrl();
+
+        $data = ["recherche" => $medias];
+
+        $response = new Response(json_encode($data));
+        $response->headers->set('Content-Type', 'application/json');
+
+        return $response;
+        }
+
+        /*else
+        {
+            return new Response("Erreur");
+        }*/
+    }
     public function NewsAction()
     {
         $em = $this->getDoctrine()->getManager();

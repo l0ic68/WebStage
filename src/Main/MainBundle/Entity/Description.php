@@ -49,6 +49,12 @@ class Description
     private $media;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="ordre", type="integer")
+     */
+    private $ordre;
+    /**
      * Get id
      *
      * @return integer 
@@ -148,5 +154,28 @@ class Description
     public function getMedia()
     {
         return $this->media;
+    }
+
+    /**
+     * Set ordre
+     *
+     * @param integer $ordre
+     * @return Description
+     */
+    public function setOrdre($ordre)
+    {
+        $this->ordre = $ordre;
+
+        return $this;
+    }
+
+    /**
+     * Get ordre
+     *
+     * @return integer 
+     */
+    public function getOrdre()
+    {
+        return $this->ordre;
     }
 }

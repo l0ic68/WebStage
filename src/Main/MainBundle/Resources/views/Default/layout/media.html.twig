@@ -67,6 +67,36 @@
         </script>
     {% endfor %}
             <script src="{{ asset ('js/Media.js') }}"></script>
+        {% block javascripts %}
+            <script type="text/javascript">
+                $(function(){
+                    $('.search').on('keyup', function(e)
+                    {
+                        if(e.keyCode == 13) //appui sur la touche entrée
+                        {
+                            var event_id = $(this).attr("id"); // get l'id de l'input
+                            var comment = $(this).val();        // get la valeur du champ
+
+                            $.ajax({
+                                type: "GET",
+                                url: "{{ path('addcomment') }}",
+                                cache: false,
+                                data: {event_id: event_id, text: comment},
+                            }).done(function(data)
+                            {
+                                alert("Comment added"); // debug
+                                console.log(data);      // debug
+
+                                $('#comments').prepend("<div class=\"row comment\"><div class=\"col-lg-2\">"+data['user']+"</div><div class=\"col-lg-10 textComment\">"+data['comment']+"</div><div class=\"row\"><p class=\"col-lg-3 date\">"+data['date']+"</p></div></div>"); //fonction d'affichage pour la div
+
+                                $('.search').val("");
+                            });
+                        }
+                    });
+                });
+
+            </script>
+        {% endblock %}
         {% endblock %}
         </div>
     {% endfor %}

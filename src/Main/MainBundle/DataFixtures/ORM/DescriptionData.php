@@ -25,6 +25,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
           Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyler  a décidé avec quelques amis de créer début 2016 
           une association dénommée  « Aux porteurs de lumière-solidarité Irak ».");
         $qui->setPage("accueil");
+        $qui->setOrdre("1");
         $manager->persist($qui);
 
         $ou = new Description();
@@ -37,6 +38,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         Suspendisse mauris ligula, fermentum sit amet dapibus non, gravida id sapien. Vestibulum imperdiet mauris elit, 
         quis ornare massa cursus eget.");
         $ou->setPage("accueil");
+        $ou->setOrdre("2");
         $manager->persist($ou);
 
         $pourquoi = new Description();
@@ -50,6 +52,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         mais Daech les poursuit et leur montre qu’il peut venir combattre en tout point du globe.
         Fuir n’est donc pas la solution ; quand l’Allemagne nazie dominait l’Europe, il a fallu résister en restant sur place. ");
         $pourquoi->setPage("accueil");
+        $pourquoi->setOrdre("3");
         $manager->persist($pourquoi);
 
         $comment = new Description();
@@ -57,6 +60,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         $comment->setDescription("Nous avons pour but de soutenir financièrement la formation des générations futures, 
         de témoigner des valeurs humaines, de dialogue et de solidarité face au fanatisme destructeur et sectaire.");
         $comment->setPage("accueil");
+        $comment->setOrdre("4");
         $manager->persist($comment);
 
         $aujourdhui = new Description();
@@ -67,6 +71,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         reconstruction de l'Irak dès aujourd'hui. Rester c'est refuser que ce pays perde l'une de ses cimposantes humaines qui forment la richesse
         d'une population multiculturelles.");
         $aujourdhui->setPage("origine");
+        $aujourdhui->setOrdre("5");
         $aujourdhui->setMedia($this->getReference('equipe_groupe'));
         $manager->persist($aujourdhui);
 
@@ -81,6 +86,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         > Soit sous forme de virement à l’adresse du compte suivant :      Caisse d’épargne de Molsheim : 16 705-09017-08001639023 rib 49
         Grand merci pour votre solidarité !");
         $don->setPage("don");
+        $don->setOrdre("6");
         $manager->persist($don);
 
         $volonte = new Description();
@@ -90,6 +96,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         Kirkuk afin de poursuivre leurs études et pourvoir devenir les cadres de l’Irak de demain.
           Bref, dès aujourd’hui se préparer pour construire l’après Daech.");
         $volonte->setPage("origine");
+        $volonte->setOrdre("7");
         $manager->persist($volonte);
 
         $valeur = new Description();
@@ -99,6 +106,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         Pas de frais généraux, pas de charges de publicité, de secrétariat. Notre action  est le fruit d’un engagement où 
         chaque membre prend à sa charge ses frais.  La conséquence est immédiate :  1 euro collecté = 1 euro en faveur de l’Irak.");
         $valeur->setPage("origine");
+        $valeur->setOrdre("8");
         $manager->persist($valeur);
 
         $irakG = new Description();
@@ -112,6 +120,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         quis ornare massa cursus eget.");
         $irakG->setPage("lieu");
         $irakG->setMedia($this->getReference('irakG_media'));
+        $irakG->setOrdre("9");
         $manager->persist($irakG);
 
         $irakS = new Description();
@@ -125,6 +134,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         quis ornare massa cursus eget.");
         $irakS->setPage("lieu");
         $irakS->setMedia($this->getReference('kirkouk'));
+        $irakS->setOrdre("10");
         $manager->persist($irakS);
 
         $objectif = new Description();
@@ -137,6 +147,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         Suspendisse mauris ligula, fermentum sit amet dapibus non, gravida id sapien. Vestibulum imperdiet mauris elit, 
         quis ornare massa cursus eget.");
         $objectif->setPage("objectif");
+        $objectif->setOrdre("11");
         $objectif->setMedia($this->getReference('carouselMedia1'));
         $manager->persist($objectif);
 

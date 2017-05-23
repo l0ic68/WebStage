@@ -76,5 +76,6 @@ contact:
     requirements:
             _method:  GET|POST
 
+searchMedia:
 
 
