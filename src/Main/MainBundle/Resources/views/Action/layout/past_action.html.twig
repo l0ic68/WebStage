@@ -22,12 +22,12 @@
             {#<!-- Modal -->                                                          aria-labelledby="exampleModalLabel"#}
             <div class="modal fade" id="{{loop.index}}" tabindex="-1" role="dialog" aria-hidden="true" >
                 <button type="button" class="close modalTextHomepage" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Retour</span>
+                    <span class="Retour" aria-hidden="true"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Retour</span>
                 </button>
 
                 <div class="modal-dialog ModalAction" role="document">
                     <div class="ImageActionModal">
-                       <img src="{{ asset(action.picture.path) }}" style="width : 250px; height : 250px;">
+                       <img class="ImageHautActionModal" src="{{ asset(action.picture.path) }}">
                     </div>
                     <div class="modal-content">
                         <div class="modal-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -39,7 +39,7 @@
                             <p class="CoutActionModal">Coût de l'action : {{ action.cout }}</p>
                             <p class="CoutActionModal">Argent récolté : {{ action.recolte }}</p>
                         </div>
-                        <div class="row">
+                        <div class="row CarouselModalAction">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <div id="myCarousel" class="carousel slide col-xs-12 col-sm-12 col-md-12 col-lg-12 test7" data-ride="carousel">
                                     <!-- Indicators -->

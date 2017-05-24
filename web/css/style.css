@@ -528,6 +528,11 @@ button.close:hover
     color: black;
 }
 
+.Retour
+{
+    margin-left: 2%;
+}
+
 /* -------------------- !Home Page! -------------------- */
 
 
@@ -1074,16 +1079,28 @@ button.close:hover
 
 .TitreModal
 {
-    margin-left: 250px!important;
+    margin-left: 350px!important;
 }
 
 .ImageActionCarouselModal
 {
-    margin-left: 10%;
-    max-width: 80%;
-    max-height : 550px;
-    width: 80%;
+    margin-left: 15.5%;
+    max-width: 66%;
+    max-height : 450px;
+    min-width: 70%;
+    min-height : 450px;
+    width: 70%;
     height: 550px;
 }
 
+.ImageHautActionModal
+{
+    width: 350px;
+    height: 250px;
+}
+
+.CarouselModalAction
+{
+    margin-bottom: 2%;
+}
 /*---------------------  !Action!   -------------------- */
