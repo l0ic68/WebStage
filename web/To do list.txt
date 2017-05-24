@@ -3,7 +3,6 @@
 
 GLOBAL 
 
--agrandir le texte
 -Changer les couleurs
 -Faire modal sur toutes les images
 Demander les chiffres clès de l'association
