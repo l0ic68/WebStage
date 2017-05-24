@@ -32,6 +32,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action1->addMedia($this->getReference('equipe_groupe'));
         $action1->addMedia($this->getReference('kirkouk'));
         $action1->addMedia($this->getReference('irakG_media'));
+        $action1->setPicture($this->getReference("carouselMedia1"));
         $manager->persist($action1);
 
         $action2 = new Action();
@@ -51,6 +52,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action2->setRecolte(5000);
         $action2->setType("Passée");
 //        $action2->addMedia($this->getReference('kirkouk'));
+        $action2->setPicture($this->getReference("carouselMedia2"));
         $manager->persist($action2);
 
         $action3 = new Action();
@@ -70,6 +72,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action3->setRecolte(5000);
         $action3->setType("Passée");
 //        $action3->addMedia($this->getReference('irakG_media'));
+        $action3->setPicture($this->getReference("carouselMedia3"));
         $manager->persist($action3);
 
         $manager->flush();

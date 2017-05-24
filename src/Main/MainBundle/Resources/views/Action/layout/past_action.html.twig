@@ -6,7 +6,7 @@
         {% for action in actions %}
             <section class="col-lg-4 ActionRealise">
                 <div class="pastAction">
-                        {#<img  class ="pastActionImg" src="{{ asset(action.media.path) }}">#}
+                        <img  class ="pastActionImg" src="{{ asset(action.picture.path) }}">
                     <h4 class="TitreAction">{{ action.nom[:50] }}</h4>
                     <p class="DateAction">{{ action.dateDebut| date() }}</p>
                     <p class="DescriptionAction">{{ action.description[:150] }}...</p>
@@ -19,15 +19,6 @@
                     {#<p>{{ action.type }}</p>#}
                 </div>
             </section>
-            {% if not action.media.empty %}
-                <p>
-                    {#{% for media in action.media %}#}
-                   {#<img src="{{ asset(media.path) }}"> {% if not loop.last %}, {% endif %}#}
-                    {#{% endfor %}#}
-                </p>
-            {% endif %}
-
-
             {#<!-- Modal -->                                                          aria-labelledby="exampleModalLabel"#}
             <div class="modal fade" id="{{loop.index}}" tabindex="-1" role="dialog" aria-hidden="true" >
                 <button type="button" class="close modalTextHomepage" data-dismiss="modal" aria-label="Close">
@@ -36,7 +27,7 @@
 
                 <div class="modal-dialog ModalAction" role="document">
                     <div class="ImageActionModal">
-                        <p style="width: 250px; height: 250px; background-color: black;"></p>
+                       <img src="{{ asset(action.picture.path) }}" style="width : 250px; height : 250px;">
                     </div>
                     <div class="modal-content">
                         <div class="modal-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -54,21 +45,27 @@
                                     <!-- Indicators -->
                                     <ol class="carousel-indicators">
                                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                        {% for action in actions %}
-                                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                                        {% if not action.media.empty %}
+                                        {% for media in action.media %}
+                                            <li data-target="#myCarousel" data-slide-to="{{ loop.index }}"></li>
                                         {% endfor %}
+                                        {% endif %}
                                     </ol>
 
                                     <!-- Wrapper for slides -->
+
                                     <div class="carousel-inner centrageD">
                                         <div class="item active" style="width: 100%;">
-                                            <img class="ImageActionCarouselModal d-block img-fluid" src="{{ asset("img/partenaire.png") }}" alt="Los Angeles">
+                                            <img class="ImageActionCarouselModal d-block img-fluid" src="{{ asset(action.picture.path) }}" alt="Los Angeles">
                                         </div>
-                                        {% for action in actions %}
-                                            <div class="item" style="width: 100%;">
-                                                <img class="ImageActionCarouselModal d-block img-fluid" src="{{ asset("img/partenaire.png") }}" alt="Los Angeles">
-                                            </div>
-                                        {% endfor %}
+                                        {% if not action.media.empty %}
+                                            {% for media in action.media %}
+                                                <div class="item" style="width: 100%;">
+                                                    <img  class="ImageActionCarouselModal d-block img-fluid" src="{{ asset(media.path) }}">
+                                                </div>
+                                            {% endfor %}
+                                        {% endif %}
+
                                     </div>
 
                                     <!-- Left and right controls -->

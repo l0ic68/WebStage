@@ -77,6 +77,12 @@ class Action
     private $media;
 
     /**
+     * @ORM\ManyToOne(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist","remove"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $picture;
+
+    /**
      * Get id
      *
      * @return integer 
@@ -298,5 +304,28 @@ class Action
     public function removeMedia(\Main\MainBundle\Entity\Media $media)
     {
         $this->media->removeElement($media);
+    }
+
+    /**
+     * Set picture
+     *
+     * @param \Main\MainBundle\Entity\Media $picture
+     * @return Action
+     */
+    public function setPicture(\Main\MainBundle\Entity\Media $picture)
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * Get picture
+     *
+     * @return \Main\MainBundle\Entity\Media 
+     */
+    public function getPicture()
+    {
+        return $this->picture;
     }
 }
