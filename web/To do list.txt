@@ -1,57 +1,110 @@
-﻿To do list (non responsive) :																									Legende : 
-																												# pas urgent
-																												le reste a faire avant vendredi
+﻿To do list (non responsive) :																									
+																												
+
+GLOBAL 
+
+-agrandir le texte
+-Changer les couleurs
+-Faire modal sur toutes les images
+Demander les chiffres clès de l'association
+Compresser les images(demander pour les images)
+Demander pour les tags
+
 HomePages:
 
--Crée un compte twitter (bidon)
-#-Ajout API Twitter
--Lien Partage fontionnel
--News (afficher les derniere news + liens vers toutes les news)
-#-Mention légale
+-Lien Partage fontionnel (' A demander')
+-Mention légale ( voir avec eux)
+-partenainre(donnée réel + boucle)
+
 
 Origines :
--Taille photo
+-Photo de groupe 
 
 Lieux :
 
 -photo réel + texte
--Enlever le ?
+-refaire le titre
 
 But : 
 
--Mettre du texte
+-Faire la page
 
 
 Equipe :
 
--Titre Centrer
--Mettre les vrai membres (photo non comprise)
+-Photo membres + description
 
+Nos Action
 
-Future :
+Projet realisée / en cours / futur
+Faire les modals
 
--Trouvée une action Future (prendre plus d'éléve en charge)
 
 Media :
 
--A travailler (dimension image)
+-Icone souris galerie
+-Dimension
+-Centrage modal
+-SearchBar Z0
 
-Contact :
+Don :
 
--Enlever le sucess
--Ecrire le text en FR
--Agrandir message
--Enlever le bouton qui traine
--Changer le form en Z0
+-Refaire le text  
+
 
 Langue : 
 
 #Etudier trad
 
-News : 
-
-Faire la page
-
-Compresser les images
 
 
+A faire : 
+
+Refaire le panel Admin
+
+
+Collection de Form (Pour la table membres ( faire une boucle est ainsi l'adaptée au autre Pages Admin))
+
+Modal de Action réalisé / en cours / futur
+
+Corriger les fautes
+
+Faire un MCD
+
+API Paypal
+
+OPTI du code
+
+Formatage du Texte avec symfo
+
+
+
+To do list (responsive)
+
+home page 
+
+-footer
+-responsive modal
+-Erreur NavBar
+-Margin Bottom Qui
+-Agrandir taille images // Ou Padding top
+-Centrer les elements
+
+Origines :
+
+-titre
+
+Galerie 
+-A faire entièrement 
+
+Don : 
+
+Attention logo crowdfunding
+
+Contact : 
+
+Css addresse a refaire
+
+
+refaire Login
+Login Z0
