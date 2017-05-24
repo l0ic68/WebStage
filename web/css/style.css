@@ -624,14 +624,17 @@ button.close:hover
 
 
 /* -------------------- Objectif -------------------- */
-#Objectif
+.Objectif
 {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
     margin: 3%;
+}
 
+.ImgObjectif
+{
+    width: 50%;
 }
 
 /* -------------------- !Objectifs! -------------------- */
@@ -793,6 +796,11 @@ button.close:hover
 {
     margin-bottom: 2%;
 
+}
+
+.input-group .form-control
+{
+    z-index: 1;
 }
 /* -------------------- !Media! -------------------- */
 

@@ -24,10 +24,6 @@ Lieux :
 -photo réel + texte
 -refaire le titre
 
-But : 
-
--Faire la page
-
 
 Equipe :
 
@@ -36,15 +32,12 @@ Equipe :
 Nos Action
 
 Projet realisée / en cours / futur
-Faire les modals
 
 
 Media :
 
--Icone souris galerie
 -Dimension
 -Centrage modal
--SearchBar Z0
 
 Don :
 
