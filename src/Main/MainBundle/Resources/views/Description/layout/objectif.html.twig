@@ -6,10 +6,10 @@
                 <h2 class="LigneTitre Titre"><span class="LigneSpan">{{ objectif.nom }}</span></h2>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 Objectif">
-                <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 Description">
+                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 Description">
                     <p>{{ objectif.description }}</p>
                 </div>
-                <img class="col-xs-4 col-sm-4 col-md-4 col-lg-4 ImgObjectif" src="{{ asset(objectif.media.path) }}">
+                <img class="col-xs-12 col-sm-12 col-md-4 col-lg-4 ImgObjectif" src="{{ asset(objectif.media.path) }}">
             </div>
         </section>
     {% endfor %}

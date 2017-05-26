@@ -6,7 +6,6 @@
     position: relative;
     background-color: rgb(235, 235, 235);
     background-color: white;
-
 }
 
 html, body
@@ -125,6 +124,14 @@ h5
     justify-content: center;
     align-items: center;
 }
+
+ul, menu, dir {
+    -webkit-padding-start: 10px;
+}
+
+/*.sidenav{*/
+    /*padding: 8px 20px 8px 32px;*/
+/*}*/
 
 /* -------------------- Header -------------------- */
 header
@@ -293,9 +300,22 @@ footer
     text-align: right;
 }
 
+@media screen and (max-width: 1196px)
+{
+    #Mentions
+    {
+        text-align: center;
+    }
+}
+
 #Droits, #Mentions
 {
     white-space: nowrap;
+}
+
+#Droits
+{
+    text-overflow: ellipsis;
 }
 /* -------------------- !Footer! -------------------- */
 
@@ -637,6 +657,14 @@ button.close:hover
     margin: 3%;
 }
 
+@media screen and (max-width: 760px)
+{
+    .Objectif
+    {
+        flex-direction: column!important;
+    }
+}
+
 .ImgObjectif
 {
     width: 50%;
@@ -746,7 +774,7 @@ button.close:hover
 .DivImgMedia
 {
     width: 300px ;
-    height: 300px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -759,10 +787,9 @@ button.close:hover
 
 #ImgMedia
 {
-    width: 85%;
-    height: 85%;
-    max-width: 300px;
-    max-height: 300px;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1007,11 +1034,10 @@ button.close:hover
 }
 .pastActionImg
 {
-    min-width: 425px;
-    max-width: 425px;
-    max-height: 300px;
-    min-height: 300px;
+    min-width: 100%;
+    max-width: 100%;
 }
+
 .TitreAction
 {
     font-size: 20px;
