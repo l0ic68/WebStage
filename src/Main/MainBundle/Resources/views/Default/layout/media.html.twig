@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-
+    <div class="boucle">
     {% for media in medias %}
         <div class="text{{ loop.index }}">
         <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 DivImgMedia ">
@@ -56,6 +56,7 @@
                     </div>
                 </div>
             </div>
+
         {% block javascripts %}
     {% for media in medias %}
         <script type="text/javascript">
@@ -66,6 +67,7 @@
             });
         </script>
     {% endfor %}
+
             <script src="{{ asset ('js/Media.js') }}"></script>
             <script type="text/javascript">
                 $(function(){
@@ -91,6 +93,6 @@
             </script>
         {% endblock %}
     {% endfor %}
-
+    </div>
 
 {% endblock %}
