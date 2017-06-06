@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 QuiOrigine">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 Description">
-                        <p>{{ origine.description }}</p>
+                        <p>{{ origine.description|raw }}</p>
                     </div>
                         <img class="col-xs-5 col-sm-5 col-md-5 col-lg-6 ImgOrigine" alt="Image groupe membres" src="{{ asset(origine.media.path) }}">
                 </div>
@@ -21,7 +21,7 @@
                 <h2 class="Titre LigneTitre"><span class="LigneSpan">{{ origine.nom  }}</span></h2>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 Description">
-                <p>{{ origine.description }}</p>
+                {{ origine.description }}
             </div>
         </section>
         {% endif %}

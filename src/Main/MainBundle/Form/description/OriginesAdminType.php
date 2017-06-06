@@ -13,7 +13,7 @@ class OriginesAdminType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('description','text',array('attr' => array('class' => 'DescriptionOrigines',)))
+        $builder->add('description','text',array('attr' => array('class' => 'DescriptionOrigines ckeditor',)))
                 ->add('nom','text',array('attr' => array('class' => 'TitreOrigines')))
                 ->add('submit','submit',array('label'=>'rouge'))
                 ->getForm();
