@@ -16,10 +16,14 @@
             <div class="carousel-inner centrageD">
                 <div class="item active" style="width: 100%;">
                     <img class="ImageCarousel d-block img-fluid" src="{{  asset(active.media.path) }}" alt="Los Angeles">
+                    <div class="carousel-caption" style="margin-bottom: 10%;"><p class="HelpUs">Aidez ces étudiants</p></div>
+                    <div class="carousel-caption DivDonate"><p class="Donate">Donate</p></div>
                 </div>
                 {% for image in images %}
                     <div class="item" style="width: 100%;">
                         <img class="ImageCarousel d-block img-fluid" src="{{ asset(image.media.path) }}" alt="Los Angeles">
+                        <div class="carousel-caption" style="margin-bottom: 10%;"><p class="HelpUs">Aidez ces étudiants</p></div>
+                        <div class="carousel-caption DivDonate"><p class="Donate">Donate</p></div>
                     </div>
                 {% endfor %}
             </div>
@@ -37,13 +41,54 @@
         <!--        !Caroussel!      -->
 
         <!--        Barre bienvenue      -->
-        <div id="DivBvn" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 0px">
+        <div id="DivBvn" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <h2 id="Bvn">Bienvenue !</h2>
+            <div class="TextIntro">Daech est à Mossoul depuis 3 ans ! Des milliers de
+                personnes ont été déplacées ou on émigré.</br>Cette Situation nous interpelle... </br>Et vous ?</div>
         </div>
         <!--        !Barre bienvenue!      -->
 
         <!--        Texte HomePage      -->
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+
+            <div style="display: flex; justify-content: space-around;">
+                <div class="1">
+                    <div id="1" class="bjr" style="position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i>
+                        <p style="margin-top: 10%; font-size: xx-large;">Qui ?</p>
+                    </div>
+                    <div class="bye" style="">Aurevoir</div>
+                </div>
+
+                <div class="2">
+                    <div id="2" class="bjr" style="position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <i class="fa fa-map-marker fa-5x" aria-hidden="true"></i>
+                        <p style="margin-top: 10%; font-size: xx-large;">Où ?</p>
+                    </div>
+                    <div class="2" style="">Aurevoir</div>
+                </div>
+
+                <div class="All">
+                    <div class="bjr" style="position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <i class="fa fa-question-circle fa-5x" aria-hidden="true"></i>
+                        <p style="margin-top: 10%; font-size: xx-large;">Pourquoi ?</p>
+                    </div>
+                    <div class="bye" style="">Aurevoir</div>
+                </div>
+
+                <div class="All">
+                    <div class="bjr" style="position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <i class="fa fa-users fa-5x" aria-hidden="true"></i>
+                        <p style="margin-top: 10%; font-size: xx-large;">Comment ?</p>
+                    </div>
+                    <div class="bye" style="">Aurevoir</div>
+                </div>
+            </div>
+
+
+
+
             {% for entreprise in entreprises %}
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 DivHomePage">
                     <h3 class="MotHomePage" > {{ entreprise.nom }} ? </h3>
@@ -82,6 +127,33 @@
                         });
                     });
                 </script>
+
+                <script>
+                    $('.1').hover(mouseOver, mouseOut);
+//                    $('#Ou').hover(mouseOver2, mouseOut2);
+
+                    function mouseOver()
+                    {
+                        $("#1").slideUp("slow");
+                        $(this).toggleClass("enroule"); return false;
+                    }
+                    function mouseOut()
+                    {
+                        $("#1").slideDown("slow");
+                        $(this).toggleClass("enroule"); return false;
+                    }
+
+//                    function mouseOver2()
+//                    {
+//                        $("#Ou").slideUp("slow");
+//                        $(this).toggleClass("enroule"); return false;
+//                    }
+//                    function mouseOut2()
+//                    {
+//                        $("#Ou").slideDown("slow");
+//                        $(this).toggleClass("enroule"); return false;
+//                    }
+                </script>
             {% endfor %}
                 {% endblock %}
             {% endfor %}
@@ -90,7 +162,7 @@
     </div>
 
     <!--        Slide Partenaire      -->
-    <div class="row">
+    <div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="carousel slide multi-item-carousel" id="theCarousel">
                 <div class="carousel-inner">

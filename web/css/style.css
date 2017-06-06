@@ -1,7 +1,7 @@
 #container
 {
-    margin-right:5%;
-    margin-left: 5%;
+    /*margin-right:5%;*/
+    /*margin-left: 5%;*/
     min-height: 100%;
     position: relative;
     background-color: rgb(235, 235, 235);
@@ -396,35 +396,33 @@ footer
 {
     padding: 0px;
     display: flex;
-    align-items: center;
-    height: 17vh;
-    background-color: rgb(1, 117, 217);
+    flex-direction: column;
+    height: 200px;
+    background-color: #009de0;
+    margin-bottom: 5%;
 
 }
 
 #Bvn
 {
-    margin-left: 8%;
+    margin-left: 7%;
+    padding: 1%;
     color: rgb(235, 235, 235);
 }
 
-#Mycarousel
+#myCarousel
 {
     width:100%;
-    height:550px;
-}
-
-.test7
-{
-   padding: 0px;
+    height:640px;
+    padding: 0px;
 }
 
 .ImageCarousel
 {
     max-width: 100%;
-    max-height : 550px;
+    max-height :640px;
     width: 100%;
-    height: 550px;
+    height: 700px;
 }
 
 .carousel-indicators
@@ -553,6 +551,66 @@ button.close:hover
     margin-left: 2%;
 }
 
+.HelpUs
+{
+    font-size: 57px;
+    line-height: 50px;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.DivDonate
+{
+    margin-bottom: 4%;
+    display: flex;
+    justify-content: center;
+}
+
+.Donate
+{
+    padding: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #009de0;
+}
+
+.Donate:hover
+{
+    cursor:  pointer;
+    background-color: #cf472f;
+}
+
+.TextIntro
+{
+    color: whitesmoke;
+    font-size: large;
+    margin-bottom: 0px;
+    text-align: justify;
+    padding-left: 5%;
+}
+
+.bjr, .bye
+{
+    width: 200px;
+    height: 200px;
+}
+
+.bjr
+{
+    background-color: white;
+}
+
+.bye
+{
+    background-color: #009de0;
+}
+
+.All
+{
+    width: 200px;
+    height: 200px;
+}
 /* -------------------- !Home Page! -------------------- */
 
 
