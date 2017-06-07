@@ -55,7 +55,7 @@ h5
 .Titre
 {
     color: whitesmoke;
-    text-align: center!important; 
+    text-align: center!important;
 }
 
 .DivTitre
@@ -689,13 +689,19 @@ button.close:hover
     margin-top: 1%;
     margin-bottom: 1%;
 }
-.bandeauText >h2
+
+.bandeauText
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*margin-top: 0px;*/
+}
+
+.bandeauText >h2
+{
+    margin: 0px;
     color:white ;
+
 }
 .bandeauDonate
 {
@@ -709,6 +715,8 @@ button.close:hover
     height:60px;
     margin: 1%;
 }
+
+
 .bandeauDonate:hover
 {
     display: flex;
@@ -719,6 +727,10 @@ button.close:hover
     font-size:x-large;
     height:60px;
     margin: 1%;
+}
+.footerContact
+{
+    margin-right: 30px;
 }
 /* -------------------- !Home Page! -------------------- */
 
@@ -1346,3 +1358,44 @@ button.close:hover
     background-color: #3e8e41;
 }
 /*---------------------  !bouttonhover!   --------------------*/
+
+/*---------------------  New CSS Description  --------------------*/
+.sectionDescription
+{
+    padding:0px;
+}
+
+
+.titreDescription
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(215, 215, 215);
+    width: 100%;
+    padding: 2% 0% 2% 0%;
+}
+.divTextDescription
+{
+    padding: 5% 10% 0% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.textDescription
+{
+    text-align: justify;
+}
+.imageDescription
+{
+    width: 120%;
+}
+.descriptionMore
+{
+    margin-left: 5%;
+    margin-right:5%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
