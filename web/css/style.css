@@ -694,6 +694,7 @@ button.close:hover
     display: flex;
     justify-content: center;
     align-items: center;
+    /*margin-top: 0px;*/
     color:white ;
 }
 .bandeauDonate
@@ -701,6 +702,7 @@ button.close:hover
     display: flex;
     justify-content: center;
     align-items: center;
+    /*color: #ffffff;*/
     background-color:#feb41f;
     width: 200px;
     font-size:x-large;
@@ -712,7 +714,7 @@ button.close:hover
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#feb41f;
+    background-color:#ffffff;
     width: 200px;
     font-size:x-large;
     height:60px;
