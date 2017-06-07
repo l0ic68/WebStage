@@ -8,7 +8,7 @@
     {% for don in dons %}
         <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 Don">
             <div class="col-xs-9 col-sm-9 col-md-9 col-lg-10 DescriptionDon">
-                <p>{{ don.description }}</p>
+                <p>{{ don.description|raw }}</p>
             </div>
         </section>
     {% endfor %}
