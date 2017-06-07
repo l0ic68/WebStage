@@ -20,7 +20,7 @@ html, body
 body
 {
     background-color: rgb(235, 235, 235);
-    font-family: Gill Sans MT, sans-serif;
+    font-family: Verdana;
     font-size: medium;
 }
 
@@ -146,7 +146,7 @@ header
     top: 0;
     left: 0;
     z-index: 2;
-    background-color: white;
+    background-color: #009de0;
     width: 100%;
     box-shadow: 1px 1px 12px #555;
     display: flex;
@@ -166,12 +166,27 @@ header, .push
    }
 }
 
+.DivImgHeader
+{
+    position: absolute;
+    width: 8.5%;
+    top: 0px;
+    height: 170%;
+    background-color: black;
+    padding: 0px;
+    box-shadow: 1px 1px 12px #555;
+
+}
 
 .imgheader
 {
-    width: 80px;
-    min-width: 80px;
+    /*width: 80px;*/
+    /*min-width: 80px;*/
     /*margin-left: 40%;*/
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    width: 100%;
 }
 
 #TitreHeader
@@ -228,18 +243,32 @@ header, .push
 {
     display: flex;
     white-space: nowrap;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-#DonHeader
-{
-    text-decoration: underline rgb(207, 71, 47);
-    font-weight: bold;
-}
+/*#DonHeader*/
+/*{*/
+    /*!*text-decoration: underline rgb(207, 71, 47);*!*/
+    /*font-weight: bold;*/
+/*}*/
 
 .MotsHeader
 {
     font-size: large;
+    color: white;
+}
+
+.HeaderDivMot
+{
+    width: 25%;
+    text-align: center;
+}
+
+#NavbarHeader
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 /* -------------------- !Header! -------------------- */
@@ -641,14 +670,14 @@ button.close:hover
 
 .FaireDon
 {
-    background-color: #009de0;
+    background-color: #feb41f;
     color: white;
 }
 
 .FaireDon:hover
 {
-    background-color: #feb41f!important;
-    color: white;
+    background-color: white!important;
+    color: #feb41f;
 }
 
 .bandeauHomepage
