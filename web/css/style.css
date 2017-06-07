@@ -727,6 +727,73 @@ button.close:hover
     height:60px;
     margin: 1%;
 }
+
+.DivPierre
+{
+    background-color: rgb(240,240,240);
+    margin-top: 2%;
+    margin-bottom: 5%;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.DivTextPierre
+{
+    padding-left: 10%;
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    flex-direction: column;
+}
+
+.DivTextPierre > h3
+{
+    margin: 0px;
+}
+
+.DivImgPierre
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.imgPierre
+{
+    border-radius: 50%;
+    width: 65%;
+}
+
+.carousel-content {
+    color:black;
+    display:flex;
+    align-items:center;
+}
+
+#text-carousel {
+    width: 120%;
+    height: 300px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.IndicateurPierreCaroussel
+{
+    background-color: #009de0!important;
+}
+
+.btn-primary
+{
+    background-color: #009de0;
+    border-color: #009de0;
+}
+
 /* -------------------- !Home Page! -------------------- */
 
 
