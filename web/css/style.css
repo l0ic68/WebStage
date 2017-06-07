@@ -7,7 +7,10 @@
     background-color: rgb(235, 235, 235);
     background-color: white;
 }
-
+@font-face {
+    font-family: 'Typo_Round';
+    src: url('Typo_Round_Light_Demo.otf')
+}
 html, body
 {
     height: 100%;
@@ -23,6 +26,7 @@ body
 
 h1
 {
+    font-family: 'Typo_Round';
     font-weight: bold;
     color: rgb(1, 167, 217);
     font-size: x-large;
@@ -30,6 +34,7 @@ h1
 
 h2
 {
+    font-family: 'Typo_Round';
     font-weight: 600;
     color: rgb(1, 117, 217);
     font-size: xx-large;
@@ -37,12 +42,13 @@ h2
 
 h3
 {
+    font-family: 'Typo_Round';
     color: rgb(1, 117, 217);
     font-weight: bold;
 }
 
 h5
-{
+{  font-family: 'Typo_Round';
    margin:0px;
 }
 
