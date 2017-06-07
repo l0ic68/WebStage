@@ -679,6 +679,45 @@ button.close:hover
     background-color: white!important;
     color: #feb41f;
 }
+
+.bandeauHomepage
+{
+    display: flex;
+    justify-content: center;
+    background-color: #009de0;
+    width :100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.bandeauText >h2
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white ;
+}
+.bandeauDonate
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#feb41f;
+    width: 200px;
+    font-size:x-large;
+    height:60px;
+    margin: 1%;
+}
+.bandeauDonate:hover
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#feb41f;
+    width: 200px;
+    font-size:x-large;
+    height:60px;
+    margin: 1%;
+}
 /* -------------------- !Home Page! -------------------- */
 
 

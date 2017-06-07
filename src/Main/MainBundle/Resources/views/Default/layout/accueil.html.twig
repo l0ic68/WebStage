@@ -114,34 +114,34 @@
 
 
 
-            {% for entreprise in entreprises %}
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 DivHomePage">
-                    <h3 class="MotHomePage" > {{ entreprise.nom }} ? </h3>
-                    <div class="text{{ loop.index }}">
-                        <div class="DescriptionHomePage" >
-                                {{ entreprise.description[:250] }} <p class="LirePlusHomePage">Lire plus...</p>
-                        </div>
-                    </div>
+            {#{% for entreprise in entreprises %}#}
+                {#<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 DivHomePage">#}
+                    {#<h3 class="MotHomePage" > {{ entreprise.nom }} ? </h3>#}
+                    {#<div class="text{{ loop.index }}">#}
+                        {#<div class="DescriptionHomePage" >#}
+                                {#{{ entreprise.description[:250] }} <p class="LirePlusHomePage">Lire plus...</p>#}
+                        {#</div>#}
+                    {#</div>#}
 
                     {#<!-- Modal -->                                                          aria-labelledby="exampleModalLabel"#}
-                    <div class="modal fade" id="{{loop.index}}" tabindex="-1" role="dialog" aria-hidden="true" >
-                        <button type="button" class="close modalTextHomepage" data-dismiss="modal" aria-label="Close">
-                             <span class="Retour" aria-hidden="true"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Retour</span>
-                        </button>
-                        <div class="modal-dialog" role="document">
+                    {#<div class="modal fade" id="{{loop.index}}" tabindex="-1" role="dialog" aria-hidden="true" >#}
+                        {#<button type="button" class="close modalTextHomepage" data-dismiss="modal" aria-label="Close">#}
+                             {#<span class="Retour" aria-hidden="true"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Retour</span>#}
+                        {#</button>#}
+                        {#<div class="modal-dialog" role="document">#}
 
-                            <div class="modal-content">
-                                <div class="modal-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <h3 class="Titre LigneTitre"><span class="LigneSpan" >{{ entreprise.nom }}</span></h3>
-                                </div>
-                                <div class="modal-body TextModalHomepage">
-                                    {{ entreprise.description }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- !Modal! -->
-                </div>
+                            {#<div class="modal-content">#}
+                                {#<div class="modal-header col-xs-12 col-sm-12 col-md-12 col-lg-12">#}
+                                    {#<h3 class="Titre LigneTitre"><span class="LigneSpan" >{{ entreprise.nom }}</span></h3>#}
+                                {#</div>#}
+                                {#<div class="modal-body TextModalHomepage">#}
+                                    {#{{ entreprise.description }}#}
+                                {#</div>#}
+                            {#</div>#}
+                        {#</div>#}
+                    {#</div>#}
+                    {#<!-- !Modal! -->#}
+                {#</div>#}
 
             {% block javascripts %}
             {% for entreprise in entreprises %}
@@ -181,9 +181,17 @@
                 </script>
             {% endfor %}
                 {% endblock %}
-            {% endfor %}
+            {#{% endfor %}#}
         </div>
         <!--        !Texte HomePage!      -->
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bandeauHomepage">
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 bandeauText" >
+            <h2>Comment pouvez-vous simplement nous aider ? </h2>
+        </div>
+        <div class="bandeauDonate">
+            <p style="margin: 0px">Faire un Don</p>
+        </div>
     </div>
 
     <!--        Slide Partenaire      -->
