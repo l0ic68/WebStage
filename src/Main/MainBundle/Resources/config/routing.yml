@@ -58,10 +58,6 @@ objectif:
     path:     /objectif
     defaults: { _controller: MainBundle:Description:objectif }
 
-membres:
-    path:     /membres
-    defaults: { _controller: MainBundle:Description:membres }
-
 don:
     path:     /don
     defaults: { _controller: MainBundle:Default:don }
