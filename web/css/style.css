@@ -689,12 +689,19 @@ button.close:hover
     margin-top: 1%;
     margin-bottom: 1%;
 }
-.bandeauText >h2
+
+.bandeauText
 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.bandeauText >h2
+{
+    margin: 0px;
     color:white ;
+
 }
 .bandeauDonate
 {
@@ -707,6 +714,8 @@ button.close:hover
     height:60px;
     margin: 1%;
 }
+
+
 .bandeauDonate:hover
 {
     display: flex;
