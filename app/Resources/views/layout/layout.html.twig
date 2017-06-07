@@ -72,29 +72,43 @@
             <nav class="hidden-xs hidden-sm col-md-10 col-lg-7" id="DivHeader" style="white-space: nowrap;">
                 <ul class="nav navbar-nav" id="ListeDivHeader" >
                     <!--  <li class="active"><a href="#">Home</a></li>-->
-                    <li class="dropdown">
-                        <a class="dropdown-toggle MotsHeader" data-toggle="dropdown" href="#">Nos actions
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ path('past') }}">Réalisé</a></li>
-                            <li><a href="{{ path('actual') }}">En cours</a></li>
-                            <li><a href="{{ path('future') }}">Futur</a></li>
-                        </ul>
-                    </li>
-                    <li><a id="DonHeader" class="MotsHeader" href="{{ path('don') }}">Faire un don</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle MotsHeader" data-toggle="dropdown" href="#">Qui sommes nous ?
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ path('origines') }}">Nos origines </a></li>
-                            <li><a href="{{ path('lieu') }}">Ou agissons nous ?</a></li>
-                            <li><a href="{{ path('objectif') }}">Dans quel but ?</a></li>
-                            <li><a href="{{ path('membres') }}">Notre équipes</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="MotsHeader" href="{{ path('galerie') }}">Galeries</a></li>
-                    <li><a class="MotsHeader" href="{{ path('originesAdmin') }}">Admin</a></li>
-                    <li><a class="MotsHeader" href="{{ path('contact') }}">Contact</a></li>
+
+                    {#<div class="dropdown">#}
+                        {#<button class="dropbtn">Nos Action</button>#}
+                        {#<div class="dropdown-content">#}
+                            {#<a href="{{ path('past') }}">Réalisé</a>#}
+                            {#<a href="{{ path('actual') }}">Réalisé</a>#}
+                            {#<a href="{{ path('future') }}">Futur</a>#}
+                        {#</div>#}
+                    {#</div>#}
+                    {#<button class="dropbtn">Nos Action</button>#}
+                    {#<li class="dropdown">#}
+                        {#<a class="dropdown-toggle MotsHeader" data-toggle="dropdown" href="#">Nos actions#}
+                            {#<span class="caret"></span></a>#}
+                        {#<ul class="dropdown-menu">#}
+                            {#<li><a href="{{ path('past') }}">Réalisé</a></li>#}
+                            {#<li><a href="{{ path('actual') }}">Réalisé</a></li>#}
+                            {#<li><a href="{{ path('future') }}">Futur</a></li>#}
+                        {#</ul>#}
+                    {#</li>#}
+                    {#<li><a id="DonHeader" class="MotsHeader" href="{{ path('don') }}">Faire un don</a></li>#}
+                    {#<li class="dropdown">#}
+                        {#<a class="dropdown-toggle MotsHeader" data-toggle="dropdown" href="#">Qui sommes nous ?#}
+                            {#<span class="caret"></span></a>#}
+                        {#<ul class="dropdown-menu">#}
+                            {#<li><a href="{{ path('origines') }}">Nos origines </a></li>#}
+                            {#<li><a href="{{ path('lieu') }}">Ou agissons nous ?</a></li>#}
+                            {#<li><a href="{{ path('objectif') }}">Dans quel but ?</a></li>#}
+                            {#<li><a href="{{ path('membres') }}">Notre équipes</a></li>#}
+                        {#</ul>#}
+                    {#</li>#}
+                    <li><a class="MotsHeader" href="{{ path('galerie') }}">Qui sommes nous ?</a></li>
+                    <li><a class="MotsHeader" href="{{ path('galerie') }}">Actions</a></li>
+                    <li><a class="MotsHeader" href="{{ path('galerie') }}">Projet réalisé</a></li>
+                    <li><a class="FaireDon" href="{{ path('don') }}">Faire un don</a></li>
+                   {#<li><a class="MotsHeader" href="{{ path('galerie') }}">Galeries</a></li>#}
+                    {#<li><a class="MotsHeader" href="{{ path('originesAdmin') }}">Admin</a></li>#}
+                    {#<li><a class="MotsHeader" href="{{ path('contact') }}">Contact</a></li>#}
                 </ul>
             </nav>
             <!--        !Image et Menu header!      -->
