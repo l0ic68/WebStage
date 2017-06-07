@@ -26,11 +26,4 @@ class DescriptionController extends Controller
         $objectifs = $em->getRepository('MainBundle:Description')->findByPage('objectif');
         return $this->render('MainBundle:Description:layout\objectif.html.twig',array('objectifs'=> $objectifs));
     }
-
-    public function MembresAction()
-    {
-        $em = $this->getDoctrine()->getManager();
-        $membres = $em->getRepository('MainBundle:Membres')->findAll();
-        return $this->render('MainBundle:Description:layout\membres.html.twig',array('membres'=> $membres));
-    }
 }

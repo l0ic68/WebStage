@@ -35,9 +35,6 @@ objectifAdmin:
     path:     /objectif
     defaults: { _controller: MainBundle:DescriptionAdmin:objectif }
 
-membresAdmin:
-    path:     /membres
-    defaults: { _controller: MainBundle:DescriptionAdmin:membres }
 
 donAdmin:
     path:     /don

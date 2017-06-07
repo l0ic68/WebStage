@@ -137,11 +137,4 @@ class DescriptionAdminController extends Controller
             'form1' => $form1->createView(),
         ));
     }
-
-    public function MembresAction(Request $request)
-    {
-        $em = $this->getDoctrine()->getManager();
-        $membres = $em->getRepository('MainBundle:Membres')->findAll();
-        return $this->render('MainBundle:Description:layout\membres.html.twig',array('membres'=> $membres));
-    }
 }
