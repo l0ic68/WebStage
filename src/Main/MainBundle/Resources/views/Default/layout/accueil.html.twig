@@ -16,14 +16,14 @@
             <div class="carousel-inner centrageD">
                 <div class="item active" style="width: 100%;">
                     <img class="ImageCarousel d-block img-fluid" src="{{  asset(active.media.path) }}" alt="Los Angeles">
-                    <div class="carousel-caption" style="margin-bottom: 10%;"><p class="HelpUs">Aidez ces étudiants</p></div>
-                    <div class="carousel-caption DivDonate"><p class="Donate">Donate</p></div>
+                    <p class="HelpUs">Aidez ces étudiants</p>
+                    {#<div class="carousel-caption DivDonate"><p class="Donate">Donate</p></div>#}
                 </div>
                 {% for image in images %}
                     <div class="item" style="width: 100%;">
                         <img class="ImageCarousel d-block img-fluid" src="{{ asset(image.media.path) }}" alt="Los Angeles">
-                        <div class="carousel-caption" style="margin-bottom: 10%;"><p class="HelpUs">Aidez ces étudiants</p></div>
-                        <div class="carousel-caption DivDonate"><p class="Donate">Donate</p></div>
+                        <p class="HelpUs2">Aidez ces étudiants</p>
+                        {#<div class="carousel-caption DivDonate"><p class="Donate">Donate</p></div>#}
                     </div>
                 {% endfor %}
             </div>
@@ -190,7 +190,7 @@
     <div class="DivPierre col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 DivTextPierre">
             <h3 style="font-size: 275%; margin-left: 5%; margin-top: 5%;">Aidons-les</h3>
-            <div id="text-carousel" class="carousel slide" data-ride="carousel">
+            <div style="padding-top: 3%" id="text-carousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <li  data-target="#text-carousel" data-slide-to="0" class="active IndicateurPierreCaroussel"></li>
