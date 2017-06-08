@@ -728,12 +728,10 @@ button.close:hover
     height:60px;
     margin: 1%;
 }
-<<<<<<< HEAD
 .footerContact
 {
     margin-right: 30px;
 }
-=======
 
 .DivPierre
 {
@@ -800,8 +798,6 @@ button.close:hover
     background-color: #009de0;
     border-color: #009de0;
 }
-
->>>>>>> origin/master
 /* -------------------- !Home Page! -------------------- */
 
 
@@ -1447,6 +1443,14 @@ button.close:hover
 }
 .divTextDescription
 {
+    padding: 5% 10% 5% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dddddd;
+}
+.divTextMoreDescription
+{
     padding: 5% 10% 0% 5%;
     display: flex;
     justify-content: center;
@@ -1454,6 +1458,8 @@ button.close:hover
 }
 .textDescription
 {
+    display: flex;
+    flex-direction:column;
     text-align: justify;
 }
 .imageDescription
