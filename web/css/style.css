@@ -798,7 +798,7 @@ button.close:hover
     background-color: #009de0;
     border-color: #009de0;
 }
-<<<<<<< HEAD
+
 
 .DivReussite
 {
@@ -853,9 +853,6 @@ button.close:hover
     width: 40%;
     height: 12%;
 }
-
-=======
->>>>>>> origin/master
 /* -------------------- !Home Page! -------------------- */
 
 
@@ -1509,16 +1506,22 @@ button.close:hover
 }
 .divTextMoreDescription
 {
-    padding: 5% 10% 0% 5%;
+    padding: 2% 10% 2% 5%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #009de0;
+
 }
 .textDescription
 {
     display: flex;
     flex-direction:column;
+    justify-content: center;
+    /*align-items: center;*/
     text-align: justify;
+    height: 350px;
+    padding: 4%;
 }
 .imageDescription
 {
@@ -1531,5 +1534,23 @@ button.close:hover
     display: flex;
     flex-direction:column;
     align-items: center;
+}
+.descriptionMore >h3
+{
+  color:white;
+}
+
+
+.DivimgbackDescription
+{
+    padding-right: 0px;
+    background-image: url(../img/2.jpg);
+    min-height: 350px;
+    max-height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 5%;
 }
 
