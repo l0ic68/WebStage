@@ -273,6 +273,8 @@ header
     display: flex;
     white-space: nowrap;
     justify-content: space-around;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 /*#DonHeader*/
@@ -291,6 +293,7 @@ header
 {
     /*width: 24%;*/
     text-align: center;
+    height: 20px;
 }
 
 #NavbarHeader
