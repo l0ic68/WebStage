@@ -41,30 +41,66 @@
         <!--        !Caroussel!      -->
 
         <!--        Barre bienvenue      -->
-        <div id="DivBvn" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <h2 id="Bvn">Soutenez Aux Porteurs de Lumière</h2>
-            <div class="TextIntro col-xs-6 col-sm-6 col-md-6 col-lg-offset-1 col-lg-6">Ne faisons pas une croix sur les Chrétiens d'Orient.<br/>
-            Le fatalisme n'est pas une réponse au fanatisme.</div>
-        </div>
+        {#<div id="DivBvn" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">#}
+            {#<h2 id="Bvn">Soutenez Aux Porteurs de Lumière</h2>#}
+            {#<div class="TextIntro col-xs-6 col-sm-6 col-md-6 col-lg-offset-1 col-lg-6">Ne faisons pas une croix sur les Chrétiens d'Orient.<br/>#}
+            {#Le fatalisme n'est pas une réponse au fanatisme.</div>#}
+        {#</div>#}
         <!--        !Barre bienvenue!      -->
 
-        <!--        Texte HomePage      -->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <!--        About us      -->
+            <div class="AboutUs col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="APropos col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <h2 class="parallax-title text-left" style="padding: 20px; text-align: center; margin: 0px; font-size: 48px; color: #333;">A propos de nous</h2>
+                </div>
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma
+                        uris, commodo sed neque et, feugiat pretium purus. Quisque quis purus viverra, bibendum mi ut, volutpat enim. Curabitur ia
+                        culis posuere elit, nec imperdiet mauris varius ac. Maecenas quis enim lec
+                        tus. Vivamus lacus libero, laoreet ut urna egestas, bibendum pretium augue. </p>
+                </div>
+            </div>
+        <!--        !About us!      -->
 
-            <div style="display: flex; justify-content: space-around;">
-                <div class="All" id="Un">
-                    <div id="Qui" class="bjr" style="position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                        <i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i>
-                        <p style="margin-top: 10%; font-size: xx-large;">Qui ?</p>
-                    </div>
-                    <div class="bye text9">
-                        <p style="font-size: x-large;">Qui ?</p>
-                        <div class="bye2">
-                            <p>A la faveur de la rencontre de Mgr Yousif et d’un ancien bâtisseur alsacien ; Bernard Geyler, celui-ci a fait le
-                                voyage de Kirkuk en décembre 2015.
-                            </p>
-                        </div>
-                        <p>Lire plus...</p>
+        <!--        Image de qui somme nous      -->
+            <section class="ImageQui col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="UneImageQui col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <img class="ImgQui" src="{{ asset("img/Enfant.jpg") }}">
+                    <h3>Soutenir les réfugiés</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma</p>
+                </div>
+
+                <div class="UneImageQui col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <img class="ImgQui" src="{{ asset("img/tree.jpg") }}">
+                    <h3>Qualité de vie</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma</p>
+                </div>
+
+                <div class="UneImageQui col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    <img class="ImgQui" src="{{ asset("img/charity.jpg") }}">
+                    <h3>Collecte de dons</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma</p>
+                </div>
+            </section>
+        <!--        !Image de qui somme nous!      -->
+
+        <!--        Texte HomePage      -->
+        {#<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">#}
+
+            {#<div style="display: flex; justify-content: space-around;">#}
+                {#<div class="All" id="Un">#}
+                    {#<div id="Qui" class="bjr" style="position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;">#}
+                        {#<i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i>#}
+                        {#<p style="margin-top: 10%; font-size: xx-large;">Qui ?</p>#}
+                    {#</div>#}
+                    {#<div class="bye text9">#}
+                        {#<p style="font-size: x-large;">Qui ?</p>#}
+                        {#<div class="bye2">#}
+                            {#<p>A la faveur de la rencontre de Mgr Yousif et d’un ancien bâtisseur alsacien ; Bernard Geyler, celui-ci a fait le#}
+                                {#voyage de Kirkuk en décembre 2015.#}
+                            {#</p>#}
+                        {#</div>#}
+                        {#<p>Lire plus...</p>#}
 
                         {#<div class="modal fade" id="text9" tabindex="-1" role="dialog" aria-hidden="true" >#}
                             {#<button type="button" class="close modalTextHomepage" data-dismiss="modal" aria-label="Close">#}
@@ -83,33 +119,33 @@
                             {#</div>#}
                         {#</div>#}
 
-                    </div>
-                </div>
+                    {#</div>#}
+                {#</div>#}
 
-                <div class="All" id="Deux">
-                    <div id="Ou" class="bjr" style="position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                        <i class="fa fa-map-marker fa-5x" aria-hidden="true"></i>
-                        <p style="margin-top: 10%; font-size: xx-large;">Où ?</p>
-                    </div>
-                    <div class="bye" style="">Aurevoir</div>
-                </div>
+                {#<div class="All" id="Deux">#}
+                    {#<div id="Ou" class="bjr" style="position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;">#}
+                        {#<i class="fa fa-map-marker fa-5x" aria-hidden="true"></i>#}
+                        {#<p style="margin-top: 10%; font-size: xx-large;">Où ?</p>#}
+                    {#</div>#}
+                    {#<div class="bye" style="">Aurevoir</div>#}
+                {#</div>#}
 
-                <div class="All">
-                    <div class="bjr" style="position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                        <i class="fa fa-question-circle fa-5x" aria-hidden="true"></i>
-                        <p style="margin-top: 10%; font-size: xx-large;">Pourquoi ?</p>
-                    </div>
-                    <div class="bye" style="">Aurevoir</div>
-                </div>
+                {#<div class="All">#}
+                    {#<div class="bjr" style="position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;">#}
+                        {#<i class="fa fa-question-circle fa-5x" aria-hidden="true"></i>#}
+                        {#<p style="margin-top: 10%; font-size: xx-large;">Pourquoi ?</p>#}
+                    {#</div>#}
+                    {#<div class="bye" style="">Aurevoir</div>#}
+                {#</div>#}
 
-                <div class="All">
-                    <div class="bjr" style="position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                        <i class="fa fa-users fa-5x" aria-hidden="true"></i>
-                        <p style="margin-top: 10%; font-size: xx-large;">Comment ?</p>
-                    </div>
-                    <div class="bye" style="">Aurevoir</div>
-                </div>
-            </div>
+                {#<div class="All">#}
+                    {#<div class="bjr" style="position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;">#}
+                        {#<i class="fa fa-users fa-5x" aria-hidden="true"></i>#}
+                        {#<p style="margin-top: 10%; font-size: xx-large;">Comment ?</p>#}
+                    {#</div>#}
+                    {#<div class="bye" style="">Aurevoir</div>#}
+                {#</div>#}
+            {#</div>#}
 
 
 
@@ -179,6 +215,24 @@
                         $(this).toggleClass("enroule"); return false;
                     }
                 </script>
+
+                {#<script>#}
+                    {#$(function() {#}
+                        {#var header = $(".color-nav-perso");#}
+{#//                        var colora = $(".color-a");#}
+                        {#$(window).scroll(function() {#}
+                            {#var scroll = $(window).scrollTop();#}
+
+                            {#if (scroll >= 80) {#}
+                                {#header.removeClass('color-nav-perso').addClass("color-nav-perso-fixe")#}
+{#//                                colora.removeClass('color-a').addClass("color-a-fixe");#}
+                            {#} else {#}
+{#//                                colora.removeClass("color-a-fixe").addClass('color-a')#}
+                                {#header.removeClass("color-nav-perso-fixe").addClass('color-nav-perso');#}
+                            {#}#}
+                        {#});#}
+                    {#});#}
+                {#</script>#}
             {% endfor %}
                 {% endblock %}
             {#{% endfor %}#}
