@@ -157,19 +157,25 @@ header
 .push
 {
     height: 80px;
+    /*transition: height 0.1s;*/
+    /*background-color: #009de0;*/
 }
 
 .color-nav-perso
 {
     background-color: #009de0;
     height: 80px;
+    transition: height 0.5s;
 }
 
-.color-nav-perso-fixe
-{
-    background-color: red;
-    height: 60px;
-}
+/*.color-nav-perso:hover {*/
+    /*height: 60px;*/
+/*}*/
+
+/*.color-nav-perso-fixe*/
+/*{*/
+    /*height: 60px;*/
+/*}*/
 
 @media only screen and (min-width: 1198px) and (max-width: 1300px) {
    #DivHeader
@@ -181,13 +187,13 @@ header
 .DivImgHeader
 {
     position: absolute;
-    width: 8.5%;
+    width: 130px;
     top: 0px;
     height: 150px;
-    background-color: black;
+    background-color: transparent;
     padding: 0px;
     box-shadow: 1px 1px 12px #555;
-
+    transition: all 0.5s;
 }
 
 .imgheader
@@ -199,6 +205,21 @@ header
     height: 100%;
     top: 0px;
     width: 100%;
+}
+
+.DivImgHeader2
+{
+    display: none;
+    height: 100%;
+    background-color: transparent;
+    padding: 0px;
+    transition: all 0.5s;
+}
+
+.imgheader2
+{
+    width: 75px;
+    height: 60px;
 }
 
 #TitreHeader
@@ -245,10 +266,6 @@ header
         min-width: 60px!important;
     }
 
-    .push
-    {
-        height: 13vh;
-    }
 }
 
 #DivHeader      /* Centrage Menu */
