@@ -40,29 +40,29 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($twitter);
 
         $carouselMedia1 = new Media();
-        $carouselMedia1->setPath('/img/1.jpg');
+        $carouselMedia1->setPath('/img/Carousel1Small.jpg');
         $carouselMedia1->setUrl('1.jpg');
         $manager->persist($carouselMedia1);
 
         $carouselMedia2 = new Media();
-        $carouselMedia2->setPath('/img/2.jpg');
+        $carouselMedia2->setPath('/img/Carousel2Small.jpg');
         $carouselMedia2->setUrl('2.jpg');
         $manager->persist($carouselMedia2);
 
         $carouselMedia3 = new Media();
-        $carouselMedia3->setPath('/img/3.jpg');
+        $carouselMedia3->setPath('/img/Carousel3Small.jpg');
         $carouselMedia3->setUrl('3.jpg');
         $manager->persist($carouselMedia3);
 
         $carouselMedia4 = new Media();
-        $carouselMedia4->setPath('/img/4.jpg');
+        $carouselMedia4->setPath('/img/Carousel4Small.jpg');
         $carouselMedia4->setUrl('4.jpg');
         $manager->persist($carouselMedia4);
 
-        $carouselMedia5 = new Media();
-        $carouselMedia5->setPath('/img/5.jpg');
-        $carouselMedia5->setUrl('5.jpg');
-        $manager->persist($carouselMedia5);
+//        $carouselMedia5 = new Media();
+//        $carouselMedia5->setPath('/img/5.jpg');
+//        $carouselMedia5->setUrl('5.jpg');
+//        $manager->persist($carouselMedia5);
 
         $equipe_groupe = new Media();
         $equipe_groupe->setPath('img/ImageGroupe.JPG');
@@ -95,7 +95,7 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $this->addReference('carouselMedia2',$carouselMedia2);
         $this->addReference('carouselMedia3',$carouselMedia3);
         $this->addReference('carouselMedia4',$carouselMedia4);
-        $this->addReference('carouselMedia5',$carouselMedia5);
+//        $this->addReference('carouselMedia5',$carouselMedia5);
         $this->addReference('equipe_groupe',$equipe_groupe);
         $this->addReference('inconnu',$inconnu);
         $this->addReference('irakG_media',$irakG);

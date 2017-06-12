@@ -747,7 +747,11 @@ button.close:hover
 }
 .footerContact
 {
-    margin-right: 30px;
+    margin-right: 10px;
+}
+.footerMention
+{
+    margin-left: 10px;
 }
 
 .DivPierre
@@ -814,10 +818,6 @@ button.close:hover
     background-color: #009de0;
     border-color: #009de0;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 
 .DivReussite
 {
@@ -1573,3 +1573,20 @@ button.close:hover
     margin-bottom: 5%;
 }
 
+.footer
+{
+    background-color: #009de0!important;
+    color:white;
+}
+#Droits>a
+{
+    color:white;
+}
+#Mentions>a
+{
+    color:white;
+}
+.glyphicon-chevron-right:before,.glyphicon-chevron-left:before
+{
+    display: none;
+}
