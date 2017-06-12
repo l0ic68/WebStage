@@ -7,13 +7,14 @@
     <link rel="stylesheet" href=" {{ asset('css/bootstrap.min.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/font-awesome/css/font-awesome.min.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     {% block stylesheets %}{% endblock %}
     <link rel="icon" type="image/x-icon" href="{{ asset('img/favicon.ico') }}" />
 </head>
 <body>
     <div id="container">
         <!--        Header      -->
-        <header>
+        <header class="color-nav-perso">
             <!--        Bouton menu smartphone      -->
             <div class="col-xs-1 col-sm-1 hidden-md hidden-lg" style=" z-index: 2;">
                 <div id="mySidenav" class="sidenav">
@@ -69,6 +70,9 @@
             <a class="hidden-xs hidden-sm col-sm-1 col-md-offset-1 col-md-1 col-lg-offset-1 col-lg-1 DivImgHeader" href="{{ path("accueil") }}" >
                 <img alt="Logo" src="{{ asset('img/logo.jpg') }}"  class="imgheader">
             </a>
+            <a class="hidden-xs hidden-sm col-sm-1 col-md-offset-1 col-md-1 col-lg-offset-1 col-lg-1 DivImgHeader2" href="{{ path("accueil") }}" >
+                <img alt="Logo" src="{{ asset('img/logoneg.png') }}"  class="imgheader2">
+            </a>
 
             {#<a style="text-decoration: none;" class=" col-xs-offset-1 col-xs-7 col-sm-7 col-md-offset-0 hidden-md col-lg-3" href="{{ path("accueil") }}">#}
                 {#<h1 id="TitreHeader">Aux porteurs de lumière</h1>#}
@@ -114,8 +118,8 @@
                         {#</ul>#}
                     {#</li>#}
                     <li class="HeaderDivMot"><a class="MotsHeader" href="{{ path('description') }}">Qui sommes nous ?</a></li>
-                    <li class="HeaderDivMot"><a class="MotsHeader" href="{{ path('actual') }}">Actions</a></li>
-                    <li class="HeaderDivMot"><a class="MotsHeader" href="{{ path('past') }}">Projet réalisé</a></li>
+                    <li class="HeaderDivMot"><a class="MotsHeader" href="{{ path('actual') }}">Actions réalisées </a></li>
+                    <li class="HeaderDivMot"><a class="MotsHeader" href="{{ path('past') }}">Projet futur</a></li>
                     <li class="HeaderDivMot"><a class="FaireDon" href="{{ path('don') }}">Faire un don</a></li>
                    {#<li><a class="MotsHeader" href="{{ path('galerie') }}">Galeries</a></li>#}
                     {#<li><a class="MotsHeader" href="{{ path('originesAdmin') }}">Admin</a></li>#}
@@ -143,7 +147,40 @@
 <script src="{{ asset ('js/tether.min.js') }}"></script>
 <script src="{{ asset ('js/bootstrap.min.js') }}"></script>
 <script src="{{ asset ('js/MultiCaroussel.js') }}"></script>
-{% block javascripts %}{% endblock %}
+<script>
+    $(function() {
+//            var header = $(".color-nav-perso");
+//                        var colora = $(".color-a");
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $(".color-nav-perso").css('height', '60px');
+                $(".DivImgHeader").css({
+                    "height": "125px",
+                    "width": "108px"
+                });
+                $(".DivImgHeader2").show();
+                $(".DivImgHeader").hide();
+
+
+            } else {
+
+                $(".color-nav-perso").css('height', '80px');
+                $(".DivImgHeader").css({
+                    "height": "150px",
+                    "width": "130px"
+                });
+                $(".push").css('height', '80px');
+                $(".DivImgHeader2").hide();
+                $(".DivImgHeader").show();
+
+            }
+        });
+    });
+</script>
+{% block javascripts %}
+{% endblock %}
 
 </body>
 </html>

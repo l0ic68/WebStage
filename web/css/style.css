@@ -19,7 +19,8 @@ html, body
 
 body
 {
-    background-color: rgb(235, 235, 235);
+    /*background-color: rgb(235, 235, 235);*/
+    background-color: white;
     font-family: Verdana;
     font-size: medium;
 }
@@ -146,18 +147,35 @@ header
     top: 0;
     left: 0;
     z-index: 2;
-    background-color: #009de0;
     width: 100%;
     box-shadow: 1px 1px 12px #555;
     display: flex;
     align-items: center;
-    min-height: 82px;
+    /*min-height: 80px;*/
 }
 
-header, .push
+.push
 {
-    height: 12vh;
+    height: 80px;
+    /*transition: height 0.1s;*/
+    /*background-color: #009de0;*/
 }
+
+.color-nav-perso
+{
+    background-color: #009de0;
+    height: 80px;
+    transition: height 0.5s;
+}
+
+/*.color-nav-perso:hover {*/
+    /*height: 60px;*/
+/*}*/
+
+/*.color-nav-perso-fixe*/
+/*{*/
+    /*height: 60px;*/
+/*}*/
 
 @media only screen and (min-width: 1198px) and (max-width: 1300px) {
    #DivHeader
@@ -169,13 +187,13 @@ header, .push
 .DivImgHeader
 {
     position: absolute;
-    width: 8.5%;
+    width: 130px;
     top: 0px;
-    height: 170%;
-    background-color: black;
+    height: 150px;
+    background-color: transparent;
     padding: 0px;
     box-shadow: 1px 1px 12px #555;
-
+    transition: all 0.5s;
 }
 
 .imgheader
@@ -187,6 +205,21 @@ header, .push
     height: 100%;
     top: 0px;
     width: 100%;
+}
+
+.DivImgHeader2
+{
+    display: none;
+    height: 100%;
+    background-color: transparent;
+    padding: 0px;
+    transition: all 0.5s;
+}
+
+.imgheader2
+{
+    width: 75px;
+    height: 60px;
 }
 
 #TitreHeader
@@ -233,10 +266,6 @@ header, .push
         min-width: 60px!important;
     }
 
-    .push
-    {
-        height: 13vh;
-    }
 }
 
 #DivHeader      /* Centrage Menu */
@@ -260,7 +289,7 @@ header, .push
 
 .HeaderDivMot
 {
-    width: 24%;
+    /*width: 24%;*/
     text-align: center;
 }
 
@@ -691,6 +720,7 @@ button.close:hover
 {
     background-color: #feb41f;
     color: white;
+    height: 50px;
 }
 
 .FaireDon:hover
@@ -705,6 +735,9 @@ button.close:hover
     justify-content: center;
     background-color: #009de0;
     width :100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
 }
 
 .bandeauText
@@ -818,6 +851,10 @@ button.close:hover
     background-color: #009de0;
     border-color: #009de0;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 
 .DivReussite
 {
@@ -872,6 +909,74 @@ button.close:hover
     width: 40%;
     height: 12%;
 }
+
+.AboutUs
+{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 60px;
+    background-color: white;
+}
+
+.parallax-title.text-left:before {
+    left: 14%;
+    right: auto;
+}
+
+.parallax-title:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+    width: 50px;
+    height: 2px;
+    border-bottom: 2px solid;
+    border-color: #009de0;
+}
+
+.ImageQui
+{
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+    margin-bottom: 35px;
+    background-color: white;
+}
+
+.UneImageQui
+{
+    display: flex;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.UneImageQui > h3
+{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.UneImageQui > img
+{
+    margin-bottom: 28px;
+}
+
+.ImgQui
+{
+    width: 370px;
+    height: 237px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* -------------------- !Home Page! -------------------- */
 
 
