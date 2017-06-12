@@ -2,6 +2,75 @@
 
 {% block body %}
     <div id="main">
+
+
+        {#<div class="container main-container">#}
+            {#<div id="carousel-example-generic" class="carousel slide">#}
+                {#<!-- Indicators -->#}
+                {#<ol class="carousel-indicators">#}
+                    {#<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>#}
+                    {#<li data-target="#carousel-example-generic" data-slide-to="1"></li>#}
+                    {#<li data-target="#carousel-example-generic" data-slide-to="2"></li>#}
+                {#</ol>#}
+
+                {#<!-- Wrapper for slides -->#}
+                {#<div class="carousel-inner" role="listbox">#}
+
+                    {#<!-- First slide -->#}
+                    {#<div class="item active deepskyblue">#}
+
+                        {#<div class="carousel-caption">#}
+                            {#<h3 data-animation="animated bounceInLeft">#}
+                                {#This is the caption for slide 1#}
+                            {#</h3>#}
+                            {#<h3 data-animation="animated bounceInRight">#}
+                                {#This is the caption for slide 1#}
+                            {#</h3>#}
+                            {#<button class="btn btn-primary btn-lg" data-animation="animated zoomInUp">Button</button>#}
+                        {#</div>#}
+                    {#</div> <!-- /.item -->#}
+
+                    {#<!-- Second slide -->#}
+                    {#<div class="item deepskyblue">#}
+                        {#<div class="carousel-caption">#}
+                            {#<h3 class="icon-container" data-animation="animated bounceInDown">#}
+                                {#<span class="glyphicon glyphicon-heart"></span>#}
+                            {#</h3>#}
+                            {#<h3 data-animation="animated bounceInUp">#}
+                                {#This is the caption for slide 2#}
+                            {#</h3>#}
+                            {#<button class="btn btn-primary btn-lg" data-animation="animated zoomInRight">Button</button>#}
+                        {#</div>#}
+                    {#</div><!-- /.item -->#}
+
+                    {#<!-- Third slide -->#}
+                    {#<div class="item darkerskyblue">#}
+                        {#<div class="carousel-caption">#}
+                            {#<h3 class="icon-container" data-animation="animated zoomInLeft">#}
+                                {#<span class="glyphicon glyphicon-glass"></span>#}
+                            {#</h3>#}
+                            {#<h3 data-animation="animated flipInX">#}
+                                {#This is the caption for slide 3#}
+                            {#</h3>#}
+                            {#<button class="btn btn-primary btn-lg" data-animation="animated lightSpeedIn">Button</button>#}
+                        {#</div>#}
+                    {#</div><!-- /.item -->#}
+
+                {#</div><!-- /.carousel-inner -->#}
+
+                {#<!-- Controls -->#}
+                {#<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">#}
+                    {#<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>#}
+                    {#<span class="sr-only">Previous</span>#}
+                {#</a>#}
+                {#<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">#}
+                    {#<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>#}
+                    {#<span class="sr-only">Next</span>#}
+                {#</a>#}
+            {#</div><!-- /.carousel -->#}
+
+        {#</div><!-- /.container -->#}
+
         <!--        Caroussel      -->
         <div id="myCarousel" class="carousel slide col-xs-12 col-sm-12 col-md-12 col-lg-12 test7" data-ride="carousel">
             <!-- Indicators -->
@@ -16,8 +85,8 @@
             <div class="carousel-inner centrageD">
                 <div class="item active" style="width: 100%;">
                     <img class="ImageCarousel d-block img-fluid" src="{{  asset(active.media.path) }}" alt="Los Angeles">
-                    <div class="carousel-caption">
-                        <h3 class="animated bounceInLeft">
+                    <div class="carousel-caption TextNewCaroussel">
+                        <h3 class="animated fadeInLeft" style="font-size: 50px; color: white">
                             Aidez ces étudiants
                         </h3>
                     </div>
@@ -26,8 +95,8 @@
                 {% for image in images %}
                     <div class="item" style="width: 100%;">
                         <img class="ImageCarousel d-block img-fluid" src="{{ asset(image.media.path) }}" alt="Los Angeles">
-                        <div class="carousel-caption">
-                            <h3 data-animation="animated bounceInLeft">
+                        <div class="carousel-caption TextNewCaroussel2">
+                            <h3 class="animated fadeInRight" style="font-size: 50px; color: white">
                                 Aidez ces étudiants
                             </h3>
                       </div>
@@ -242,6 +311,47 @@
                         {#});#}
                     {#});#}
                 {#</script>#}
+
+                <script>
+                    (function( $ ) {
+
+                        //Function to animate slider captions
+                        function doAnimations( elems ) {
+                            //Cache the animationend event in a variable
+                            var animEndEv = 'webkitAnimationEnd animationend';
+
+                            elems.each(function () {
+                                var $this = $(this),
+                                    $animationType = $this.data('animation');
+                                $this.addClass($animationType).one(animEndEv, function () {
+                                    $this.removeClass($animationType);
+                                });
+                            });
+                        }
+
+                        //Variables on page load
+                        var $myCarousel = $('#carousel-example-generic'),
+                            $firstAnimatingElems = $myCarousel.find('.item:first').find("[data-animation ^= 'animated']");
+
+                        //Initialize carousel
+                        $myCarousel.carousel();
+
+                        //Animate captions in first slide on page load
+                        doAnimations($firstAnimatingElems);
+
+                        //Pause carousel
+                        $myCarousel.carousel('pause');
+
+
+                        //Other slides to be animated on carousel slide event
+                        $myCarousel.on('slide.bs.carousel', function (e) {
+                            var $animatingElems = $(e.relatedTarget).find("[data-animation ^= 'animated']");
+                            doAnimations($animatingElems);
+                        });
+
+                    })(jQuery);
+                </script>
+
             {% endfor %}
                 {% endblock %}
             {#{% endfor %}#}

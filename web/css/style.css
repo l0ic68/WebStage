@@ -854,10 +854,7 @@ button.close:hover
     background-color: #009de0;
     border-color: #009de0;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 
 .DivReussite
 {
@@ -896,7 +893,7 @@ button.close:hover
 .Divimgback
 {
     padding-right: 0px;
-    background-image: url(Dentaire.jpg);
+    background-image: url(dentiste.jpg);
     min-height: 500px;
     max-height: 500px;
     background-attachment: fixed;
@@ -1698,3 +1695,87 @@ button.close:hover
 {
     display: none;
 }
+
+
+
+
+
+
+
+
+
+/*---------------------  New Caroussel  --------------------*/
+/*.main-container {*/
+    /*padding: 10px 15px;*/
+/*}*/
+/*.skyblue {*/
+    /*background-color: #22c8ff;*/
+/*}*/
+/*.deepskyblue {*/
+    /*background-color: #00bfff;*/
+/*}*/
+/*.darkerskyblue {*/
+    /*background-color: #00a6dd;*/
+/*}*/
+/*.carousel-indicators {*/
+    /*bottom: 0;*/
+/*}*/
+/*.carousel-control.right,*/
+/*.carousel-control.left {*/
+    /*background-image: none;*/
+/*}*/
+/*.carousel .item {*/
+    /*min-height: 350px;*/
+    /*height: 100%;*/
+    /*width:100%;*/
+/*}*/
+/*.carousel-caption h3,*/
+/*.carousel .icon-container,*/
+/*!*.carousel-caption button {*!*/
+    /*!*background-color: #09c;*!*/
+/*!*}*!*/
+.carousel-caption h3 {
+    padding: .5em;
+}
+.carousel .icon-container {
+    display: inline-block;
+    font-size: 25px;
+    line-height: 25px;
+    padding: 1em;
+    text-align: center;
+    border-radius: 50%;
+}
+/*.carousel-caption button {*/
+    /*border-color: #00bfff;*/
+    /*margin-top: 1em;*/
+/*}*/
+
+/* Animation delays */
+.carousel-caption h3:first-child {
+    animation-delay: 1s;
+}
+.carousel-caption h3:nth-child(2) {
+    animation-delay: 2s;
+}
+.carousel-caption button {
+    animation-delay: 3s;
+}
+
+.TextNewCaroussel
+{
+    width: 500px;
+    position: absolute;
+    bottom :0px;
+    left: 100px;
+}
+
+.TextNewCaroussel2
+{
+    width: 500px;
+    position: absolute;
+    top :0px;
+    right: -200px;
+}
+
+
+/*---------------------  !New Caroussel!  --------------------*/
