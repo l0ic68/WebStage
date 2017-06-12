@@ -260,7 +260,7 @@ header, .push
 
 .HeaderDivMot
 {
-    width: 24%;
+    /*width: 24%;*/
     text-align: center;
 }
 
@@ -814,10 +814,7 @@ button.close:hover
     background-color: #009de0;
     border-color: #009de0;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 
 .DivReussite
 {
