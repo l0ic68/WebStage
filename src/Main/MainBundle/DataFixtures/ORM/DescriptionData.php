@@ -18,6 +18,63 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
 {
     public function load(ObjectManager $manager)
     {
+        $aPropos = new Description();
+        $aPropos->setNom("A propos de nous");
+        $aPropos->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma uris, commodo sed neque et, 
+        feugiat pretium purus. Quisque quis purus viverra, bibendum mi ut, volutpat enim. Curabitur ia 
+        culis posuere elit, nec imperdiet mauris varius ac. Maecenas quis enim lec tus. Vivamus lacus libero, 
+        laoreet ut urna egestas, bibendum pretium augue.");
+        $aPropos->setPage("accueil");
+        $aPropos->setOrdre("1");
+        $manager->persist($aPropos);
+
+
+        $soutenir = new Description();
+        $soutenir->setNom("Soutenir les réfugiés");
+        $soutenir->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma uris, commodo sed neque et, 
+        feugiat pretium purus. Quisque quis purus viverra, bibendum mi ut, volutpat enim. Curabitur ia 
+        culis posuere elit, nec imperdiet mauris varius ac. Maecenas quis enim lec tus. Vivamus lacus libero, 
+        laoreet ut urna egestas, bibendum pretium augue.");
+        $soutenir->setPage("accueil");
+        $soutenir->setMedia($this->getReference('soutenir'));
+        $soutenir->setOrdre("2");
+        $manager->persist($soutenir);
+
+        $qualite = new Description();
+        $qualite->setNom("Qualité de vie");
+        $qualite->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma uris, commodo sed neque et, 
+        feugiat pretium purus. Quisque quis purus viverra, bibendum mi ut, volutpat enim. Curabitur ia 
+        culis posuere elit, nec imperdiet mauris varius ac. Maecenas quis enim lec tus. Vivamus lacus libero, 
+        laoreet ut urna egestas, bibendum pretium augue.");
+        $qualite->setPage("accueil");
+        $qualite->setMedia($this->getReference('qualite'));
+        $qualite->setOrdre("3");
+        $manager->persist($qualite);
+
+        $collecte = new Description();
+        $collecte->setNom("Collecte de dons");
+        $collecte->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma uris, commodo sed neque et, 
+        feugiat pretium purus. Quisque quis purus viverra, bibendum mi ut, volutpat enim. Curabitur ia 
+        culis posuere elit, nec imperdiet mauris varius ac. Maecenas quis enim lec tus. Vivamus lacus libero, 
+        laoreet ut urna egestas, bibendum pretium augue.");
+        $collecte->setPage("accueil");
+        $collecte->setMedia($this->getReference('collecte'));
+        $collecte->setOrdre("4");
+        $manager->persist($collecte);
+
+        $bandeau = new Description();
+        $bandeau->setNom("Comment pouvez-vous simplement nous aider ?");
+        $bandeau->setDescription(" ");
+        $bandeau->setPage("accueil");
+//        $soutenir->setMedia($this->getReference('$bandeau'));
+        $bandeau->setOrdre("5");
+        $manager->persist($bandeau);
+
+
         $qui = new Description();
         $qui->setNom("Qui");
         $qui->setDescription("A la faveur de la rencontre de Mgr Yousif et d’un ancien bâtisseur alsacien ;
@@ -25,7 +82,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
           Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyler  a décidé avec quelques amis de créer début 2016 
           une association dénommée  « Aux porteurs de lumière-solidarité Irak ».");
         $qui->setPage("accueil");
-        $qui->setOrdre("1");
+        $qui->setOrdre("6");
         $manager->persist($qui);
 
         $ou = new Description();
@@ -38,7 +95,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         Suspendisse mauris ligula, fermentum sit amet dapibus non, gravida id sapien. Vestibulum imperdiet mauris elit, 
         quis ornare massa cursus eget.");
         $ou->setPage("accueil");
-        $ou->setOrdre("2");
+        $ou->setOrdre("7");
         $manager->persist($ou);
 
         $pourquoi = new Description();
@@ -52,7 +109,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         mais Daech les poursuit et leur montre qu’il peut venir combattre en tout point du globe.
         Fuir n’est donc pas la solution ; quand l’Allemagne nazie dominait l’Europe, il a fallu résister en restant sur place. ");
         $pourquoi->setPage("accueil");
-        $pourquoi->setOrdre("3");
+        $pourquoi->setOrdre("8");
         $manager->persist($pourquoi);
 
         $comment = new Description();
@@ -60,7 +117,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         $comment->setDescription("Nous avons pour but de soutenir financièrement la formation des générations futures, 
         de témoigner des valeurs humaines, de dialogue et de solidarité face au fanatisme destructeur et sectaire.");
         $comment->setPage("accueil");
-        $comment->setOrdre("4");
+        $comment->setOrdre("8");
         $manager->persist($comment);
 
         $aujourdhui = new Description();
@@ -71,7 +128,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         reconstruction de l'Irak dès aujourd'hui. Rester c'est refuser que ce pays perde l'une de ses cimposantes humaines qui forment la richesse
         d'une population multiculturelles.");
         $aujourdhui->setPage("origine");
-        $aujourdhui->setOrdre("5");
+        $aujourdhui->setOrdre("9");
         $aujourdhui->setMedia($this->getReference('equipe_groupe'));
         $manager->persist($aujourdhui);
 

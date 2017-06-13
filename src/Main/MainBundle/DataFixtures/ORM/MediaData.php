@@ -84,6 +84,21 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $kirkouk->setUrl('kirkouk.png');
         $manager->persist($kirkouk);
 
+        $soutenir = new Media();
+        $soutenir->setPath('img/Carousel2Small.jpg');
+        $soutenir->setUrl('Carousel2Small.png');
+        $manager->persist($soutenir);
+
+        $qualite = new Media();
+        $qualite->setPath('img/P1060953.jpg');
+        $qualite->setUrl('P1060953.png');
+        $manager->persist($qualite);
+
+        $collecte = new Media();
+        $collecte->setPath('img/charity.jpg');
+        $collecte->setUrl('charity.png');
+        $manager->persist($collecte);
+
 
 
         $manager->flush();
@@ -97,6 +112,9 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
 //        $this->addReference('carouselMedia4',$carouselMedia4);
 //        $this->addReference('carouselMedia5',$carouselMedia5);
         $this->addReference('equipe_groupe',$equipe_groupe);
+        $this->addReference('collecte',$collecte);
+        $this->addReference('qualite',$qualite);
+        $this->addReference('soutenir',$soutenir);
         $this->addReference('inconnu',$inconnu);
         $this->addReference('irakG_media',$irakG);
         $this->addReference('kirkouk',$kirkouk);

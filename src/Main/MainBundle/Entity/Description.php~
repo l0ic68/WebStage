@@ -49,6 +49,14 @@ class Description
     private $media;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="frontPage", type="string", length=255)
+     */
+
+    private $frontPage;
+
+    /**
      * @var int
      *
      * @ORM\Column(name="ordre", type="integer")
@@ -87,6 +95,7 @@ class Description
         return $this->description;
     }
 
+   
     /**
      * Set nom
      *
@@ -154,5 +163,28 @@ class Description
     public function getMedia()
     {
         return $this->media;
+    }
+
+    /**
+     * Set ordre
+     *
+     * @param integer $ordre
+     * @return Description
+     */
+    public function setOrdre($ordre)
+    {
+        $this->ordre = $ordre;
+
+        return $this;
+    }
+
+    /**
+     * Get ordre
+     *
+     * @return integer 
+     */
+    public function getOrdre()
+    {
+        return $this->ordre;
     }
 }

@@ -36,6 +36,20 @@ class Action
     private $description;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="descriptionP2", type="text", nullable=true)
+     */
+    private $descriptionP2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descriptionP3", type="text",nullable=true)
+     */
+    private $descriptionP3;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="date_debut", type="datetime")
@@ -69,6 +83,15 @@ class Action
      * @ORM\Column(name="type", type="string", length=255)
      */
     private $type;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="frontPage", type="string", length=255)
+     * @ORM\JoinColumn(nullable=true)
+     */
+
+    private $frontPage;
 
     /**
      * @ORM\ManyToMany(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist"})
@@ -304,5 +327,51 @@ class Action
     public function removeMedia(\Main\MainBundle\Entity\Media $media)
     {
         $this->media->removeElement($media);
+    }
+
+    /**
+     * Set picture
+     *
+     * @param \Main\MainBundle\Entity\Media $picture
+     * @return Action
+     */
+    public function setPicture(\Main\MainBundle\Entity\Media $picture)
+    {
+        $this->picture = $picture;
+
+        return $this;
+    }
+
+    /**
+     * Get picture
+     *
+     * @return \Main\MainBundle\Entity\Media 
+     */
+    public function getPicture()
+    {
+        return $this->picture;
+    }
+
+    /**
+     * Set frontPage
+     *
+     * @param string $frontPage
+     * @return Action
+     */
+    public function setFrontPage($frontPage)
+    {
+        $this->frontPage = $frontPage;
+
+        return $this;
+    }
+
+    /**
+     * Get frontPage
+     *
+     * @return string
+     */
+    public function getFrontPage()
+    {
+        return $this->frontPage;
     }
 }
