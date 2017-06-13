@@ -36,6 +36,20 @@ class Action
     private $description;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="descriptionP2", type="text", nullable=true)
+     */
+    private $descriptionP2;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="descriptionP3", type="text",nullable=true)
+     */
+    private $descriptionP3;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="date_debut", type="datetime")
@@ -69,6 +83,15 @@ class Action
      * @ORM\Column(name="type", type="string", length=255)
      */
     private $type;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="frontPage", type="string", length=255)
+     * @ORM\JoinColumn(nullable=true)
+     */
+
+    private $frontPage;
 
     /**
      * @ORM\ManyToMany(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist"})
@@ -327,5 +350,74 @@ class Action
     public function getPicture()
     {
         return $this->picture;
+    }
+
+    /**
+     * Set frontPage
+     *
+     * @param string $frontPage
+     * @return Action
+     */
+    public function setFrontPage($frontPage)
+    {
+        $this->frontPage = $frontPage;
+
+        return $this;
+    }
+
+    /**
+     * Get frontPage
+     *
+     * @return string
+     */
+    public function getFrontPage()
+    {
+        return $this->frontPage;
+    }
+
+    /**
+     * Set descriptionP2
+     *
+     * @param string $descriptionP2
+     * @return Action
+     */
+    public function setDescriptionP2($descriptionP2)
+    {
+        $this->descriptionP2 = $descriptionP2;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptionP2
+     *
+     * @return string 
+     */
+    public function getDescriptionP2()
+    {
+        return $this->descriptionP2;
+    }
+
+    /**
+     * Set descriptionP3
+     *
+     * @param string $descriptionP3
+     * @return Action
+     */
+    public function setDescriptionP3($descriptionP3)
+    {
+        $this->descriptionP3 = $descriptionP3;
+
+        return $this;
+    }
+
+    /**
+     * Get descriptionP3
+     *
+     * @return string 
+     */
+    public function getDescriptionP3()
+    {
+        return $this->descriptionP3;
     }
 }

@@ -48,6 +48,7 @@ class Description
      */
     private $media;
 
+
     /**
      * @var int
      *
@@ -87,6 +88,7 @@ class Description
         return $this->description;
     }
 
+   
     /**
      * Set nom
      *

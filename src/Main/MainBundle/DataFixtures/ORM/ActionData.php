@@ -19,7 +19,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
     public function load(ObjectManager $manager)
     {
         $action1 = new Action();
-        $action1->setNom("Un cabinet dentaire de deux fauteuils pour les réfugiés de Kirkuk :  premier projet réalisé");
+        $action1->setNom("Un cabinet dentaire pour les réfugiés de Kirkuk");
         $action1->setDescription("Début 2016, la construction et l’équipement d’un cabinet dentaire a été mené sur  
         les fonds propres de l’association, au travers de ses membres. Ce cabinet basé à Kirkuk offre aujourd’hui aux 
         déplacés-déracinés de Mossoul  (ville sous contrôle de Daech depuis 3 ans) des soins dentaires gratuits sur la base 
@@ -33,6 +33,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action1->addMedia($this->getReference('kirkouk'));
         $action1->addMedia($this->getReference('irakG_media'));
         $action1->setPicture($this->getReference("carouselMedia1"));
+        $action1->setFrontPage('realisé');
         $manager->persist($action1);
 
         $action2 = new Action();
@@ -46,6 +47,10 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         par an et par étudiant, soit total de 100.000 €. Les capitaux pour les  25 premiers étudiants sont en place. 
         Nous cherchons des parrainages pour  les autres 25 étudiants. Parrainer par exemple 2 étudiants vous coûte, 
         avoir fiscal déduit de 66 %, 1360 €  (dans la limite de 20% du revenu imposable)");
+        $action2->setDescriptionP2("Début 2016, la construction et l’équipement d’un cabinet dentaire a été mené sur  
+        les fonds propres de l’association, au travers de ses membres. Ce cabinet basé à Kirkuk offre aujourd’hui aux 
+        déplacés-déracinés de Mossoul  (ville sous contrôle de Daech depuis 3 ans) des soins dentaires gratuits sur la base 
+        du bénévolat de 3 dentistes Irakiens. Deux chrétiens et un musulman.");
         $action2->setCout(10000);
         $action2->setDateDebut(new \DateTime("01-01-2017"), new \DateTimeZone('Europe/Paris'));
         $action2->setDateFin(new \DateTime("31-12-2017"), new \DateTimeZone('Europe/Paris'));
@@ -53,6 +58,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action2->setType("Passée");
 //        $action2->addMedia($this->getReference('kirkouk'));
         $action2->setPicture($this->getReference("carouselMedia2"));
+        $action2->setFrontPage('Cours');
         $manager->persist($action2);
 
         $action3 = new Action();
@@ -73,6 +79,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action3->setType("Passée");
 //        $action3->addMedia($this->getReference('irakG_media'));
         $action3->setPicture($this->getReference("carouselMedia3"));
+        $action3->setFrontPage('null');
         $manager->persist($action3);
 
         $manager->flush();
