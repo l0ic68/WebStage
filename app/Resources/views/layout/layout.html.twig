@@ -119,7 +119,7 @@
                     {#</li>#}
                     <li class="HeaderDivMot"><a class="MotsHeader" href="{{ path('description') }}">Qui sommes nous ?</a></li>
                     <li class="HeaderDivMot"><a class="MotsHeader" href="{{ path('past') }}">Actions réalisées </a></li>
-                    <li class="HeaderDivMot"><a class="MotsHeader" href="{{ path('actual') }}">Projet futur</a></li>
+                    <li class="HeaderDivMot"><a class="MotsHeader" href="{{ path('actual') }}">Projet en cours</a></li>
                     <li class="HeaderDivMot"><a class="FaireDon" href="{{ path('don') }}">Faire un don</a></li>
                    {#<li><a class="MotsHeader" href="{{ path('galerie') }}">Galeries</a></li>#}
                     {#<li><a class="MotsHeader" href="{{ path('originesAdmin') }}">Admin</a></li>#}
@@ -163,6 +163,7 @@
                 });
                 $(".DivImgHeader2").show();
                 $(".DivImgHeader").hide();
+                $("#DivHeader").css('margin-left', '25%');
 
 
             } else {
@@ -175,7 +176,7 @@
                 $(".push").css('height', '80px');
                 $(".DivImgHeader2").hide();
                 $(".DivImgHeader").show();
-
+                $("#DivHeader").css('margin-left', '41.6%');
             }
         });
     });
