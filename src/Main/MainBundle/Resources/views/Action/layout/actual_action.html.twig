@@ -1,20 +1,33 @@
 {% extends "::layout/layout.html.twig" %}
 {% block body %}
-    <div class="container white col-lg-12 padder-t2 DivTitre">
-        <h2 class="LigneTitre Titre"><span class="LigneSpan">Action en cours</span></h2>
+    <div class="DivimgbackAction brightness col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+    </div>
+    <div class="APropos TitreActionPrincipal">
+        <p class="parallax-title3 text-left" style="font-size: xx-large; padding-bottom: 1%;">Soutenez les étudiants</p>
+    </div>
+    <div class="DescriptionActionPrincipal">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma
+            uris, commodo sed neque et, feugiat pretium purus. Quisque quis purus viverra, bibendum mi ut, volutpat enim. Curabitur ia
+            culis posuere elit, nec imperdiet mauris varius ac. Maecenas quis enim lec
+            tus. Vivamus lacus libero, laoreet ut urna egestas, bibendum pretium augue. </p>
+        <div style="height: 30px; width: 50%"></div>
+        <span class="DonatePastPrincipal">Faire un Don</span>
+        <span class="DonatePastPrincipal">Voir les détails</span>
+
     </div>
 
+    <div style="height: 450px"></div>
+
     {% for action in actions %}
-        <div class="container white col-lg-12 padder-t2 DivTitre">
-            <h2 class="LigneTitre Titre"><span class="LigneSpan">Action en cours</span></h2>
+        <div class="OneAction col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <img  class ="pastActionImg" src="{{ asset(action.picture.path) }}">
+            <h4>{{ action.nom[:50] }}</h4>
+            <p class="DescriptionActionPast">{{ action.description[:130] }}...</p>
+            <p class="DivCout"><span class="CoutAction">{{ action.recolte }}</span>€ récolter pour un coût de <span class="CoutAction">{{ action.cout }}</span>€</p>
+            <p class="DatePast">{{ action.dateFin| date('d/m/Y') }}    -    {{ action.dateDebut| date('d/m/Y') }}</p>
+            <div class="DonatePast">Faire un Don</div>
         </div>
-        <p>{{ action.nom }}</p>
-        <p>{{ action.description }}</p>
-        <p>{{ action.dateDebut| date() }}</p>
-        <p>{{ action.dateFin| date() }}</p>
-        <p>{{ action.cout }}</p>
-        <p>{{ action.recolte }}</p>
-        <p>{{ action.type }}</p>
     {% endfor %}
 
 

@@ -48,6 +48,23 @@ h3
     font-weight: bold;
 }
 
+h4
+{
+    font-family: 'Typo_Round';
+    /*font-family: Lora;*/
+    color: #333333;
+    font-weight: 500;
+    font-size: 22px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+h4:hover
+{
+    color: #00adef;
+    cursor: pointer;
+}
+
 h5
 {  font-family: 'Typo_Round';
    margin:0px;
@@ -303,6 +320,15 @@ header
     justify-content: space-around;
 }
 
+.nav>li>a:hover
+{
+    background-color: white;
+}
+
+.DatePast
+{
+    text-align: center;
+}
 /* -------------------- !Header! -------------------- */
 
 
@@ -717,6 +743,7 @@ button.close:hover
 {
     width: 250px;
     height: 250px;
+    /*background-color: #f3f3f3;*/
 }
 
 .FaireDon
@@ -905,7 +932,7 @@ button.close:hover
 
 .boutonReussite
 {
-    margin-top: 12%;
+    margin-top: 2%;
     width: 40%;
     height: 12%;
 }
@@ -925,6 +952,42 @@ button.close:hover
 }
 
 .parallax-title:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+    width: 50px;
+    height: 2px;
+    border-bottom: 2px solid;
+    border-color: #009de0;
+}
+
+.parallax-title2.text-left:before {
+    left: 8%;
+    right: auto;
+}
+
+.parallax-title2:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+    width: 50px;
+    height: 2px;
+    border-bottom: 2px solid;
+    border-color: #009de0;
+}
+
+.parallax-title3.text-left:before {
+    left: 0%;
+    right: auto;
+}
+
+.parallax-title3:before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -1032,6 +1095,11 @@ button.close:hover
 {
     text-align: justify;
     padding-right: 5%;
+}
+
+.APropos
+{
+
 }
 
 /* -------------------- !Origines! -------------------- */
@@ -1284,10 +1352,15 @@ button.close:hover
 
 .DivImageDon
 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 2px black solid;
     padding-bottom: 1%;
     padding-top: 1%;
     background-color: rgb(215, 215, 215);
+    /*height: 35%;*/
 }
 
 #DescriptionDon
@@ -1298,10 +1371,15 @@ button.close:hover
 #Payment
 {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     text-align: center;
-    padding: 3%;
+    /*padding: 3%;*/
+    width: 100%;
+    /*height: 600px;*/
+    padding-top: 5%;
+    background-color: white;
+    height: 200px;
 }
 
 @media screen and (max-width: 1000px)
@@ -1456,31 +1534,15 @@ button.close:hover
     flex-direction: column;
     background-color: rgb(235, 235, 235);
 }
-.pastActionImg
-{
-    min-width: 100%;
-    max-width: 100%;
-}
 
-.TitreAction
-{
-    font-size: 20px;
-    font-weight: bold;
-    margin : 5%;
-    text-align: center;
-}
+
 .DateAction
 {
     text-align: center;
     text-decoration: underline;
     font-size: 20px;
 }
-.DescriptionAction
-{
-    text-align: center;
-    margin-left: 5%;
-    margin-right: 5%;
-}
+
 
 .LirePlusAction:hover
 {
@@ -1552,6 +1614,153 @@ button.close:hover
 .CarouselModalAction
 {
     margin-bottom: 2%;
+}
+
+.AllAction
+{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.OneAction
+{
+    padding: 1em;
+    margin: 0 2% 1em 0;
+    /*height: ;*/
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0px 1px 13px 3px rgba(0,0,0,0.1);
+}
+
+.pastActionImg
+{
+    min-width: 100%;
+    max-width: 100%;
+    padding-bottom: 14px;
+    height: 177px;
+}
+
+.DescriptionActionPast
+{
+   font-size: 14px;
+    font-weight: normal;
+}
+
+.DivCout
+{
+    margin-bottom: 14px;
+}
+
+.CoutAction
+{
+    font-weight: bold;
+}
+
+.DonatePast
+{
+    width: 100%;
+    background: #00adef;
+    color: white;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 6px 24px;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.DonatePast:hover
+{
+    cursor: pointer;
+    background-color: #feb41f;;
+}
+
+.ActionPrincipal
+{
+    width: 100%;
+    height: 450px;
+    padding: 75px 0;
+    background: rgba(0, 0, 0, 0.6);
+    /*background: transparent;*/
+    z-index: 1;
+}
+
+.DivimgbackAction
+{
+    position: absolute;
+    padding: 75px 0px;
+    background-image: url(Action.jpg);
+    /*background-color: black;*/
+    min-height: 500px;
+    max-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 5%;
+    /*opacity: 0.9;*/
+    filter: brightness(50%);
+    /*background: linear-gradient(black, white);*/
+}
+
+.DivimgbackActionPast
+{
+    position: absolute;
+    padding: 0px;
+    background-image: url(ActionPast.jpg);
+    /*background-color: black;*/
+    min-height: 250px;
+    max-height: 250px;
+    /*background-attachment: fixed;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 100% 500px;*/
+    opacity: 0.4;
+    /*filter: brightness(50%);*/
+    /*background: linear-gradient(black, white);*/
+    margin-bottom: 5%;
+}
+
+.TitreActionPrincipal
+{
+    color: white;
+    filter: brightness(100%)!important;
+    z-index: 2;
+    position: absolute;
+    margin-top: 8%;
+    margin-left: 10%;
+    width: 25%;
+}
+
+.DescriptionActionPrincipal
+{
+    color: white;
+    filter: brightness(100%)!important;
+    z-index: 2;
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 10%;
+    width: 45%;
+    margin-bottom: 10%;
+}
+
+.DonatePastPrincipal
+{
+    width: 25%;
+    background: #00adef;
+    color: white;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 6px 24px;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-right: 2%;
+}
+
+.DonatePastPrincipal:hover
+{
+    cursor: pointer;
+    background-color: #feb41f;;
 }
 /*---------------------  !Action!   -------------------- */
 
@@ -1641,9 +1850,9 @@ button.close:hover
 {
     display: flex;
     flex-direction:column;
-    justify-content: center;
+    /*justify-content: center;*/
     /*align-items: center;*/
-    text-align: justify;
+    /*text-align: justify;*/
     height: 350px;
     padding: 4%;
 }
@@ -1677,6 +1886,8 @@ button.close:hover
     background-size: cover;
     margin-bottom: 5%;
 }
+
+
 
 .footer
 {
