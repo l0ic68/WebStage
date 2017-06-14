@@ -58,7 +58,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action2->setType("Passée");
 //        $action2->addMedia($this->getReference('kirkouk'));
         $action2->setPicture($this->getReference("carouselMedia2"));
-        $action2->setFrontPage('Cours');
+        $action2->setFrontPage('null');
         $manager->persist($action2);
 
         $action3 = new Action();
@@ -122,7 +122,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action5->setType("En cours");
 //        $action2->addMedia($this->getReference('kirkouk'));
         $action5->setPicture($this->getReference("carouselMedia2"));
-        $action5->setFrontPage('null');
+        $action5->setFrontPage('Cours');
         $manager->persist($action5);
 
 
