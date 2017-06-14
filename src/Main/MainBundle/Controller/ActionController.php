@@ -26,6 +26,13 @@ class ActionController extends Controller
         return $this->render('MainBundle:Action:layout\past_action.html.twig',array('actions'=> $actions,'id' =>$id));
     }
 
+    function actualActionModalAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $actions = $em->getRepository('MainBundle:Action')->findByType('En cours');
+        return $this->render('MainBundle:Action:layout\actual_action.html.twig',array('actions'=> $actions,'id' =>$id));
+    }
+
     public function FutureAction()
     {
         $em = $this->getDoctrine()->getManager();

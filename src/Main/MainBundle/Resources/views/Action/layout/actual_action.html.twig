@@ -13,7 +13,7 @@
             tus. Vivamus lacus libero, laoreet ut urna egestas, bibendum pretium augue. </p>
         <div style="height: 30px; width: 50%"></div>
         <span class="DonatePastPrincipal">Faire un Don</span>
-        <span class="DonatePastPrincipal">Voir les détails</span>
+        <span class="DonatePastPrincipal ">Voir les détails</span>
 
     </div>
 
@@ -27,9 +27,91 @@
             <p class="DescriptionActionPast">{{ action.description[:130] }}...</p>
             <p class="DivCout"><span class="CoutAction">{{ action.recolte }}</span>€ récolter pour un coût de <span class="CoutAction">{{ action.cout }}</span>€</p>
             <p class="DatePast">{{ action.dateFin| date('d/m/Y') }}    -    {{ action.dateDebut| date('d/m/Y') }}</p>
-            <div class="DonatePast">Faire un Don</div>
+            <div class="DonatePast text{{ action.id }}">Faire un Don</div>
+        </div>
+        <div class="modal fade" id="{{ action.id }}" tabindex="-1" role="dialog" aria-hidden="true" >
+            <button type="button" class="close modalTextHomepage" data-dismiss="modal" aria-label="Close">
+                <span class="Retour" aria-hidden="true"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Retour</span>
+            </button>
+
+            <div class="modal-dialog ModalAction" role="document">
+                <div class="ImageActionModal">
+                    <img class="ImageHautActionModal" src="{{ asset(action.picture.path) }}">
+                </div>
+                <div class="modal-content">
+                    <div class="modal-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h3 class="Titre TitreModal"><span>{{ action.nom}}</span></h3>
+                    </div>
+                    <div class="modal-body TextModalHomepage">
+                        <p class="DateActionModal">{{ action.dateDebut| date() }}</p>
+                        {{ action.description }}
+                        <p class="CoutActionModal">Coût de l'action : {{ action.cout }}</p>
+                        <p class="CoutActionModal">Argent récolté : {{ action.recolte }}</p>
+                    </div>
+                    <div class="row CarouselModalAction">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div id="myCarousel" class="carousel slide col-xs-12 col-sm-12 col-md-12 col-lg-12 test7" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    {% if not action.media.empty %}
+                                        {% for media in action.media %}
+                                            <li data-target="#myCarousel" data-slide-to="{{ action.id }}"></li>
+                                        {% endfor %}
+                                    {% endif %}
+                                </ol>
+
+                                <!-- Wrapper for slides -->
+
+                                <div class="carousel-inner centrageD">
+                                    <div class="item active" style="width: 100%;">
+                                        <img class="ImageActionCarouselModal d-block img-fluid" src="{{ asset(action.picture.path) }}" alt="Los Angeles">
+                                    </div>
+                                    {% if not action.media.empty %}
+                                        {% for media in action.media %}
+                                            <div class="item" style="width: 100%;">
+                                                <img  class="ImageActionCarouselModal d-block img-fluid" src="{{ asset(media.path) }}">
+                                            </div>
+                                        {% endfor %}
+                                    {% endif %}
+                                </div>
+                                <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="background: none;">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" data-slide="next" style="background: none;">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     {% endfor %}
+
     </div>
+    {% block javascripts %}
+        {% for action in actions %}
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $(".text{{ action.id }}").click(function(){
+                        $("#{{ action.id }}").modal('show');
+                    });
+                });
+            </script>
+        {% endfor %}
+        <script type="text/javascript">
+            {% if id is defined %}
+            {
+                $(document).ready(function(){
+                    $("#{{ id }}").modal('show');
+                });
+            }
+            {% endif %}
+        </script>
+    {% endblock %}
 
 {% endblock %}

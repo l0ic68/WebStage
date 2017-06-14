@@ -84,4 +84,8 @@ pastActionModal:
     pattern: /passée/{id}
     defaults: { _controller: MainBundle:Action:pastActionModal }
 
+actualActionModal:
+    pattern: /en_cours/{id}
+    defaults: { _controller: MainBundle:Action:actualActionModal }
+
 
