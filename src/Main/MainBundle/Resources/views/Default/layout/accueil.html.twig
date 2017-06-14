@@ -403,7 +403,8 @@
                 {#</a>#}
             </div>
             <div style="display: flex; justify-content: flex-end;">
-                <button type="button" class="btn btn-primary">Voir le projet</button>
+                {#<a href="{{ path('pastActionModal',{'id' : actionC.id }) }}"> <button type="button" class="btn btn-primary">Voir le projet</button><a/>#}
+                <button type="button" class="btn btn-primary"><a href="{{ path('pastActionModal',{'id' : actionC.id }) }}">Voir le projet </a></button>
             </div>
         </div>
 

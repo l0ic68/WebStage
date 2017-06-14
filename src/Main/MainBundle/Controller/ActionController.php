@@ -19,6 +19,12 @@ class ActionController extends Controller
         $actions = $em->getRepository('MainBundle:Action')->findByType('Passée');
         return $this->render('MainBundle:Action:layout\past_action.html.twig',array('actions'=> $actions));
     }
+    public function PastActionModalAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $actions = $em->getRepository('MainBundle:Action')->findByType('Passée');
+        return $this->render('MainBundle:Action:layout\past_action.html.twig',array('actions'=> $actions,'id' =>$id));
+    }
 
     public function FutureAction()
     {

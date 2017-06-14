@@ -10,7 +10,7 @@
                     <h4 class="TitreAction">{{ action.nom[:50] }}</h4>
                     <p class="DateAction">{{ action.dateDebut| date() }}</p>
                     <p class="DescriptionAction">{{ action.description[:150] }}...</p>
-                    <div class="text{{ loop.index }}">
+                    <div class="text{{ action.id }}">
                         <p class="Titre LigneTitre LirePlusAction" style="padding: 10px"><span class="LigneSpan">Lire plus</span> </p>
                     </div>
                     {#<p>{{ action.dateFin| date() }}</p>#}
@@ -20,7 +20,7 @@
                 </div>
             </section>
             {#<!-- Modal -->                                                          aria-labelledby="exampleModalLabel"#}
-            <div class="modal fade" id="{{loop.index}}" tabindex="-1" role="dialog" aria-hidden="true" >
+            <div class="modal fade in" id="{{action.id}}" tabindex="-1" role="dialog" aria-hidden="true" >
                 <button type="button" class="close modalTextHomepage" data-dismiss="modal" aria-label="Close">
                     <span class="Retour" aria-hidden="true"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Retour</span>
                 </button>
@@ -86,15 +86,25 @@
             <!-- !Modal! -->
 
             {% block javascripts %}
+
                 {% for action in actions %}
                     <script type="text/javascript">
                         $(document).ready(function(){
-                            $(".text{{ loop.index }}").click(function(){
-                                $("#{{ loop.index }}").modal('show');
+                            $(".text{{ action.id }}").click(function(){
+                                $("#{{ action.id }}").modal('show');
                             });
                         });
                     </script>
                 {% endfor %}
+                <script type="text/javascript">
+                    {% if id is defined %}
+                    {
+                    $(document).ready(function(){
+                        $("#{{ id }}").modal('show');
+                    });
+                    }
+                    {% endif %}
+                </script>
             {% endblock %}
         {% endfor %}
 
