@@ -932,7 +932,7 @@ button.close:hover
 
 .boutonReussite
 {
-    margin-top: 12%;
+    margin-top: 2%;
     width: 40%;
     height: 12%;
 }
@@ -1352,10 +1352,15 @@ button.close:hover
 
 .DivImageDon
 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 2px black solid;
     padding-bottom: 1%;
     padding-top: 1%;
     background-color: rgb(215, 215, 215);
+    /*height: 35%;*/
 }
 
 #DescriptionDon
@@ -1366,10 +1371,15 @@ button.close:hover
 #Payment
 {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     text-align: center;
-    padding: 3%;
+    /*padding: 3%;*/
+    width: 100%;
+    /*height: 600px;*/
+    padding-top: 5%;
+    background-color: white;
+    height: 200px;
 }
 
 @media screen and (max-width: 1000px)
@@ -1693,6 +1703,24 @@ button.close:hover
     /*background: linear-gradient(black, white);*/
 }
 
+.DivimgbackActionPast
+{
+    position: absolute;
+    padding: 0px;
+    background-image: url(ActionPast.jpg);
+    /*background-color: black;*/
+    min-height: 250px;
+    max-height: 250px;
+    /*background-attachment: fixed;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 100% 500px;*/
+    opacity: 0.4;
+    /*filter: brightness(50%);*/
+    /*background: linear-gradient(black, white);*/
+    margin-bottom: 5%;
+}
+
 .TitreActionPrincipal
 {
     color: white;
@@ -1858,6 +1886,8 @@ button.close:hover
     background-size: cover;
     margin-bottom: 5%;
 }
+
+
 
 .footer
 {
