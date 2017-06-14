@@ -168,7 +168,7 @@ header
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 20;
     width: 100%;
     box-shadow: 1px 1px 12px #555;
     display: flex;
