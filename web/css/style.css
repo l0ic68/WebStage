@@ -70,6 +70,11 @@ h5
    margin:0px;
 }
 
+a:link
+{
+    color: white;
+}
+
 .Titre
 {
     color: whitesmoke;
@@ -854,6 +859,7 @@ button.close:hover
 .imgPierre
 {
     border-radius: 50%;
+    /*border-radius:         100px / 160px;*/
     width: 65%;
 }
 
