@@ -82,11 +82,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action7->setDateFin(new \DateTime("31-12-2017"), new \DateTimeZone('Europe/Paris'));
         $action7->setRecolte(0);
         $action7->setType("En cours");
-<<<<<<< HEAD
         $action7->setPicture($this->getReference("irakG_media"));
-=======
-        $action7->setPicture($this->getReference("google"));
->>>>>>> 413abbc322295cad2ec15dedfa5a9afb23554e9c
         $action7->setFrontPage('null');
         $manager->persist($action7);
 
