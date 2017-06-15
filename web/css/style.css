@@ -70,7 +70,30 @@ h5
    margin:0px;
 }
 
+a
+{
+    color: white;
+    text-decoration: none;
+}
 
+a:hover
+{
+    color: white;
+    text-decoration: none;
+}
+
+
+.bandeauDonate > a
+{
+    color: black;
+    text-decoration: none;
+}
+
+.bandeauDonate > a:hover
+{
+    color: black;
+    text-decoration: none;
+}
 
 a:link
 {
@@ -103,6 +126,10 @@ a:link
     padding-right: 5%;
 }
 
+.BoutonDon
+{
+    margin: 0px;
+}
 
 .LigneTitre
 {
@@ -821,6 +848,7 @@ button.close:hover
     font-size:x-large;
     height:60px;
     margin: 1%;
+    /*background-color: black;*/
 }
 
 .bandeauDonate:link
@@ -944,11 +972,12 @@ button.close:hover
     background-image: url(dentiste.jpg);
     min-height: 500px;
     max-height: 500px;
-    background-attachment: fixed;
-    background-position: center;
+    /*background-attachment: fixed;*/
+    /*background-poqsition: center;*/
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 5%;
+    border-bottom-right-radius: 5px;
 }
 
 .boutonReussite
@@ -1475,7 +1504,7 @@ button.close:hover
 #TitreContact
 {
     color: whitesmoke;
-    text-align: center;
+    /*text-align: left;*/
 }
 
 
@@ -1503,6 +1532,19 @@ button.close:hover
 {
     padding-top: 0.5%;
 }
+
+.DivContact
+{
+    margin-top: 2%;
+    /*display: flex;*/
+    /*justify-content: flex-start;*/
+}
+
+.ContactDiv
+{
+
+}
+
 /* -------------------- !Contact! -------------------- */
 
 
