@@ -85,7 +85,7 @@
                     <img class="ImageCarousel d-block img-fluid" src="{{  asset(active.media.path) }}" alt="Los Angeles">
                     <div class="carousel-caption TextNewCaroussel">
                         <h3 class="animated fadeInLeft" style="font-size: 50px; color: white">
-                            Aidez ces étudiants
+                           {{ active.text }}
                         </h3>
                     </div>
                     {#<div class="carousel-caption DivDonate"><p class="Donate">Donate</p></div>#}
@@ -95,7 +95,7 @@
                         <img class="ImageCarousel d-block img-fluid" src="{{ asset(image.media.path) }}" alt="Los Angeles">
                         <div class="carousel-caption TextNewCaroussel2">
                             <h3 class="animated fadeInRight" style="font-size: 50px; color: white">
-                                Aidez ces étudiants
+                                {{ image.text }}
                             </h3>
                       </div>
                         {#<div class="carousel-caption DivDonate"><p class="Donate">Donate</p></div>#}
