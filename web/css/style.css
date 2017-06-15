@@ -876,7 +876,7 @@ button.close:hover
 }
 
 #text-carousel {
-    width: 120%;
+    width: 100%;
     height: 300px;
     padding: 50px;
     display: flex;
@@ -1050,6 +1050,7 @@ button.close:hover
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 5px;
 }
 
 /* -------------------- !Home Page! -------------------- */
