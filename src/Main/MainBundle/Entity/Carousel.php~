@@ -27,6 +27,14 @@ class Carousel
      * @ORM\JoinColumn(nullable=true)
      */
     private $media;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="text", type="string", length=255)
+     *
+     */
+    private $text;
     
     /**
      * @var int
