@@ -95,7 +95,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($but);
 //
         $volontees = new Description();
-        $volontees->setNom("Nos volontées");
+        $volontees->setNom("Nos volontés");
         $volontees->setDescription("A la faveur de la rencontre de Mgr Yousif et d’un ancien bâtisseur alsacien ;
           Bernard Geyler, celui-ci a fait le voyage de Kirkuk en décembre 2015.
           Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyler  a décidé avec quelques amis de créer début 2016
@@ -105,7 +105,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($volontees);
 
         $valeur = new Description();
-        $valeur->setNom("Nos valeur");
+        $valeur->setNom("Nos valeurs");
         $valeur->setDescription("Daech mène une guerre folle contre tous ceux qui ne sont pas avec lui,
         les chrétiens, mais aussi les musulmans. Il n’y a aucune logique rationnelle au combat mené par Daech.
         Ce sont des barbares, ils veulent le chaos. Dans l’islam comme chez les chrétiens, on n’a pas le droit de tuer l’autre.
