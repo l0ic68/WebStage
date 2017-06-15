@@ -1116,6 +1116,13 @@ button.close:hover
     margin-bottom: 2%;
 }
 
+.text1
+{
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 /* -------------------- !Origines! -------------------- */
 
 
