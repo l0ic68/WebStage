@@ -997,7 +997,7 @@ button.close:hover
 }
 
 .parallax-title.text-left:before {
-    left: 14%;
+    left: 22%;
     right: auto;
 }
 
@@ -1821,6 +1821,18 @@ button.close:hover
     margin-bottom: 10%;
 }
 
+.NombreEtudiant
+{
+    color: white;
+    filter: brightness(100%)!important;
+    z-index: 2;
+    position: absolute;
+    margin-top: 8%;
+    margin-left: 65%;
+    width: 30%;
+    margin-bottom: 10%;
+}
+
 .DonatePastPrincipal
 {
     width: 25%;
@@ -1839,6 +1851,20 @@ button.close:hover
     cursor: pointer;
     background-color: #feb41f;;
 }
+
+.LigneChiffre
+{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.chiffre
+{
+    font-size: 20px;
+    color:#009de0 ;
+}
+
 /*---------------------  !Action!   -------------------- */
 
 /*---------------------  bouttonhover   --------------------*/
