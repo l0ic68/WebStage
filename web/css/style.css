@@ -70,6 +70,8 @@ h5
    margin:0px;
 }
 
+
+
 a:link
 {
     color: white;
@@ -769,6 +771,7 @@ button.close:hover
     color: #feb41f;
 }
 
+
 .bandeauHomepage
 {
     display: flex;
@@ -819,6 +822,12 @@ button.close:hover
     height:60px;
     margin: 1%;
 }
+
+.bandeauDonate:link
+{
+    color: white;
+}
+
 .footerContact
 {
     margin-right: 10px;
@@ -1116,7 +1125,7 @@ button.close:hover
     margin-bottom: 2%;
 }
 
-.text1
+.Lireplus
 {
     font-size: large;
     font-weight: bold;
