@@ -29,8 +29,11 @@ class DescriptionController extends Controller
 
     public function DescriptionAction()
     {
-//        $em = $this->getDoctrine()->getManager();
-//        $objectifs = $em->getRepository('MainBundle:Description')->findByPage('objectif');
-        return $this->render('MainBundle:Description:layout\description.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $histoire = $em->getRepository('MainBundle:Description')->findOneByOrdre('6');
+        $but = $em->getRepository('MainBundle:Description')->findOneByOrdre('7');
+        $volonte = $em->getRepository('MainBundle:Description')->findOneByOrdre('8');
+        $valeur = $em->getRepository('MainBundle:Description')->findOneByOrdre('9');
+        return $this->render('MainBundle:Description:layout\description.html.twig', array('histoire'=>$histoire,'valeur'=>$valeur,'volonte'=>$volonte,'but'=>$but));
     }
 }

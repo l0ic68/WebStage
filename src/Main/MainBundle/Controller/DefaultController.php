@@ -15,15 +15,20 @@ class DefaultController extends Controller
         $em = $this->getDoctrine()->getManager();
 //        $entreprises = $em->getRepository('MainBundle:Description')->findByPage('accueil');
         $aPropos = $em->getRepository('MainBundle:Description')->findOneByOrdre('1');
-        $bandeau = $em->getRepository('MainBundle:Description')->findOneByOrdre('5');
         $descriptions = $em->getRepository('MainBundle:Description')->findByOrdre(array('2','3','4'));
         $actionC = $em->getRepository('MainBundle:Action')->findOneByFrontPage('cours');
         $actionR = $em->getRepository('MainBundle:Action')->findOneByFrontPage('realisé');
         $active = $em->getRepository('MainBundle:Carousel')->findOneByOrdre('0');
         $images = $em->getRepository('MainBundle:Carousel')->ByOrder();
-        return $this->render('MainBundle:Default:layout\accueil.html.twig',array('descriptions' => $descriptions ,'aPropos'=> $aPropos,'active'=>$active,"images" => $images,'actionC' => $actionC,'bandeau'=>$bandeau,'actionR' => $actionR));
+        return $this->render('MainBundle:Default:layout\accueil.html.twig',array('descriptions' => $descriptions ,'aPropos'=> $aPropos,'active'=>$active,"images" => $images,'actionC' => $actionC,'actionR' => $actionR));
     }
+    public function bandeauAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $bandeau = $em->getRepository('MainBundle:Description')->findOneByOrdre('5');
+        return $this->render('MainBundle:moduleUsed:bandeau.html.twig',array('bandeau'=>$bandeau));
 
+    }
     public function GalerieAction()
     {
         $em = $this->getDoctrine()->getManager();

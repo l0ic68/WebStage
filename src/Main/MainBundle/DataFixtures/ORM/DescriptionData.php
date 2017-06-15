@@ -75,50 +75,50 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($bandeau);
 
 
-        $qui = new Description();
-        $qui->setNom("Qui");
-        $qui->setDescription("A la faveur de la rencontre de Mgr Yousif et d’un ancien bâtisseur alsacien ;
+        $histoire = new Description();
+        $histoire->setNom("Notre histoire");
+        $histoire->setDescription("A la faveur de la rencontre de Mgr Yousif et d’un ancien bâtisseur alsacien ;
           Bernard Geyler, celui-ci a fait le voyage de Kirkuk en décembre 2015.  
           Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyler  a décidé avec quelques amis de créer début 2016 
           une association dénommée  « Aux porteurs de lumière-solidarité Irak ».");
-        $qui->setPage("accueil");
-        $qui->setOrdre("6");
-        $manager->persist($qui);
+        $histoire->setPage("Qui");
+        $histoire->setMedia($this->getReference('irakG_media'));
+        $histoire->setOrdre("6");
+        $manager->persist($histoire);
 
-        $ou = new Description();
-        $ou->setNom("Ou");
-        $ou->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc orci mi, 
-        sollicitudin eleifend metus porttitor, aliquam euismod purus. Sed a lacinia odio, at 
-        lobortis dolor. Fusce rutrum quam ut ullamcorper ultricies. Ut blandit cursus mauris, 
-        id congue quam euismod eget. Nullam aliquet ultrices ante, nec facilisis risus fringilla non. 
-        Integer et libero et ipsum molestie ultricies eu ut risus. Curabitur eget velit non dolor lobortis malesuada. 
-        Suspendisse mauris ligula, fermentum sit amet dapibus non, gravida id sapien. Vestibulum imperdiet mauris elit, 
-        quis ornare massa cursus eget.");
-        $ou->setPage("accueil");
-        $ou->setOrdre("7");
-        $manager->persist($ou);
+        $but = new Description();
+        $but->setNom("Notre but");
+        $but->setDescription("Nous avons pour but de soutenir financièrement la formation des générations futures, 
+        de témoigner des valeurs humaines, de dialogue et de solidarité face au fanatisme destructeur et sectaire.");
+        $but->setPage("Qui");
+        $but->setOrdre("7");
+        $manager->persist($but);
+//
+        $volontees = new Description();
+        $volontees->setNom("Nos volontées");
+        $volontees->setDescription("A la faveur de la rencontre de Mgr Yousif et d’un ancien bâtisseur alsacien ;
+          Bernard Geyler, celui-ci a fait le voyage de Kirkuk en décembre 2015.
+          Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyler  a décidé avec quelques amis de créer début 2016
+          une association dénommée  « Aux porteurs de lumière-solidarité Irak ».");
+        $volontees->setPage("accueil");
+        $volontees->setOrdre("8");
+        $manager->persist($volontees);
 
-        $pourquoi = new Description();
-        $pourquoi->setNom("Pourquoi");
-        $pourquoi->setDescription("Daech mène une guerre folle contre tous ceux qui ne sont pas avec lui, 
-        les chrétiens, mais aussi les musulmans. Il n’y a aucune logique rationnelle au combat mené par Daech. 
-        Ce sont des barbares, ils veulent le chaos. Dans l’islam comme chez les chrétiens, on n’a pas le droit de tuer l’autre. 
-        Il faut donc éduquer les plus jeunes en leur montrant l’impasse des discours guerriers. 
-        C’est la responsabilité de chacun et de tous, car Daech ne profite pas d’un prétendu choc des 
-        civilisations, mais de l’inculture.Beaucoup de réfugiés ont voulu venir en Europe pour fuir le chaos, 
+        $valeur = new Description();
+        $valeur->setNom("Nos valeur");
+        $valeur->setDescription("Daech mène une guerre folle contre tous ceux qui ne sont pas avec lui,
+        les chrétiens, mais aussi les musulmans. Il n’y a aucune logique rationnelle au combat mené par Daech.
+        Ce sont des barbares, ils veulent le chaos. Dans l’islam comme chez les chrétiens, on n’a pas le droit de tuer l’autre.
+        Il faut donc éduquer les plus jeunes en leur montrant l’impasse des discours guerriers.
+        C’est la responsabilité de chacun et de tous, car Daech ne profite pas d’un prétendu choc des
+        civilisations, mais de l’inculture.Beaucoup de réfugiés ont voulu venir en Europe pour fuir le chaos,
         mais Daech les poursuit et leur montre qu’il peut venir combattre en tout point du globe.
         Fuir n’est donc pas la solution ; quand l’Allemagne nazie dominait l’Europe, il a fallu résister en restant sur place. ");
-        $pourquoi->setPage("accueil");
-        $pourquoi->setOrdre("8");
-        $manager->persist($pourquoi);
+        $valeur->setPage("accueil");
+        $valeur->setOrdre("9");
+        $manager->persist($valeur);
 
-        $comment = new Description();
-        $comment->setNom("Comment");
-        $comment->setDescription("Nous avons pour but de soutenir financièrement la formation des générations futures, 
-        de témoigner des valeurs humaines, de dialogue et de solidarité face au fanatisme destructeur et sectaire.");
-        $comment->setPage("accueil");
-        $comment->setOrdre("8");
-        $manager->persist($comment);
+
 
         $aujourdhui = new Description();
         $aujourdhui->setNom("Qui sommes nous Aujourd'hui");
@@ -128,7 +128,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         reconstruction de l'Irak dès aujourd'hui. Rester c'est refuser que ce pays perde l'une de ses cimposantes humaines qui forment la richesse
         d'une population multiculturelles.");
         $aujourdhui->setPage("origine");
-        $aujourdhui->setOrdre("9");
+        $aujourdhui->setOrdre("10");
         $aujourdhui->setMedia($this->getReference('equipe_groupe'));
         $manager->persist($aujourdhui);
 
@@ -143,56 +143,44 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         > Soit sous forme de virement à l’adresse du compte suivant :      Caisse d’épargne de Molsheim : 16 705-09017-08001639023 rib 49
         Grand merci pour votre solidarité !");
         $don->setPage("don");
-        $don->setOrdre("6");
+        $don->setOrdre("11");
         $manager->persist($don);
 
-        $volonte = new Description();
-        $volonte->setNom("Nos volontés");
-        $volonte->setDescription("Notre volonté est de permettre à cette jeunesse plein de promesse, triplement déracinée, d’abord de Mossoul vers la vallée de 
-        Ninive, puis de là vers le nord Kurdistan, souvent à Erbil, dans des camps, et enfin de là-bas, séparés de leurs familles vers 
-        Kirkuk afin de poursuivre leurs études et pourvoir devenir les cadres de l’Irak de demain.
-          Bref, dès aujourd’hui se préparer pour construire l’après Daech.");
-        $volonte->setPage("origine");
-        $volonte->setOrdre("7");
-        $manager->persist($volonte);
+        $but = new Description();
+        $but->setNom("Notre but");
+        $but->setDescription("Nous avons pour but de soutenir financièrement la formation des générations futures, 
+        de témoigner des valeurs humaines, de dialogue et de solidarité face au fanatisme destructeur et sectaire.");
+        $but->setPage("Qui");
+        $but->setOrdre("12");
+        $manager->persist($but);
 
-        $valeur = new Description();
-        $valeur->setNom("Nos valeurs");
-        $valeur->setDescription("Notre association se donne pour mission de lever des fonds dans une démarche chrétienne éthique 
-        et oblative afin de financer les actions et projets humanitaires  de Mgr Yousif Thomas Mirkis en Irak: 
-        Pas de frais généraux, pas de charges de publicité, de secrétariat. Notre action  est le fruit d’un engagement où 
-        chaque membre prend à sa charge ses frais.  La conséquence est immédiate :  1 euro collecté = 1 euro en faveur de l’Irak.");
-        $valeur->setPage("origine");
-        $valeur->setOrdre("8");
-        $manager->persist($valeur);
-
-        $irakG = new Description();
-        $irakG->setNom("Irak (en général) ");
-        $irakG->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc orci mi, 
-        sollicitudin eleifend metus porttitor, aliquam euismod purus. Sed a lacinia odio, at 
-        lobortis dolor. Fusce rutrum quam ut ullamcorper ultricies. Ut blandit cursus mauris, 
-        id congue quam euismod eget. Nullam aliquet ultrices ante, nec facilisis risus fringilla non. 
-        Integer et libero et ipsum molestie ultricies eu ut risus. Curabitur eget velit non dolor lobortis malesuada. 
-        Suspendisse mauris ligula, fermentum sit amet dapibus non, gravida id sapien. Vestibulum imperdiet mauris elit, 
-        quis ornare massa cursus eget.");
-        $irakG->setPage("lieu");
-        $irakG->setMedia($this->getReference('irakG_media'));
-        $irakG->setOrdre("9");
-        $manager->persist($irakG);
-
-        $irakS = new Description();
-        $irakS->setNom("Irak (précisement) ");
-        $irakS->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc orci mi, 
-        sollicitudin eleifend metus porttitor, aliquam euismod purus. Sed a lacinia odio, at 
-        lobortis dolor. Fusce rutrum quam ut ullamcorper ultricies. Ut blandit cursus mauris, 
-        id congue quam euismod eget. Nullam aliquet ultrices ante, nec facilisis risus fringilla non. 
-        Integer et libero et ipsum molestie ultricies eu ut risus. Curabitur eget velit non dolor lobortis malesuada. 
-        Suspendisse mauris ligula, fermentum sit amet dapibus non, gravida id sapien. Vestibulum imperdiet mauris elit, 
-        quis ornare massa cursus eget.");
-        $irakS->setPage("lieu");
-        $irakS->setMedia($this->getReference('kirkouk'));
-        $irakS->setOrdre("10");
-        $manager->persist($irakS);
+//        $irakG = new Description();
+//        $irakG->setNom("Irak (en général) ");
+//        $irakG->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc orci mi,
+//        sollicitudin eleifend metus porttitor, aliquam euismod purus. Sed a lacinia odio, at
+//        lobortis dolor. Fusce rutrum quam ut ullamcorper ultricies. Ut blandit cursus mauris,
+//        id congue quam euismod eget. Nullam aliquet ultrices ante, nec facilisis risus fringilla non.
+//        Integer et libero et ipsum molestie ultricies eu ut risus. Curabitur eget velit non dolor lobortis malesuada.
+//        Suspendisse mauris ligula, fermentum sit amet dapibus non, gravida id sapien. Vestibulum imperdiet mauris elit,
+//        quis ornare massa cursus eget.");
+//        $irakG->setPage("lieu");
+//        $irakG->setMedia($this->getReference('irakG_media'));
+//        $irakG->setOrdre("9");
+//        $manager->persist($irakG);
+//
+//        $irakS = new Description();
+//        $irakS->setNom("Irak (précisement) ");
+//        $irakS->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc orci mi,
+//        sollicitudin eleifend metus porttitor, aliquam euismod purus. Sed a lacinia odio, at
+//        lobortis dolor. Fusce rutrum quam ut ullamcorper ultricies. Ut blandit cursus mauris,
+//        id congue quam euismod eget. Nullam aliquet ultrices ante, nec facilisis risus fringilla non.
+//        Integer et libero et ipsum molestie ultricies eu ut risus. Curabitur eget velit non dolor lobortis malesuada.
+//        Suspendisse mauris ligula, fermentum sit amet dapibus non, gravida id sapien. Vestibulum imperdiet mauris elit,
+//        quis ornare massa cursus eget.");
+//        $irakS->setPage("lieu");
+//        $irakS->setMedia($this->getReference('kirkouk'));
+//        $irakS->setOrdre("10");
+//        $manager->persist($irakS);
 
         $objectif = new Description();
         $objectif->setNom("Quel est le but de l'association");
@@ -204,23 +192,23 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         Suspendisse mauris ligula, fermentum sit amet dapibus non, gravida id sapien. Vestibulum imperdiet mauris elit, 
         quis ornare massa cursus eget.");
         $objectif->setPage("objectif");
-        $objectif->setOrdre("11");
+        $objectif->setOrdre("13");
         $objectif->setMedia($this->getReference('carouselMedia1'));
         $manager->persist($objectif);
 
 
         $manager->flush();
 
-        $this->addReference('qui',$qui);
-        $this->addReference('ou',$ou);
-        $this->addReference('pourquoi',$pourquoi);
-        $this->addReference('comment',$comment);
+//        $this->addReference('qui',$qui);
+//        $this->addReference('ou',$ou);
+        $this->addReference('but',$but);
+        $this->addReference('histoire',$histoire);
         $this->addReference('don',$don);
         $this->addReference('aujourdhui',$aujourdhui);
-        $this->addReference('volonte',$volonte);
+        $this->addReference('volontees',$volontees);
         $this->addReference('valeur',$valeur);
-        $this->addReference('irakG',$irakG);
-        $this->addReference('irakS',$irakS);
+//        $this->addReference('irakG',$irakG);
+//        $this->addReference('irakS',$irakS);
         $this->addReference('objectif',$objectif);
 
     }

@@ -419,14 +419,7 @@
 
 
     <!--        Faire un Don      -->
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bandeauHomepage">
-        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 bandeauText" >
-            <h2>{{ bandeau.nom }}</h2>
-        </div>
-        <div class="bandeauDonate">
-            <p style="margin: 0px">Faire un Don</p>
-        </div>
-    </div>
+    {% render(controller('MainBundle:Default:bandeau')) %}
     <!--        !Faire une Don!      -->
 
     <!--        Votre réussite      -->
