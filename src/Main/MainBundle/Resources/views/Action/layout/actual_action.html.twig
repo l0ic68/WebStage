@@ -29,6 +29,7 @@
             <p class="DatePast">{{ action.dateFin| date('d/m/Y') }}    -    {{ action.dateDebut| date('d/m/Y') }}</p>
             <div class="DonatePast text{{ action.id }}">Faire un Don</div>
         </div>
+
         <div class="modal fade" id="{{ action.id }}" tabindex="-1" role="dialog" aria-hidden="true" >
             <button type="button" class="close modalTextHomepage" data-dismiss="modal" aria-label="Close">
                 <span class="Retour" aria-hidden="true"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Retour</span>
@@ -43,10 +44,34 @@
                         <h3 class="Titre TitreModal"><span>{{ action.nom}}</span></h3>
                     </div>
                     <div class="modal-body TextModalHomepage">
-                        <p class="DateActionModal">{{ action.dateDebut| date() }}</p>
-                        {{ action.description }}
-                        <p class="CoutActionModal">Coût de l'action : {{ action.cout }}</p>
-                        <p class="CoutActionModal">Argent récolté : {{ action.recolte }}</p>
+                        {#<div class="DateActionModal">#}
+                        {#Du : <span style="text-decoration: underline;">{{ action.dateDebut| date('d/m/Y') }}</span>   Au : <span style="text-decoration: underline;">{{ action.dateFin| date('d/m/Y') }}</span>#}
+                        {#</div>#}
+                        <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h2 class="parallax-title text-left" style="padding-bottom: 10px; padding-left: 10%; margin: 0px; font-size: 38px; color: #333;">Déscription du projet :</h2>
+                        </div>
+                        <div>
+                            <p style="text-align: left; margin-left: 5%; margin-right: 5%;">{{ action.description }}</p>
+                        </div>
+                        <div class="CoutActionModal">
+                            <span>Coût de l'action : {{ action.cout }}</span>
+                            <span>Argent récolté : {{ action.recolte }}</span>
+                        </div>
+                    </div>
+
+                    <!--        Faire un Don      -->
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bandeauHomepage">
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 bandeauText" >
+                            <h2>Vous souhaitez soutenir le projet ?</h2>
+                        </div>
+                        <div class="bandeauDonate">
+                            <p style="margin: 0px">Faire un Don</p>
+                        </div>
+                    </div>
+                    <!--        !Faire une Don!      -->
+
+                    <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="parallax-title text-left" style="padding-bottom: 10px; padding-left: 11%; margin: 0px; font-size: 38px; color: #333;">Le projet en image :</h2>
                     </div>
                     <div class="row CarouselModalAction">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
