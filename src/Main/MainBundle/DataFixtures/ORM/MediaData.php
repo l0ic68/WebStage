@@ -99,6 +99,21 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $collecte->setUrl('charity.png');
         $manager->persist($collecte);
 
+        $etudiantG = new Media();
+        $etudiantG->setPath('img/etudiantGroupe.png');
+        $etudiantG->setUrl('etudiantGroupe.png');
+        $manager->persist($etudiantG);
+
+        $cabinetDentaire = new Media();
+        $cabinetDentaire->setPath('img/cabinetDentaire.jpg');
+        $cabinetDentaire->setUrl('cabinetDentaire.jpg');
+        $manager->persist($cabinetDentaire);
+
+        $etudiant = new Media();
+        $etudiant->setPath('img/etudiant.jpg');
+        $etudiant->setUrl('etudiant.jpg');
+        $manager->persist($etudiant);
+
 
 
         $manager->flush();
@@ -118,6 +133,9 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $this->addReference('inconnu',$inconnu);
         $this->addReference('irakG_media',$irakG);
         $this->addReference('kirkouk',$kirkouk);
+        $this->addReference('etudiantG',$etudiantG);
+        $this->addReference('cabinetDentaire',$cabinetDentaire);
+        $this->addReference('etudiant',$etudiant);
     }
 
     public function getOrder()

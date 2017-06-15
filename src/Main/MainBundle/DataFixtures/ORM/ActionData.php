@@ -29,76 +29,13 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action1->setDateFin(new \DateTime("15-04-2016"), new \DateTimeZone('Europe/Paris'));
         $action1->setRecolte(0);
         $action1->setType("Passée");
-        $action1->addMedia($this->getReference('equipe_groupe'));
-        $action1->addMedia($this->getReference('kirkouk'));
-        $action1->addMedia($this->getReference('irakG_media'));
-        $action1->setPicture($this->getReference("carouselMedia1"));
+//        $action1->addMedia($this->getReference('equipe_groupe'));
+//        $action1->addMedia($this->getReference('kirkouk'));
+//        $action1->addMedia($this->getReference('irakG_media'));
+        $action1->setPicture($this->getReference("cabinetDentaire"));
         $action1->setFrontPage('realisé');
         $manager->persist($action1);
 
-        $action2 = new Action();
-        $action2->setNom("Parrainage de 50 étudiants en Architecture et Ingénierie à Kirkuk ");
-        $action2->setDescription("L’université de Kirkuk donne accès aux filières suivantes : 
-        médecine; pharmacie; dentaire; ingénierie et architecture. En 2015/2016, 
-        Mgr Yousif avait accueilli 400 étudiants.  La rentrée universitaire s’annonce avec un 
-        effectif plus important de 550 étudiants. Nous avons retenus pour une nouvelle action, 
-        de soutenir les étudiants en architectes. Nos métiers, et notre sensibilité n’y sont pas étranger ! 
-        L’opération va consister à financer leur hébergement à Kirkuk; cela représente un budget de 2000 euros 
-        par an et par étudiant, soit total de 100.000 €. Les capitaux pour les  25 premiers étudiants sont en place. 
-        Nous cherchons des parrainages pour  les autres 25 étudiants. Parrainer par exemple 2 étudiants vous coûte, 
-        avoir fiscal déduit de 66 %, 1360 €  (dans la limite de 20% du revenu imposable)");
-        $action2->setDescriptionP2("Début 2016, la construction et l’équipement d’un cabinet dentaire a été mené sur  
-        les fonds propres de l’association, au travers de ses membres. Ce cabinet basé à Kirkuk offre aujourd’hui aux 
-        déplacés-déracinés de Mossoul  (ville sous contrôle de Daech depuis 3 ans) des soins dentaires gratuits sur la base 
-        du bénévolat de 3 dentistes Irakiens. Deux chrétiens et un musulman.");
-        $action2->setCout(10000);
-        $action2->setDateDebut(new \DateTime("01-01-2017"), new \DateTimeZone('Europe/Paris'));
-        $action2->setDateFin(new \DateTime("31-12-2017"), new \DateTimeZone('Europe/Paris'));
-        $action2->setRecolte(5000);
-        $action2->setType("Passée");
-//        $action2->addMedia($this->getReference('kirkouk'));
-        $action2->setPicture($this->getReference("carouselMedia2"));
-        $action2->setFrontPage('null');
-        $manager->persist($action2);
-
-        $action3 = new Action();
-        $action3->setNom("Parrainage de 50 étudiants en Architecture et Ingénierie à Kirkuk");
-        $action3->setDescription("L’université de Kirkuk donne accès aux filières suivantes : 
-        médecine; pharmacie; dentaire; ingénierie et architecture. En 2015/2016, 
-        Mgr Yousif avait accueilli 400 étudiants.  La rentrée universitaire s’annonce avec un 
-        effectif plus important de 550 étudiants. Nous avons retenus pour une nouvelle action, 
-        de soutenir les étudiants en architectes. Nos métiers, et notre sensibilité n’y sont pas étranger ! 
-        L’opération va consister à financer leur hébergement à Kirkuk; cela représente un budget de 2000 euros 
-        par an et par étudiant, soit total de 100.000 €. Les capitaux pour les  25 premiers étudiants sont en place. 
-        Nous cherchons des parrainages pour  les autres 25 étudiants. Parrainer par exemple 2 étudiants vous coûte, 
-        avoir fiscal déduit de 66 %, 1360 €  (dans la limite de 20% du revenu imposable)");
-        $action3->setCout(10000);
-        $action3->setDateDebut(new \DateTime("08-05-2017"), new \DateTimeZone('Europe/Paris'));
-        $action3->setDateFin(new \DateTime("08-05-2017"), new \DateTimeZone('Europe/Paris'));
-        $action3->setRecolte(5000);
-        $action3->setType("Passée");
-//        $action3->addMedia($this->getReference('irakG_media'));
-        $action3->setPicture($this->getReference("carouselMedia3"));
-        $action3->setFrontPage('null');
-        $manager->persist($action3);
-
-        $action4 = new Action();
-        $action4->setNom("Un cabinet dentaire pour les réfugiés de Kirkuk");
-        $action4->setDescription("Début 2016, la construction et l’équipement d’un cabinet dentaire a été mené sur  
-        les fonds propres de l’association, au travers de ses membres. Ce cabinet basé à Kirkuk offre aujourd’hui aux 
-        déplacés-déracinés de Mossoul  (ville sous contrôle de Daech depuis 3 ans) des soins dentaires gratuits sur la base 
-        du bénévolat de 3 dentistes Irakiens. Deux chrétiens et un musulman.");
-        $action4->setCout(0);
-        $action4->setDateDebut(new \DateTime("01-01-2016"), new \DateTimeZone('Europe/Paris'));
-        $action4->setDateFin(new \DateTime("15-04-2016"), new \DateTimeZone('Europe/Paris'));
-        $action4->setRecolte(0);
-        $action4->setType("En cours");
-        $action4->addMedia($this->getReference('equipe_groupe'));
-        $action4->addMedia($this->getReference('kirkouk'));
-        $action4->addMedia($this->getReference('irakG_media'));
-        $action4->setPicture($this->getReference("carouselMedia1"));
-        $action4->setFrontPage('null');
-        $manager->persist($action4);
 
         $action5 = new Action();
         $action5->setNom("Parrainage de 50 étudiants en Architecture et Ingénierie à Kirkuk ");
@@ -121,18 +58,39 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action5->setRecolte(5000);
         $action5->setType("En cours");
 //        $action2->addMedia($this->getReference('kirkouk'));
-        $action5->setPicture($this->getReference("carouselMedia2"));
+        $action5->setPicture($this->getReference("etudiant"));
         $action5->setFrontPage('Cours');
         $manager->persist($action5);
+
+        $action6 = new Action();
+        $action6->setNom("Construction d'une maison pour alzheimer");
+        $action6->setDescription("L'association à comme objectif de construire une maison pour alzheimer, le permit de construire à déjà était validé grâce au plan fournit par l'association.");
+        $action6->setCout(0);
+        $action6->setDateDebut(new \DateTime("01-01-2017"), new \DateTimeZone('Europe/Paris'));
+        $action6->setDateFin(new \DateTime("31-12-2017"), new \DateTimeZone('Europe/Paris'));
+        $action6->setRecolte(0);
+        $action6->setType("En cours");
+        $action6->setPicture($this->getReference("irakG_media"));
+        $action6->setFrontPage('null');
+        $manager->persist($action6);
+
+        $action7 = new Action();
+        $action7->setNom("Elargissement de l'action \"Aux Porteurs de Lumière\"");
+        $action7->setDescription("L'association est en phase d'aggrantissement avec l'ouverture d'une nouvelle branche à Paris aux frai des membres");
+        $action7->setCout(0);
+        $action7->setDateDebut(new \DateTime("01-01-2017"), new \DateTimeZone('Europe/Paris'));
+        $action7->setDateFin(new \DateTime("31-12-2017"), new \DateTimeZone('Europe/Paris'));
+        $action7->setRecolte(0);
+        $action7->setType("En cours");
+        $action7->setPicture($this->getReference(""));
+        $action7->setFrontPage('null');
+        $manager->persist($action7);
 
 
 
         $manager->flush();
 
         $this->addReference('action1',$action1);
-        $this->addReference('action2',$action2);
-        $this->addReference('action3',$action3);
-        $this->addReference('action4',$action4);
         $this->addReference('action5',$action5);
 
     }

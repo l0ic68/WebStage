@@ -19,7 +19,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
     public function load(ObjectManager $manager)
     {
         $aPropos = new Description();
-        $aPropos->setNom("A propos de nous");
+        $aPropos->setNom("A notre propos");
         $aPropos->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
         Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma uris, commodo sed neque et, 
         feugiat pretium purus. Quisque quis purus viverra, bibendum mi ut, volutpat enim. Curabitur ia 
@@ -31,19 +31,19 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
 
 
         $soutenir = new Description();
-        $soutenir->setNom("Soutenir les réfugiés");
+        $soutenir->setNom("Soutien de 800 réfugiés");
         $soutenir->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
         Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma uris, commodo sed neque et, 
         feugiat pretium purus. Quisque quis purus viverra, bibendum mi ut, volutpat enim. Curabitur ia 
         culis posuere elit, nec imperdiet mauris varius ac. Maecenas quis enim lec tus. Vivamus lacus libero, 
         laoreet ut urna egestas, bibendum pretium augue.");
         $soutenir->setPage("accueil");
-        $soutenir->setMedia($this->getReference('soutenir'));
+        $soutenir->setMedia($this->getReference('etudiantG'));
         $soutenir->setOrdre("2");
         $manager->persist($soutenir);
 
         $qualite = new Description();
-        $qualite->setNom("Qualité de vie");
+        $qualite->setNom("Amélioration du quotidien");
         $qualite->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
         Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma uris, commodo sed neque et, 
         feugiat pretium purus. Quisque quis purus viverra, bibendum mi ut, volutpat enim. Curabitur ia 
@@ -55,7 +55,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($qualite);
 
         $collecte = new Description();
-        $collecte->setNom("Collecte de dons");
+        $collecte->setNom("Pour financer nos actions : collecte de dons");
         $collecte->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
         Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma uris, commodo sed neque et, 
         feugiat pretium purus. Quisque quis purus viverra, bibendum mi ut, volutpat enim. Curabitur ia 
@@ -82,7 +82,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
           Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyler  a décidé avec quelques amis de créer début 2016 
           une association dénommée  « Aux porteurs de lumière-solidarité Irak ».");
         $histoire->setPage("Qui");
-        $histoire->setMedia($this->getReference('irakG_media'));
+//        $histoire->setMedia($this->getReference(''));
         $histoire->setOrdre("6");
         $manager->persist($histoire);
 
