@@ -340,6 +340,11 @@ header
     color: white;
 }
 
+.MotsHeader:hover
+{
+    color: #009de0;
+}
+
 .HeaderDivMot
 {
     /*width: 24%;*/
@@ -544,7 +549,7 @@ footer
 #myCarousel
 {
     width:100%;
-    height:640px;
+    /*height:640px;*/
     padding: 0px;
 }
 
@@ -884,6 +889,16 @@ button.close:hover
     flex-direction: column;
 }
 
+@media screen and (max-width: 1450px)
+{
+    .DivTextPierre
+    {
+        padding-left: 1%!important;
+    }
+
+}
+
+
 .DivTextPierre > h3
 {
     margin: 0px;
@@ -914,7 +929,7 @@ button.close:hover
 
 #text-carousel {
     width: 100%;
-    height: 300px;
+    /*height: 300px;*/
     padding: 50px;
     display: flex;
     align-items: center;
@@ -950,6 +965,37 @@ button.close:hover
 {
     padding: 0px;
     text-align: left;
+}
+
+.TitreReussite
+{
+    font-size: 275%;
+    margin-bottom: 8%;
+}
+
+@media screen and (max-width: 992px)
+{
+    .TitreReussite
+    {
+      margin-bottom: 2%;
+    }
+
+    .TexteDivReussite
+    {
+        margin-bottom: 2%;
+    }
+
+    .DivReussite
+    {
+        height: auto;
+        padding: 5%;
+    }
+}
+
+
+.TexteDivReussite
+{
+    margin-bottom: 5%;
 }
 
 .TexteReussite
@@ -995,6 +1041,34 @@ button.close:hover
     padding-bottom: 60px;
     background-color: white;
 }
+
+.AProposTitre
+{
+    padding: 20px;
+    text-align: center;
+    margin: 0px;
+    font-size: 48px;
+    color: #333;
+}
+
+@media screen and (max-width: 992px)
+{
+    .AboutUs
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .AProposTitre
+    {
+        text-align: left;
+    }
+
+}
+
+
 
 .parallax-title.text-left:before {
     left: 22%;
@@ -1057,6 +1131,22 @@ button.close:hover
     justify-content: center;
     margin-bottom: 35px;
     background-color: white;
+
+}
+@media screen and (max-width: 1450px)
+{
+    .UneImageQui
+    {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .ImgQui
+    {
+        width: 100%!important;
+        height: auto!important;
+        max-height: 237px;
+    }
 }
 
 .UneImageQui

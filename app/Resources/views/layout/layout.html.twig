@@ -20,37 +20,10 @@
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <ul>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Qui sommes nous ?
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ path('origines') }}">Nos origines </a></li>
-                            <li><a href="{{ path('lieu') }}">Ou agissons nous ?</a></li>
-                            <li><a href="{{ path('objectif') }}">Dans quel but ?</a></li>
-                            {#<li><a href="{{ path('membres') }}">Notre équipes</a></li>#}
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Nos actions
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{{ path('past') }}">Réalisé</a></li>
-                            <li><a href="{{ path('actual') }}">En cours</a></li>
-                            <li><a href="{{ path('future') }}">Futur</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="{{ path('galerie') }}">Galeries</a></li>
-                    <li><a href="{{ path('don') }}">Faire un don</a></li>
-                    <li><a href="{{ path('contact') }}">Contact</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Langue
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Anglais</a></li>
-                            <li><a href="#">Français</a></li>
-                            <li><a href="#">Allemand</a></li>
-                        </ul>
-                    </li>
+                        <li><a href="{{ path('description') }}">Projets réalisés</a></li>
+                        <li><a href="{{ path('past') }}">Projets réalisés</a></li>
+                        <li><a href="{{ path('actual') }}">Actions en cours</a></li>
+                        <li><a href="{{ path('don') }}">Faire un don</a></li>
                     </ul>
                 </div>
                 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
@@ -84,7 +57,7 @@
 
 
 
-            <nav class="hidden-xs hidden-sm col-lg-offset-5 col-md-10 col-lg-7" id="DivHeader" style="white-space: nowrap;">
+            <nav class="hidden-xs hidden-sm col-md-offset-4 col-lg-offset-5 col-md-10 col-lg-7" id="DivHeader" style="white-space: nowrap;">
                 <ul class="nav navbar-nav navbar" id="NavbarHeader">
                     <!--  <li class="active"><a href="#">Home</a></li>-->
 
@@ -118,8 +91,8 @@
                         {#</ul>#}
                     {#</li>#}
                     <li class="HeaderDivMot"><a class="MotsHeader" href="{{ path('description') }}">Qui sommes nous ?</a></li>
-                    <li class="HeaderDivMot"><a class="MotsHeader" href="{{ path('past') }}">Actions réalisées </a></li>
-                    <li class="HeaderDivMot"><a class="MotsHeader" href="{{ path('actual') }}">Projet en cours</a></li>
+                    <li class="HeaderDivMot"><a class="MotsHeader" href="{{ path('past') }}">Projets réalisés </a></li>
+                    <li class="HeaderDivMot"><a class="MotsHeader" href="{{ path('actual') }}">Actions en cours</a></li>
                     <li class="HeaderDivMot"><a class="FaireDon" href="{{ path('don') }}">Faire un don</a></li>
                    {#<li><a class="MotsHeader" href="{{ path('galerie') }}">Galeries</a></li>#}
                     {#<li><a class="MotsHeader" href="{{ path('originesAdmin') }}">Admin</a></li>#}
