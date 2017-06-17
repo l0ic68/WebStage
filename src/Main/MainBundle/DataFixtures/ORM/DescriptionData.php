@@ -20,23 +20,20 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
     {
         $aPropos = new Description();
         $aPropos->setNom("A notre propos");
-        $aPropos->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma uris, commodo sed neque et, 
-        feugiat pretium purus. Quisque quis purus viverra, bibendum mi ut, volutpat enim. Curabitur ia 
-        culis posuere elit, nec imperdiet mauris varius ac. Maecenas quis enim lec tus. Vivamus lacus libero, 
-        laoreet ut urna egestas, bibendum pretium augue.");
+        $aPropos->setDescription("Préoccupé par la situation en Irak M. Geyler a decider, avec quelques amis, de créer 
+        début 2016 une association dénommée \"Aux porteurs de lumière-solidarité Irak\". Notre association se donne pour 
+        mission de lever des fonds dans une démarche 
+        éthique et oblative afin de financer les acrions et projets humanitaires de Mgr Yousif Thomas Mirkis en Irak. 
+        ");
         $aPropos->setPage("accueil");
         $aPropos->setOrdre("1");
         $manager->persist($aPropos);
 
 
         $soutenir = new Description();
-        $soutenir->setNom("Soutien de 800 réfugiés");
-        $soutenir->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma uris, commodo sed neque et, 
-        feugiat pretium purus. Quisque quis purus viverra, bibendum mi ut, volutpat enim. Curabitur ia 
-        culis posuere elit, nec imperdiet mauris varius ac. Maecenas quis enim lec tus. Vivamus lacus libero, 
-        laoreet ut urna egestas, bibendum pretium augue.");
+        $soutenir->setNom("Soutien de 800 étudiants");
+        $soutenir->setDescription("Notre volonté est de permettre à cette jeunesse plein de promesse, triplement 
+        déracinée, de poursuivre leurs études et pourvoir devenir les cadres de l’Irak de demain.");
         $soutenir->setPage("accueil");
         $soutenir->setMedia($this->getReference('etudiantG'));
         $soutenir->setOrdre("2");
@@ -44,11 +41,8 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
 
         $qualite = new Description();
         $qualite->setNom("Amélioration du quotidien");
-        $qualite->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma uris, commodo sed neque et, 
-        feugiat pretium purus. Quisque quis purus viverra, bibendum mi ut, volutpat enim. Curabitur ia 
-        culis posuere elit, nec imperdiet mauris varius ac. Maecenas quis enim lec tus. Vivamus lacus libero, 
-        laoreet ut urna egestas, bibendum pretium augue.");
+        $qualite->setDescription("Pour l'amélioration de la qualité de vie via la construction de divers bâtiment 
+        nécessaire au quotidien.");
         $qualite->setPage("accueil");
         $qualite->setMedia($this->getReference('qualite'));
         $qualite->setOrdre("3");
@@ -56,11 +50,8 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
 
         $collecte = new Description();
         $collecte->setNom("Pour financer nos actions : collecte de dons");
-        $collecte->setDescription("Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-        Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma uris, commodo sed neque et, 
-        feugiat pretium purus. Quisque quis purus viverra, bibendum mi ut, volutpat enim. Curabitur ia 
-        culis posuere elit, nec imperdiet mauris varius ac. Maecenas quis enim lec tus. Vivamus lacus libero, 
-        laoreet ut urna egestas, bibendum pretium augue.");
+        $collecte->setDescription(" Notre action est le fruit d’un engagement où chaque membre prend à sa charge ses 
+        frais.  La conséquence est immédiate : 1 euro collecté = 1 euro en faveur de l’Irak.");
         $collecte->setPage("accueil");
         $collecte->setMedia($this->getReference('collecte'));
         $collecte->setOrdre("4");

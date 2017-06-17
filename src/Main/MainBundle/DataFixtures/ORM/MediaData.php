@@ -110,10 +110,14 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($cabinetDentaire);
 
         $etudiant = new Media();
-        $etudiant->setPath('img/etudiant.jpg');
-        $etudiant->setUrl('etudiant.jpg');
+        $etudiant->setPath('img/P1070667.jpg');
+        $etudiant->setUrl('P1070667.jpg');
         $manager->persist($etudiant);
 
+        $paris = new Media();
+        $paris->setPath('img/france.jpg');
+        $paris->setUrl('france.jpg');
+        $manager->persist($paris);
 
 
         $manager->flush();
@@ -136,6 +140,7 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $this->addReference('etudiantG',$etudiantG);
         $this->addReference('cabinetDentaire',$cabinetDentaire);
         $this->addReference('etudiant',$etudiant);
+        $this->addReference('paris',$paris);
     }
 
     public function getOrder()
