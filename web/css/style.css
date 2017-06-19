@@ -557,8 +557,37 @@ footer
 {
     max-width: 100%;
     max-height :640px;
+    min-width: 100%;
+    /*min-height: 640px;*/
     width: 100%;
     height: 700px;
+}
+
+@media screen and (max-width: 1200px)
+{
+    .ImageCarousel
+    {
+        max-height :480px;
+        min-height: 480px;
+    }
+}
+
+@media screen and (max-width: 992px)
+{
+    .ImageCarousel
+    {
+        max-height :363px;
+        min-height: 363px;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .ImageCarousel
+    {
+        max-height :212px;
+        min-height: 212px;
+    }
 }
 
 .carousel-indicators
@@ -810,9 +839,11 @@ button.close:hover
     justify-content: center;
     background-color: #009de0;
     width :100%;
-    height: 150px;
+    min-height: 80px;
+    height: auto;
     display: flex;
     align-items: center;
+    padding: 3%;
 }
 
 .bandeauText
@@ -878,8 +909,16 @@ button.close:hover
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 520px;
+    height: auto;
 }
+
+/*@media screen and (max-width: 1000px)*/
+/*{*/
+    /*.DivPierre*/
+    /*{*/
+        /*height :820px;*/
+    /*}*/
+/*}*/
 
 .DivTextPierre
 {
@@ -926,7 +965,11 @@ button.close:hover
     color:black;
     display:flex;
     align-items:center;
+    width: 100%;
+    height: auto;
 }
+
+
 
 #text-carousel {
     width: 100%;
@@ -1039,7 +1082,7 @@ button.close:hover
     margin-top: 3%;
     display: flex;
     align-items: center;
-    padding-bottom: 60px;
+    margin-bottom: 4%;
     background-color: white;
 }
 
