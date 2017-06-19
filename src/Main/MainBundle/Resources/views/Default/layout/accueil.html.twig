@@ -435,7 +435,7 @@
 
     <div class="DivReussite col-xs-12 col-sm-12 col-md-6 col-lg-4">
         <h3 class="TitreReussite" style="">{{ actionR.nom }}</h3>
-        <p class="TexteDivReussite">{{ actionR.description[:400] }}</p>
+        <p class="TexteDivReussite">{{ actionR.description[:400] }}...</p>
         <button type="button" class="btn btn-primary"><a href="{{ path('pastActionModal',{'id' : actionR.id }) }}">Voir le projet </a></button>
     </div>
     <!--        !Votre réussite!      -->

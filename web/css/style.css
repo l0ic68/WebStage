@@ -859,12 +859,14 @@ button.close:hover
     width: 250px;
     height: 250px;
     /*background-color: #f3f3f3;*/
+    /*padding-left: 0px*/
 }
 
-.All:hover
+
+.bjr:hover
 {
     cursor: pointer;
-    /*background-color: rgb(125,125,125);*/
+    box-shadow: 1px 1px 12px #555;
 }
 
 .FaireDon

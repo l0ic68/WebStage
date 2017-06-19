@@ -24,9 +24,10 @@
     {#</div>#}
     <div style="height: 100px"></div>
     {#<div class="parallax-window col-xs-12 col-sm-12 col-md-12 col-lg-12" data-parallax="scroll" data-image-src="/WebStage/web/img/Carousel1Small.jpg"></div>#}
-    <div class="AllAction col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="AllAction col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-12 col-sm-10 col-md-10 col-lg-10">
         {% for action in actions %}
-                <div class="OneAction col-xs-12 col-sm-6 col-md-5 col-lg-3">
+    <div class="DivOneAction col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                <div class="OneAction col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <img  class ="pastActionImg" src="{{ asset(action.picture.path) }}">
                     <h4>{{ action.nom[:50] }}</h4>
                     <p class="DescriptionActionPast">{{ action.description[:130] }}...</p>
@@ -34,6 +35,7 @@
                     <p class="DatePast">{{ action.dateFin| date('d/m/Y') }}    -    {{ action.dateDebut| date('d/m/Y') }}</p>
                     <div class="DonatePast text{{ action.id }}">Voir l'action</div>
                 </div>
+    </div>
             {#<section class="col-lg-4 ActionRealise">#}
                 {#<div class="pastAction">#}
                         {#<img  class ="pastActionImg" src="{{ asset(action.picture.path) }}">#}
@@ -68,7 +70,7 @@
                                 {#Du : <span style="text-decoration: underline;">{{ action.dateDebut| date('d/m/Y') }}</span>   Au : <span style="text-decoration: underline;">{{ action.dateFin| date('d/m/Y') }}</span>#}
                             {#</div>#}
                             <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <h2 class="parallax-title text-left" style="padding-bottom: 10px; padding-left: 10%; margin: 0px; font-size: 38px; color: #333;">Déscription du projet :</h2>
+                                <h2 class="parallax-title text-left" style="padding-bottom: 10px; padding-left: 10%; margin: 0px; font-size: 38px; color: #333;">Description du projet :</h2>
                             </div>
                             <div>
                                 <p style="text-align: left; margin-left: 5%; margin-right: 5%;">{{ action.description }}</p>

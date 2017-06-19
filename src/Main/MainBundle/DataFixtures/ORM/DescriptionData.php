@@ -87,24 +87,23 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
 //
         $volontees = new Description();
         $volontees->setNom("Nos volontés");
-        $volontees->setDescription("A la faveur de la rencontre de Mgr Yousif et d’un ancien bâtisseur alsacien ;
-          Bernard Geyler, celui-ci a fait le voyage de Kirkuk en décembre 2015.
-          Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyler  a décidé avec quelques amis de créer début 2016
-          une association dénommée  « Aux porteurs de lumière-solidarité Irak ».");
+        $volontees->setDescription("Notre volonté est de permettre à cette jeunesse plein de promesse, triplement 
+        déracinée, d’abord de Mossoul vers la vallée de Ninive, puis de là vers le nord Kurdistan, souvent à Erbil, 
+        dans des camps, et enfin de là-bas, séparés de leurs familles vers Kirkuk afin de poursuivre leurs études et 
+        pourvoir devenir les cadres de l’Irak de demain.  Bref, dès aujourd’hui se préparer pour construire l’après 
+        Daech.
+");
         $volontees->setPage("accueil");
         $volontees->setOrdre("8");
         $manager->persist($volontees);
 
         $valeur = new Description();
         $valeur->setNom("Nos valeurs");
-        $valeur->setDescription("Daech mène une guerre folle contre tous ceux qui ne sont pas avec lui,
-        les chrétiens, mais aussi les musulmans. Il n’y a aucune logique rationnelle au combat mené par Daech.
-        Ce sont des barbares, ils veulent le chaos. Dans l’islam comme chez les chrétiens, on n’a pas le droit de tuer l’autre.
-        Il faut donc éduquer les plus jeunes en leur montrant l’impasse des discours guerriers.
-        C’est la responsabilité de chacun et de tous, car Daech ne profite pas d’un prétendu choc des
-        civilisations, mais de l’inculture.Beaucoup de réfugiés ont voulu venir en Europe pour fuir le chaos,
-        mais Daech les poursuit et leur montre qu’il peut venir combattre en tout point du globe.
-        Fuir n’est donc pas la solution ; quand l’Allemagne nazie dominait l’Europe, il a fallu résister en restant sur place. ");
+        $valeur->setDescription("Notre association se donne pour mission de lever des fonds dans une démarche
+         éthique et oblative afin de financer les actions et projets humanitaires  de Mgr Yousif Thomas Mirkis en Irak: 
+         Pas de frais généraux, pas de charges de publicité, de secrétariat. Notre action  est le fruit d’un engagement 
+         où chaque membre prend à sa charge ses frais.  La conséquence est immédiate :  1 euro collecté = 1 euro en
+          faveur de l’Irak. ");
         $valeur->setPage("accueil");
         $valeur->setOrdre("9");
         $manager->persist($valeur);
