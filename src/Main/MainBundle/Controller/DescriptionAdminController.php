@@ -9,6 +9,7 @@ use Main\MainBundle\Form\DescriptionAdminType;
 use Main\MainBundle\Form\DescriptionImageAdminType;
 use Main\MainBundle\Form\BandeauAdminType;
 use Main\MainBundle\Form\MediaAdminType;
+use Main\MainBundle\Form\CarouselImageAdminType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -131,8 +132,9 @@ class DescriptionAdminController extends Controller
         $image3 = $em->getRepository('MainBundle:Carousel')->findOneByOrdre('3');
         $image4 = $em->getRepository('MainBundle:Carousel')->findOneByOrdre('4');
         $formType = new CarouselAdminType();
+        $formType2 = new CarouselImageAdminType();
         if($image != null) {
-            $form = $this->get('form.factory')->createNamedBuilder('image', $formType, $image)
+            $form = $this->get('form.factory')->createNamedBuilder('image', $formType2, $image)
                 ->getForm();
         }
         else
@@ -192,66 +194,116 @@ class DescriptionAdminController extends Controller
         }
 
         if('POST' === $request->getMethod()) {
-            if($image != null)
-            {
+
+            if ($image != null) {
+
                 if ($request->request->has('image')) {
-                $form->handleRequest($request);
-                if ($form->isValid()) {
-                    // On l'enregistre notre objet $advert dans la base de données, par exemple
-                    $em = $this->getDoctrine()->getManager();
-                    $em->persist($image);
-                    $em->flush();
-                }
+                    $form->handleRequest($request);
+                    if ($form->isValid()) {
+
+                            // On l'enregistre notre objet $advert dans la base de données, par exemple
+                            $em = $this->getDoctrine()->getManager();
+                            $em->persist($image);
+                            $em->flush();
+                    }
                 }
             }
-            if($image1 != null) {
+
+            if ($image1 != null) {
                 if ($request->request->has('image1')) {
+                    $form1->handleRequest($request);
+                    if ($form1->isValid()) {
 
-                $form1->handleRequest($request);
-                if ($form1->isValid()) {
-                    // On l'enregistre notre objet $advert dans la base de données, par exemple
-                    $em = $this->getDoctrine()->getManager();
-                    $em->persist($image1);
-                    $em->flush();
+                        if ($form1->get('delete')->isClicked()) {
+                            $em = $this->getDoctrine()->getManager();
+                            $em->remove($image1);
+                            $em->flush();
+                            $image1 = new Carousel();
+                            $form1 = $this->get('form.factory')->createNamedBuilder('image1',$formType,$image1)
+                                ->getForm();
+                            $image1->setOrdre(1);
+                        } else {
+                            // On l'enregistre notre objet $advert dans la base de données, par exemple
+                            $em = $this->getDoctrine()->getManager();
+                            $em->persist($image1);
+                            $em->flush();
+                        }
+                    }
                 }
             }
-            }
-            if($image2 != null) {
+            if ($image2 != null) {
                 if ($request->request->has('image2')) {
-                $form2->handleRequest($request);
-                if ($form2->isValid()) {
-                    // On l'enregistre notre objet $advert dans la base de données, par exemple
-                    $em = $this->getDoctrine()->getManager();
-                    $em->persist($image2);
-                    $em->flush();
-                }
+                    $form2->handleRequest($request);
+                    if ($form2->isValid()) {
+                        if ($form2->get('delete')->isClicked()) {
+                            $em = $this->getDoctrine()->getManager();
+                            $image2->setText("");
+                            $em->remove($image2);
+                            $em->flush();
+
+                            $image2 = new Carousel();
+                            $form2 = $this->get('form.factory')->createNamedBuilder('image2',$formType,$image2)
+                                ->getForm();
+                            $image2->setOrdre(2);
+                        } else {
+                            // On l'enregistre notre objet $advert dans la base de données, par exemple
+                            $em = $this->getDoctrine()->getManager();
+                            $em->persist($image2);
+                            $em->flush();
+                        }
+                    }
                 }
             }
-            if($image3 != null) {
+            if ($image3 != null) {
                 if ($request->request->has('image3')) {
+                    if ($form3->get('delete')->isClicked()) {
+                        $em = $this->getDoctrine()->getManager();
+                        $image3->setText("");
+                        $em->remove($image3);
+                        $em->flush();
+
+                        $image3 = new Carousel();
+                        $form3 = $this->get('form.factory')->createNamedBuilder('image3',$formType,$image3)
+                            ->getForm();
+                        $image3->setOrdre(3);
+                    } else {
+                        $form3->handleRequest($request);
+                        if ($form3->isValid()) {
+                            // On l'enregistre notre objet $advert dans la base de données, par exemple
+                            $em = $this->getDoctrine()->getManager();
+                            $em->persist($image3);
+                            $em->flush();
+                        }
+                    }
+                }
             }
-                $form3->handleRequest($request);
-                if ($form3->isValid()) {
-                    // On l'enregistre notre objet $advert dans la base de données, par exemple
+
+            if ($request->request->has('image4')) {
+                if ($form4->get('delete')->isClicked()) {
                     $em = $this->getDoctrine()->getManager();
-                    $em->persist($image3);
+                    $em->remove($image4);
                     $em->flush();
+
+                    $image4 = new Carousel();
+                    $form4 = $this->get('form.factory')->createNamedBuilder('image4',$formType,$image4)
+                        ->getForm();
+                    $image4->setOrdre(4);
+                } else {
+                    $form4->handleRequest($request);
+                    if ($form4->isValid()) {
+                        // On l'enregistre notre objet $advert dans la base de données, par exemple
+                        $em = $this->getDoctrine()->getManager();
+                        $em->persist($image4);
+                        $em->flush();
+                    }
                 }
             }
-            }
-
-                if ($request->request->has('image4')) {
-
-                $form4->handleRequest($request);
-                if ($form4->isValid()) {
-                    // On l'enregistre notre objet $advert dans la base de données, par exemple
-                    $em = $this->getDoctrine()->getManager();
-                    $em->persist($image4);
-                    $em->flush();
-                }
-                }
+        }
 
 
+
+        $active = $em->getRepository('MainBundle:Carousel')->findOneByOrdre('0');
+        $images = $em->getRepository('MainBundle:Carousel')->ByOrder();
         return $this->render('MainBundle:Admin:carousel.html.twig', array(
             'active' => $active,
             'image' => $image,
