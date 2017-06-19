@@ -19,8 +19,9 @@ class DescriptionAdminType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('nom','text',array('attr' => array('class' => 'TitreAdmin')))
-                ->add('description','textarea',array('attr' => array('class' => 'DescriptionAdmin ckeditor')));
-//                ->add('submit','submit',array('label'=>'Edit'));
+                ->add('description','textarea',array('attr' => array('class' => 'DescriptionAdmin ckeditor')))
+//                ->add('media',new MediaType(),array('required' => false))
+                ->add('submit','submit',array('label'=>'Edit'));
 
     }
     

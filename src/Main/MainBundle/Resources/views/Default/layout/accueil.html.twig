@@ -104,6 +104,7 @@
                 {% endfor %}
             </div>
 
+
             <!-- Left and right controls -->
             <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="background: none;">
                 <span class="glyphicon glyphicon-chevron-left"><i class="fa fa-angle-double-left" aria-hidden="true"></i></span>
@@ -130,7 +131,7 @@
                         <h2 class="parallax-title text-left AProposTitre">{{ aPropos.nom }}</h2>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
-                    <p>{{ aPropos.description }}</p>
+                    <p>{{ aPropos.description|raw }}</p>
                 </div>
             </div>
         <!--        !About us!      -->
@@ -141,7 +142,7 @@
                 <div class="UneImageQui col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     <img class="ImgQui" src="{{ asset(description.media.path) }}">
                     <h3>{{description.nom}}</h3>
-                    <p>{{ description.description}}</p>
+                    <p>{{ description.description|raw}}</p>
                 </div>
                 {% endfor %}
                 {#<div class="UneImageQui col-xs-3 col-sm-3 col-md-3 col-lg-3">#}
