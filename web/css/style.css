@@ -247,6 +247,18 @@ header
     transition: all 0.5s;
 }
 
+.DivImgHeader3
+    {
+        height: 100%;
+        background-color: transparent;
+        padding: 0px;
+        transition: all 0.5s;
+        display: flex;
+        align-items: center;
+        /*padding-top: 3%;*/
+    }
+
+
 .imgheader
 {
     /*width: 80px;*/
@@ -256,6 +268,14 @@ header
     height: 100%;
     top: 0px;
     width: 100%;
+}
+
+@media screen and (max-height: 992px) {
+    .DivImgHeader
+    {
+        width: 110px;
+        height: 130px;
+    }
 }
 
 .DivImgHeader2
@@ -268,6 +288,12 @@ header
 }
 
 .imgheader2
+{
+    width: 75px;
+    height: 60px;
+}
+
+.imgheader3
 {
     width: 75px;
     height: 60px;
@@ -311,11 +337,11 @@ header
         padding: 0px;
     }
 
-    .imgheader
-    {
-        width: 60px!important;
-        min-width: 60px!important;
-    }
+    /*.imgheader*/
+    /*{*/
+        /*width: 60px!important;*/
+        /*min-width: 60px!important;*/
+    /*}*/
 
 }
 
@@ -379,7 +405,7 @@ header
     position: fixed;
     z-index: 3;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
@@ -812,11 +838,33 @@ button.close:hover
     text-align: center;
 }
 
+.DivAll
+{
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+}
+
+@media screen and (max-width: 850px)
+{
+    .DivAll
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .All
 {
     width: 250px;
     height: 250px;
     /*background-color: #f3f3f3;*/
+}
+
+.All:hover
+{
+    cursor: pointer;
+    /*background-color: rgb(125,125,125);*/
 }
 
 .FaireDon
@@ -912,13 +960,24 @@ button.close:hover
     height: auto;
 }
 
-/*@media screen and (max-width: 1000px)*/
-/*{*/
-    /*.DivPierre*/
-    /*{*/
-        /*height :820px;*/
-    /*}*/
-/*}*/
+.DivCarte
+{
+    background-color: rgb(240,240,240);
+    margin-top: 2%;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+@media screen and (max-width: 768px)
+{
+    .DivCarte
+    {
+        flex-direction: column;
+    }
+}
 
 .DivTextPierre
 {
@@ -954,11 +1013,46 @@ button.close:hover
     margin-bottom: 2%;
 }
 
+.DivImgCarte
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
 .imgPierre
 {
     border-radius: 50%;
     /*border-radius:         100px / 160px;*/
     width: 65%;
+}
+
+.imgCarte
+{
+    /*border-radius: 50%;*/
+    /*border-radius:         100px / 160px;*/
+    width: 100%;
+}
+
+@media screen and (max-width: 992px)
+{
+    .imgCarte
+    {
+        width: 68%;
+    }
+
+}
+
+@media screen and (max-width: 500px)
+{
+    .imgCarte
+    {
+        width: 100%;
+    }
+
 }
 
 .carousel-content {
@@ -1830,14 +1924,21 @@ button.close:hover
 .AllAction
 {
     margin-top: 5%;
-    display: flex;
-    justify-content: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
+}
+
+.DivOneAction
+{
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-bottom: 2%;
 }
 
 .OneAction
 {
     padding: 1em;
-    margin: 0 2% 1em 0;
+    /*margin: 0 2% 1em 0;*/
     /*height: ;*/
     background-color: white;
     border: 1px solid #e6e6e6;
@@ -1898,8 +1999,8 @@ button.close:hover
 
 .DivimgbackAction
 {
-    position: absolute;
-    padding: 75px 0px;
+    /*position: absolute;*/
+    /*padding: 75px 0px;*/
     background-image: url(../img/Action.jpg);
     /*background-color: black;*/
     min-height: 500px;
@@ -1908,11 +2009,43 @@ button.close:hover
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 5%;
     /*opacity: 0.9;*/
-    filter: brightness(20%);
+    /*filter: brightness(20%);*/
     /*background: linear-gradient(black, white);*/
 }
+
+@media screen and (max-width: 400px)
+{
+    .DivimgbackAction
+    {
+        min-height: 550px;
+        max-height: 550px;
+    }
+}
+
+.TitreBack
+{
+    color: white;
+    z-index: 100;
+}
+
+.DivTopAction
+{
+    height: auto;
+    /*margin-bottom: 1%;*/
+    height: 500px;
+    padding: 0px;
+}
+
+@media screen and (max-width: 400px)
+{
+    .DivTopAction
+    {
+        height: 550px;
+    }
+}
+
+
 
 .DivimgbackActionPast
 {
@@ -1935,41 +2068,55 @@ button.close:hover
 .TitreActionPrincipal
 {
     color: white;
-    filter: brightness(100%)!important;
     z-index: 2;
-    position: absolute;
-    margin-top: 8%;
-    margin-left: 10%;
-    width: 25%;
+    /*margin-top: 8%;*/
+    /*margin-left: 10%;*/
+    margin-top: 3%;
 }
 
 .DescriptionActionPrincipal
 {
     color: white;
-    filter: brightness(100%)!important;
+    /*filter: brightness(100%)!important;*/
     z-index: 2;
-    position: absolute;
-    margin-top: 15%;
-    margin-left: 10%;
-    width: 45%;
-    margin-bottom: 10%;
+    /*position: absolute;*/
+    /*margin-top: 15%;*/
+    /*margin-left: 10%;*/
+    /*width: 45%;*/
+    /*margin-bottom: 10%;*/
+    margin-top: 5%;
+}
+
+
+
+.DivGaucheImgBack
+{
+    padding: 5%;
+    padding-bottom: 2%;
+}
+
+.DivDroiteImgBack
+{
+    padding: 6%;
+    padding-left: 0px;
+    padding-bottom: 0px;
 }
 
 .NombreEtudiant
 {
     color: white;
-    filter: brightness(100%)!important;
+    /*filter: brightness(100%)!important;*/
     z-index: 2;
-    position: absolute;
-    margin-top: 8%;
-    margin-left: 65%;
-    width: 30%;
-    margin-bottom: 10%;
+    /*position: absolute;*/
+    /*margin-top: 8%;*/
+    /*margin-left: 65%;*/
+    /*width: 30%;*/
+    /*margin-bottom: 10%;*/
 }
 
 .DonatePastPrincipal
 {
-    width: 25%;
+    /*width: 25%;*/
     background: #00adef;
     color: white;
     text-align: center;
@@ -1978,12 +2125,18 @@ button.close:hover
     font-size: 1em;
     line-height: 1.5em;
     margin-right: 2%;
+    margin-bottom: 2%;
 }
 
 .DonatePastPrincipal:hover
 {
     cursor: pointer;
     background-color: #feb41f;;
+}
+
+.DivBoutonImgBack
+{
+
 }
 
 .LigneChiffre
@@ -2090,7 +2243,7 @@ button.close:hover
     /*justify-content: center;*/
     /*align-items: center;*/
     /*text-align: justify;*/
-    height: 350px;
+    height: auto;
     padding: 4%;
 }
 
