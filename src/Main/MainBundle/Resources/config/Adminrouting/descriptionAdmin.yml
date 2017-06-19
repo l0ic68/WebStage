@@ -40,3 +40,12 @@ donAdmin:
     path:     /don
     defaults: { _controller: MainBundle:Default:don }
 
+accueilAdmin:
+   path:     /accueil
+   defaults: { _controller: MainBundle:DescriptionAdmin:accueil }
+
+carouselAdmin:
+  path:     /carousel
+  defaults: { _controller: MainBundle:DescriptionAdmin:carousel }
+
+
