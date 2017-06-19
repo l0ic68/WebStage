@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class CarouselAdminType extends AbstractType
+class CarouselImageAdminType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -15,8 +15,8 @@ class CarouselAdminType extends AbstractType
     {
         $builder->add('media', new MediaType(), array('required' => false))
                 ->add('text','text')
-                ->add('submit','submit',array('label'=>'Edit'))
-                ->add('delete','submit',array('label'=>'delete'));
+                ->add('submit','submit',array('label'=>'Edit'));
+
     }
     
     /**

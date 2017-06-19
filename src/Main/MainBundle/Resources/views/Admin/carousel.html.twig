@@ -47,7 +47,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-{% if not image is null%}
+{% if not image.media is null%}
     <img src="{{ asset(image.media.path) }}">
     {{ form_start(form) }}
     {{ form_end(form) }}
@@ -55,7 +55,7 @@
     {{ form_start(form) }}
     {{ form_end(form) }}
     {% endif %}
-{% if not image1 is null%}
+{% if not image1.media is null%}
     <img src="{{ asset(image1.media.path) }}">
     {{ form_start(form1) }}
     {{ form_end(form1) }}
@@ -63,7 +63,7 @@
     {{ form_start(form1) }}
     {{ form_end(form1) }}
     {% endif %}
-{% if not image2 is null%}
+{% if not image2.media is null%}
     <img src="{{ asset(image2.media.path) }}">
     {{ form_start(form2) }}
     {{ form_end(form2) }}
