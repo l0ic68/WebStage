@@ -29,6 +29,13 @@ class DefaultController extends Controller
         return $this->render('MainBundle:moduleUsed:bandeau.html.twig',array('bandeau'=>$bandeau));
 
     }
+    public function actualiteAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+//        $bandeau = $em->getRepository('MainBundle:Description')->findOneByOrdre('5');
+        return $this->render('MainBundle:Default:layout\actualites.html.twig');
+
+    }
     public function GalerieAction()
     {
         $em = $this->getDoctrine()->getManager();

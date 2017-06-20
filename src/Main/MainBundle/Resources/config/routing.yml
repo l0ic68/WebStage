@@ -88,4 +88,7 @@ actualActionModal:
     pattern: /en_cours/{id}
     defaults: { _controller: MainBundle:Action:actualActionModal }
 
+actualite:
+    pattern: /actualite/
+    defaults: { _controller: MainBundle:Default:actualite }
 
