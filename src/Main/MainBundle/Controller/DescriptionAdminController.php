@@ -320,22 +320,24 @@ class DescriptionAdminController extends Controller
 
         ));
     }
-    public function OriginesAction(Request $request)
+
+
+
+    public function DescriptionAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $description1 = $em->getRepository('MainBundle:Description')->findOneByOrdre('5');
+        $description1 = $em->getRepository('MainBundle:Description')->findOneByOrdre('6');
         $description2 = $em->getRepository('MainBundle:Description')->findOneByOrdre('7');
         $description3 = $em->getRepository('MainBundle:Description')->findOneByOrdre('8');
 
-        $formTypeA = new DescriptionAdminType();
+        $formTypeA = new DescriptionImageAdminType();
         $formTypeB = new DescriptionAdminType();
-        $formTypeC = new DescriptionAdminType();
 
         $form1 = $this->get('form.factory')->createNamedBuilder('form1name',$formTypeA,$description1)
             ->getForm();
         $form2 = $this->get('form.factory')->createNamedBuilder('form2name',$formTypeB,$description2)
             ->getForm();
-        $form3 = $this->get('form.factory')->createNamedBuilder('form3name',$formTypeC,$description3)
+        $form3 = $this->get('form.factory')->createNamedBuilder('form3name',$formTypeB,$description3)
             ->getForm();
 
         if('POST' === $request->getMethod()) {
@@ -368,7 +370,7 @@ class DescriptionAdminController extends Controller
             }
         }
 
-        return $this->render('MainBundle:Admin:description\origines.html.twig', array(
+        return $this->render('MainBundle:Admin:description.html.twig', array(
             'form1' => $form1->createView(),
             'form2' => $form2->createView(),
             'form3' => $form3->createView()

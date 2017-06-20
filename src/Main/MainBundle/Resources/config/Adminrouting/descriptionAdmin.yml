@@ -35,7 +35,6 @@ objectifAdmin:
     path:     /objectif
     defaults: { _controller: MainBundle:DescriptionAdmin:objectif }
 
-
 donAdmin:
     path:     /don
     defaults: { _controller: MainBundle:Default:don }
@@ -43,6 +42,10 @@ donAdmin:
 accueilAdmin:
    path:     /accueil
    defaults: { _controller: MainBundle:DescriptionAdmin:accueil }
+
+descriptionAdmin:
+   path:     /description
+   defaults: { _controller: MainBundle:DescriptionAdmin:description }
 
 carouselAdmin:
   path:     /carousel
