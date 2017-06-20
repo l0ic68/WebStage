@@ -1,29 +1,15 @@
 {% extends "::layout/layout.html.twig" %}
 {% block body %}
-        {#<div class="container white col-lg-12 padder-t2 DivTitre">#}
-            {#<h2 class="LigneTitre Titre"><span class="LigneSpan">Action réalisé</span></h2>#}
-        {#</div>#}
+
 
 <div class="push"></div>
 <div style="display: flex; justify-content: center; align-items: center;">
     <div class="DivimgbackActionPast col-xs-12 col-sm-12 col-md-12 col-lg-12">
     </div>
-    <p style="color: black; font-size: xx-large; font-family: 'Typo_Round'; font-weight: bold;">Vos réussites</p>
+    <h2>Vos réussites</h2>
 </div>
-    {#<div class="APropos TitreActionPrincipal">#}
-        {#<p class="parallax-title3 text-left" style="font-size: xx-large; padding-bottom: 1%;">Soutenez les étudiants</p>#}
-    {#</div>#}
-    {#<div class="DescriptionActionPrincipal">#}
-        {#<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma#}
-            {#uris, commodo sed neque et, feugiat pretium purus. Quisque quis purus viverra, bibendum mi ut, volutpat enim. Curabitur ia#}
-            {#culis posuere elit, nec imperdiet mauris varius ac. Maecenas quis enim lec#}
-            {#tus. Vivamus lacus libero, laoreet ut urna egestas, bibendum pretium augue. </p>#}
-        {#<div style="height: 30px; width: 50%"></div>#}
-        {#<span class="DonatePastPrincipal">Faire un Don</span>#}
-        {#<span class="DonatePastPrincipal">Voir les détails</span>#}
-    {#</div>#}
     <div style="height: 100px"></div>
-    {#<div class="parallax-window col-xs-12 col-sm-12 col-md-12 col-lg-12" data-parallax="scroll" data-image-src="/WebStage/web/img/Carousel1Small.jpg"></div>#}
+
     <div class="AllAction col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-12 col-sm-10 col-md-10 col-lg-10">
         {% for action in actions %}
     <div class="DivOneAction col-xs-12 col-sm-6 col-md-6 col-lg-4">
@@ -36,21 +22,7 @@
                     <div class="DonatePast text{{ action.id }}">Voir l'action</div>
                 </div>
     </div>
-            {#<section class="col-lg-4 ActionRealise">#}
-                {#<div class="pastAction">#}
-                        {#<img  class ="pastActionImg" src="{{ asset(action.picture.path) }}">#}
-                    {#<h4 class="TitreAction">{{ action.nom[:50] }}</h4>#}
-                    {#<p class="DateAction">{{ action.dateDebut| date() }}</p>#}
-                    {#<p class="DescriptionAction">{{ action.description[:150] }}...</p>#}
-                    {#<div class="text{{ loop.index }}">#}
-                        {#<p class="Titre LigneTitre LirePlusAction" style="padding: 10px"><span class="LigneSpan">Lire plus</span> </p>#}
-                    {#</div>#}
-                    {#<p>{{ action.dateFin| date() }}</p>#}
-                    {#<p>{{ action.cout }}</p>#}
-                    {#<p>{{ action.recolte }}</p>#}
-                    {#<p>{{ action.type }}</p>#}
-                {#</div>#}
-            {#</section>#}
+
             {#<!-- Modal -->                                                          aria-labelledby="exampleModalLabel"#}
             <div class="modal fade" id="{{ action.id }}" tabindex="-1" role="dialog" aria-hidden="true" >
                 <button type="button" class="close modalTextHomepage" data-dismiss="modal" aria-label="Close">
@@ -76,8 +48,8 @@
                                 <p style="text-align: left; margin-left: 5%; margin-right: 5%;">{{ action.description }}</p>
                             </div>
                             <div class="CoutActionModal">
-                                <span>Coût de l'action : {{ action.cout }}</span>
-                                <span>Argent récolté : {{ action.recolte }}</span>
+                                <span>Projet financé intégralement, coût : {{ action.cout }}</span>
+                                {#<span>Argent récolté : {{ action.recolte }}</span>#}
                             </div>
                         </div>
                         <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12">

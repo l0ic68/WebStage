@@ -24,7 +24,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         les fonds propres de l’association, au travers de ses membres. Ce cabinet basé à Kirkuk offre aujourd’hui aux 
         déplacés-déracinés de Mossoul  (ville sous contrôle de Daech depuis 3 ans) des soins dentaires gratuits sur la base 
         du bénévolat de 3 dentistes Irakiens. Deux chrétiens et un musulman.");
-        $action1->setCout(0);
+        $action1->setCout(35000);
         $action1->setDateDebut(new \DateTime("01-01-2016"), new \DateTimeZone('Europe/Paris'));
         $action1->setDateFin(new \DateTime("15-04-2016"), new \DateTimeZone('Europe/Paris'));
         $action1->setRecolte(0);
@@ -89,7 +89,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action6->setCout(2500000);
         $action6->setDateDebut(new \DateTime("01-01-2017"), new \DateTimeZone('Europe/Paris'));
         $action6->setDateFin(new \DateTime("31-12-2017"), new \DateTimeZone('Europe/Paris'));
-        $action6->setRecolte(0);
+        $action6->setRecolte(100000);
         $action6->setType("En cours");
         $action6->setPicture($this->getReference("qualite"));
         $action6->setFrontPage('null');

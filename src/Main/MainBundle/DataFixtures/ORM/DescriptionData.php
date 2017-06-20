@@ -19,11 +19,13 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
     public function load(ObjectManager $manager)
     {
         $aPropos = new Description();
-        $aPropos->setNom("A notre propos");
-        $aPropos->setDescription("Préoccupé par la situation en Irak M. Geyler a decider, avec quelques amis, de créer 
-        début 2016 une association dénommée \"Aux porteurs de lumière-solidarité Irak\". Notre association se donne pour 
-        mission de lever des fonds dans une démarche 
-        éthique et oblative afin de financer les acrions et projets humanitaires de Mgr Yousif Thomas Mirkis en Irak. 
+        $aPropos->setNom("L'association");
+        $aPropos->setDescription("Notre association se donne pour mission de lever des fonds afin de financer des actions
+         et projets humanitaires en Irak:
+         L’association « Aux porteurs de lumière » s’est fixé comme objectif de collecter des moyens financiers. Elle
+         rassemble des fonds qu’elle adresse à Mgr Yousif par l’intermédiaire de l’OEuvre d’Orient. Grâce aux premiers
+         dons recueillis, Mgr Yousif assure l’hébergement et la subsistance des étudiants: location de maisons, mobilier,
+          nourriture. A votre tour, s’il vous plait, aidez-nous à les soutenir ! 
         ");
         $aPropos->setPage("accueil");
         $aPropos->setOrdre("1");
@@ -68,10 +70,12 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
 
         $histoire = new Description();
         $histoire->setNom("Notre histoire");
-        $histoire->setDescription("A la faveur de la rencontre de Mgr Yousif et d’un ancien bâtisseur alsacien ;
-          Bernard Geyler, celui-ci a fait le voyage de Kirkuk en décembre 2015.  
-          Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyler  a décidé avec quelques amis de créer début 2016 
-          une association dénommée  « Aux porteurs de lumière-solidarité Irak ».");
+        $histoire->setDescription("Notre équipe de 11 membres est composée d’acteurs économiques et religieux : 
+        architecte, assureur, comptable,notaire, publicitaire, personnalités de la société civile et religieuse.
+A la faveur de la rencontre de Mgr Yousif et d’un ancien bâtisseur alsacien ; Bernard Geyler, celui-ci a fait le voyage 
+de Kirkuk en décembre 2015.
+Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyler a décidé avec quelques amis de créer début
+ 2016 une association dénommée « Aux porteurs de lumière-solidarité Irak ».");
         $histoire->setPage("Qui");
 //        $histoire->setMedia($this->getReference(''));
         $histoire->setOrdre("6");
@@ -99,11 +103,10 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
 
         $valeur = new Description();
         $valeur->setNom("Nos valeurs");
-        $valeur->setDescription("Notre association se donne pour mission de lever des fonds dans une démarche
-         éthique et oblative afin de financer les actions et projets humanitaires  de Mgr Yousif Thomas Mirkis en Irak: 
-         Pas de frais généraux, pas de charges de publicité, de secrétariat. Notre action  est le fruit d’un engagement 
-         où chaque membre prend à sa charge ses frais.  La conséquence est immédiate :  1 euro collecté = 1 euro en
-          faveur de l’Irak. ");
+        $valeur->setDescription("Notre association se donne pour mission de lever des fonds dans une démarche chrétienne
+         éthique et oblative afin de financer les actions et projets humanitaires de Mgr Yousif Thomas Mirkis en Irak.
+        Pas de frais généraux, pas de charges de publicité, de secrétariat. Notre action est le fruit d’un engagement où chaque 
+        membre prend à sa charge ses frais. La conséquence est immédiate : 1 euro collecté = 1 euro en faveur de l’Irak.");
         $valeur->setPage("accueil");
         $valeur->setOrdre("9");
         $manager->persist($valeur);
