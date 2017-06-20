@@ -24,19 +24,19 @@ class CarouselData extends AbstractFixture implements OrderedFixtureInterface
         $carousel1 = new Carousel();
         $carousel1->setOrdre('0');
         $carousel1->setMedia($this->getReference('carouselMedia1'));
-        $carousel1->setText("Vue d'un site archéologique à Kirkouk");
+        $carousel1->setText("Ne faisons pas une croix sur les Chrétiens d'Orient.");
         $manager->persist($carousel1);
 
         $carousel2 = new Carousel();
         $carousel2->setOrdre('1');
         $carousel2->setMedia($this->getReference('carouselMedia2'));
-        $carousel2->setText('Bungalow où vivent les réfugiés');
+        $carousel2->setText("Soutenons les jeunes chrétiens d'Irak");
         $manager->persist($carousel2);
 
         $carousel3 = new Carousel();
         $carousel3->setOrdre('2');
         $carousel3->setMedia($this->getReference('carouselMedia3'));
-        $carousel3->setText("Commerce de proximité");
+        $carousel3->setText("Parrainez 50 étudiants en Architecture et ingénierie à Kirkuk");
         $manager->persist($carousel3);
 
 //        $carousel4 = new Carousel();
