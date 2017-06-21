@@ -3,6 +3,9 @@
 
 <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sectionDescription">
 
+
+
+    <!--        Histoire      -->
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top: 2%">
 
         <div class="textDescription col-xs-12 col-sm-12 col-md-7 col-lg-7">
@@ -17,10 +20,10 @@
         <div class="DivimgbackDescription hidden-xs hidden-sm col-md-5 col-lg-5">
         </div>
     </div>
+    <!--        !Histoire      -->
 
 
-
-    <!--        Texte HomePage      -->
+    <!--        Nos volonté, nos valeurs, notre but      -->
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 0px;background-color: #f3f3f3; margin-bottom: 2%;">
 
         <div class="DivAll">
@@ -53,6 +56,7 @@
         </div>
     </div>
 
+        <!--        !Modal!      -->
     <div class="modal fade" id="1" tabindex="-1" role="dialog" aria-hidden="true" >
         <button type="button" class="close modalTextHomepage" data-dismiss="modal" aria-label="Close">
             <span class="Retour" aria-hidden="true"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Retour</span>
@@ -61,7 +65,8 @@
         <div class="modal-dialog ModalAction" role="document">
             <div class="modal-content">
                 <div class="APropos col-xs-11 col-sm-11 col-md-11 col-lg-offset-1 col-lg-11" style="padding-left: 0px;">
-                    <h2 class="parallax-title2 text-left" style="padding: 20px; padding-left: 0px; margin: 0px; font-size: 48px; color: #333;">{{ volonte.nom}}</h2>
+                    <h2 class="hidden-xs parallax-title2 text-left" style="padding: 20px; padding-left: 0px; margin: 0px; font-size: 48px; color: #333;">{{ volonte.nom}}</h2>
+                    <h2 class="hidden-sm hidden-md hidden-lg TitreModal2" style="">{{ volonte.nom}}</h2>
                 </div>
                 <div class="modal-body" style="margin-left: 7%; margin-right: 7%; margin-bottom: 3%;">
                     {{ volonte.description }}
@@ -70,6 +75,7 @@
         </div>
     </div>
 
+
     <div class="modal fade" id="2" tabindex="-1" role="dialog" aria-hidden="true" >
         <button type="button" class="close modalTextHomepage" data-dismiss="modal" aria-label="Close">
             <span class="Retour" aria-hidden="true"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Retour</span>
@@ -77,11 +83,9 @@
 
         <div class="modal-dialog ModalAction" role="document">
             <div class="modal-content">
-                {#<div class="modal-header col-xs-12 col-sm-12 col-md-12 col-lg-12">#}
-                {#<h3 class=""><span>{{ volonte.nom}}</span></h3>#}
-                {#</div>#}
                 <div class="APropos col-xs-11 col-sm-11 col-md-11 col-lg-offset-1 col-lg-11" style="padding-left: 0px;">
-                    <h2 class="parallax-title2 text-left" style="padding: 20px; padding-left: 0px; margin: 0px; font-size: 48px; color: #333;">{{ valeur.nom}}</h2>
+                    <h2 class="hidden-xs parallax-title2 text-left" style="padding: 20px; padding-left: 0px; margin: 0px; font-size: 48px; color: #333;">{{ valeur.nom}}</h2>
+                    <h2 class="hidden-sm hidden-md hidden-lg TitreModal2" style="">{{ valeur.nom}}</h2>
                 </div>
                 <div class="modal-body" style="margin-left: 7%; margin-right: 7%; margin-bottom: 3%;">
                     {{ valeur.description }}
@@ -90,6 +94,7 @@
         </div>
     </div>
 
+
     <div class="modal fade" id="3" tabindex="-1" role="dialog" aria-hidden="true" >
         <button type="button" class="close modalTextHomepage" data-dismiss="modal" aria-label="Close">
             <span class="Retour" aria-hidden="true"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Retour</span>
@@ -97,11 +102,9 @@
 
         <div class="modal-dialog ModalAction" role="document">
             <div class="modal-content">
-                {#<div class="modal-header col-xs-12 col-sm-12 col-md-12 col-lg-12">#}
-                {#<h3 class=""><span>{{ volonte.nom}}</span></h3>#}
-                {#</div>#}
                 <div class="APropos col-xs-11 col-sm-11 col-md-11 col-lg-offset-1 col-lg-11" style="padding-left: 0px;">
-                    <h2 class="parallax-title2 text-left" style="padding: 20px; padding-left: 0px; margin: 0px; font-size: 48px; color: #333;">{{ but.nom}}</h2>
+                    <h2 class="hidden-xs parallax-title2 text-left" style="padding: 20px; padding-left: 0px; margin: 0px; font-size: 48px; color: #333;">{{ but.nom}}</h2>
+                    <h2 class="hidden-sm hidden-md hidden-lg TitreModal2" style="">{{ but.nom}}</h2>
                 </div>
                 <div class="modal-body" style="margin-left: 7%; margin-right: 7%; margin-bottom: 3%;">
                     {{ but.description }}
@@ -109,7 +112,9 @@
             </div>
         </div>
     </div>
+        <!--        !Modal!      -->
 
+    <!--        Nos volonté, nos valeurs, notre but      -->
     {% render(controller('MainBundle:Default:bandeau')) %}
 
     <div class="DivCarte hidden-xs col-sm-12 col-md-12 col-lg-12">

@@ -17,7 +17,7 @@
             <img  class ="ActualiteImage" src="{{ asset(actu.media.path) }}">
             <h4 class="TitreActualite">{{ actu.titre }}</h4>
             <p class="ParActualite">Par : <span style="color: #009de0">{{ actu.auteur }}<span></span></p>
-            <p class="DescriptionActualite">{{ actu.description }}
+            <p class="DescriptionActualite">{{ actu.description[:300] }}
                 <br>
             <p class="PlusAcutalite">Plus... ></p>
             </p>
