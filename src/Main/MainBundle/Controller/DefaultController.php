@@ -69,8 +69,8 @@ class DefaultController extends Controller
     public function DonAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $dons = $em->getRepository('MainBundle:Description')->findByPage('don');
-        return $this->render('MainBundle:Default:layout\don.html.twig',array('dons'=> $dons));
+        $don = $em->getRepository('MainBundle:Description')->findOneByOrdre('11');
+        return $this->render('MainBundle:Default:layout\don.html.twig',array('don'=> $don));
     }
 
     public function contactAction()

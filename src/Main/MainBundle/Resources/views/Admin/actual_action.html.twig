@@ -3,33 +3,26 @@
 
     <div class="DivTopAction col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="DivimgbackAction brightness col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
+{{ form_start(form1) }}
             <div class="DivGaucheImgBack col-xs-12 col-sm-8 col-md-7 col-lg-8">
                 <div class="TitreActionPrincipal col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <p class="TitreBack parallax-title3 text-left" style="font-size: xx-large; padding-bottom: 1%;">Formation = Avenir</p>
+                    <p class="TitreBack parallax-title3 text-left" style="font-size: xx-large; padding-bottom: 1%;">  {{ form_widget(form1.nom) }}</p>
                 </div>
 
                 <div class="DescriptionActionPrincipal col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h3 style="margin-top: 0%; color: white;">Soutenons les jeunes chrétiens d'Irak</h3>
-                    <p>Rester, c’est le choix fait par de nombreux étudiants, qui d’ailleurs n’avaient pas beaucoup
-                        d’autres solutions, mais qui ont ainsi fait un magnifique pari sur l’avenir. Leur permettre de
-                        rester, c’est contribuer à l’éducation et à la formation, piliers de cette future reconstruction
-                        de l’IRAK de demain.  Mais pour faire vivre tout ce monde, nous avons absolument besoin de votre
-                        solidarité</p>
+                   {{ form_widget(form1.description) }}
                     <div style="height: 30px; width: 50%"></div>
                 </div>
             </div>
-
+{{ form_end(form1) }}
+            {{ form_start(form2) }}
             <div class="DivDroiteImgBack hidden-xs col-sm-4 col-md-5 col-lg-4">
                 <div class="NombreEtudiant col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h2 style="text-align: left">Prise en charge des étudiants :</h2>
-                    <p class="LigneChiffre">Année 2014/2015 : <span class="chiffre">80</span> étudiants</p>
-                    <p class="LigneChiffre">Année 2015/2016 : <span class="chiffre">420</span>  étudiants</p>
-                    <p class="LigneChiffre">Année 2016/2017 : <span class="chiffre">680</span>  étudiants</p>
-                    <p class="LigneChiffre">Année 2017/2018 : <span class="chiffre">800</span>  étudiants</p>
+                    <h2 style="text-align: left">{{ form_widget(form2.nom) }}</h2>
+                    {{ form_widget(form2.description) }}
                 </div>
             </div>
-
+            {{ form_end(form2) }}
             {#<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">lol</div>#}
             <div class="DivBoutonImgBack col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-11 col-sm-8 col-md-8 col-lg-6">
                 <div class="DonatePastPrincipal hidden-xs col-sm-5 col-md-4 col-lg-3">Faire un Don</div>
