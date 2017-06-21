@@ -2,72 +2,7 @@
 
 {% block body %}
     <div id="main">
-        {#<div class="container main-container">#}
-            {#<div id="carousel-example-generic" class="carousel slide">#}
-                {#<!-- Indicators -->#}
-                {#<ol class="carousel-indicators">#}
-                    {#<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>#}
-                    {#<li data-target="#carousel-example-generic" data-slide-to="1"></li>#}
-                    {#<li data-target="#carousel-example-generic" data-slide-to="2"></li>#}
-                {#</ol>#}
 
-                {#<!-- Wrapper for slides -->#}
-                {#<div class="carousel-inner" role="listbox">#}
-
-                    {#<!-- First slide -->#}
-                    {#<div class="item active deepskyblue">#}
-
-                        {#<div class="carousel-caption">#}
-                            {#<h3 data-animation="animated bounceInLeft">#}
-                                {#This is the caption for slide 1#}
-                            {#</h3>#}
-                            {#<h3 data-animation="animated bounceInRight">#}
-                                {#This is the caption for slide 1#}
-                            {#</h3>#}
-                            {#<button class="btn btn-primary btn-lg" data-animation="animated zoomInUp">Button</button>#}
-                        {#</div>#}
-                    {#</div> <!-- /.item -->#}
-
-                    {#<!-- Second slide -->#}
-                    {#<div class="item deepskyblue">#}
-                        {#<div class="carousel-caption">#}
-                            {#<h3 class="icon-container" data-animation="animated bounceInDown">#}
-                                {#<span class="glyphicon glyphicon-heart"></span>#}
-                            {#</h3>#}
-                            {#<h3 data-animation="animated bounceInUp">#}
-                                {#This is the caption for slide 2#}
-                            {#</h3>#}
-                            {#<button class="btn btn-primary btn-lg" data-animation="animated zoomInRight">Button</button>#}
-                        {#</div>#}
-                    {#</div><!-- /.item -->#}
-
-                    {#<!-- Third slide -->#}
-                    {#<div class="item darkerskyblue">#}
-                        {#<div class="carousel-caption">#}
-                            {#<h3 class="icon-container" data-animation="animated zoomInLeft">#}
-                                {#<span class="glyphicon glyphicon-glass"></span>#}
-                            {#</h3>#}
-                            {#<h3 data-animation="animated flipInX">#}
-                                {#This is the caption for slide 3#}
-                            {#</h3>#}
-                            {#<button class="btn btn-primary btn-lg" data-animation="animated lightSpeedIn">Button</button>#}
-                        {#</div>#}
-                    {#</div><!-- /.item -->#}
-
-                {#</div><!-- /.carousel-inner -->#}
-
-                {#<!-- Controls -->#}
-                {#<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">#}
-                    {#<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>#}
-                    {#<span class="sr-only">Previous</span>#}
-                {#</a>#}
-                {#<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">#}
-                    {#<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>#}
-                    {#<span class="sr-only">Next</span>#}
-                {#</a>#}
-            {#</div><!-- /.carousel -->#}
-
-        {#</div><!-- /.container -->#}
 
         <!--        Caroussel      -->
         <div id="myCarousel" class="carousel slide col-xs-12 col-sm-12 col-md-12 col-lg-12 test7" data-ride="carousel">
@@ -117,163 +52,58 @@
 
         <!--        !Caroussel!      -->
 
-        <!--        Barre bienvenue      -->
-        {#<div id="DivBvn" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">#}
-            {#<h2 id="Bvn">Soutenez Aux Porteurs de Lumière</h2>#}
-            {#<div class="TextIntro col-xs-6 col-sm-6 col-md-6 col-lg-offset-1 col-lg-6">Ne faisons pas une croix sur les Chrétiens d'Orient.<br/>#}
-            {#Le fatalisme n'est pas une réponse au fanatisme.</div>#}
-        {#</div>#}
-        <!--        !Barre bienvenue!      -->
 
         <!--        About us      -->
         <a href ="{{ path('carouselAdmin') }}">modifier le Carousel</a>
-        {{ form_start(form1) }}
+
             <div class="AboutUs col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                {{ form_start(form1) }}
                 <div class="APropos col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                        <h2 class="parallax-title text-left" style="padding: 20px; text-align: center; margin: 0px; font-size: 48px; color: #333;">{{ form_widget(form1.nom) }}</h2>
+                        <h2 class="" style="padding: 20px; text-align: center; margin: 0px; font-size: 38px; color: #333;">{{ form_widget(form1.nom) }}</h2>
                 </div>
-                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                    {{ form_widget(form1.description) }}
+                <div class="col-xs-offset-2 col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    {{ form_widget(form1.description) }} </br>
+                    {{ form_end(form1) }}
                 </div>
             </div>
 
-        {{ form_end(form1) }}
+
         <!--        !About us!      -->
 
         <!--        Image de qui somme nous      -->
             <section class="ImageQui col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                {{ form_start(form2) }}
+
                 <div class="UneImageQui col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                    {{ form_start(form2) }}
                     <img class="ImgQui" src="{{ asset(soutien.media.path) }}">
-                    <h3>{{ form_widget(form2.media) }}</h3>
-                    <h3>{{ form_widget(form2.nom) }}</h3>
+                    <div>{{ form_widget(form2.media) }}</div>
+                    <h3 style="font-size: large">{{ form_widget(form2.nom) }}</h3>
                     <p>{{ form_widget(form2.description) }}</p>
+                    {{ form_end(form2) }}
                 </div>
-                {{ form_end(form2) }}
+
                 <div class="UneImageQui col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     {{ form_start(form3) }}
                     <img class="ImgQui" src="{{ asset(quotidient.media.path) }}">
-                    <h3>{{ form_widget(form3.media) }}</h3>
-                    <h3>{{ form_widget(form3.nom) }}</h3>
+                    <div>{{ form_widget(form3.media) }}</div>
+                    <h3 style="font-size: large">{{ form_widget(form3.nom) }}</h3>
                     <p>{{ form_widget(form3.description) }}</p>
+                    {{ form_end(form3) }}
                 </div>
-                {{ form_end(form3) }}
+
                 <div class="UneImageQui col-xs-3 col-sm-3 col-md-3 col-lg-3">
                     {{ form_start(form4) }}
                     <img class="ImgQui" src="{{ asset(financement.media.path) }}">
-                    <h3>{{ form_widget(form4.media) }}</h3>
-                    <h3>{{ form_widget(form4.nom) }}</h3>
+                    <div>{{ form_widget(form4.media) }}</div>
+                    <h3 style="font-size: large">{{ form_widget(form4.nom) }}</h3>
                     <p>{{ form_widget(form4.description) }}</p>
+                    {{ form_end(form4) }}
                 </div>
-                {{ form_end(form4) }}
-                {#<div class="UneImageQui col-xs-3 col-sm-3 col-md-3 col-lg-3">#}
-                    {#<img class="ImgQui" src="{{ asset("img/P1060953.JPG") }}">#}
-                    {#<h3>Qualité de vie</h3>#}
-                    {#<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma</p>#}
-                {#</div>#}
 
-                {#<div class="UneImageQui col-xs-3 col-sm-3 col-md-3 col-lg-3">#}
-                    {#<img class="ImgQui" src="{{ asset("img/charity.jpg") }}">#}
-                    {#<h3>Collecte de dons</h3>#}
-                    {#<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pellentesque nec elit pulvinar commodo. Sed nisl ma</p>#}
-                {#</div>#}
+
             </section>
         <!--        !Image de qui somme nous!      -->
 
-        {#<!--        Texte HomePage      -->#}
-        {#<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">#}
-
-            {#<div style="display: flex; justify-content: space-around;">#}
-                {#<div class="All" id="Un">#}
-                    {#<div id="Qui" class="bjr" style="position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;">#}
-                        {#<i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i>#}
-                        {#<p style="margin-top: 10%; font-size: xx-large;">Qui ?</p>#}
-                    {#</div>#}
-                    {#<div class="bye text9">#}
-                        {#<p style="font-size: x-large;">Qui ?</p>#}
-                        {#<div class="bye2">#}
-                            {#<p>A la faveur de la rencontre de Mgr Yousif et d’un ancien bâtisseur alsacien ; Bernard Geyler, celui-ci a fait le#}
-                                {#voyage de Kirkuk en décembre 2015.#}
-                            {#</p>#}
-                        {#</div>#}
-                        {#<p>Lire plus...</p>#}
-
-                        {#<div class="modal fade" id="text9" tabindex="-1" role="dialog" aria-hidden="true" >#}
-                            {#<button type="button" class="close modalTextHomepage" data-dismiss="modal" aria-label="Close">#}
-                                {#<span class="Retour" aria-hidden="true"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Retour</span>#}
-                            {#</button>#}
-                            {#<div class="modal-dialog" role="document">#}
-
-                                {#<div class="modal-content">#}
-                                    {#<div class="modal-header col-xs-12 col-sm-12 col-md-12 col-lg-12">#}
-                                        {#<h3 class="Titre LigneTitre"><span class="LigneSpan" >test</span></h3>#}
-                                    {#</div>#}
-                                    {#<div class="modal-body TextModalHomepage">#}
-                                        {#test2#}
-                                    {#</div>#}
-                                {#</div>#}
-                            {#</div>#}
-                        {#</div>#}
-
-                    {#</div>#}
-                {#</div>#}
-
-                {#<div class="All" id="Deux">#}
-                    {#<div id="Ou" class="bjr" style="position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;">#}
-                        {#<i class="fa fa-map-marker fa-5x" aria-hidden="true"></i>#}
-                        {#<p style="margin-top: 10%; font-size: xx-large;">Où ?</p>#}
-                    {#</div>#}
-                    {#<div class="bye" style="">Aurevoir</div>#}
-                {#</div>#}
-
-                {#<div class="All">#}
-                    {#<div class="bjr" style="position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;">#}
-                        {#<i class="fa fa-question-circle fa-5x" aria-hidden="true"></i>#}
-                        {#<p style="margin-top: 10%; font-size: xx-large;">Pourquoi ?</p>#}
-                    {#</div>#}
-                    {#<div class="bye" style="">Aurevoir</div>#}
-                {#</div>#}
-
-                {#<div class="All">#}
-                    {#<div class="bjr" style="position: absolute; display: flex; flex-direction: column; align-items: center; justify-content: center;">#}
-                        {#<i class="fa fa-users fa-5x" aria-hidden="true"></i>#}
-                        {#<p style="margin-top: 10%; font-size: xx-large;">Comment ?</p>#}
-                    {#</div>#}
-                    {#<div class="bye" style="">Aurevoir</div>#}
-                {#</div>#}
-            {#</div>#}
-
-
-
-
-            {#{% for entreprise in entreprises %}#}
-                {#<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 DivHomePage">#}
-                    {#<h3 class="MotHomePage" > {{ entreprise.nom }} ? </h3>#}
-                    {#<div class="text{{ loop.index }}">#}
-                        {#<div class="DescriptionHomePage" >#}
-                                {#{{ entreprise.description[:250] }} <p class="LirePlusHomePage">Lire plus...</p>#}
-                        {#</div>#}
-                    {#</div>#}
-
-                    {#<!-- Modal -->                                                          aria-labelledby="exampleModalLabel"#}
-                    {#<div class="modal fade" id="{{loop.index}}" tabindex="-1" role="dialog" aria-hidden="true" >#}
-                        {#<button type="button" class="close modalTextHomepage" data-dismiss="modal" aria-label="Close">#}
-                             {#<span class="Retour" aria-hidden="true"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Retour</span>#}
-                        {#</button>#}
-                        {#<div class="modal-dialog" role="document">#}
-
-                            {#<div class="modal-content">#}
-                                {#<div class="modal-header col-xs-12 col-sm-12 col-md-12 col-lg-12">#}
-                                    {#<h3 class="Titre LigneTitre"><span class="LigneSpan" >{{ entreprise.nom }}</span></h3>#}
-                                {#</div>#}
-                                {#<div class="modal-body TextModalHomepage">#}
-                                    {#{{ entreprise.description }}#}
-                                {#</div>#}
-                            {#</div>#}
-                        {#</div>#}
-                    {#</div>#}
-                    {#<!-- !Modal! -->#}
-                {#</div>#}
 
             {% block javascripts %}
             {#{% for entreprise in entreprises %}#}
