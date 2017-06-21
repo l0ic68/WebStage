@@ -2637,4 +2637,11 @@ button.close:hover
     margin: 3%;
 }
 
+.Recherche
+{
+    margin-top: 5%;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
 
