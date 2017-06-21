@@ -32,8 +32,10 @@ class DefaultController extends Controller
     public function actualiteAction()
     {
         $em = $this->getDoctrine()->getManager();
-//        $bandeau = $em->getRepository('MainBundle:Description')->findOneByOrdre('5');
-        return $this->render('MainBundle:Default:layout\actualites.html.twig');
+        $actus = $em->getRepository('MainBundle:Actu')->findAll();
+        return $this->render('MainBundle:Default:layout\actualites.html.twig',array(
+            'actus'=>$actus
+        ));
 
     }
     public function GalerieAction()

@@ -6,6 +6,7 @@ use Main\MainBundle\Entity\Media;
 use Main\MainBundle\Entity\Carousel;
 use Main\MainBundle\Form\CarouselAdminType;
 use Main\MainBundle\Form\DescriptionAdminType;
+use Main\MainBundle\Form\IrakAdminType;
 use Main\MainBundle\Form\DescriptionImageAdminType;
 use Main\MainBundle\Form\BandeauAdminType;
 use Main\MainBundle\Form\MediaAdminType;
@@ -22,15 +23,9 @@ class DescriptionAdminController extends Controller
     public function AccueilAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        /* Ce qu'on doit pouvoir modifier
-            -Carousel (mettre de l'ajax )
-            -description( a notre propos)
-            -Changer le projet de la page principale
-        */
-//        $aPropos = $em->getRepository('MainBundle:Description')->findOneByOrdre('1');
-//        $descriptions = $em->getRepository('MainBundle:Description')->findByOrdre(array('2','3','4'));
-//        $actionC = $em->getRepository('MainBundle:Action')->findOneByFrontPage('cours');
-//        $actionR = $em->getRepository('MainBundle:Action')->findOneByFrontPage('realisé');
+
+        $actionC = $em->getRepository('MainBundle:Action')->findOneByFrontPage('cours');
+        $actionR = $em->getRepository('MainBundle:Action')->findOneByFrontPage('realisé');
         $active = $em->getRepository('MainBundle:Carousel')->findOneByOrdre('0');
         $images = $em->getRepository('MainBundle:Carousel')->ByOrder();
 
@@ -116,6 +111,8 @@ class DescriptionAdminController extends Controller
             'quotidient' => $quotidient,
             'financement' => $financement,
             'bandeau' => $bandeau,
+            'actionC' => $actionC,
+            'actionR' => $actionR,
 
         ));
     }
@@ -334,10 +331,14 @@ class DescriptionAdminController extends Controller
         $description4 = $em->getRepository('MainBundle:Description')->findOneByOrdre('9');
         $valeur = $em->getRepository('MainBundle:Description')->findOneByOrdre('9');
         $bandeau = $em->getRepository('MainBundle:Description')->findOneByOrdre('5');
+        $irak1 = $em->getRepository('MainBundle:Description')->findOneByOrdre('14');
+        $irak2 = $em->getRepository('MainBundle:Description')->findOneByOrdre('15');
+        $irak3 = $em->getRepository('MainBundle:Description')->findOneByOrdre('16');
 
         $formTypeA = new DescriptionImageAdminType();
         $formTypeB = new DescriptionAdminType();
         $formTypeC = new BandeauAdminType();
+        $formTypeD = new IrakAdminType();
 
         $form1 = $this->get('form.factory')->createNamedBuilder('form1name',$formTypeA,$description1)
             ->getForm();
@@ -348,6 +349,12 @@ class DescriptionAdminController extends Controller
         $form4 = $this->get('form.factory')->createNamedBuilder('form4name',$formTypeB,$description2)
             ->getForm();
         $form6 = $this->get('form.factory')->createNamedBuilder('bandeau',$formTypeC,$bandeau)
+            ->getForm();
+        $form7 = $this->get('form.factory')->createNamedBuilder('irak1',$formTypeA,$irak1)
+            ->getForm();
+        $form8 = $this->get('form.factory')->createNamedBuilder('irak2',$formTypeD,$irak2)
+            ->getForm();
+        $form9 = $this->get('form.factory')->createNamedBuilder('irak3',$formTypeD,$irak3)
             ->getForm();
 
         if('POST' === $request->getMethod()) {
@@ -403,6 +410,10 @@ class DescriptionAdminController extends Controller
             'form2' => $form2->createView(),
             'form3' => $form3->createView(),
             'form4' => $form4->createView(),
+            'form7' => $form7->createView(),
+            'form8' => $form8->createView(),
+            'form9' => $form9->createView(),
+            'irak1' => $irak1,
             'volonte' => $volonte,
             'but' => $but,
             'valeur' => $valeur

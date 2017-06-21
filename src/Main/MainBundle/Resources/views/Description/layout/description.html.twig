@@ -114,12 +114,12 @@
 
     <div class="DivCarte hidden-xs col-sm-12 col-md-12 col-lg-12">
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 DivImgCarte">
-            <img class="imgCarte" src="{{ asset("img/irakLast.png") }}">
+            <img class="imgCarte" src="{{ asset(irak1.media.path) }}">
         </div>
         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 DivTextPierre">
 
 
-            <h3 style="font-size: xx-large; padding-left: 36px; margin-top: 5%;">Histoire de l'irak</h3>
+            <h3 style="font-size: xx-large; padding-left: 36px; margin-top: 5%;"> <p>{{ irak1.nom }}</p></h3>
             <div id="text-carousel" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -133,36 +133,21 @@
                         <div class="item active">
                             <div class="carousel-content">
                                 <div>
-                                    <p>L'association s'interesse à toutes les minorités menacées par Daech, tel les
-                                        Yazédis, qui tirent leurs racines de l’ancienne Mésopotamie, et qui sont considérées
-                                        par Daech comme des mécréants, et de ce fait sont menacés de mort.
-                                        En Irak, ils étaient essentiellement concentrés dans la vallée de Lalish, au Nord
-                                        de Mossoul. Beaucoup d’entre eux sont désormais réfugiés à Sulaymaniya. La
-                                        situation créée par la constitution de l’état islamique et sa volonté d’éradiquer
-                                        par la terreur toute autre forme de religion que la sienne peut conduire à deux
-                                        attitudes pour les chrétiens : partir ou rester pour résister.	</p>
+                                    <p>{{ irak1.description }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="carousel-content">
                                 <div>
-                                    <p>Mais cela pose un problème majeur aux étudiants émigré, car à Sulaymaniya il ne
-                                        parle pas la même langue qu'à Mossoul. C'est donc très compliqué pour un étudiant,
-                                        en architecture par exemple, de continuer ces études dans ces conditions. Le
-                                        problème est que l'université la plus proche qui parle leur langue se trouve à
-                                        Kirkouk, à 100 Km de leur camps.</p>
+                                    <p>{{ irak2.description }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="carousel-content">
                                 <div>
-                                    <p>C'est ici qu'intervient Mgr Yousif Thomas Mirkis qui veut leur permettre de rester
-                                        pour pouvoir contribuer à la future reconstruction de l'Irak de demain. Il a donc
-                                        loué pour ces étudiants des maisons près de l'université de Kirkouk et leur achète
-                                        de quoi subvenir a leur besoin pour qu'ils puissent continuer leurs études plus
-                                        facilement, sans frontières de langue.</p>
+                                    <p>{{ irak3.description }}</p>
                                 </div>
                             </div>
                         </div>
@@ -174,9 +159,9 @@
     </div>
 
     <div class="DivCarte col-xs-12 hidden-sm hidden-md hidden-lg">
-        <h3 style="font-size: xx-large; margin-left: 5%; margin-top: 5%;">La carte de l'irak</h3>
+        <h3 style="font-size: xx-large; margin-left: 5%; margin-top: 5%;"> <p>{{ irak1.nom }}</p></h3>
         <div class="col-xs-12 DivImgCarte">
-            <img class="imgCarte" src="{{ asset("img/irakLast.png") }}">
+            <img class="imgCarte" src="{{ asset(irak1.media.path) }}">
         </div>
         <div class="col-xs-12 DivTextPierre">
             <div id="text-carousel" class="carousel slide" data-ride="carousel">
@@ -192,36 +177,21 @@
                         <div class="item active">
                             <div class="carousel-content">
                                 <div>
-                                    <p>L'association s'interesse à toutes les minorités menacées par Daech, tel les
-                                        Yazédis, qui tirent leurs racines de l’ancienne Mésopotamie, et qui sont considérées
-                                        par Daech comme des mécréants, et de ce fait sont menacés de mort.
-                                        En Irak, ils étaient essentiellement concentrés dans la vallée de Lalish, au Nord
-                                        de Mossoul. Beaucoup d’entre eux sont désormais réfugiés à Sulaymaniya. La
-                                        situation créée par la constitution de l’état islamique et sa volonté d’éradiquer
-                                        par la terreur toute autre forme de religion que la sienne peut conduire à deux
-                                        attitudes pour les chrétiens : partir ou rester pour résister.	</p>
+                                    <p>{{ irak1.description }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="carousel-content">
                                 <div>
-                                    <p>Mais cela pose un problème majeur aux étudiants émigré, car à Sulaymaniya il ne
-                                        parle pas la même langue qu'à Mossoul. C'est donc très compliqué pour un étudiant,
-                                        en architecture par exemple, de continuer ces études dans ces conditions. Le
-                                        problème est que l'université la plus proche qui parle leur langue se trouve à
-                                        Kirkouk, à 100 Km de leur camps.</p>
+                                    <p>{{ irak2.description }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="carousel-content">
                                 <div>
-                                    <p>C'est ici qu'intervient Mgr Yousif Thomas Mirkis qui veut leur permettre de rester
-                                        pour pouvoir contribuer à la future reconstruction de l'Irak de demain. Il a donc
-                                        loué pour ces étudiants des maisons près de l'université de Kirkouk et leur achète
-                                        de quoi subvenir a leur besoin pour qu'ils puissent continuer leurs études plus
-                                        facilement, sans frontières de langue.</p>
+                                    <p>{{ irak3.description }}</p>
                                 </div>
                             </div>
                         </div>
@@ -235,44 +205,6 @@
 </section>
 
     {% block javascripts %}
-            <script>
-//                $('#Un').hover(mouseOver, mouseOut);
-//                $('#Deux').hover(mouseOver2, mouseOut2);
-//                $('#Trois').hover(mouseOver3, mouseOut3);
-
-//                function mouseOver()
-//                {
-//                    $("#Qui").slideUp("1000");
-//                    $(this).toggleClass("enroule"); return false;
-//                }
-//                function mouseOut()
-//                {
-//                    $("#Qui").slideDown("1000");
-//                    $(this).toggleClass("enroule"); return false;
-//                }
-
-//                function mouseOver2()
-//                {
-//                    $("#Ou").slideUp("1000");
-//                    $(this).toggleClass("enroule"); return false;
-//                }
-//                function mouseOut2()
-//                {
-//                    $("#Ou").slideDown("1000");
-//                    $(this).toggleClass("enroule"); return false;
-//                }
-//
-//                function mouseOver3()
-//                {
-//                    $("#But").slideUp("1000");
-//                    $(this).toggleClass("enroule"); return false;
-//                }
-//                function mouseOut3()
-//                {
-//                    $("#But").slideDown("1000");
-//                    $(this).toggleClass("enroule"); return false;
-//                }
-            </script>
                 <script type="text/javascript">
                     $(document).ready(function(){
                         $(".text1").click(function(){

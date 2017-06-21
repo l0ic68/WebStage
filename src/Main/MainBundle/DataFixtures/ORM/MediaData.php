@@ -54,15 +54,6 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $carouselMedia3->setUrl('3.jpg');
         $manager->persist($carouselMedia3);
 
-//        $carouselMedia4 = new Media();
-//        $carouselMedia4->setPath('/img/Carousel4Small.jpg');
-//        $carouselMedia4->setUrl('4.jpg');
-//        $manager->persist($carouselMedia4);
-
-//        $carouselMedia5 = new Media();
-//        $carouselMedia5->setPath('/img/5.jpg');
-//        $carouselMedia5->setUrl('5.jpg');
-//        $manager->persist($carouselMedia5);
 
         $equipe_groupe = new Media();
         $equipe_groupe->setPath('img/ImageGroupe.JPG');
@@ -75,8 +66,8 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($inconnu);
 
         $irakG = new Media();
-        $irakG->setPath('img/irak.png');
-        $irakG->setUrl('irak.png');
+        $irakG->setPath('img/irakLast.png');
+        $irakG->setUrl('irakLast.png');
         $manager->persist($irakG);
 
         $kirkouk = new Media();
@@ -128,8 +119,6 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $this->addReference('carouselMedia1',$carouselMedia1);
         $this->addReference('carouselMedia2',$carouselMedia2);
         $this->addReference('carouselMedia3',$carouselMedia3);
-//        $this->addReference('carouselMedia4',$carouselMedia4);
-//        $this->addReference('carouselMedia5',$carouselMedia5);
         $this->addReference('equipe_groupe',$equipe_groupe);
         $this->addReference('collecte',$collecte);
         $this->addReference('qualite',$qualite);

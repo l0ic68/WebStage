@@ -35,19 +35,6 @@ class Action
      */
     private $description;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="descriptionP2", type="text", nullable=true)
-     */
-    private $descriptionP2;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="descriptionP3", type="text",nullable=true)
-     */
-    private $descriptionP3;
 
     /**
      * @var \DateTime
@@ -373,51 +360,5 @@ class Action
     public function getFrontPage()
     {
         return $this->frontPage;
-    }
-
-    /**
-     * Set descriptionP2
-     *
-     * @param string $descriptionP2
-     * @return Action
-     */
-    public function setDescriptionP2($descriptionP2)
-    {
-        $this->descriptionP2 = $descriptionP2;
-
-        return $this;
-    }
-
-    /**
-     * Get descriptionP2
-     *
-     * @return string 
-     */
-    public function getDescriptionP2()
-    {
-        return $this->descriptionP2;
-    }
-
-    /**
-     * Set descriptionP3
-     *
-     * @param string $descriptionP3
-     * @return Action
-     */
-    public function setDescriptionP3($descriptionP3)
-    {
-        $this->descriptionP3 = $descriptionP3;
-
-        return $this;
-    }
-
-    /**
-     * Get descriptionP3
-     *
-     * @return string 
-     */
-    public function getDescriptionP3()
-    {
-        return $this->descriptionP3;
     }
 }

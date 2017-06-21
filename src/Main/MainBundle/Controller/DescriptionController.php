@@ -34,6 +34,17 @@ class DescriptionController extends Controller
         $but = $em->getRepository('MainBundle:Description')->findOneByOrdre('7');
         $volonte = $em->getRepository('MainBundle:Description')->findOneByOrdre('8');
         $valeur = $em->getRepository('MainBundle:Description')->findOneByOrdre('9');
-        return $this->render('MainBundle:Description:layout\description.html.twig', array('histoire'=>$histoire,'valeur'=>$valeur,'volonte'=>$volonte,'but'=>$but));
+        $irak1 = $em->getRepository('MainBundle:Description')->findOneByOrdre('14');
+        $irak2 = $em->getRepository('MainBundle:Description')->findOneByOrdre('15');
+        $irak3 = $em->getRepository('MainBundle:Description')->findOneByOrdre('16');
+        return $this->render('MainBundle:Description:layout\description.html.twig', array(
+            'histoire'=>$histoire,
+            'valeur'=>$valeur,
+            'volonte'=>$volonte,
+            'but'=>$but,
+            'irak1'=>$irak1,
+            'irak2'=>$irak2,
+            'irak3'=>$irak3
+        ));
     }
 }

@@ -35,12 +35,6 @@ class Description
      */
     private $nom;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="page", type="string", length=255)
-     */
-    private $page;
 
     /**
      * @ORM\OneToOne(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist","remove"})
@@ -110,29 +104,6 @@ class Description
     public function getNom()
     {
         return $this->nom;
-    }
-
-    /**
-     * Set page
-     *
-     * @param string $page
-     * @return Description
-     */
-    public function setPage($page)
-    {
-        $this->page = $page;
-
-        return $this;
-    }
-
-    /**
-     * Get page
-     *
-     * @return string 
-     */
-    public function getPage()
-    {
-        return $this->page;
     }
 
     /**
