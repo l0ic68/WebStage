@@ -625,6 +625,32 @@ footer
     z-index: 1;
 }
 
+.carousel-fade .carousel-inner .item {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+    z-index: 2;
+}
 
 .DivHomePage
 {
@@ -2381,19 +2407,65 @@ button.close:hover
 
 .TextNewCaroussel
 {
-    width: 500px;
-    position: absolute;
-    bottom :0px;
-    left: 100px;
-}
-
-.TextNewCaroussel2
-{
-    width: 500px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top :0px;
-    right: -200px;
+    left: 0px;
 }
+
+.TextCarousel
+{
+    /*width: 30%;*/
+    font-size: 50px;
+    color: white;
+    text-align: left;
+    position: absolute;
+    bottom: 15%;
+    left: 11%;
+}
+
+.TextCarousel2
+{
+    /*width: 30%;*/
+    font-size: 50px;
+    color: white;
+    text-align: left;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+.TextCarousel3
+{
+    /*width: 30%;*/
+    font-size: 50px;
+    color: white;
+    text-align: left;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.TextCarousel4
+{
+    /*width: 30%;*/
+    font-size: 50px;
+    color: white;
+    text-align: left;
+    position: absolute;
+    bottom: 15%;
+    right: 11%;
+}
+
+
+/*.TextNewCaroussel2*/
+/*{*/
+    /*width: 500px;*/
+    /*position: absolute;*/
+    /*top :0px;*/
+    /*right: -200px;*/
+/*}*/
 
 
 /*---------------------  !New Caroussel!  --------------------*/

@@ -4,7 +4,7 @@
     <div id="main">
 
         <!--        Caroussel      -->
-        <div id="myCarousel" class="carousel slide col-xs-12 col-sm-12 col-md-12 col-lg-12" data-ride="carousel">
+        <div id="myCarousel" class="carousel slide col-xs-12 col-sm-12 col-md-12 col-lg-12 carousel-fade" data-ride="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -18,7 +18,7 @@
                 <div class="item active" style="width: 100%;">
                     <img class="ImageCarousel d-block img-fluid" src="{{  asset(active.media.path) }}" alt="Los Angeles">
                     <div class="carousel-caption TextNewCaroussel">
-                        <h3 class="animated fadeInLeft" style="font-size: 50px; color: white; text-align: left;">
+                        <h3 class="animated fadeInLeft TextCarousel2 col-lg-5">
                            {{ active.text }}
                         </h3>
                     </div>
@@ -26,8 +26,8 @@
                 {% for image in images %}
                     <div class="item" style="width: 100%;">
                         <img class="ImageCarousel d-block img-fluid" src="{{ asset(image.media.path) }}" alt="Los Angeles">
-                        <div class="carousel-caption TextNewCaroussel2">
-                            <h3 class="animated fadeInRight" style="font-size: 50px; color: white; text-align: left;">
+                        <div class="carousel-caption TextNewCaroussel">
+                            <h3 class="animated fadeInRight TextCarousel3 col-lg-5">
                                 {{ image.text }}
                             </h3>
                       </div>
@@ -54,7 +54,7 @@
                 <div class="APropos col-xs-12 col-sm-12 col-md-6 col-lg-4">
                         <h2 class="parallax-title text-left AProposTitre">{{ aPropos.nom }}</h2>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-7">
                     <p>{{ aPropos.description|raw }}</p>
                 </div>
             </div>

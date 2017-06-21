@@ -95,17 +95,17 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action6->setFrontPage('null');
         $manager->persist($action6);
 
-        $action7 = new Action();
-        $action7->setNom("Elargissement de l'action \"Aux Porteurs de Lumière\"");
-        $action7->setDescription("L'association est en phase d'aggrantissement avec l'ouverture d'une nouvelle branche à Paris aux frais des membres");
-        $action7->setCout(0);
-        $action7->setDateDebut(new \DateTime("01-01-2017"), new \DateTimeZone('Europe/Paris'));
-        $action7->setDateFin(new \DateTime("31-12-2017"), new \DateTimeZone('Europe/Paris'));
-        $action7->setRecolte(0);
-        $action7->setType("En cours");
-        $action7->setPicture($this->getReference("paris"));
-        $action7->setFrontPage('null');
-        $manager->persist($action7);
+//        $action7 = new Action();
+//        $action7->setNom("Elargissement de l'action \"Aux Porteurs de Lumière\"");
+//        $action7->setDescription("L'association est en phase d'aggrantissement avec l'ouverture d'une nouvelle branche à Paris aux frais des membres");
+//        $action7->setCout(0);
+//        $action7->setDateDebut(new \DateTime("01-01-2017"), new \DateTimeZone('Europe/Paris'));
+//        $action7->setDateFin(new \DateTime("31-12-2017"), new \DateTimeZone('Europe/Paris'));
+//        $action7->setRecolte(0);
+//        $action7->setType("En cours");
+//        $action7->setPicture($this->getReference("paris"));
+//        $action7->setFrontPage('null');
+//        $manager->persist($action7);
 
 
 
