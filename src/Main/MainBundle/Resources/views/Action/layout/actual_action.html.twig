@@ -50,8 +50,8 @@
                 <span class="Retour" aria-hidden="true"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Retour</span>
             </button>
 
-            <div class="modal-dialog ModalAction" role="document">
-                <div class="ImageActionModal">
+            <div class="modal-dialog ModalAction " role="document">
+                <div class="ImageActionModal hidden-xs">
                     <img class="ImageHautActionModal" src="{{ asset(action.picture.path) }}">
                 </div>
                 <div class="modal-content">
@@ -63,7 +63,7 @@
                         {#Du : <span style="text-decoration: underline;">{{ action.dateDebut| date('d/m/Y') }}</span>   Au : <span style="text-decoration: underline;">{{ action.dateFin| date('d/m/Y') }}</span>#}
                         {#</div>#}
                         <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <h2 class="parallax-title text-left" style="padding-bottom: 10px; padding-left: 10%; margin: 0px; font-size: 38px; color: #333;">Description du projet :</h2>
+                            <h2 class="parallax-title text-left titreDescriptionModal" style="">Description du projet :</h2>
                         </div>
                         <div>
                             <p style="text-align: left; margin-left: 5%; margin-right: 5%;">{{ action.description }}</p>
@@ -75,18 +75,29 @@
                     </div>
 
                     <!--        Faire un Don      -->
+                    {#<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bandeauHomepage">#}
+                        {#<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 bandeauText" >#}
+                            {#<h2>Vous souhaitez soutenir le projet ?</h2>#}
+                        {#</div>#}
+                        {#<div class="bandeauDonate">#}
+                            {#<p style="margin: 0px">Faire un Don</p>#}
+                        {#</div>#}
+                    {#</div>#}
+
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bandeauHomepage">
-                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 bandeauText" >
+                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 bandeauText" >
                             <h2>Vous souhaitez soutenir le projet ?</h2>
                         </div>
                         <div class="bandeauDonate">
-                            <p style="margin: 0px">Faire un Don</p>
+                            <a href="{{path('don') }}">
+                                <p class="BoutonDon">Faire un Don</p>
+                            </a>
                         </div>
                     </div>
                     <!--        !Faire une Don!      -->
 
                     <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h2 class="parallax-title text-left" style="padding-bottom: 10px; padding-left: 11%; margin: 0px; font-size: 38px; color: #333;">Le projet en image :</h2>
+                        <h2 class="parallax-title text-left" style="padding-bottom: 10px; padding-left: 11%; margin: 0px; color: #333;">Le projet en image :</h2>
                     </div>
                     <div class="row CarouselModalAction">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
