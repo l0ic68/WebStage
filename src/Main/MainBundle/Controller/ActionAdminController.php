@@ -5,6 +5,8 @@ namespace Main\MainBundle\Controller;
 use Main\MainBundle\Entity\Action;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Main\MainBundle\Form\ActionAdminType;
+use Main\MainBundle\Form\ActionEditAdminType;
 
 /**
  * Action controller.
@@ -16,109 +18,129 @@ class ActionAdminController extends Controller
      * Lists all action entities.
      *
      */
-    public function indexAction()
+    public function show_ActualAction()
     {
         $em = $this->getDoctrine()->getManager();
-
-        $actions = $em->getRepository('MainBundle:Action')->findAll();
-
-        return $this->render('MainBundle:Admin:action/index.html.twig', array(
-            'actions' => $actions,
+        $actions = $em->getRepository('MainBundle:Action')->findByType('En cours');
+        return $this->render('MainBundle:Admin:actual_action.html.twig',array(
+            'actions'=> $actions
+        ));
+    }
+    public function show_PastAction()
+    {
+        $em = $this->getDoctrine()->getManager();
+        $actions = $em->getRepository('MainBundle:Action')->findByType('Passée');
+        return $this->render('MainBundle:Admin:past_action.html.twig',array(
+            'actions'=> $actions
         ));
     }
 
-    /**
-     * Creates a new action entity.
-     *
-     */
-    public function newAction(Request $request)
+    public function Edit_PastAction($id,Request $request)
     {
-        $action = new Action();
-        $form = $this->createForm('Main\MainBundle\Form\ActionAdminType', $action);
-        $form->handleRequest($request);
+        $em = $this->getDoctrine()->getManager();
+        $pastAction = $em->getRepository('MainBundle:Action')->findOneById($id);
+        $form1 =$this->createForm(new ActionEditAdminType(),$pastAction);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($action);
-            $em->flush();
+        if('POST' === $request->getMethod()) {
+                $form1->handleRequest($request);
+                if ($form1->isValid()) {
+                    // On l'enregistre notre objet $advert dans la base de données, par exemple
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($pastAction);
+                    $em->flush();
+                    return $this->redirectToRoute("show_past_action");
+                }
+            }
+        return $this->render('MainBundle:Admin:new_past_action.html.twig',array(
+            'form1'=> $form1
+        ));
+    }
 
-            return $this->redirectToRoute('admin_action_show', array('id' => $action->getId()));
+    public function Edit_ActualAction($id,Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $actualAction = $em->getRepository('MainBundle:Action')->findOneById($id);
+        $form1 =$this->createForm(new ActionEditAdminType(),$actualAction);
+
+        if('POST' === $request->getMethod()) {
+                $form1->handleRequest($request);
+                if ($form1->isValid()) {
+                    // On l'enregistre notre objet $advert dans la base de données, par exemple
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($actualAction);
+                    $em->flush();
+                    return $this->redirectToRoute("show_actual_action");
+                }
+            }
+        return $this->render('MainBundle:Admin:new_actual_action.html.twig',array(
+            'form1'=> $form1->createView()
+        ));
+
+    }
+    public function New_PastAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $pastAction = new Action();
+        $form1 =$this->createForm(new ActionAdminType(),$pastAction);
+        if('POST' === $request->getMethod()) {
+            $form1->handleRequest($request);
+            if ($form1->isValid()) {
+                // On l'enregistre notre objet $advert dans la base de données, par exemple
+                $em = $this->getDoctrine()->getManager();
+                $pastAction->setType('Passée');
+                $pastAction->setFrontPage('null');
+                $em->persist($pastAction);
+                $em->flush();
+                return $this->redirectToRoute("show_past_action");
+            }
         }
-
-        return $this->render('MainBundle:Admin:action/new.html.twig', array(
-            'action' => $action,
-            'form' => $form->createView(),
+        return $this->render('MainBundle:Admin:new_past_action.html.twig',array(
+            'form1'=> $form1
         ));
     }
 
-    /**
-     * Finds and displays a action entity.
-     *
-     */
-    public function showAction(Action $action)
+    public function New_ActualAction(Request $request)
     {
-        $deleteForm = $this->createDeleteForm($action);
+        $em = $this->getDoctrine()->getManager();
+        $actualAction = new Action();
+        $form1 =$this->createForm(new ActionAdminType(),$actualAction);
 
-        return $this->render('MainBundle:Admin:action/show.html.twig', array(
-            'action' => $action,
-            'delete_form' => $deleteForm->createView(),
+        if('POST' === $request->getMethod()) {
+                $form1->handleRequest($request);
+                if ($form1->isValid()) {
+                    // On l'enregistre notre objet $advert dans la base de données, par exemple
+                    $em = $this->getDoctrine()->getManager();
+                    $actualAction->setType('En cours');
+                    $actualAction->setFrontPage('null');
+                    $em->persist($actualAction);
+                    $em->flush();
+                    return $this->redirectToRoute("show_actual_action");
+                }
+            }
+        return $this->render('MainBundle:Admin:new_actual_action.html.twig',array(
+            'form1'=> $form1->createView()
         ));
     }
-
-    /**
-     * Displays a form to edit an existing action entity.
-     *
-     */
-    public function editAction(Request $request, Action $action)
+    public function Delete_PastAction($id,Request $request)
     {
-        $deleteForm = $this->createDeleteForm($action);
-        $editForm = $this->createForm('Main\MainBundle\Form\ActionAdminType', $action);
-        $editForm->handleRequest($request);
+        $em = $this->getDoctrine()->getManager();
+        $pastAction = $em->getRepository('MainBundle:Action')->findOneById($id);
 
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('admin_action_edit', array('id' => $action->getId()));
-        }
-
-        return $this->render('MainBundle:Admin:action/edit.html.twig', array(
-            'action' => $action,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($pastAction);
+        $em->flush();
+        return $this->redirectToRoute("show_past_action");
     }
 
-    /**
-     * Deletes a action entity.
-     *
-     */
-    public function deleteAction(Request $request, Action $action)
+    public function Delete_ActualAction($id)
     {
-        $form = $this->createDeleteForm($action);
-        $form->handleRequest($request);
+        $em = $this->getDoctrine()->getManager();
+        $actualAction = $em->getRepository('MainBundle:Action')->find($id);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($action);
-            $em->flush();
-        }
-
-        return $this->redirectToRoute('admin_action_index');
+                $em = $this->getDoctrine()->getManager();
+                $em->remove($actualAction);
+                $em->flush();
+                return $this->redirectToRoute("show_actual_action");
     }
 
-    /**
-     * Creates a form to delete a action entity.
-     *
-     * @param Action $action The action entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm(Action $action)
-    {
-        return $this->createFormBuilder()
-            ->setAction($this->generateUrl('admin_action_delete', array('id' => $action->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-        ;
-    }
 }

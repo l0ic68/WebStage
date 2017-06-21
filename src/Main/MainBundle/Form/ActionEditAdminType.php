@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ActionAdminType extends AbstractType
+class ActionEditAdminType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -19,11 +19,11 @@ class ActionAdminType extends AbstractType
                 ->add('date_fin')
                 ->add('cout')
                 ->add('recolte')
-                ->add('picture',new MediaType())
-//                ->add('type',"choice",array('choices' => array('Passée' => "Passée",
-//                                                               'En cours' => "En cours",
-//                                                               'Future' => "Future")));
-        ->add('submit','submit');
+                ->add('picture',new MediaType(),array('required' => false))
+                ->add('type',"choice",array('choices' => array('Passée' => "Passée",
+                                                               'En cours' => "En cours",
+                                                               'Future' => "Future")))
+                ->add('submit','submit');
     }
     
     /**
