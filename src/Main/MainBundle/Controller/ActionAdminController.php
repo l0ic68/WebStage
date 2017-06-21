@@ -3,6 +3,7 @@
 namespace Main\MainBundle\Controller;
 
 use Main\MainBundle\Entity\Action;
+use Main\MainBundle\Form\DescriptionAdminType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Main\MainBundle\Form\ActionAdminType;
@@ -18,12 +19,45 @@ class ActionAdminController extends Controller
      * Lists all action entities.
      *
      */
-    public function show_ActualAction()
+    public function show_ActualAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $actions = $em->getRepository('MainBundle:Action')->findByType('En cours');
+        $description = $em->getRepository('MainBundle:Description')->findOneByOrdre('18');
+        $description2 = $em->getRepository('MainBundle:Description')->findOneByOrdre('19');
+
+        $formTypeA = new DescriptionAdminType();
+
+        $form1 = $this->get('form.factory')->createNamedBuilder('description',$formTypeA,$description)
+            ->getForm();
+
+        $form2 = $this->get('form.factory')->createNamedBuilder('description2',$formTypeA,$description2)
+            ->getForm();
+
+        if('POST' === $request->getMethod()) {
+            if ($request->request->has('description')) {
+                $form1->handleRequest($request);
+                if ($form1->isValid()) {
+                    // On l'enregistre notre objet $advert dans la base de données, par exemple
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($description);
+                    $em->flush();
+                }
+            }
+            if ($request->request->has('description2')) {
+                $form2->handleRequest($request);
+                if ($form2->isValid()) {
+                    // On l'enregistre notre objet $advert dans la base de données, par exemple
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($description2);
+                    $em->flush();
+                }
+            }
+        }
         return $this->render('MainBundle:Admin:actual_action.html.twig',array(
-            'actions'=> $actions
+            'actions'=> $actions,
+            'form1'=>$form1->createView(),
+            'form2'=>$form2->createView()
         ));
     }
     public function show_PastAction()

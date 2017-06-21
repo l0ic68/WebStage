@@ -116,15 +116,9 @@ Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyle
         $manager->persist($aujourdhui);
 
         $don = new Description();
-        $don->setNom("Don");
-        $don->setDescription("Nous vous sollicitons chacun en fonction de vos moyens que vous soyez salarié, profession libérale, retraité, acteur économique, ou chef d’entreprise, persuadés de l’intérêt de notre action.
-        Si vous êtes convaincu : • Que l’avenir de l’Irak existe, et qu’il est à portée de main • Qu’il vaut mieux permettre aux réfugiés de trouver leur place dans leur pays, pour y former les cadres de demain plutôt que de les voir venir grossir les flots de populations parquées dans des camps, ou marginalisés dans les quartiers déshérité de nos villes, sans parler notre langue, sans profession reconnue bref, sans avenir. Alors vous avez trouvé à côté de chez vous l’association « aux porteurs de Lumière solidarité Irak » qui pourra grâce à vous être le prolongement solidaire de votre constat. Ensemble, et grâce à votre contribution, nous travaillerons afin de traduire nos espérances et nos convictions en projets concrets.
-        • Pour le soutien de notre action au profit des enfants     de la diaspora de Strasbourg, Parrainer un élève ; c’est 1300 € par an soit par un chèque, soit par un virement automatique de 108 € par mois.
-        • Pour le soutien des étudiants de Kirkuk Parrainer un étudiant c’est 2000 € par an soit par un chèque, soit par un virement automatique de 168 € par mois.
-        Pour les dons destinés aux oeuvres organisées par Mgr Yousif Nous collectons au travers de notre association les montants qui transiteront par l’Œuvre d’Orient pour des raisons fiscales mais aussi pour permettre l’acheminement de l’argent. Cette fondation de notoriété internationale est reconnue d’intérêt général de longue date. Bien rodée aux circuits de financement des Eglises d’Orient, elle délivrera aux donateurs les attestations fiscales qu’ils pourraient souhaiter.
-        Nous pouvons recevoir votre générosité : > Soit sous forme de chèques libellés à l’ordre de l’OEuvre d’Orient seront à adresser à :   « Aux porteurs de lumière - Solidarité Irak » 12, rue des cerisiers - 67117 Furdenheim 
-        > Soit sous forme de virement à l’adresse du compte suivant :      Caisse d’épargne de Molsheim : 16 705-09017-08001639023 rib 49
-        Grand merci pour votre solidarité !");
+        $don->setNom("Comment nous soutenir ?");
+        $don->setDescription("Pour soutenir nos différentes actions auprès des réfugiés d'irak vous pouvez 
+        leurs offrir votre don via le site de Crowdfunding.");
         $don->setOrdre("11");
         $manager->persist($don);
 
@@ -182,6 +176,35 @@ Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyle
         $Irak3->setOrdre("16");
         $manager->persist($Irak3);
 
+        $projetR= new Description();
+        $projetR->setNom("Vos réussites");
+        $projetR->setDescription("");
+        $projetR->setOrdre("17");
+        $manager->persist($projetR);
+
+        $projetC1= new Description();
+        $projetC1->setNom("Formation = Avenir");
+        $projetC1->setDescription("Soutenons les jeunes chrétiens d'Irak
+        Rester, c’est le choix fait par de nombreux étudiants, qui d’ailleurs 
+        n’avaient pas beaucoup d’autres solutions, mais qui ont ainsi fait 
+        un magnifique pari sur l’avenir. Leur permettre de rester, c’est contribuer à 
+        l’éducation et à la formation, piliers de cette future reconstruction de l’IRAK 
+        de demain. Mais pour faire vivre tout ce monde, nous avons absolument besoin de 
+        votre solidarité");
+        $projetC1->setOrdre("18");
+        $manager->persist($projetC1);
+
+        $projetC2= new Description();
+        $projetC2->setNom("Prise en charge des étudiants :");
+        $projetC2->setDescription("Année 2014/2015 : 80 étudiants
+
+                                   Année 2015/2016 : 420 étudiants
+
+                                   Année 2016/2017 : 680 étudiants
+
+                                   Année 2017/2018 : 800 étudiants");
+        $projetC2->setOrdre("19");
+        $manager->persist($projetC2);
 
         $manager->flush();
 
