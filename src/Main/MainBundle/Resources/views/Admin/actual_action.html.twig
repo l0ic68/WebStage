@@ -1,0 +1,84 @@
+{% extends "::layout/layout.html.twig" %}
+{% block body %}
+
+    <div class="DivTopAction col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="DivimgbackAction brightness col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+            <div class="DivGaucheImgBack col-xs-12 col-sm-8 col-md-7 col-lg-8">
+                <div class="TitreActionPrincipal col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <p class="TitreBack parallax-title3 text-left" style="font-size: xx-large; padding-bottom: 1%;">Formation = Avenir</p>
+                </div>
+
+                <div class="DescriptionActionPrincipal col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h3 style="margin-top: 0%; color: white;">Soutenons les jeunes chrétiens d'Irak</h3>
+                    <p>Rester, c’est le choix fait par de nombreux étudiants, qui d’ailleurs n’avaient pas beaucoup
+                        d’autres solutions, mais qui ont ainsi fait un magnifique pari sur l’avenir. Leur permettre de
+                        rester, c’est contribuer à l’éducation et à la formation, piliers de cette future reconstruction
+                        de l’IRAK de demain.  Mais pour faire vivre tout ce monde, nous avons absolument besoin de votre
+                        solidarité</p>
+                    <div style="height: 30px; width: 50%"></div>
+                </div>
+            </div>
+
+            <div class="DivDroiteImgBack hidden-xs col-sm-4 col-md-5 col-lg-4">
+                <div class="NombreEtudiant col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h2 style="text-align: left">Prise en charge des étudiants :</h2>
+                    <p class="LigneChiffre">Année 2014/2015 : <span class="chiffre">80</span> étudiants</p>
+                    <p class="LigneChiffre">Année 2015/2016 : <span class="chiffre">420</span>  étudiants</p>
+                    <p class="LigneChiffre">Année 2016/2017 : <span class="chiffre">680</span>  étudiants</p>
+                    <p class="LigneChiffre">Année 2017/2018 : <span class="chiffre">800</span>  étudiants</p>
+                </div>
+            </div>
+
+            {#<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">lol</div>#}
+            <div class="DivBoutonImgBack col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-11 col-sm-8 col-md-8 col-lg-6">
+                <div class="DonatePastPrincipal hidden-xs col-sm-5 col-md-4 col-lg-3">Faire un Don</div>
+                <div class="DonatePastPrincipal col-xs-12 col-sm-5 col-md-4 col-lg-3">Voir les détails</div>
+            </div>
+
+        </div>
+
+    </div>
+    <div style="height: 450px"></div>
+
+    <div class="AllAction col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-12 col-sm-10 col-md-10 col-lg-10">
+        {% for action in actions %}
+            <div class="DivOneAction col-xs-12 col-sm-6 col-md-6 col-lg-4">
+                <div class="OneAction col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <img  class ="pastActionImg" src="{{ asset(action.picture.path) }}">
+                    <h4>{{ action.nom[:50] }}</h4>
+                    <p class="DescriptionActionPast">{{ action.description[:130] }}...</p>
+                    <p class="DivCout"><span class="CoutAction">{{ action.recolte }}</span>€ récolter pour un coût de <span class="CoutAction">{{ action.cout }}</span>€</p>
+                    <p class="DatePast">{{ action.dateFin| date('d/m/Y') }}    -    {{ action.dateDebut| date('d/m/Y') }}</p>
+                    <div class="DonatePast"><a href="{{ path('edit_actual_action',{ id : action.id}) }}"> Modifier</a></div>
+                    <div class="DonatePast"><a href="{{ path('delete_actual_action',{ id : action.id}) }}"> Supprimer</a></div>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="bandeauDonate">
+            <a href="{{ path('new_actual_action') }}">Nouveau projet</a>
+        </div>
+
+    </div>
+    {% block javascripts %}
+        {% for action in actions %}
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $(".text{{ action.id }}").click(function(){
+                        $("#{{ action.id }}").modal('show');
+                    });
+                });
+            </script>
+        {% endfor %}
+        <script type="text/javascript">
+            {% if id is defined %}
+            {
+                $(document).ready(function(){
+                    $("#{{ id }}").modal('show');
+                });
+            }
+            {% endif %}
+        </script>
+    {% endblock %}
+
+{% endblock %}

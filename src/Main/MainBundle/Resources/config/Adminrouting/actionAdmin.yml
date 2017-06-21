@@ -1,24 +1,31 @@
-admin_action_index:
-    path:     /
-    defaults: { _controller: "MainBundle:ActionAdmin:index" }
-    methods:  GET
+edit_past_action:
+    path:     /edit_past/{id}
+    defaults: { _controller: "MainBundle:ActionAdmin:edit_past" }
 
-admin_action_show:
-    path:     /{id}/show
-    defaults: { _controller: "MainBundle:ActionAdmin:show" }
-    methods:  GET
+edit_actual_action:
+    path:     /edit_actual/{id}
+    defaults: { _controller: "MainBundle:ActionAdmin:edit_actual" }
 
-admin_action_new:
-    path:     /new
-    defaults: { _controller: "MainBundle:ActionAdmin:new" }
-    methods:  [GET, POST]
+new_past_action:
+    path:     /new_past
+    defaults: { _controller: "MainBundle:ActionAdmin:new_past" }
 
-admin_action_edit:
-    path:     /{id}/edit
-    defaults: { _controller: "MainBundle:ActionAdmin:edit" }
-    methods:  [GET, POST]
+new_actual_action:
+    path:     /new_actual
+    defaults: { _controller: "MainBundle:ActionAdmin:new_actual" }
 
-admin_action_delete:
-    path:     /{id}/delete
-    defaults: { _controller: "MainBundle:ActionAdmin:delete" }
-    methods:  DELETE
+delete_past_action:
+    path:     /delete_past/{id}
+    defaults: { _controller: "MainBundle:ActionAdmin:delete_past" }
+
+delete_actual_action:
+    path:     /delete_actual/{id}
+    defaults: { _controller: "MainBundle:ActionAdmin:delete_actual" }
+
+show_past_action:
+    path:     /show_past
+    defaults: { _controller: "MainBundle:ActionAdmin:show_past" }
+
+show_actual_action:
+    path:     /show_actual
+    defaults: { _controller: "MainBundle:ActionAdmin:show_actual" }

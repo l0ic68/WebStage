@@ -51,4 +51,22 @@ carouselAdmin:
   path:     /carousel
   defaults: { _controller: MainBundle:DescriptionAdmin:carousel }
 
+edit_actu:
+    path:     /edit_actu/{id}
+    defaults: { _controller: "MainBundle:DefaultAdmin:edit_actu" }
+
+new_actu:
+    path:     /new_acu
+    defaults: { _controller: "MainBundle:DefaultAdmin:new_actu" }
+
+
+delete_actu:
+    path:     /delete_actu/{id}
+    defaults: { _controller: "MainBundle:DefaultAdmin:delete_actu" }
+
+
+show_actu:
+    path:     /actu
+    defaults: { _controller: "MainBundle:DefaultAdmin:show_actu" }
+
 
