@@ -42,15 +42,6 @@ class CarouselData extends AbstractFixture implements OrderedFixtureInterface
         $carousel3->setText("Parrainez 50 étudiants en Architecture et ingénierie à Kirkuk");
         $manager->persist($carousel3);
 
-//        $carousel4 = new Carousel();
-//        $carousel4->setOrdre('3');
-//        $carousel4->setMedia($this->getReference('carouselMedia4'));
-//        $manager->persist($carousel4);
-
-//        $carousel5 = new Carousel();
-//        $carousel5->setOrdre('4');
-//        $carousel5->setMedia($this->getReference('carouselMedia5'));
-//        $manager->persist($carousel5);
 
 
 
@@ -59,8 +50,7 @@ class CarouselData extends AbstractFixture implements OrderedFixtureInterface
         $this->addReference('carousel1',$carousel1);
         $this->addReference('carousel2',$carousel2);
         $this->addReference('carousel3',$carousel3);
-//        $this->addReference('carousel4',$carousel4);
-//        $this->addReference('carousel5',$carousel5);
+
 }
 
     public function getOrder()

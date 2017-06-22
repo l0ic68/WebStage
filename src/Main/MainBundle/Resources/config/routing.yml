@@ -76,6 +76,10 @@ searchMedia:
     pattern: /searchMedia
     defaults: { _controller: MainBundle:Default:searchmedia }
 
+searchActu:
+    pattern: /searchActu
+    defaults: { _controller: MainBundle:Default:searchactu }
+
 description:
     pattern: /description
     defaults: { _controller: MainBundle:Description:description }
