@@ -71,7 +71,7 @@ A la faveur de la rencontre de Mgr Yousif et d’un ancien bâtisseur alsacien ;
 de Kirkuk en décembre 2015.
 Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyler a décidé avec quelques amis de créer début
  2016 une association dénommée « Aux porteurs de lumière-solidarité Irak ».");
-//        $histoire->setMedia($this->getReference(''));
+        $histoire->setMedia($this->getReference('histoireMedia'));
         $histoire->setOrdre("6");
         $manager->persist($histoire);
 
