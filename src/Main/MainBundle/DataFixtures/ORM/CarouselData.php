@@ -42,9 +42,6 @@ class CarouselData extends AbstractFixture implements OrderedFixtureInterface
         $carousel3->setText("Parrainez 50 étudiants en Architecture et ingénierie à Kirkuk");
         $manager->persist($carousel3);
 
-
-
-
         $manager->flush();
 
         $this->addReference('carousel1',$carousel1);

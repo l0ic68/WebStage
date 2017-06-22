@@ -27,7 +27,7 @@
         <div class="OneActualite col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <img  class ="ActualiteImage" src="{{ asset(actu.media.path) }}">
             <h4 class="TitreActualite">{{ actu.titre }}</h4>
-            <p class="ParActualite">Par : <span style="color: #009de0">{{ actu.auteur }}<span></span></p>
+            <p class="ParActualite">Par : <span style="color: #009de0">{{ actu.auteur }}</span></p>
             <p class="DescriptionActualite">{{ actu.description[:300] }}
                 <br>
             <p class="PlusAcutalite">Plus... ></p>
@@ -79,6 +79,7 @@
     {#</div>#}
 
 {#</div>#}
+</div>
     {% block javascripts %}
         <script type="text/javascript">
             $(function(){
