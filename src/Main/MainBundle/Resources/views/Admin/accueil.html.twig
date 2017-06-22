@@ -1,4 +1,4 @@
-{% extends "::layout/layout.html.twig" %}
+{% extends "::Adminlayout/layout.html.twig" %}
 
 {% block body %}
     <div id="main">
@@ -209,6 +209,20 @@
         </div>
         <!--        !Texte HomePage!      -->
     </div>
+    <div class="Recherche col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h2 class="hidden-xs col-sm-offset-3 col-sm-5 col-md-offset-4 col-md-3 col-lg-offset-4 col-lg-3" style="margin-top: 0px; margin-bottom: 0px;">Changer le Projet</h2>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Choisir</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                {% for listeActionC in listeActionCs%}
+                    <li><a href="{{ path('changeActionC',{'id' : listeActionC.id }) }}"><button class="search">{{ listeActionC.nom }}</button></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 
     <!--        Rajouter une pierre a l'edifice      -->
     <div class="DivPierre col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -222,14 +236,16 @@
             </div>
 
             <div style="display: flex; justify-content: flex-start; padding-left: 3%;">
-                <button type="button" class="btn btn-primary"><a href="{{ path('actualActionModal',{'id' : actionC.id }) }}">Modifier le Projet</a></button>
+                <button type="button" class="btn btn-primary"><a href="{{ path('edit_actual_action',{'id' : actionC.id }) }}">Modifier le Projet</a></button>
             </div>
         </div>
+
 
         <div class="hidden-xs hidden-sm col-md-6 col-lg-6 DivImgPierre">
             <img class="imgPierre" src="{{ asset(actionC.picture.path) }}">
         </div>
     </div>
+
     <!--        !Rajouter une pierre a l'edifice!      -->
 
 
@@ -240,11 +256,24 @@
     <!--        Votre réussite      -->
     <div class="Divimgback hidden-xs hidden-sm col-md-6 col-lg-8">
     </div>
-
+    <div class="Recherche col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h2 class="hidden-xs col-sm-offset-3 col-sm-5 col-md-offset-4 col-md-3 col-lg-offset-4 col-lg-3" style="margin-top: 0px; margin-bottom: 0px;">Changer le Projet</h2>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Choisir</button>
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                {% for listeActionR in listeActionRs%}
+                    <li><a href="{{ path('changeActionR',{'id' : listeActionR.id }) }}"><button class="search">{{ listeActionR.nom }}</button></a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
     <div class="DivReussite col-xs-12 col-sm-12 col-md-6 col-lg-4">
         <h3 class="TitreReussite">{{ actionR.nom }}</h3>
         <p class="TexteDivReussite">{{ actionR.description[:400] }}...</p>
-        <a href="{{ path('pastActionModal',{'id' : actionR.id }) }}">
+        <a href="{{ path('edit_past_action',{'id' : actionR.id }) }}">
             <button type="button" class="btn btn-primary">Modifier le Projet</button></a>
     </div>
 

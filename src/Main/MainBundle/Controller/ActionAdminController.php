@@ -176,5 +176,32 @@ class ActionAdminController extends Controller
                 $em->flush();
                 return $this->redirectToRoute("show_actual_action");
     }
+    public function changeActionRAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $actualFront = $em->getRepository('MainBundle:Action')->findOneByFrontPage('realisé');
+        $newFront = $em->getRepository('MainBundle:Action')->findOneById($id);
+
+        $em = $this->getDoctrine()->getManager();
+        $actualFront->setFrontPage('null');
+        $newFront->setFrontPage('realisé');
+        $em->persist($actualFront);
+        $em->persist($newFront);
+        $em->flush();
+        return $this->redirectToRoute("accueilAdmin");
+    }
+    public function changeActionCAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $actualFront = $em->getRepository('MainBundle:Action')->findOneByFrontPage('Cours');
+        $newFront = $em->getRepository('MainBundle:Action')->findOneById($id);
+        $em = $this->getDoctrine()->getManager();
+        $actualFront->setFrontPage('test');
+        $newFront->setFrontPage('Cours');
+        $em->persist($actualFront);
+        $em->persist($newFront);
+        $em->flush();
+        return $this->redirectToRoute("accueilAdmin");
+    }
 
 }

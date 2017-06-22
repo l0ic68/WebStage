@@ -26,6 +26,8 @@ class DescriptionAdminController extends Controller
 
         $actionC = $em->getRepository('MainBundle:Action')->findOneByFrontPage('cours');
         $actionR = $em->getRepository('MainBundle:Action')->findOneByFrontPage('realisé');
+        $listeActionRs = $em->getRepository('MainBundle:Action')->findByType('Passée');
+        $listeActionCs = $em->getRepository('MainBundle:Action')->findByType('En cours');
         $active = $em->getRepository('MainBundle:Carousel')->findOneByOrdre('0');
         $images = $em->getRepository('MainBundle:Carousel')->ByOrder();
 
@@ -113,6 +115,8 @@ class DescriptionAdminController extends Controller
             'bandeau' => $bandeau,
             'actionC' => $actionC,
             'actionR' => $actionR,
+            'listeActionRs' => $listeActionRs,
+            'listeActionCs' => $listeActionCs,
 
         ));
     }
@@ -400,6 +404,33 @@ class DescriptionAdminController extends Controller
                     // On l'enregistre notre objet $advert dans la base de données, par exemple
                     $em = $this->getDoctrine()->getManager();
                     $em->persist($bandeau);
+                    $em->flush();
+                }
+            }
+            if ($request->request->has('irak1')) {
+                $form7->handleRequest($request);
+                if ($form7->isValid()) {
+                    // On l'enregistre notre objet $advert dans la base de données, par exemple
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($irak1);
+                    $em->flush();
+                }
+            }
+            if ($request->request->has('irak2')) {
+                $form8->handleRequest($request);
+                if ($form8->isValid()) {
+                    // On l'enregistre notre objet $advert dans la base de données, par exemple
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($irak2);
+                    $em->flush();
+                }
+            }
+            if ($request->request->has('irak3')) {
+                $form9->handleRequest($request);
+                if ($form9->isValid()) {
+                    // On l'enregistre notre objet $advert dans la base de données, par exemple
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($irak3);
                     $em->flush();
                 }
             }

@@ -24,7 +24,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         les fonds propres de l’association, au travers de ses membres. Ce cabinet basé à Kirkuk offre aujourd’hui aux 
         déplacés-déracinés de Mossoul  (ville sous contrôle de Daech depuis 3 ans) des soins dentaires gratuits sur la base 
         du bénévolat de 3 dentistes Irakiens. Deux chrétiens et un musulman.");
-        $action1->setCout(35000);
+        $action1->setCout("35 000");
         $action1->setDateDebut(new \DateTime("01-01-2016"), new \DateTimeZone('Europe/Paris'));
         $action1->setDateFin(new \DateTime("15-04-2016"), new \DateTimeZone('Europe/Paris'));
         $action1->setRecolte(0);
@@ -46,16 +46,13 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         co-locataires. C’est lui qui va chercher au marché hebdomadaire, accompagné par un
         collaborateur de l’archevêque la nourriture pour la maisonnée pour une semaine
 ");
-        $action8->setCout(0);
+        $action8->setCout("100 000");
         $action8->setDateDebut(new \DateTime("01-09-2015"), new \DateTimeZone('Europe/Paris'));
         $action8->setDateFin(new \DateTime("29-06-2016"), new \DateTimeZone('Europe/Paris'));
         $action8->setRecolte(0);
         $action8->setType("Passée");
-//        $action1->addMedia($this->getReference('equipe_groupe'));
-//        $action1->addMedia($this->getReference('kirkouk'));
-//        $action1->addMedia($this->getReference('irakG_media'));
         $action8->setPicture($this->getReference("etudiant"));
-        $action8->setFrontPage('realisé');
+        $action8->setFrontPage('null');
         $manager->persist($action8);
 
         $action5 = new Action();
@@ -66,7 +63,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         par an et par étudiant, soit total de 100.000 €. Les capitaux pour les  25 premiers étudiants sont en place. 
         Nous cherchons des parrainages pour  les autres 25 étudiants. Parrainer par exemple 2 étudiants vous coûte, 
         avoir fiscal déduit de 66 %, 1360 €  (dans la limite de 20% du revenu imposable)");
-        $action5->setCout(100000);
+        $action5->setCout("100 000");
         $action5->setDateDebut(new \DateTime("01-01-2017"), new \DateTimeZone('Europe/Paris'));
         $action5->setDateFin(new \DateTime("31-12-2017"), new \DateTimeZone('Europe/Paris'));
         $action5->setRecolte(0);
@@ -86,7 +83,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         par un malade qui nécessite une présence continue. Lors du dernier passage de Mr Geyler en Irak,
         ils as pu rencontrer l’épouse du Président, Monsieur Jalal Talabani
         afin de la sensibiliser au projet.");
-        $action6->setCout(2500000);
+        $action6->setCout("2 500 000");
         $action6->setDateDebut(new \DateTime("01-01-2017"), new \DateTimeZone('Europe/Paris'));
         $action6->setDateFin(new \DateTime("31-12-2017"), new \DateTimeZone('Europe/Paris'));
         $action6->setRecolte(100000);

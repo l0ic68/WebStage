@@ -29,3 +29,11 @@ show_past_action:
 show_actual_action:
     path:     /show_actual
     defaults: { _controller: "MainBundle:ActionAdmin:show_actual" }
+
+changeActionR:
+    path:     /changeActionR/{id}
+    defaults: { _controller: "MainBundle:ActionAdmin:changeactionR" }
+
+changeActionC:
+    path:     /changeActionC/{id}
+    defaults: { _controller: "MainBundle:ActionAdmin:changeactionC" }

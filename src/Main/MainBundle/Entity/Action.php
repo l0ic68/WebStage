@@ -51,9 +51,9 @@ class Action
     private $date_fin;
 
     /**
-     * @var integer
+     * @var string
      *
-     * @ORM\Column(name="cout", type="integer")
+     * @ORM\Column(name="cout", type="string", length=255)
      */
     private $cout;
 
