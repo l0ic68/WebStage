@@ -17,17 +17,22 @@
             <img  class ="ActualiteImage" src="{{ asset(actu.media.path) }}">
             <h4 class="TitreActualite">{{ actu.titre }}</h4>
             <p class="ParActualite">Par : <span style="color: #009de0">{{ actu.auteur }}<span></span></p>
-            <p class="DescriptionActualite">{{ actu.description }}
+            <p class="DescriptionActualite">{{ actu.description[:300] }}
                 <br>
-            <div class="DonatePast"><a href="{{ path('edit_actu',{ id : actu.id}) }}"> Modifier</a></div>
-            <div class="DonatePast"><a href="{{ path('delete_actu',{ id : actu.id}) }}"> Supprimer</a></div>
+
+            <a href="{{ path('edit_actu',{ id : actu.id}) }}"> <button class="DonatePast"> Modifier</button></a>
+            <a href="{{ path('delete_actu',{ id : actu.id}) }}"><button class="DonatePast"> Supprimer</button></a>
             </p>
         </div>
     </div>
 
 {% endfor %}
-    <div class="bandeauDonate">
-        <a href="{{ path('new_actu') }}">Nouvelle actualitée</a>
+    <div class="NewActu">
+        <a style="color: gray" href="{{ path('new_actu') }}">
+                <i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i>
+        </a>
+
+
     </div>
     {#<div class="DivOneActualite col-xs-12 col-sm-6 col-md-6 col-lg-4">#}
         {#<div class="OneActualite col-xs-12 col-sm-12 col-md-12 col-lg-12">#}

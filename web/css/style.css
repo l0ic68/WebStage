@@ -2645,3 +2645,27 @@ button.close:hover
     /*align-items: center;*/
 }
 
+
+
+/*ADMIN ADMIN    ADMIN   ADMIN*/
+
+.TitreAdmin
+{
+    /*background-color: red;*/
+    /*width: 500px;*/
+}
+
+.NewActu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkgray;
+    background-color:white;
+    border: 1px solid lightgray;
+    width: 370px;
+    font-size:x-large;
+    height:600px;
+    margin: 1%;
+    cursor: pointer;
+}
