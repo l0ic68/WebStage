@@ -42,12 +42,12 @@ class Description
      */
     private $media;
 
-//    /**
-//     * @var string
-//     *
-//     * @ORM\Column(name="lien", type="string", length=255, nullable=true)
-//     */
-//    private $lien;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lien", type="string", length=255, nullable=true)
+     */
+    private $lien;
 
     /**
      * @var int
@@ -156,5 +156,28 @@ class Description
     public function getOrdre()
     {
         return $this->ordre;
+    }
+
+    /**
+     * Set lien
+     *
+     * @param string $lien
+     * @return Description
+     */
+    public function setLien($lien)
+    {
+        $this->lien = $lien;
+
+        return $this;
+    }
+
+    /**
+     * Get lien
+     *
+     * @return string 
+     */
+    public function getLien()
+    {
+        return $this->lien;
     }
 }
