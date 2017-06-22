@@ -10,16 +10,12 @@
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
             <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu" role="menu">
-<<<<<<< HEAD
-            <li class="ActuBouton" ><a href="#">Conférence</a></li>
-            <li class="ActuBouton" ><a href="#">Evenement</a></li>
-            <li class="ActuBouton" ><a href="#">Presse</a></li>
-=======
-            <li><button class="search" value="fa fa fa-university fa-2x fa-inverse">Conférence</button></li>
-            <li><button class="search" value="fa fa-calendar-check-o fa-2x fa-inverse">Evenement</button></li>
-            <li><button class="search" value="fa fa-newspaper-o fa-2x fa-inverse">Presse</button></li>
->>>>>>> 68871036576e5b1ce4e5ef359e546808856bfcc8
+        <ul class="dropdown-menu" role="menu" style="margin: 0px; padding: 0px;">
+
+            <li><button class="search DonatePast" value="fa fa fa-university fa-2x fa-inverse">Conférence</button></li>
+            <li><button class="search DonatePast" value="fa fa-calendar-check-o fa-2x fa-inverse">Evenement</button></li>
+            <li><button class="search DonatePast" value="fa fa-newspaper-o fa-2x fa-inverse">Presse</button></li>
+
         </ul>
     </div>
 </div>
@@ -36,58 +32,49 @@
             <p class="ParActualite">Par : <span style="color: #009de0">{{ actu.auteur }}</span></p>
             <p class="DescriptionActualite">{{ actu.description[:300] }}
                 <br>
-            <p class="PlusAcutalite">Plus... ></p>
+            <p class="PlusAcutalite {{ actu.id }}">Plus... ></p>
             </p>
         </div>
     </div>
+
+
+
+    {#<!-- Modal -->                                                          aria-labelledby="exampleModalLabel"#}
+    <div class="modal fade" id="{{ actu.id }}" tabindex="-1" role="dialog" aria-hidden="true" >
+        <button type="button" class="close modalTextHomepage" data-dismiss="modal" aria-label="Close">
+            <span class="Retour" aria-hidden="true"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Retour</span>
+        </button>
+
+        <div class="modal-dialog ModalAction" role="document">
+            <div class="ImageActionModal hidden-xs">
+                <img class="ImageHautActionModal" src="{{ asset(actu.media.path) }}">
+            </div>
+            <div class="modal-content">
+                <div class="modal-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h3 class="Titre TitreModal"><span>{{ actu.titre }}</span></h3>
+                </div>
+                <div class="modal-body TextModalHomepage">
+                    <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h2 class="parallax-title text-left" style="padding-bottom: 10px; padding-left: 10%; margin: 0px; color: #333;">Description du projet :</h2>
+                    </div>
+                    <div>
+                        <p style="text-align: left; margin-left: 5%; margin-right: 5%;">{{ actu.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- !Modal! -->
+
+
+
 {% endfor %}
-<<<<<<< HEAD
 
-=======
 </div>
-    {#<div class="DivOneActualite col-xs-12 col-sm-6 col-md-6 col-lg-4">#}
-        {#<div class="OneActualite col-xs-12 col-sm-12 col-md-12 col-lg-12">#}
-            {#<img  class ="ActualiteImage" src="{{ asset("img/charity.jpg") }}">#}
-            {#<h4 class="TitreActualite">Une actualité de qualité</h4>#}
-            {#<p class="ParActualite">Par : <span style="color: #009de0">Le Monde<span></span></p>#}
-            {#<p class="DescriptionActualite">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus pharetr#}
-                {#a lorem, non volutpat augue egestas sed. Donec at purus eros. Integer eu pretium leo. Duis consequat diam#}
-                {#ec leo commodo lacinia. Nunc rhoncus, arcu at euismod suscipi..#}
-                {#<br>#}
-            {#<p class="PlusAcutalite">Plus... ></p>#}
-            {#</p>#}
-        {#</div>#}
-    {#</div>#}
 
-    {#<div class="DivOneActualite col-xs-12 col-sm-6 col-md-6 col-lg-4">#}
-        {#<div class="OneActualite col-xs-12 col-sm-12 col-md-12 col-lg-12">#}
-            {#<img  class ="ActualiteImage" src="{{ asset("img/etudiantGroupe.png") }}">#}
-            {#<h4 class="TitreActualite">Une actualité de qualité</h4>#}
-            {#<p class="ParActualite">Par : <span style="color: #009de0">Le Monde<span></span></p>#}
-            {#<p class="DescriptionActualite">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus pharetr#}
-                {#a lorem, non volutpat augue egestas sed. Donec at purus eros. Integer eu pretium leo. Duis consequat diam#}
-                {#ec leo commodo lacinia. Nunc rhoncus, arcu at euismod suscipi..#}
-                {#<br>#}
-            {#<p class="PlusAcutalite">Plus... ></p>#}
-            {#</p>#}
-        {#</div>#}
-    {#</div>#}
 
-    {#<div class="DivOneActualite col-xs-12 col-sm-6 col-md-6 col-lg-4">#}
-        {#<div class="OneActualite col-xs-12 col-sm-12 col-md-12 col-lg-12">#}
-            {#<img  class ="ActualiteImage" src="{{ asset("img/Histoire.jpg") }}">#}
-            {#<h4 class="TitreActualite">Une actualité de qualité</h4>#}
-            {#<p class="ParActualite">Par : <span style="color: #009de0">Le Monde<span></span></p>#}
-            {#<p class="DescriptionActualite">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus pharetr#}
-                {#a lorem, non volutpat augue egestas sed. Donec at purus eros. Integer eu pretium leo. Duis consequat diam#}
-                {#ec leo commodo lacinia. Nunc rhoncus, arcu at euismod suscipi..#}
-                {#<br>#}
-            {#<p class="PlusAcutalite">Plus... ></p>#}
-            {#</p>#}
-        {#</div>#}
-    {#</div>#}
 
-{#</div>#}
+
 </div>
     {% block javascripts %}
         <script type="text/javascript">
@@ -112,6 +99,16 @@
             });
 
         </script>
+        {% for actu in actus %}
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $(".{{ actu.id }}").click(function(){
+                        $("#{{ actu.id }}").modal('show');
+                    });
+                });
+            </script>
+        {% endfor %}
+
     {% endblock %}
->>>>>>> 68871036576e5b1ce4e5ef359e546808856bfcc8
+
 {% endblock %}
