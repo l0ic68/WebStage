@@ -1231,7 +1231,7 @@ button.close:hover
 .Divimgback
 {
     padding-right: 0px;
-    background-image: url(dentiste.jpg);
+    /*background-image: url(dentiste.jpg);*/
     min-height: 500px;
     max-height: 500px;
     /*background-attachment: fixed;*/
@@ -2406,7 +2406,7 @@ button.close:hover
 .DivimgbackDescription
 {
     padding-right: 0px;
-    background-image: url(../img/Histoire.jpg);
+    /*background-image: url(../img/Histoire.jpg);*/
     min-height: 350px;
     max-height: 350px;
     /*background-attachment: fixed;*/
