@@ -1,0 +1,17 @@
+<div class="boucle">
+    {% for actu in actus %}
+        <div class="DivOneActualite col-xs-12 col-sm-6 col-md-6 col-lg-4">
+            <div class="triangle"></div>
+            <i class="{{ actu.type }} logoActualite" aria-hidden="true"></i>
+            <div class="OneActualite col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <img  class ="ActualiteImage" src="{{ asset(actu.media.path) }}">
+                <h4 class="TitreActualite">{{ actu.titre }}</h4>
+                <p class="ParActualite">Par : <span style="color: #009de0">{{ actu.auteur }}<span></span></p>
+                <p class="DescriptionActualite">{{ actu.description[:300] }}
+                    <br>
+                <p class="PlusAcutalite">Plus... ></p>
+                </p>
+            </div>
+        </div>
+    {% endfor %}
+</div>

@@ -23,7 +23,7 @@ class Carousel
 
 
     /**
-     * @ORM\OneToOne(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist","remove"})
+     * @ORM\ManyToOne(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist"})
      * @ORM\JoinColumn(nullable=true)
      */
     private $media;
@@ -42,6 +42,15 @@ class Carousel
      * @ORM\Column(name="ordre", type="integer",unique=true)
      */
     private $ordre;
+
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="placement", type="string", length=255)
+     *
+     */
+    private $placement;
 
 
     /**
@@ -98,5 +107,28 @@ class Carousel
     public function getMedia()
     {
         return $this->media;
+    }
+
+    /**
+     * Set text
+     *
+     * @param string $text
+     * @return Carousel
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
+
+        return $this;
+    }
+
+    /**
+     * Get text
+     *
+     * @return string 
+     */
+    public function getText()
+    {
+        return $this->text;
     }
 }

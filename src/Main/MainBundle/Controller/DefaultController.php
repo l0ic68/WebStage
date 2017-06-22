@@ -59,6 +59,22 @@ class DefaultController extends Controller
         $response->setData(array('classifiedList' => $content));
         return $response;
     }
+
+    public function searchActuAction()
+    {
+        $request = $this->container->get('request');
+        $text = $request->query->get('text');
+        $em = $this->getDoctrine()->getManager();
+        $actus = $em->getRepository('MainBundle:Actu')->findByType($text);
+
+            $content = $this->RenderView('MainBundle:Default:layout\searchActu.html.twig', array(
+                'actus' => $actus,
+            ));
+
+        $response = new JsonResponse();
+        $response->setData(array('classifiedList' => $content));
+        return $response;
+    }
     public function NewsAction()
     {
         $em = $this->getDoctrine()->getManager();

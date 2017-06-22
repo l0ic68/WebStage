@@ -45,6 +45,15 @@ class Carousel
 
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="placement", type="string", length=255)
+     *
+     */
+    private $placement;
+
+
+    /**
      * Get id
      *
      * @return integer 
@@ -121,5 +130,28 @@ class Carousel
     public function getText()
     {
         return $this->text;
+    }
+
+    /**
+     * Set placement
+     *
+     * @param string $placement
+     * @return Carousel
+     */
+    public function setPlacement($placement)
+    {
+        $this->placement = $placement;
+
+        return $this;
+    }
+
+    /**
+     * Get placement
+     *
+     * @return string 
+     */
+    public function getPlacement()
+    {
+        return $this->placement;
     }
 }
