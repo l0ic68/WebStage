@@ -18,8 +18,10 @@
                 <div class="item active" style="width: 100%;">
                     <img class="ImageCarousel d-block img-fluid" src="{{  asset(active.media.path) }}" alt="Los Angeles">
                     <div class="carousel-caption TextNewCaroussel">
-                        <h3 class="animated fadeInLeft {{ active.placement }} col-lg-5">
-                           {{ active.text }}
+                        <h3 class="animated fadeInLeft {{ active.placement }} TextCarousel2 col-lg-5">
+                            <span class="ColorationText">
+                                {{ active.text }}
+                            </span>
                         </h3>
                     </div>
                 </div>
@@ -27,8 +29,12 @@
                     <div class="item" style="width: 100%;">
                         <img class="ImageCarousel d-block img-fluid" src="{{ asset(image.media.path) }}" alt="Los Angeles">
                         <div class="carousel-caption TextNewCaroussel">
-                            <h3 class="animated fadeInRight {{ image.placement }} col-lg-5">
-                                {{ image.text }}
+
+                            <h3 class="animated fadeInRight {{ image.placement }}  TextCarousel3 col-lg-5">
+                                <span class="ColorationText">
+                                    {{ image.text }}
+                                </span>
+
                             </h3>
                       </div>
                     </div>

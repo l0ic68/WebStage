@@ -42,6 +42,12 @@ class Description
      */
     private $media;
 
+//    /**
+//     * @var string
+//     *
+//     * @ORM\Column(name="lien", type="string", length=255, nullable=true)
+//     */
+//    private $lien;
 
     /**
      * @var int

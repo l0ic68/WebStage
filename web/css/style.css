@@ -786,7 +786,7 @@ footer
     padding-bottom: 5%;
     /*padding-top: 0px;*/
     text-align: center;
-    font-size: 14px;
+    font-size: medium;
     margin-top: 18.5%;
 }
 button.close
@@ -1747,7 +1747,8 @@ button.close:hover
 #Payment
 {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     text-align: center;
     /*padding: 3%;*/
@@ -1755,7 +1756,7 @@ button.close:hover
     /*height: 600px;*/
     padding-top: 5%;
     background-color: white;
-    height: 200px;
+    /*height: 200px;*/
 }
 
 @media screen and (max-width: 1000px)
@@ -2016,13 +2017,10 @@ button.close:hover
 
 .ImageActionCarouselModal
 {
-    margin-left: 15.5%;
-    max-width: 50%;
-    /*max-height : 550px;*/
-    min-width: 70%;
-    /*min-height : 550px;*/
-    width: 50%;
-    /*height: 550px;*/
+    margin:auto;
+    max-width: 800px;
+    width: 800px;
+    height: auto;
 }
 
 @media screen and (max-width: 768px)
@@ -2086,7 +2084,7 @@ button.close:hover
 
 .DescriptionActionPast
 {
-   font-size: 14px;
+   font-size: medium;
     font-weight: normal;
 }
 
@@ -2513,6 +2511,12 @@ button.close:hover
     left: 0px;
 }
 
+
+.ColorationText
+{
+    background-color: #009de0;
+}
+
 .TextCarousel
 {
     /*width: 30%;*/
@@ -2522,6 +2526,7 @@ button.close:hover
     position: absolute;
     bottom: 15%;
     left: 11%;
+
 }
 
 .TextCarousel2
@@ -2668,4 +2673,12 @@ button.close:hover
     height:600px;
     margin: 1%;
     cursor: pointer;
+}
+
+.ActuBouton
+{
+    width: 100%;
+    background-color: #009de0;
+    border: none;
+    margin-bottom: 2%;
 }
