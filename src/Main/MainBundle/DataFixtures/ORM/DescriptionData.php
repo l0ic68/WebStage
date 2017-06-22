@@ -37,6 +37,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         déracinée, de poursuivre leurs études et pourvoir devenir les cadres de l’Irak de demain.");
                $soutenir->setMedia($this->getReference('etudiantG'));
         $soutenir->setOrdre("2");
+        $soutenir->setLien("'actualActionModal',{'id' : actionC.id }");
         $manager->persist($soutenir);
 
         $qualite = new Description();
