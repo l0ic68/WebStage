@@ -37,7 +37,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         déracinée, de poursuivre leurs études et pourvoir devenir les cadres de l’Irak de demain.");
                $soutenir->setMedia($this->getReference('etudiantG'));
         $soutenir->setOrdre("2");
-        $soutenir->setLien("'actualActionModal',{'id' : actionC.id }");
+        $soutenir->setLien("actual");
         $manager->persist($soutenir);
 
         $qualite = new Description();
@@ -46,6 +46,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         nécessaire au quotidien.");
                $qualite->setMedia($this->getReference('qualite'));
         $qualite->setOrdre("3");
+        $qualite->setLien("past");
         $manager->persist($qualite);
 
         $collecte = new Description();
@@ -54,6 +55,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         frais.  La conséquence est immédiate : 1 euro collecté = 1 euro en faveur de l’Irak.");
                $collecte->setMedia($this->getReference('collecte'));
         $collecte->setOrdre("4");
+        $collecte->setLien("don");
         $manager->persist($collecte);
 
         $bandeau = new Description();
@@ -193,6 +195,7 @@ Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyle
         de demain. Mais pour faire vivre tout ce monde, nous avons absolument besoin de 
         votre solidarité");
         $projetC1->setOrdre("18");
+        $projetC1->setlien("actualActionModal");
         $manager->persist($projetC1);
 
         $projetC2= new Description();
