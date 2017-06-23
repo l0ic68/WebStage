@@ -14,7 +14,7 @@ class ActuAdminType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('Titre')
-                ->add('description')
+                ->add('description','textarea',array('attr' => array('class' => 'ckeditor')))
                 ->add('lien')
                 ->add('auteur')
                 ->add('media',new MediaType(),array('required' => false))

@@ -4,11 +4,46 @@
 <div class="push"></div>
 
 
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-3 col-lg-9">
-<h2 style="">Ajouter une actualité :</h2>
-<div style=" margin-top: 2%;">
+{#<div class="col-xs-12 col-sm-12 col-md-12 col-lg-offset-3 col-lg-9">#}
+{#<h2 style="">Ajouter une actualité :</h2>#}
+{#<div style=" margin-top: 2%;">#}
 
        {{ form_start(form1) }}
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="DivFormAction col-xs-4 col-sm-4 col-md-4 col-lg-offset-1 col-lg-4" style="height: 337px;">
+            <h2> Titre :   </h2>
+            {{ form_widget(form1.Titre) }}
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4  col-lg-7 DivFormAction">
+            <h2 style="margin-right: 3%;"> Description :   </h2>
+            {{ form_widget(form1.description) }}
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-offset-1 col-lg-4 DivFormAction">
+            <h2 style="margin-right: 3%;"> Lien : </h2>
+            {{ form_widget(form1.lien) }}
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-7 DivFormAction">
+            <h2 style="margin-right: 3%;"> Auteur : </h2>
+            {{ form_widget(form1.auteur) }}
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-offset-1 col-lg-4 DivFormAction">
+            <h2 style="margin-right: 3%;"> Image :   </h2>
+            {{ form_widget(form1.media) }}
+        </div>
+
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-7 DivFormAction">
+            <h2 style="margin-right: 3%;"> Type :   </h2>
+            {{ form_widget(form1.type) }}
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 DivFormAction">
+            {{ form_widget(form1.submit) }}
+        </div>
+
+    </div>
        {{ form_end(form1) }}
 
 </div>

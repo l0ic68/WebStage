@@ -18,7 +18,8 @@
                     <p class="DescriptionActionPast">{{ action.description[:130] }}...</p>
                     <p class="DivCout">Un coût de <span class="CoutAction">{{ action.cout }}</span>€</p>
                     <p class="DatePast">{{ action.dateDebut| date('d/m/Y') }}    -    {{ action.dateFin| date('d/m/Y') }}</p>
-                    <div class="DonatePast text{{ action.id }}">Voir l'action</div>
+                    <a href="{{ path('edit_actual_action',{ id : action.id}) }}"><div class="DonatePast" style="margin-bottom: 2%;">Modifier</div></a>
+                    <a href="{{ path('delete_actual_action',{ id : action.id}) }}"><div class="DonatePast"> Supprimer</div></a>
                 </div>
     </div>
             <div class="modal fade" id="{{ action.id }}" tabindex="-1" role="dialog" aria-hidden="true" >

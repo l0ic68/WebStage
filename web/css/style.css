@@ -2682,3 +2682,27 @@ button.close:hover
     border: none;
     margin-bottom: 2%;
 }
+
+.DivFormAction
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+#main_mainbundle_action_description
+{
+    width: 500px;
+    height: 200px;
+}
+
+#main_mainbundle_action_nom
+{
+    width: 70%;
+}
+
+#bandeau_nom
+{
+    width: 900px;
+}

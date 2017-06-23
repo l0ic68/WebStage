@@ -14,7 +14,7 @@ class ActionEditAdminType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('nom')
-                ->add('description')
+                ->add('description', 'textarea',array('attr' => array('class' => 'ckeditor')))
                 ->add('date_debut')
                 ->add('date_fin')
                 ->add('cout')
