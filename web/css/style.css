@@ -1302,6 +1302,132 @@ button.close:hover
     right: auto;
 }
 
+.parallax-titleAssos.text-left:before {
+    left: 15%;
+    right: auto;
+}
+
+.parallax-titleAssos:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+    width: 50px;
+    height: 2px;
+    border-bottom: 2px solid;
+    border-color: #009de0;
+}
+
+.parallax-titleModal.text-left:before {
+    left: 0px;
+    right: auto;
+}
+
+.parallax-titleModal:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+    width: 50px;
+    height: 2px;
+    border-bottom: 2px solid;
+    border-color: #009de0;
+}
+
+.parallax-titleModalActu.text-left:before {
+    left: 20%;
+    right: auto;
+}
+
+.parallax-titleModalActu:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+    width: 50px;
+    height: 2px;
+    border-bottom: 2px solid;
+    border-color: #009de0;
+}
+
+.parallax-titleModalAction.text-left:before {
+    left: 10%;
+    right: auto;
+}
+
+.parallax-titleModalAction:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+    width: 50px;
+    height: 2px;
+    border-bottom: 2px solid;
+    border-color: #009de0;
+}
+
+.parallax-titleAction.text-left:before {
+    left: 2%;
+    right: auto;
+}
+
+.parallax-titleAction:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+    width: 50px;
+    height: 2px;
+    border-bottom: 2px solid;
+    border-color: #009de0;
+}
+
+.parallax-titleModalActionCours.text-left:before {
+    left: 11%;
+    right: auto;
+}
+
+.parallax-titleModalActionCours:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+    width: 50px;
+    height: 2px;
+    border-bottom: 2px solid;
+    border-color: #009de0;
+}
+
+.parallax-titleModalActionCours2.text-left:before {
+    left: 12%;
+    right: auto;
+}
+
+.parallax-titleModalActionCours2:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
+    margin: 0 auto;
+    width: 50px;
+    height: 2px;
+    border-bottom: 2px solid;
+    border-color: #009de0;
+}
+
 .parallax-title:before {
     content: "";
     position: absolute;
