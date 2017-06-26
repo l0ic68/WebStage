@@ -121,8 +121,8 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($oeuvre);
 
         $histoire = new Media();
-        $histoire->setPath('img/Histoire.png');
-        $histoire->setUrl('histoire.png');
+        $histoire->setPath('img/histoire.jpg');
+        $histoire->setUrl('histoire.jpg');
         $manager->persist($histoire);
 
         $manager->flush();
