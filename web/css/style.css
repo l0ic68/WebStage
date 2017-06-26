@@ -150,7 +150,18 @@ a:link
 .BoutonDon
 {
     margin: 0px;
+    text-align: center;
 }
+
+@media only screen and (max-width: 768px) {
+    .BoutonDon
+    {
+        font-size: medium;
+    }
+}
+
+
+
 
 .LigneTitre
 {
