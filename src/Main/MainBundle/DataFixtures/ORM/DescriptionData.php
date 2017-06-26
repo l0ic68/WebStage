@@ -53,10 +53,17 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         $collecte->setNom("Pour financer nos actions : collecte de dons");
         $collecte->setDescription(" Notre action est le fruit d’un engagement où chaque membre prend à sa charge ses 
         frais.  La conséquence est immédiate : 1 euro collecté = 1 euro en faveur de l’Irak.");
-               $collecte->setMedia($this->getReference('collecte'));
+        $collecte->setMedia($this->getReference('collecte'));
         $collecte->setOrdre("4");
         $collecte->setLien("don");
         $manager->persist($collecte);
+
+        $don = new Description();
+        $don->setNom("Comment nous soutenir ?");
+        $don->setDescription(" ");
+        $don->setMedia($this->getReference('unicef'));
+        $don->setOrdre("23");
+        $manager->persist($don);
 
         $bandeau = new Description();
         $bandeau->setNom("Comment pouvez-vous simplement nous aider ?");
@@ -182,6 +189,7 @@ Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyle
         $projetR= new Description();
         $projetR->setNom("Vos réussites");
         $projetR->setDescription("");
+        $projetR->setMedia($this->getReference("action_past"));
         $projetR->setOrdre("17");
         $manager->persist($projetR);
 
@@ -209,6 +217,24 @@ Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyle
                                    Année 2017/2018 : 800 étudiants");
         $projetC2->setOrdre("19");
         $manager->persist($projetC2);
+
+        $crowdfounding= new Description();
+        $crowdfounding->setNom("Crowdfounding");
+        $crowdfounding->setDescription("Pour soutenir nos différentes actions auprès des réfugiés d'irak vous pouvez leurs offrir votre don via le site de Crowdfunding.");
+        $crowdfounding->setOrdre("20");
+        $manager->persist($crowdfounding);
+
+        $virement= new Description();
+        $virement->setNom("Virement");
+        $virement->setDescription("Virement à l’adresse du compte suivant : Caisse d’épargne de Molsheim : 16 705-09017-08001639023 rib 49");
+        $virement->setOrdre("21");
+        $manager->persist($virement);
+
+        $cheque= new Description();
+        $cheque->setNom("Cheque");
+        $cheque->setDescription("Par chèque libellé à l’ordre de l’Œuvre d’Orient* et adressé à l’association « Aux porteurs de lumière » 12, rue des cerisiers - 67117 FURDENHEIM");
+        $cheque->setOrdre("22");
+        $manager->persist($cheque);
 
         $manager->flush();
 

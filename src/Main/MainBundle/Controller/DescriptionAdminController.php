@@ -445,6 +445,7 @@ class DescriptionAdminController extends Controller
             'form8' => $form8->createView(),
             'form9' => $form9->createView(),
             'irak1' => $irak1,
+            'description1' => $description1,
             'volonte' => $volonte,
             'but' => $but,
             'valeur' => $valeur

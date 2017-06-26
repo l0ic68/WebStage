@@ -4,6 +4,7 @@ namespace Main\MainBundle\Controller;
 
 use Main\MainBundle\Entity\Action;
 use Main\MainBundle\Form\DescriptionAdminType;
+use Main\MainBundle\Form\DescriptionImageAdminType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Main\MainBundle\Form\ActionAdminType;
@@ -64,8 +65,12 @@ class ActionAdminController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $actions = $em->getRepository('MainBundle:Action')->findByType('Passée');
+        $description = $em->getRepository('MainBundle:Description')->findOneByOrdre('17');
+        $form = $this->createForm(new DescriptionImageAdminType(),$description);
         return $this->render('MainBundle:Admin:past_action.html.twig',array(
-            'actions'=> $actions
+            'actions'=> $actions,
+            'form'=> $form->createView(),
+            'description'=> $description,
         ));
     }
 
@@ -86,7 +91,7 @@ class ActionAdminController extends Controller
                 }
             }
         return $this->render('MainBundle:Admin:new_past_action.html.twig',array(
-            'form1'=> $form1
+            'form1'=> $form1->createView()
         ));
     }
 
@@ -129,7 +134,7 @@ class ActionAdminController extends Controller
             }
         }
         return $this->render('MainBundle:Admin:new_past_action.html.twig',array(
-            'form1'=> $form1
+            'form1'=> $form1->createView()
         ));
     }
 
