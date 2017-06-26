@@ -35,10 +35,6 @@ objectifAdmin:
     path:     /objectif
     defaults: { _controller: MainBundle:DescriptionAdmin:objectif }
 
-donAdmin:
-    path:     /don
-    defaults: { _controller: MainBundle:Default:don }
-
 accueilAdmin:
    path:     /accueil
    defaults: { _controller: MainBundle:DescriptionAdmin:accueil }
@@ -68,5 +64,9 @@ delete_actu:
 show_actu:
     path:     /actu
     defaults: { _controller: "MainBundle:DefaultAdmin:show_actu" }
+
+donAdmin:
+    path:     /don
+    defaults: { _controller: "MainBundle:DefaultAdmin:DonAdmin" }
 
 

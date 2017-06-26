@@ -125,6 +125,16 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $histoire->setUrl('histoire.jpg');
         $manager->persist($histoire);
 
+        $action_past = new Media();
+        $action_past->setPath('img/ActionPast.jpg');
+        $action_past->setUrl('ActionPast.jpg');
+        $manager->persist($action_past);
+
+        $unicef = new Media();
+        $unicef->setPath('img/unicef.jpg');
+        $unicef->setUrl('unicef.jpg');
+        $manager->persist($unicef);
+
         $manager->flush();
 
         $this->addReference('email',$email);
@@ -147,6 +157,8 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $this->addReference('conf',$conf);
         $this->addReference('oeuvre',$oeuvre);
         $this->addReference('histoireMedia',$histoire);
+        $this->addReference('action_past',$action_past);
+        $this->addReference('unicef',$unicef);
     }
 
     public function getOrder()
