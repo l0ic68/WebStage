@@ -146,7 +146,7 @@ Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyle
         $manager->persist($objectif);
 
         $Irak1= new Description();
-        $Irak1->setNom("Histoire de l'irak");
+        $Irak1->setNom("Histoire de l'Irak");
         $Irak1->setDescription("L'association s'interesse à toutes 
         les minorités menacées par Daech, tel les Yazédis, qui tirent 
         leurs racines de l’ancienne Mésopotamie, et qui sont considérées 

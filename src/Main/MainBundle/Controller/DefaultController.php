@@ -66,6 +66,10 @@ class DefaultController extends Controller
         $text = $request->query->get('text');
         $em = $this->getDoctrine()->getManager();
         $actus = $em->getRepository('MainBundle:Actu')->findByType($text);
+        if($actus == null)
+        {
+            $actus = $em->getRepository('MainBundle:Actu')->findAll();
+        }
 
             $content = $this->RenderView('MainBundle:Default:layout\searchActu.html.twig', array(
                 'actus' => $actus,
