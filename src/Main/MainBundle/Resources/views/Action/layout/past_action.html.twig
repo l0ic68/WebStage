@@ -41,19 +41,19 @@
                             {#<div class="DateActionModal">#}
                                 {#Du : <span style="text-decoration: underline;">{{ action.dateDebut| date('d/m/Y') }}</span>   Au : <span style="text-decoration: underline;">{{ action.dateFin| date('d/m/Y') }}</span>#}
                             {#</div>#}
-                            <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-left: 0px;">
                                 <h2 class="parallax-title text-left" style="padding-bottom: 10px; padding-left: 10%; margin: 0px; color: #333;">Description du projet :</h2>
                             </div>
                             <div>
-                                <p style="text-align: left; margin-left: 5%; margin-right: 5%;">{{ action.description }}</p>
+                                <p style="text-align: left; margin-left: 10%; margin-right: 10%;">{{ action.description }}</p>
                             </div>
                             <div class="CoutActionModal">
                                 <span>Projet financé intégralement, coût : {{ action.cout }}</span>
                                 {#<span>Argent récolté : {{ action.recolte }}</span>#}
                             </div>
                         </div>
-                        <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <h2 class="parallax-title text-left" style="padding-bottom: 10px; padding-left: 11%; margin: 0px; color: #333;">Le projet en image :</h2>
+                        <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-left: 0px;">
+                            <h2 class="parallax-title text-left" style="padding-bottom: 10px; padding-left: 10%; margin: 0px; color: #333;">Le projet en image :</h2>
                         </div>
                         <div class="row CarouselModalAction">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
