@@ -2706,3 +2706,35 @@ button.close:hover
 {
     width: 900px;
 }
+
+.ImageCarouselAdmin
+{
+
+}
+
+.DivCarouselAdmin
+{
+    margin-top: 5%;
+}
+
+#image_text
+{
+    width: 100%;
+    height: 50px;
+}#image1_text
+{
+    width: 100%;
+    height: 50px;
+}#image2_text
+{
+    width: 100%;
+    height: 50px;
+}#image3_text
+{
+    width: 100%;
+    height: 50px;
+}#image4_text
+{
+    width: 100%;
+    height: 50px;
+}
