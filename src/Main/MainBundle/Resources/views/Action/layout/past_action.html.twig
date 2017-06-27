@@ -4,9 +4,9 @@
 
 <div class="push"></div>
 <div style="display: flex; justify-content: center; align-items: center;">
-    <div class="DivimgbackActionPast col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="DivimgbackActionPast col-xs-12 col-sm-12 col-md-12 col-lg-12"  style="background-image: url({{asset(description.media.path)}});">
     </div>
-    <h2>Vos réussites</h2>
+    <h2>{{ description.nom }}</h2>
 </div>
     <div style="height: 100px"></div>
 
@@ -16,7 +16,7 @@
                 <div class="OneAction col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <img  class ="pastActionImg" src="{{ asset(action.picture.path) }}">
                     <h4>{{ action.nom[:50] }}</h4>
-                    <p class="DescriptionActionPast">{{ action.description[:130] }}...</p>
+                    <p class="DescriptionActionPast">{{ action.description[:130]|raw }}...</p>
                     <p class="DivCout">Un coût de <span class="CoutAction">{{ action.cout }}</span>€</p>
                     <p class="DatePast">{{ action.dateDebut| date('d/m/Y') }}    -    {{ action.dateFin| date('d/m/Y') }}</p>
                     <div class="DonatePast text{{ action.id }}">Voir l'action</div>
@@ -45,7 +45,7 @@
                                 <h2 class="parallax-titleModalAction text-left" style="padding-bottom: 10px; padding-left: 10%; margin: 0px; color: #333;">Description du projet :</h2>
                             </div>
                             <div>
-                                <p style="text-align: left; margin-left: 10%; margin-right: 10%;">{{ action.description }}</p>
+                                <p style="text-align: left; margin-left: 10%; margin-right: 10%;">{{ action.description|raw }}</p>
                             </div>
                             <div class="CoutActionModal">
                                 <span>Projet financé intégralement, coût : {{ action.cout }}</span>

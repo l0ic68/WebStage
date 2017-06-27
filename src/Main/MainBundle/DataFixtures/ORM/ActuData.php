@@ -24,7 +24,7 @@ class ActuData extends AbstractFixture implements OrderedFixtureInterface
         $actu1->setAuteur("Le monde");
         $actu1->setMedia($this->getReference('etudiantG'));
         $actu1->setType("fa fa-calendar-check-o fa-2x fa-inverse");
-        $actu1->setLien("http:://google.com");
+        $actu1->setLien("https://www.google.fr");
         $manager->persist($actu1);
 
         $actu2 = new Actu();
@@ -34,7 +34,7 @@ class ActuData extends AbstractFixture implements OrderedFixtureInterface
         $actu2->setAuteur("Aux Porteurs de Lumière");
         $actu2->setMedia($this->getReference('paris'));
         $actu2->setType("fa fa fa-university fa-2x fa-inverse");
-        $actu2->setLien("http:://google.com");
+        $actu2->setLien("https://www.google.fr");
         $manager->persist($actu2);
 
         $actu4 = new Actu();
@@ -67,7 +67,7 @@ class ActuData extends AbstractFixture implements OrderedFixtureInterface
         $actu4->setAuteur("Les évêques de France");
         $actu4->setMedia($this->getReference('conf'));
         $actu4->setType("fa fa-newspaper-o fa-2x fa-inverse");
-        $actu4->setLien("http:://google.com");
+        $actu4->setLien("https://www.google.fr");
         $manager->persist($actu4);
 
         $actu3 = new Actu();
@@ -92,7 +92,6 @@ class ActuData extends AbstractFixture implements OrderedFixtureInterface
         $actu3->setAuteur("L'Oeuvre d'Orient");
         $actu3->setMedia($this->getReference('oeuvre'));
         $actu3->setType("fa fa-newspaper-o fa-2x fa-inverse");
-        $actu3->setLien("http:://google.com");
         $manager->persist($actu3);
 
 

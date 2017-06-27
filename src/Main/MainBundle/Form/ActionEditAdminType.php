@@ -21,8 +21,7 @@ class ActionEditAdminType extends AbstractType
                 ->add('recolte')
                 ->add('picture',new MediaType(),array('required' => false))
                 ->add('type',"choice",array('choices' => array('Passée' => "Passée",
-                                                               'En cours' => "En cours",
-                                                               'Future' => "Future")))
+                                                               'En cours' => "En cours")))
                 ->add('submit','submit');
     }
     

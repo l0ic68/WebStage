@@ -15,7 +15,7 @@ class ActuAdminType extends AbstractType
     {
         $builder->add('Titre')
                 ->add('description','textarea',array('attr' => array('class' => 'ckeditor')))
-                ->add('lien')
+                ->add('lien','text',array('required' => false))
                 ->add('auteur')
                 ->add('media',new MediaType(),array('required' => false))
                 ->add('type',"choice",array('choices' => array('fa fa-university fa-2x fa-inverse' => "conférence",
