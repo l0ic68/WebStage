@@ -31,7 +31,7 @@
             <img  class ="ActualiteImage" src="{{ asset(actu.media.path) }}">
             <h4 class="TitreActualite">{{ actu.titre }}</h4>
             <p class="ParActualite">Par : <span style="color: #009de0">{{ actu.auteur }}</span></p>
-            <p class="DescriptionActualite">{{ actu.description[:300] }}
+            <p class="DescriptionActualite">{{ actu.description[:300]|raw }}
                 <br>
             <p class="PlusAcutalite {{ actu.id }}">Plus... ></p>
             </p>
@@ -59,8 +59,11 @@
                         <h2 class="parallax-titleModalActu text-left" style="padding-bottom: 10px; padding-left: 20%; margin: 0px; color: #333;">Description du projet :</h2>
                     </div>
                     <div>
-                        <p style="text-align: left; margin-left: 20%; margin-right: 20%;">{{ actu.description }}</p>
+                        <p style="text-align: left; margin-left: 20%; margin-right: 20%;">{{ actu.description|raw }}</p>
                     </div>
+                    {% if not actu.lien is null %}
+                        lien vers la news : <a href="{{ actu.lien }}" style="color : blue;">{{ actu.lien }}</a>
+                    {% endif %}
                 </div>
             </div>
         </div>

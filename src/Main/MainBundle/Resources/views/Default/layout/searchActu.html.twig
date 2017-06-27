@@ -6,12 +6,59 @@
             <div class="OneActualite col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <img  class ="ActualiteImage" src="{{ asset(actu.media.path) }}">
                 <h4 class="TitreActualite">{{ actu.titre }}</h4>
-                <p class="ParActualite">Par : <span style="color: #009de0">{{ actu.auteur }}<span></span></p>
-                <p class="DescriptionActualite">{{ actu.description[:300] }}
+                <p class="ParActualite">Par : <span style="color: #009de0">{{ actu.auteur }}</span></p>
+                <p class="DescriptionActualite">{{ actu.description[:300]|raw }}
                     <br>
-                <p class="PlusAcutalite">Plus... ></p>
+                <p class="PlusAcutalite {{ actu.id }}">Plus... ></p>
                 </p>
             </div>
         </div>
+
+
+
+        {#<!-- Modal -->                                                          aria-labelledby="exampleModalLabel"#}
+        <div class="modal fade" id="{{ actu.id }}" tabindex="-1" role="dialog" aria-hidden="true" >
+            <button type="button" class="close modalTextHomepage" data-dismiss="modal" aria-label="Close">
+                <span class="Retour" aria-hidden="true"> <i class="fa fa-arrow-left" aria-hidden="true"></i>Retour</span>
+            </button>
+
+            <div class="modal-dialog ModalAction" role="document">
+                <div class="ImageActionModal hidden-xs">
+                    <img class="ImageHautActionModal" src="{{ asset(actu.media.path) }}">
+                </div>
+                <div class="modal-content">
+                    <div class="modal-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h3 class="Titre TitreModal"><span>{{ actu.titre }}</span></h3>
+                    </div>
+                    <div class="modal-body TextModalHomepage">
+                        <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-left: 0px;">
+                            <h2 class="parallax-titleModalActu text-left" style="padding-bottom: 10px; padding-left: 20%; margin: 0px; color: #333;">Description du projet :</h2>
+                        </div>
+                        <div>
+                            <p style="text-align: left; margin-left: 20%; margin-right: 20%;">{{ actu.description|raw }}</p>
+                        </div>
+                        {% if not actu.lien is null %}
+                            lien vers la news : <a href="{{ actu.lien }}" style="color : blue;">{{ actu.lien }}</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- !Modal! -->
+
+
+
     {% endfor %}
+
 </div>
+
+
+{% for actu in actus %}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".{{ actu.id }}").click(function(){
+                $("#{{ actu.id }}").modal('show');
+            });
+        });
+    </script>
+{% endfor %}

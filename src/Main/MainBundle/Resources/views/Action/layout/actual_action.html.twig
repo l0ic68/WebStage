@@ -38,7 +38,7 @@
             <div class="OneAction col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <img  class ="pastActionImg" src="{{ asset(action.picture.path) }}">
                 <h4>{{ action.nom[:50] }}</h4>
-                <p class="DescriptionActionPast">{{ action.description[:130] }}...</p>
+                <p class="DescriptionActionPast">{{ action.description[:130]|raw }}...</p>
                 <p class="DivCout"><span class="CoutAction">{{ action.recolte }}</span>€ récolter pour un coût de <span class="CoutAction">{{ action.cout }}</span>€</p>
                 <p class="DatePast">{{ action.dateFin| date('d/m/Y') }}    -    {{ action.dateDebut| date('d/m/Y') }}</p>
                 <div class="DonatePast text{{ action.id }}">Faire un Don</div>
@@ -65,7 +65,7 @@
                             <h2 class="parallax-titleModalActionCours text-left titreDescriptionModal" style="">Description du projet :</h2>
                         </div>
                         <div>
-                            <p style="text-align: left; margin-left: 5%; margin-right: 5%;">{{ action.description }}</p>
+                            <p style="text-align: left; margin-left: 5%; margin-right: 5%;">{{ action.description|raw }}</p>
                         </div>
                         <div class="CoutActionModal">
                             <span>Coût de l'action : {{ action.cout }} €</span>

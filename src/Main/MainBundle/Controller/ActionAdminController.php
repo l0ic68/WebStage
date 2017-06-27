@@ -61,13 +61,13 @@ class ActionAdminController extends Controller
             'form2'=>$form2->createView()
         ));
     }
-    public function show_PastAction()
+    public function show_PastAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $actions = $em->getRepository('MainBundle:Action')->findByType('Passée');
         $description = $em->getRepository('MainBundle:Description')->findOneByOrdre('17');
         $form = $this->createForm(new DescriptionImageAdminType(),$description);
-        $form->handleRequest($form);
+        $form->handleRequest($request);
         if ($form->isValid()) {
             // On l'enregistre notre objet $advert dans la base de données, par exemple
             $em = $this->getDoctrine()->getManager();

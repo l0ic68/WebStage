@@ -12,7 +12,7 @@
             <img  class ="ActualiteImage" src="{{ asset(actu.media.path) }}">
             <h4 class="TitreActualite">{{ actu.titre }}</h4>
             <p class="ParActualite">Par : <span style="color: #009de0">{{ actu.auteur }}<span></span></p>
-            <p class="DescriptionActualite">{{ actu.description[:300] }}
+            <p class="DescriptionActualite">{{ actu.description[:300]|raw }}
                 <br>
 
             <a href="{{ path('edit_actu',{ id : actu.id}) }}"> <button class="DonatePast" style="margin-bottom: 2%; margin-top: 4%;"> Modifier</button></a>

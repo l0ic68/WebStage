@@ -44,7 +44,7 @@ class Actu
 
 
     /**
-     * @ORM\ManyToOne(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist","remove"})
+     * @ORM\ManyToOne(targetEntity="Main\MainBundle\Entity\Media", cascade={"persist"})
      * @ORM\JoinColumn(nullable=true)
      */
     private $media;
@@ -59,7 +59,7 @@ class Actu
     /**
      * @var string
      *
-     * @ORM\Column(name="lien", type="string", length=255)
+     * @ORM\Column(name="lien", type="string", length=255,nullable=true)
      */
     private $lien;
 

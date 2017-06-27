@@ -13,7 +13,7 @@
                 <h2 class="parallax-title2 text-left" style="padding: 20px; padding-left: 0px; margin: 0px; font-size: 48px; color: #333;">{{ histoire.nom }}</h2>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top: 4%;">
-                <p>{{ histoire.description }}</p>
+                <p>{{ histoire.description|raw }}</p>
             </div>
         </div>
 
@@ -69,7 +69,7 @@
                     <h2 class="hidden-sm hidden-md hidden-lg TitreModal2" style="">{{ volonte.nom}}</h2>
                 </div>
                 <div class="modal-body" style="margin-left: 7%; margin-right: 7%; margin-bottom: 3%;">
-                    {{ volonte.description }}
+                    {{ volonte.description|raw }}
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@
                     <h2 class="hidden-sm hidden-md hidden-lg TitreModal2" style="">{{ valeur.nom}}</h2>
                 </div>
                 <div class="modal-body" style="margin-left: 7%; margin-right: 7%; margin-bottom: 3%;">
-                    {{ valeur.description }}
+                    {{ valeur.description|raw }}
                 </div>
             </div>
         </div>
@@ -107,7 +107,7 @@
                     <h2 class="hidden-sm hidden-md hidden-lg TitreModal2" style="">{{ but.nom}}</h2>
                 </div>
                 <div class="modal-body" style="margin-left: 7%; margin-right: 7%; margin-bottom: 3%;">
-                    {{ but.description }}
+                    {{ but.description|raw }}
                 </div>
             </div>
         </div>
@@ -138,21 +138,21 @@
                         <div class="item active">
                             <div class="carousel-content">
                                 <div>
-                                    <p>{{ irak1.description }}</p>
+                                    <p>{{ irak1.description|raw }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="carousel-content">
                                 <div>
-                                    <p>{{ irak2.description }}</p>
+                                    <p>{{ irak2.description|raw }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="carousel-content">
                                 <div>
-                                    <p>{{ irak3.description }}</p>
+                                    <p>{{ irak3.description|raw }}</p>
                                 </div>
                             </div>
                         </div>
@@ -182,21 +182,21 @@
                         <div class="item active">
                             <div class="carousel-content">
                                 <div>
-                                    <p>{{ irak1.description }}</p>
+                                    <p>{{ irak1.description|raw }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="carousel-content">
                                 <div>
-                                    <p>{{ irak2.description }}</p>
+                                    <p>{{ irak2.description|raw }}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="item">
                             <div class="carousel-content">
                                 <div>
-                                    <p>{{ irak3.description }}</p>
+                                    <p>{{ irak3.description|raw }}</p>
                                 </div>
                             </div>
                         </div>
