@@ -15,6 +15,11 @@ class CarouselImageAdminType extends AbstractType
     {
         $builder->add('media', new MediaType(), array('required' => false))
                 ->add('text','text')
+            ->add('placement','choice',array('choices' => array('TextCarousel1' => "Bas Gauche",
+                'TextCarousel2' => "Haut Gauche",
+                'TextCarousel3' => "Haut Droite",
+                'TextCarousel4' => "Bas Droite"
+            )))
                 ->add('submit','submit',array('label'=>'Edit'));
 
     }
