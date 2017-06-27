@@ -2,36 +2,29 @@
 {% block body %}
 
 <div class="push"></div>
-
  {{ form_start(form1) }}
-
-
-
          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <h3 class="Titre TitreModal"><span style="color: black;">{{ form_widget(form1.nom) }}</span></h3>
          </div>
     {{ form_widget(form1.picture) }}
-
             <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-left: 0px;">
                <h2 class="parallax-titleModalAction text-left" style="padding-bottom: 10px; padding-left: 10%; margin: 0px; color: #333;">Description du projet :</h2>
             </div>
             <div>
                <p style="text-align: left; margin-left: 10%; margin-right: 10%;">    {{ form_widget(form1.description) }}</p>
             </div>
-            <div class="CoutActionModal">
+            <div class="CoutActionModal" style="margin-right: 0px; margin-left: 0px; padding-left: 10%;">
                <span class=" col-xs-6">Projet financé intégralement, coût :    {{ form_widget(form1.cout) }}€</span>
                 <span class=" col-xs-6"> Argent récolté :    {{ form_widget(form1.recolte) }}€</span>
             </div>
 
-    <div class="CoutActionModal col-xs-12">
+    <div class="CoutActionModal col-xs-12" style="margin-right: 0px; margin-left: 0px; padding-left: 10%;">
         <span class="col-xs-4">Durée du projet : Du   {{ form_widget(form1.date_debut) }} </span>
         <span class="col-xs-4">Au   {{ form_widget(form1.date_fin) }} </span>
         {#<span>Argent récolté : {{ action.recolte }}</span>#}
     </div>
-
-    <div class="CoutActionModal col-xs-12">
-        {#<span>Type du projet :     {{ form_widget(form1.type) }}</span>#}
-        {#<span>Argent récolté : {{ action.recolte }}</span>#}
+    <div class="CoutActionModal col-xs-12" style="margin-right: 0px; margin-left: 0px; padding-left: 10%;" >
+        <span>Type du projet :     {{ form_widget(form1.type) }}</span>
     </div>
 
          <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-left: 0px;">
@@ -78,12 +71,8 @@
                {#</div>#}
             {#</div>#}
          {#</div>#}
-
-
         <div style="margin: 5%;">
             {{ form_widget(form1.submit) }}
         </div>
-
-
     {{ form_end(form1) }}
 {% endblock %}
