@@ -18,18 +18,18 @@
             <div>
                <p style="text-align: left; margin-left: 10%; margin-right: 10%;">    {{ form_widget(form1.description) }}</p>
             </div>
-            <div class="CoutActionModal">
+            <div class="CoutActionModal" style="margin-right: 0px; margin-left: 0px; padding-left: 10%;">
                <span class=" col-xs-6">Projet financé intégralement, coût :    {{ form_widget(form1.cout) }}€</span>
                 <span class=" col-xs-6"> Argent récolté :    {{ form_widget(form1.recolte) }}€</span>
             </div>
 
-    <div class="CoutActionModal col-xs-12">
+    <div class="CoutActionModal col-xs-12" style="margin-right: 0px; margin-left: 0px; padding-left: 10%;">
         <span class="col-xs-4">Durée du projet : Du   {{ form_widget(form1.date_debut) }} </span>
         <span class="col-xs-4">Au   {{ form_widget(form1.date_fin) }} </span>
         {#<span>Argent récolté : {{ action.recolte }}</span>#}
     </div>
 
-    <div class="CoutActionModal col-xs-12">
+    <div class="CoutActionModal col-xs-12" style="margin-right: 0px; margin-left: 0px; padding-left: 10%;" >
         <span>Type du projet :     {{ form_widget(form1.type) }}</span>
         {#<span>Argent récolté : {{ action.recolte }}</span>#}
     </div>
