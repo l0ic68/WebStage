@@ -2652,12 +2652,13 @@ button.close:hover
 .ColorationText
 {
     background-color: #009de0;
+    font-size: xx-large;
 }
 
 .TextCarousel
 {
     /*width: 30%;*/
-    font-size: 50px;
+    /*font-size: 50px;*/
     color: white;
     text-align: left;
     position: absolute;
@@ -2669,7 +2670,7 @@ button.close:hover
 .TextCarousel2
 {
     /*width: 30%;*/
-    font-size: 50px;
+    /*font-size: 50px;*/
     color: white;
     text-align: left;
     position: absolute;
@@ -2680,7 +2681,7 @@ button.close:hover
 .TextCarousel3
 {
     /*width: 30%;*/
-    font-size: 50px;
+    /*font-size: 50px;*/
     color: white;
     text-align: left;
     position: absolute;
@@ -2691,7 +2692,7 @@ button.close:hover
 .TextCarousel4
 {
     /*width: 30%;*/
-    font-size: 50px;
+    /*font-size: 50px;*/
     color: white;
     text-align: left;
     position: absolute;

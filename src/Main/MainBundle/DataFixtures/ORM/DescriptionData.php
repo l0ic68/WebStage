@@ -212,7 +212,7 @@ Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyle
         $manager->persist($projetC2);
 
         $crowdfounding= new Description();
-        $crowdfounding->setNom("Crowdfounding");
+        $crowdfounding->setNom("Crowdfunding");
         $crowdfounding->setDescription("Pour soutenir nos différentes actions auprès des réfugiés d'irak vous pouvez leurs offrir votre don via le site de Crowdfunding.");
         $crowdfounding->setOrdre("20");
         $manager->persist($crowdfounding);
