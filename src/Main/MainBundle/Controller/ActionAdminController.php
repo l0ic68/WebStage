@@ -67,6 +67,13 @@ class ActionAdminController extends Controller
         $actions = $em->getRepository('MainBundle:Action')->findByType('Passée');
         $description = $em->getRepository('MainBundle:Description')->findOneByOrdre('17');
         $form = $this->createForm(new DescriptionImageAdminType(),$description);
+        $form->handleRequest($form);
+        if ($form->isValid()) {
+            // On l'enregistre notre objet $advert dans la base de données, par exemple
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($description);
+            $em->flush();
+        }
         return $this->render('MainBundle:Admin:past_action.html.twig',array(
             'actions'=> $actions,
             'form'=> $form->createView(),

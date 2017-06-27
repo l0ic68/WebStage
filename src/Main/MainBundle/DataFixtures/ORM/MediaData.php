@@ -40,7 +40,7 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($twitter);
 
         $carouselMedia1 = new Media();
-        $carouselMedia1->setPath('/img/Carousel1Small.jpg');
+        $carouselMedia1->setPath('/img/Carousel1Small3.jpg');
         $carouselMedia1->setUrl('1.jpg');
         $manager->persist($carouselMedia1);
 

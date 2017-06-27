@@ -125,13 +125,6 @@ Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyle
         $aujourdhui->setMedia($this->getReference('equipe_groupe'));
         $manager->persist($aujourdhui);
 
-        $don = new Description();
-        $don->setNom("Comment nous soutenir ?");
-        $don->setDescription("Pour soutenir nos différentes actions auprès des réfugiés d'irak vous pouvez 
-        leurs offrir votre don via le site de Crowdfunding.");
-        $don->setOrdre("11");
-        $manager->persist($don);
-
         $but = new Description();
         $but->setNom("Notre but");
         $but->setDescription("Nous avons pour but de soutenir financièrement la formation des générations futures, 

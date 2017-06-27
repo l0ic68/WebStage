@@ -89,8 +89,16 @@ class DefaultController extends Controller
     public function DonAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $don = $em->getRepository('MainBundle:Description')->findOneByOrdre('11');
-        return $this->render('MainBundle:Default:layout\don.html.twig',array('don'=> $don));
+        $don = $em->getRepository('MainBundle:Description')->findOneByOrdre('23');
+        $crowdfounding = $em->getRepository('MainBundle:Description')->findOneByOrdre('20');
+        $virement = $em->getRepository('MainBundle:Description')->findOneByOrdre('21');
+        $cheque = $em->getRepository('MainBundle:Description')->findOneByOrdre('22');
+        return $this->render('MainBundle:Default:layout\don.html.twig',array(
+            'don'=> $don,
+            'crowdfounding'=> $crowdfounding,
+            'virement'=> $virement,
+            'cheque'=> $cheque,
+            ));
     }
 
     public function contactAction()
