@@ -179,7 +179,6 @@ class DescriptionAdminController extends Controller
             $form3 = $this->get('form.factory')->createNamedBuilder('image3',$formType,$image3)
                 ->getForm();
             $image3->setOrdre(3);
-//            var_dump($image3);
         }
         if($image4 != null) {
             $form4 = $this->get('form.factory')->createNamedBuilder('image4', $formType, $image4)
@@ -257,19 +256,19 @@ class DescriptionAdminController extends Controller
             }
             if ($image3 != null) {
                 if ($request->request->has('image3')) {
-                    if ($form3->get('delete')->isClicked()) {
-                        $em = $this->getDoctrine()->getManager();
-                        $image3->setText("");
-                        $em->remove($image3);
-                        $em->flush();
+                    $form3->handleRequest($request);
+                    if ($form3->isValid()) {
+                        if ($form3->get('delete')->isClicked()) {
+                            $em = $this->getDoctrine()->getManager();
+                            $image3->setText("");
+                            $em->remove($image3);
+                            $em->flush();
 
-                        $image3 = new Carousel();
-                        $form3 = $this->get('form.factory')->createNamedBuilder('image3',$formType,$image3)
-                            ->getForm();
-                        $image3->setOrdre(3);
-                    } else {
-                        $form3->handleRequest($request);
-                        if ($form3->isValid()) {
+                            $image3 = new Carousel();
+                            $form3 = $this->get('form.factory')->createNamedBuilder('image3',$formType,$image3)
+                                ->getForm();
+                            $image3->setOrdre(3);
+                        } else {
                             // On l'enregistre notre objet $advert dans la base de données, par exemple
                             $em = $this->getDoctrine()->getManager();
                             $em->persist($image3);
@@ -278,24 +277,26 @@ class DescriptionAdminController extends Controller
                     }
                 }
             }
-
-            if ($request->request->has('image4')) {
-                if ($form4->get('delete')->isClicked()) {
-                    $em = $this->getDoctrine()->getManager();
-                    $em->remove($image4);
-                    $em->flush();
-
-                    $image4 = new Carousel();
-                    $form4 = $this->get('form.factory')->createNamedBuilder('image4',$formType,$image4)
-                        ->getForm();
-                    $image4->setOrdre(4);
-                } else {
+            if ($image4 != null) {
+                if ($request->request->has('image4')) {
                     $form4->handleRequest($request);
                     if ($form4->isValid()) {
-                        // On l'enregistre notre objet $advert dans la base de données, par exemple
-                        $em = $this->getDoctrine()->getManager();
-                        $em->persist($image4);
-                        $em->flush();
+                        if ($form4->get('delete')->isClicked()) {
+                            $em = $this->getDoctrine()->getManager();
+                            $image4->setText("");
+                            $em->remove($image4);
+                            $em->flush();
+
+                            $image4 = new Carousel();
+                            $form4 = $this->get('form.factory')->createNamedBuilder('image4',$formType,$image4)
+                                ->getForm();
+                            $image4->setOrdre(4);
+                        } else {
+                            // On l'enregistre notre objet $advert dans la base de données, par exemple
+                            $em = $this->getDoctrine()->getManager();
+                            $em->persist($image4);
+                            $em->flush();
+                        }
                     }
                 }
             }
