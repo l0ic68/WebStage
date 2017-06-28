@@ -88,7 +88,7 @@ class ActionData extends AbstractFixture implements OrderedFixtureInterface
         $action6->setDateFin(new \DateTime("31-12-2017"), new \DateTimeZone('Europe/Paris'));
         $action6->setRecolte(100000);
         $action6->setType("En cours");
-        $action6->setPicture($this->getReference("qualite"));
+        $action6->setPicture($this->getReference("bat3"));
         $action6->setFrontPage('null');
         $manager->persist($action6);
 

@@ -40,12 +40,12 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($twitter);
 
         $carouselMedia1 = new Media();
-        $carouselMedia1->setPath('/img/Carousel1Small3.jpg');
+        $carouselMedia1->setPath('/img/APL_carrousel2.jpg');
         $carouselMedia1->setUrl('1.jpg');
         $manager->persist($carouselMedia1);
 
         $carouselMedia2 = new Media();
-        $carouselMedia2->setPath('/img/Carousel4Small.jpg');
+        $carouselMedia2->setPath('/img/APL_carrousel1.jpg');
         $carouselMedia2->setUrl('4.jpg');
         $manager->persist($carouselMedia2);
 
@@ -135,6 +135,16 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $unicef->setUrl('unicef.jpg');
         $manager->persist($unicef);
 
+        $aide= new Media();
+        $aide->setPath('img/aide.jpg');
+        $aide->setUrl('aide.jpg');
+        $manager->persist($aide);
+
+        $bat3= new Media();
+        $bat3->setPath('img/bat3.jpg');
+        $bat3->setUrl('bat3.jpg');
+        $manager->persist($bat3);
+
         $manager->flush();
 
         $this->addReference('email',$email);
@@ -159,6 +169,8 @@ class MediaData extends AbstractFixture implements OrderedFixtureInterface
         $this->addReference('histoireMedia',$histoire);
         $this->addReference('action_past',$action_past);
         $this->addReference('unicef',$unicef);
+        $this->addReference('aide',$aide);
+        $this->addReference('bat3',$bat3);
     }
 
     public function getOrder()
