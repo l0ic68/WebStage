@@ -29,7 +29,7 @@ h1
 {
     font-family: 'Verdana';
     font-weight: bold;
-    color: rgb(1, 167, 217);
+    color: #009de0;
     font-size: x-large;
 }
 
@@ -38,7 +38,7 @@ h2
     /*font-family: 'Typo_Round';*/
     font-family: 'Verdana';
     font-weight: bold;
-    color: rgb(1, 117, 217);
+    color: #009de0;
     font-size: xx-large;
 }
 
@@ -48,7 +48,7 @@ h2
 h3
 {
     font-family: 'Verdana';
-    color: rgb(1, 117, 217);
+    color: #009de0;
     font-weight: bold;
     font-size: xx-large;
 }
@@ -129,7 +129,7 @@ a:link
 
 .DivTitre
 {
-    background-color: rgb(1, 117, 217);
+    background-color: #009de0;
     padding: 2%;
     margin-bottom: 3%;
 }
@@ -166,46 +166,46 @@ a:link
 .LigneTitre
 {
     background:linear-gradient(
-        rgb(1, 117, 217) 0%,
-        rgb(1, 117, 217) 45%,
+            #009de0 0%,
+            #009de0 45%,
         whitesmoke 46%,
         whitesmoke 54%,
         whitesmoke 54%,
-        rgb(1, 117, 217) 54%,
-        rgb(1, 117, 217) 100%);
+            #009de0 54%,
+            #009de0 100%);
     background:-webkit-linear-gradient(
-            rgb(1, 117, 217) 0%,
-            rgb(1, 117, 217) 45%,
+            #009de0 0%,
+            #009de0 45%,
             whitesmoke 46%,
             whitesmoke 54%,
-            rgb(1, 117, 217) 54%,
-            rgb(1, 117, 217) 100%);
+            #009de0 54%,
+            #009de0 100%);
     background:    -moz-linear-gradient(
-            rgb(1, 117, 217) 0%,
-            rgb(1, 117, 217) 45%,
+            #009de0 0%,
+            #009de0 45%,
             whitesmoke 46%,
             whitesmoke 54%,
-            rgb(1, 117, 217) 54%,
-            rgb(1, 117, 217) 100%);
+            #009de0 54%,
+            #009de0 100%);
     background:     -ms-linear-gradient(
-            rgb(1, 117, 217) 0%,
-            rgb(1, 117, 217) 45%,
+            #009de0 0%,
+            #009de0 45%,
             whitesmoke 46%,
             whitesmoke 54%,
-            rgb(1, 117, 217) 54%,
-            rgb(1, 117, 217) 100%);
+            #009de0 54%,
+            #009de0 100%);
     background:      -o-linear-gradient(
-            rgb(1, 117, 217) 0%,
-            rgb(1, 117, 217) 45%,
+            #009de0 0%,
+            #009de0 45%,
             whitesmoke 46%,
             whitesmoke 54%,
-            rgb(1, 117, 217) 54%,
-            rgb(1, 117, 217) 100%);
+            #009de0 54%,
+            #009de0 100%);
 }
 
 .LigneSpan
 {
-    background:rgb(1, 117, 217);
+    background:#009de0;
     padding:0 20px;
 }
 .centrageD
@@ -341,7 +341,7 @@ header
 
 #TitreHeader:hover, TitreHeader:link, TitreHeader:visited, TitreHeader:active
 {
-    color: rgb(1, 167, 217)
+    color: #009de0
 }
 
 @media only screen and (min-width: 1198px) and (max-width: 1400px) {
@@ -741,7 +741,7 @@ footer
 .modal-header
 {
     padding: 5%;
-    background-color: rgb(1, 117, 217);
+    background-color: #009de0;
     /*padding: 2%;*/
     margin-top: 2%;
     opacity: 1;
@@ -1689,7 +1689,7 @@ button.close:hover
 /* -------------------- Membres -------------------- */
 #DivTitreMembres
 {
-    background-color: rgb(1, 117, 217);
+    background-color: #009de0;
     padding: 2%;
     margin-bottom: 3%;
 }
@@ -1958,7 +1958,7 @@ button.close:hover
 
 #DivTitreContact
 {
-    background-color: rgb(1, 117, 217);
+    background-color: #009de0;
     padding: 2%;
     margin-bottom: 3%;
 }
@@ -1986,8 +1986,8 @@ button.close:hover
 
 .btn-danger {
     color: white;
-    background-color: rgb(1, 117, 217);
-    border-color: rgb(1, 8, 217);
+    background-color: #009de0;
+    border-color: #009de0;
 }
 
 .inputGroupContainer
