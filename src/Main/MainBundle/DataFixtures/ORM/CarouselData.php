@@ -24,7 +24,7 @@ class CarouselData extends AbstractFixture implements OrderedFixtureInterface
         $carousel1 = new Carousel();
         $carousel1->setOrdre('0');
         $carousel1->setMedia($this->getReference('carouselMedia1'));
-        $carousel1->setText("Ne faisons pas une croix sur les Chrétiens d'Orient.");
+        $carousel1->setText("Ne faisons pas une croix sur les Chrétiens d'Irak.");
         $carousel1->setPlacement("TextCarousel2");
         $manager->persist($carousel1);
 

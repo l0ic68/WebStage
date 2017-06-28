@@ -66,7 +66,7 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         $manager->persist($don);
 
         $bandeau = new Description();
-        $bandeau->setNom("Comment pouvez-vous simplement nous aider ?");
+        $bandeau->setNom("Comment pouvez-vous nous aider ?");
         $bandeau->setDescription(" ");
        //        $soutenir->setMedia($this->getReference('$bandeau'));
         $bandeau->setOrdre("5");
