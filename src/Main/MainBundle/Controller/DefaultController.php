@@ -79,11 +79,10 @@ class DefaultController extends Controller
         $response->setData(array('classifiedList' => $content));
         return $response;
     }
-    public function NewsAction()
+    public function MentionAction()
     {
         $em = $this->getDoctrine()->getManager();
-        $news = $em->getRepository('MainBundle:News')->findall();
-        return $this->render('MainBundle:Default:layout\news.html.twig',array('news'=> $news));
+        return $this->render('MainBundle:Default:layout\mention.html.twig');
     }
 
     public function DonAction()

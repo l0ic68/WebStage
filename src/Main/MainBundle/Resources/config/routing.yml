@@ -42,9 +42,9 @@ galerie:
     path:     /galerie
     defaults: { _controller: MainBundle:Default:galerie }
 
-news:
-    path:     /news
-    defaults: { _controller: MainBundle:News:news }
+mention:
+    path:     /mention
+    defaults: { _controller: MainBundle:Default:mention }
 
 origines:
     path:     /origines
