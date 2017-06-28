@@ -3,8 +3,11 @@
 namespace Main\MainBundle\Controller;
 
 use Main\MainBundle\Entity\Action;
+use Main\MainBundle\Entity\Media;
+use Main\MainBundle\Form\addImageAdminType;
 use Main\MainBundle\Form\DescriptionAdminType;
 use Main\MainBundle\Form\DescriptionImageAdminType;
+use Main\MainBundle\Form\MediaType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Main\MainBundle\Form\ActionAdminType;
@@ -97,7 +100,7 @@ class ActionAdminController extends Controller
                     return $this->redirectToRoute("show_past_action");
                 }
             }
-        return $this->render('MainBundle:Admin:new_past_action.html.twig',array(
+        return $this->render('MainBundle:Admin:edit_past_action.html.twig',array(
             'form1'=> $form1->createView()
         ));
     }
@@ -118,9 +121,45 @@ class ActionAdminController extends Controller
                     return $this->redirectToRoute("show_actual_action");
                 }
             }
-        return $this->render('MainBundle:Admin:new_actual_action.html.twig',array(
+        return $this->render('MainBundle:Admin:edit_actual_action.html.twig',array(
             'form1'=> $form1->createView()
         ));
+
+    }
+    public function Add_imageAction($id,Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $image = $em->getRepository('MainBundle:Action')->findOneById($id);
+        $media= new Media();
+
+        $form1 = $this->createForm(new MediaType() , $media);
+        $form1->handleRequest($request);
+
+        if ($form1->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $image->addMedia($media);
+            $em->persist($media);
+            $em->flush();
+        }
+
+        return $this->render('MainBundle:Admin:img_action.html.twig',array(
+            'form1'=> $form1->createView(),
+            'image'=> $image
+        ));
+
+    }
+    public function Delete_imageAction($id,$mediaDelete)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $projet= $em->getRepository('MainBundle:Action')->findOneById($id);
+        $media = $em->getRepository('MainBundle:Media')->findOneById($mediaDelete);
+//        $media= $em->getRepository('MainBundle:Action')->findByMedia($mediaDelete);
+            $em = $this->getDoctrine()->getManager();
+            $projet->removeMedia($media);
+            $em->persist($media);
+            $em->flush();
+
+        return $this->redirectToRoute('add_image',array('id'=>$id));
 
     }
     public function New_PastAction(Request $request)

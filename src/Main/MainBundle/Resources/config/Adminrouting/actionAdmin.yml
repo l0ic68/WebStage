@@ -37,3 +37,11 @@ changeActionR:
 changeActionC:
     path:     /changeActionC/{id}
     defaults: { _controller: "MainBundle:ActionAdmin:changeactionC" }
+
+add_image:
+    path:     /add_image/{id}
+    defaults: { _controller: "MainBundle:ActionAdmin:add_image" }
+
+delete_image:
+    path:     /delete_image/{id}/{mediaDelete}
+    defaults: { _controller: "MainBundle:ActionAdmin:delete_image" }

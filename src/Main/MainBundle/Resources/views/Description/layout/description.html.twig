@@ -1,9 +1,6 @@
 {% extends "::layout/layout.html.twig" %}
 {% block body %}
-
 <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12 sectionDescription">
-
-
 
     <!--        Histoire      -->
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="margin-top: 2%">
@@ -21,7 +18,6 @@
         </div>
     </div>
     <!--        !Histoire      -->
-
 
     <!--        Nos volonté, nos valeurs, notre but      -->
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding: 0px;background-color: #f3f3f3; margin-bottom: 2%;">
@@ -119,12 +115,12 @@
 
     <div class="DivCarte hidden-xs col-sm-12 col-md-12 col-lg-12">
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 DivImgCarte">
-            <img class="imgCarte" src="{{ asset(irak1.media.path) }}">
+            <img class="imgCarte" src="{{ asset(irak1.media.path) }}" alt="Carte de l'irak">
         </div>
         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 DivTextPierre">
 
 
-            <h3 style="font-size: xx-large; padding-left: 36px; margin-top: 5%;"> <p>{{ irak1.nom }}</p></h3>
+            <h3 style="font-size: xx-large; padding-left: 36px; margin-top: 5%;">{{ irak1.nom }}</h3>
             <div id="text-carousel" class="carousel slide carousel-fade" data-ride="carousel">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
@@ -164,12 +160,12 @@
     </div>
 
     <div class="DivCarte col-xs-12 hidden-sm hidden-md hidden-lg">
-        <h3 style="font-size: xx-large; margin-left: 5%; margin-top: 5%;"> <p>{{ irak1.nom }}</p></h3>
+        <h3 style="font-size: xx-large; margin-left: 5%; margin-top: 5%;">{{ irak1.nom }}</h3>
         <div class="col-xs-12 DivImgCarte">
-            <img class="imgCarte" src="{{ asset(irak1.media.path) }}">
+            <img class="imgCarte" src="{{ asset(irak1.media.path) }}" alt="Carte de l'Irak">
         </div>
         <div class="col-xs-12 DivTextPierre">
-            <div id="text-carousel" class="carousel slide" data-ride="carousel" style="padding: 8%; padding-bottom: 15%;">
+            <div id="text-carouselMin" class="carousel slide" data-ride="carousel" style="padding: 8%; padding-bottom: 15%;">
                 <!-- Indicators -->
                 <ol class="carousel-indicators">
                     <li  data-target="#text-carousel" data-slide-to="0" class="active IndicateurPierreCaroussel"></li>

@@ -36,7 +36,7 @@
     {% for action in actions %}
         <div class="DivOneAction col-xs-12 col-sm-6 col-md-6 col-lg-4">
             <div class="OneAction col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <img  class ="pastActionImg" src="{{ asset(action.picture.path) }}">
+                <img class ="pastActionImg" src="{{ asset(action.picture.path) }}" alt="Image Projet En Cours">
                 <h4>{{ action.nom[:50] }}</h4>
                 <p class="DescriptionActionPast">{{ action.description[:130]|raw }}...</p>
                 <p class="DivCout"><span class="CoutAction">{{ action.recolte }}</span>€ récolter pour un coût de <span class="CoutAction">{{ action.cout }}</span>€</p>
@@ -51,7 +51,7 @@
 
             <div class="modal-dialog ModalAction " role="document">
                 <div class="ImageActionModal hidden-xs">
-                    <img class="ImageHautActionModal" src="{{ asset(action.picture.path) }}">
+                    <img class="ImageHautActionModal" src="{{ asset(action.picture.path) }}" alt="Img Projet en cours">
                 </div>
                 <div class="modal-content">
                     <div class="modal-header col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -115,12 +115,12 @@
 
                                 <div class="carousel-inner centrageD">
                                     <div class="item active" style="width: 100%;">
-                                        <img class="ImageActionCarouselModal d-block img-fluid" src="{{ asset(action.picture.path) }}" alt="Los Angeles">
+                                        <img class="ImageActionCarouselModal d-block img-fluid" src="{{ asset(action.picture.path) }}" alt="Image du projet">
                                     </div>
                                     {% if not action.media.empty %}
                                         {% for media in action.media %}
                                             <div class="item" style="width: 100%;">
-                                                <img  class="ImageActionCarouselModal d-block img-fluid" src="{{ asset(media.path) }}">
+                                                <img  class="ImageActionCarouselModal d-block img-fluid" src="{{ asset(media.path) }}" alt="Carousel du projet">
                                             </div>
                                         {% endfor %}
                                     {% endif %}

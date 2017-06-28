@@ -1,0 +1,93 @@
+{% extends "::adminLayout/layout.html.twig" %}
+{% block body %}
+
+<div class="push"></div>
+
+    {{ form_start(form1) }}
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h3 class="Titre TitreModal"><span style="color: black;">{{ form_widget(form1.nom) }}</span></h3>
+    </div>
+    {{ form_widget(form1.picture) }}
+
+    <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-left: 0px;">
+        <h2 class="parallax-titleModalAction text-left" style="padding-bottom: 10px; padding-left: 10%; margin: 0px; color: #333;">Description du projet :</h2>
+    </div>
+    <div>
+        <p style="text-align: left; margin-left: 10%; margin-right: 10%;">    {{ form_widget(form1.description) }}</p>
+    </div>
+    <div class="CoutActionModal"  style="margin-right: 0px; margin-left: 0px; padding-left: 10%;">
+        <span class=" col-xs-6">Projet financé intégralement, coût :    {{ form_widget(form1.cout) }}€</span>
+        <span class=" col-xs-6"> Argent récolté :    {{ form_widget(form1.recolte) }}€</span>
+    </div>
+
+    <div class="CoutActionModal col-xs-12"  style="margin-right: 0px; margin-left: 0px; padding-left: 10%;">
+        <span class="col-xs-4">Durée du projet : Du   {{ form_widget(form1.date_debut) }} </span>
+        <span class="col-xs-4">Au   {{ form_widget(form1.date_fin) }} </span>
+    </div>
+
+    <div class="CoutActionModal col-xs-12"  style="margin-right: 0px; margin-left: 0px; padding-left: 10%;">
+        <span>Type du projet :     {{ form_widget(form1.type) }}</span>
+    </div>
+
+    <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-left: 0px;">
+        <h2 class="parallax-titleModalAction text-left" style="padding-bottom: 10px; padding-left: 10%; margin: 0px; color: #333;">Le projet en image :</h2>
+    </div>
+
+    <div style="margin: 5%;">
+        {{ form_widget(form1.submit) }}
+    </div>
+
+
+    {{ form_end(form1) }}
+ {#{{ form_start(form1) }}#}
+
+    {#<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">#}
+       {#<div class="col-xs-4 col-sm-4 col-md-4 col-lg-offset-1 col-lg-4 DivFormAction" style="height: 337px;">#}
+           {#<h2> Nom :   </h2>#}
+           {#{{ form_widget(form1.nom) }}#}
+       {#</div>#}
+        {#<div class="col-xs-4 col-sm-4 col-md-4  col-lg-7 DivFormAction">#}
+            {#<h2 style="margin-right: 3%;"> Description :   </h2>#}
+           {#{{ form_widget(form1.description) }}#}
+       {#</div>#}
+
+        {#<div class="col-xs-6 col-sm-6 col-md-6 col-lg-offset-1 col-lg-4 DivFormAction">#}
+            {#<h2 style="margin-right: 3%;"> Date début :   </h2>#}
+            {#{{ form_widget(form1.date_debut) }}#}
+        {#</div>#}
+
+        {#<div class="col-xs-6 col-sm-6 col-md-6 col-lg-7 DivFormAction">#}
+            {#<h2 style="margin-right: 3%;"> Date fin :   </h2>#}
+            {#{{ form_widget(form1.date_fin) }}#}
+        {#</div>#}
+
+        {#<div class="col-xs-6 col-sm-6 col-md-6 col-lg-offset-1 col-lg-4 DivFormAction">#}
+            {#<h2 style="margin-right: 3%;"> Cout :   </h2>#}
+            {#{{ form_widget(form1.cout) }}€#}
+        {#</div>#}
+
+        {#<div class="col-xs-6 col-sm-6 col-md-6 col-lg-7 DivFormAction">#}
+            {#<h2 style="margin-right: 3%;"> Récolte :   </h2>#}
+            {#{{ form_widget(form1.recolte) }}€#}
+        {#</div>#}
+
+        {#<div class="col-xs-6 col-sm-6 col-md-6 col-lg-offset-1 col-lg-4 DivFormAction">#}
+            {#<h2 style="margin-right: 3%;"> Image :   </h2>#}
+            {#{{ form_widget(form1.picture) }}#}
+        {#</div>#}
+
+        {#<div class="col-xs-6 col-sm-6 col-md-6 col-lg-7 DivFormAction">#}
+            {#<h2 style="margin-right: 3%;"> Projet :   </h2>#}
+            {#{{ form_widget(form1.type) }}#}
+        {#</div>#}
+
+        {#<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 DivFormAction">#}
+            {#{{ form_widget(form1.submit) }}#}
+        {#</div>#}
+
+    {#</div>#}
+
+
+
+    {#{{ form_end(form1) }}#}
+{% endblock %}

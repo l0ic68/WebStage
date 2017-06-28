@@ -25,6 +25,7 @@
                     <p class="DivCout">Un coût de <span class="CoutAction">{{ action.cout }}</span>€</p>
                     <p class="DatePast">{{ action.dateDebut| date('d/m/Y') }}    -    {{ action.dateFin| date('d/m/Y') }}</p>
                     <a href="{{ path('edit_past_action',{ id : action.id}) }}"><div class="DonatePast" style="margin-bottom: 2%;">Modifier</div></a>
+                    <a href="{{ path('add_image',{ id : action.id}) }}"><div class="DonatePast" style="margin-bottom: 2%;">Ajouter une image</div></a>
                     <a href="{{ path('delete_past_action',{ id : action.id}) }}"><div class="DonatePast"> Supprimer</div></a>
                 </div>
     </div>

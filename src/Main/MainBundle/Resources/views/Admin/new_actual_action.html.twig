@@ -4,9 +4,6 @@
 <div class="push"></div>
 
     {{ form_start(form1) }}
-
-
-
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <h3 class="Titre TitreModal"><span style="color: black;">{{ form_widget(form1.nom) }}</span></h3>
     </div>
@@ -26,12 +23,9 @@
     <div class="CoutActionModal col-xs-12"  style="margin-right: 0px; margin-left: 0px; padding-left: 10%;">
         <span class="col-xs-4">Durée du projet : Du   {{ form_widget(form1.date_debut) }} </span>
         <span class="col-xs-4">Au   {{ form_widget(form1.date_fin) }} </span>
-        {#<span>Argent récolté : {{ action.recolte }}</span>#}
     </div>
 
     <div class="CoutActionModal col-xs-12"  style="margin-right: 0px; margin-left: 0px; padding-left: 10%;">
-        <span>Type du projet :     {{ form_widget(form1.type) }}</span>
-        {#<span>Argent récolté : {{ action.recolte }}</span>#}
     </div>
 
     <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-left: 0px;">
