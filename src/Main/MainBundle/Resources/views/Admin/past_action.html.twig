@@ -7,12 +7,15 @@
     <div class="DivimgbackActionPast col-xs-12 col-sm-12 col-md-12 col-lg-12"  style="background-image: url({{asset(description.media.path)}});">
     </div>
     <p style="color: black; font-size: xx-large; font-family: 'Typo_Round'; font-weight: bold;"></p>
+    <div style="z-index: 5;">
+        {{ form_start(form) }}
+        {{ form_widget(form.nom) }}
+        {{ form_widget(form.media) }}
+        {{ form_widget(form._token) }}
+        {{ form_widget(form.submit) }}
+    </div>
 </div>
-    {{ form_start(form) }}
-    {{ form_widget(form.nom) }}
-   {{ form_widget(form.media) }}
-    {{ form_widget(form._token) }}
-   {{ form_widget(form.submit) }}
+
 
     <div style="height: 100px"></div>
     <div class="AllAction col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-12 col-sm-10 col-md-10 col-lg-10">
