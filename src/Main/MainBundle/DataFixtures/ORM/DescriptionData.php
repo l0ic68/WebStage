@@ -21,11 +21,10 @@ class DescriptionData extends AbstractFixture implements OrderedFixtureInterface
         $aPropos = new Description();
         $aPropos->setNom("L'association");
         $aPropos->setDescription("Notre association se donne pour mission de lever des fonds afin de financer des actions
-         et projets humanitaires en Irak:
-         L’association « Aux porteurs de lumière » s’est fixé comme objectif de collecter des moyens financiers. Elle
-         rassemble des fonds qu’elle adresse à Mgr Yousif par l’intermédiaire de l’OEuvre d’Orient. Grâce aux premiers
-         dons recueillis, Mgr Yousif assure l’hébergement et la subsistance des étudiants: location de maisons, mobilier,
-          nourriture. A votre tour, s’il vous plait, aidez-nous à les soutenir ! 
+         et projets humanitaires en Irak: L'association « Aux porteurs de lumière » s'est fixé comme objectif de collecter
+          des moyens financiers. Elle rassemble des fonds qu'elle adresse à Mgr Yousif par l'intermédiaire de l'OEuvre d'Orient.
+           Grâce aux premiers dons recueillis, Mgr Yousif assure l'hébergement et la subsistance des étudiants: location
+            de maisons, mobilier, nourriture. À votre tour, s'il vous plait, aidez-nous à les soutenir ! 
         ");
         $aPropos->setOrdre("1");
         $manager->persist($aPropos);
@@ -147,7 +146,7 @@ Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyle
 
         $Irak1= new Description();
         $Irak1->setNom("Histoire de l'Irak");
-        $Irak1->setDescription("L'association s'interesse à toutes 
+        $Irak1->setDescription("L'association s'intéresse à toutes 
         les minorités menacées par Daech, tel les Yazédis, qui tirent 
         leurs racines de l’ancienne Mésopotamie, et qui sont considérées 
         par Daech comme des mécréants, et de ce fait sont menacés de mort. 

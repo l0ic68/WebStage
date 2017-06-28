@@ -7,7 +7,7 @@
     {#</div>#}
     <div class="container white DivContact" style="padding-left: 8%; margin-bottom: 2%;">
         <div class="APropos col-xs-4 col-sm-4 col-md-4 col-lg-4" style="margin-bottom: 3%;">
-            <h2 class="parallax-title2 text-left" style="padding-bottom:10px; margin: 0px; font-size: 48px; color: #333;">Contact :</h2>
+            <h2 class="" style="padding-bottom:10px; margin: 0px; font-size: xx-large; color: #009de0;">Contact :</h2>
         </div>
         <div class="row padder-t padder-b container white col-lg-12">
                     <!-- Form -->
@@ -15,7 +15,7 @@
                     <div class="form-group ContactDiv">
                         <div class="row">
                             <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-2 col-sm-2 col-md-2 col-lg-2" style="padding: 3px;">
-                                <label class="control-label pull-left" ><h4>{{ form_label(form.lastname) }}</h4></label>
+                                <label class="control-label pull-left" ><p style="font-size: x-large;">{{ form_label(form.lastname) }}</p></label>
                             </div>
                             <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 inputGroupContainer">
                                 <div class="input-group">
@@ -25,7 +25,7 @@
                                 </div>
                             </div>
                             <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                <label class="control-label pull-left"><h4>{{ form_label(form.firstname) }}</h4></label>
+                                <label class="control-label pull-left"><p style="font-size: x-large;">{{ form_label(form.firstname) }}</p></label>
                             </div>
                             <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 inputGroupContainer">
                                 <div class="input-group">
@@ -60,7 +60,7 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                        <label class="control-label pull-left"><h4>{{ form_label(form.email) }}</h4></label>
+                                        <label class="control-label pull-left"><p style="font-size: x-large;">{{ form_label(form.email) }}</p></label>
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 inputGroupContainer">
                                         <div class="input-group">
@@ -70,7 +70,7 @@
                                         </div>
                                     </div>
                                     <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                        <label class="control-label pull-left"><h4>{{ form_label(form.phone) }}</h4></label>
+                                        <label class="control-label pull-left"><p style="font-size: x-large;">{{ form_label(form.phone) }}</p></label>
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 inputGroupContainer" style="padding-left: 10px;">
                                         <div class="input-group">
@@ -98,7 +98,7 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-2 col-sm-2 col-md-2 col-lg-2">
-                                        <label class="control-label pull-left"><h4>{{ form_label(form.message) }}</h4></label>
+                                        <label class="control-label pull-left"><p style="font-size: x-large;">{{ form_label(form.message) }}</p></label>
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-4 col-lg-5 inputGroupContainer">
                                         <div id="MessageContact" class="input-group">
@@ -120,17 +120,15 @@
         </div>
         <div class="row padder-b">
             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <h4 class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-9 col-sm-9 col-md-9 col-lg-9" style="font-family: Verdana;">Contactez nous directement:</h4>
+                <h4 class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-9 col-sm-9 col-md-9 col-lg-9" style="font-family: Verdana; margin-bottom: 3%;">Contactez nous directement:</h4>
             </div>
             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <h4 class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-2 col-sm-2 col-md-2 col-lg-2 padder-lr" style="font-family: Verdana;">Mail:</h4>
-                <a class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-6 col-sm-6 col-md-6 col-lg-6 padder-lr" href="mailto:aporteurlumiere@gmail.com">
-                    <h4 style="font-family: Verdana;" id="mail">aporteurlumiere@gmail.com</h4>
-                </a>
+                <p class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-2 col-sm-2 col-md-2 col-lg-2 padder-lr" style="font-family: Verdana; font-size: x-large; font-weight: bold;">Mail:</p>
+                <p class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-6 col-sm-6 col-md-6 col-lg-6 padder-lr"style="font-family: Verdana;" id="adress">aporteurlumiere@gmail.com</p>
             </div>
             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <h4 class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-3 col-sm-2 col-md-2 col-lg-2 padder-lr" style="font-family: Verdana;">Adresse:</h4>
-                <h4 class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-6 col-sm-6 col-md-6 col-lg-6 padder-lr"style="font-family: Verdana;" id="adress">12, rue des cerisiers - 67117 FURDENHEIM</h4>
+                <p class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-3 col-sm-2 col-md-2 col-lg-2 padder-lr" style="font-family: Verdana; font-size: x-large; font-weight: bold;">Adresse:</p>
+                <p class="col-xs-offset-1 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-6 col-sm-6 col-md-6 col-lg-6 padder-lr"style="font-family: Verdana;" id="adress">12, rue des cerisiers - 67117 FURDENHEIM</p>
 
             </div>
         </div>
