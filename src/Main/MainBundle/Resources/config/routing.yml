@@ -1,6 +1,6 @@
 main_admin_description:
     resource: "@MainBundle/Resources/config/Adminrouting/descriptionAdmin.yml"
-    prefix:   /admin/description
+    prefix:   /admin
 
 main_admin_action:
     resource: "@MainBundle/Resources/config/Adminrouting/actionAdmin.yml"
@@ -17,10 +17,6 @@ main_admin_news:
 main_admin_carousel:
     resource: "@MainBundle/Resources/config/Adminrouting/carouselAdmin.yml"
     prefix:   /admin/carousel
-
-admin:
-    resource: "@MainBundle/Resources/config/Adminrouting/panelAdmin.yml"
-    prefix:   /admin
 
 accueil:
     path:     /

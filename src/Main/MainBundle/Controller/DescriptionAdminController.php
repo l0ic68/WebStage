@@ -391,11 +391,11 @@ class DescriptionAdminController extends Controller
                 }
             }
             if ($request->request->has('form4name')) {
-                $form3->handleRequest($request);
-                if ($form3->isValid()) {
+                $form4->handleRequest($request);
+                if ($form4->isValid()) {
                     // On l'enregistre notre objet $advert dans la base de données, par exemple
                     $em = $this->getDoctrine()->getManager();
-                    $em->persist($description4);
+                    $em->persist($description2);
                     $em->flush();
                 }
             }

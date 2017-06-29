@@ -63,9 +63,11 @@
                                     <ol class="carousel-indicators">
                                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                                         {% if not action.media.empty %}
-                                        {% for media in action.media %}
-                                            <li data-target="#myCarousel" data-slide-to="{{ action.id }}"></li>
-                                        {% endfor %}
+                                            {% set count = 1 %}
+                                            {% for media in action.media %}
+                                                <li data-target="#myCarousel" data-slide-to="{{ count }}"></li>
+                                                {% set count = count +1 %}
+                                            {% endfor %}
                                         {% endif %}
                                     </ol>
 
