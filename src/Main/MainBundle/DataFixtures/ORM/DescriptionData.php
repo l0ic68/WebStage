@@ -190,7 +190,7 @@ Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyle
         $manager->persist($projetC1);
 
         $projetC2= new Description();
-        $projetC2->setNom("Prise en charge des étudiants :");
+        $projetC2->setNom("Prise en charge des étudiants : ");
         $projetC2->setDescription("<p>&nbsp;</p>
 
 <p>Ann&eacute;e 2014/2015 : 80 &eacute;tudiants</p>
