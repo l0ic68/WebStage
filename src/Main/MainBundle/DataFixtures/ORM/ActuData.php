@@ -28,7 +28,7 @@ La délégation sur son chemin a visité aussi la ville chrétienne de Qaraqosh,
         $actu1->setAuteur("Aux porteurs de lumiere");
         $actu1->setMedia($this->getReference('aide'));
         $actu1->setType("fa fa-calendar-check-o fa-2x fa-inverse");
-        $actu1->setLien("https://www.google.fr");
+//        $actu1->setLien("https://www.google.fr");
         $manager->persist($actu1);
 
         $actu2 = new Actu();
@@ -38,7 +38,7 @@ La délégation sur son chemin a visité aussi la ville chrétienne de Qaraqosh,
         $actu2->setAuteur("Aux Porteurs de Lumière");
         $actu2->setMedia($this->getReference('paris'));
         $actu2->setType("fa fa fa-university fa-2x fa-inverse");
-        $actu2->setLien("https://www.google.fr");
+//        $actu2->setLien("https://www.google.fr");
         $manager->persist($actu2);
 
         $actu4 = new Actu();
@@ -71,7 +71,7 @@ La délégation sur son chemin a visité aussi la ville chrétienne de Qaraqosh,
         $actu4->setAuteur("Les évêques de France");
         $actu4->setMedia($this->getReference('conf'));
         $actu4->setType("fa fa-newspaper-o fa-2x fa-inverse");
-        $actu4->setLien("https://www.google.fr");
+        $actu4->setLien("http://www.eglise.catholique.fr/conference-des-eveques-de-france/textes-et-declarations/418325-avec-nos-freres-chretiens-dorient-nous-redisons-lurgence-dagir/");
         $manager->persist($actu4);
 
         $actu3 = new Actu();
@@ -96,6 +96,7 @@ La délégation sur son chemin a visité aussi la ville chrétienne de Qaraqosh,
         $actu3->setAuteur("L'Oeuvre d'Orient");
         $actu3->setMedia($this->getReference('oeuvre'));
         $actu3->setType("fa fa-newspaper-o fa-2x fa-inverse");
+        $actu3->setLien("https://www.oeuvre-orient.fr/2017/03/03/avec-leglise-de-france-soutenez-les-etudiantsenirak/");
         $manager->persist($actu3);
 
 
