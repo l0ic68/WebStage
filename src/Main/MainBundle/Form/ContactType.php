@@ -15,9 +15,9 @@ class ContactType extends AbstractType
     {
         //ici nous allons faire notre formulaire en PHP
         $builder
-            ->add('firstname', 'text', array('label' => 'Prenom',
-                                          'attr' => array('class' => 'input-medium search-query form-control',
-                                          'placeholder' => 'Prenom',)))
+//            ->add('firstname', 'text', array('label' => 'Prenom',
+//                                          'attr' => array('class' => 'input-medium search-query form-control',
+//                                          'placeholder' => 'Prenom',)))
                                           
             ->add('lastname', 'text', array('label' => 'Nom',
                                           'attr' => array('class' => 'input-medium search-query form-control',
