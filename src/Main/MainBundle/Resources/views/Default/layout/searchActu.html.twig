@@ -34,8 +34,8 @@
                         <div class="APropos col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-left: 0px;">
                             <h2 class="parallax-titleModalActu text-left" style="padding-bottom: 10px; padding-left: 20%; margin: 0px; color: #333;">Description du projet :</h2>
                         </div>
-                        <div>
-                            <p style="text-align: left; margin-left: 20%; margin-right: 20%;">{{ actu.description|raw }}</p>
+                        <div style="text-align: left; margin-left: 20%; margin-right: 20%;">
+                            <p>{{ actu.description|raw }}</p>
                         </div>
                         {% if not actu.lien is null %}
                             lien vers la news : <a href="{{ actu.lien }}" style="color : blue;">{{ actu.lien }}</a>

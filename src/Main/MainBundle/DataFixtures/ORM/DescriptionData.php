@@ -85,7 +85,7 @@ Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyle
         $manager->persist($histoire);
 
         $but = new Description();
-        $but->setNom("Notre but");
+        $but->setNom("Nos objectifs");
         $but->setDescription("Nous avons pour but de soutenir financièrement la formation des générations futures, 
         de témoigner des valeurs humaines, de dialogue et de solidarité face au fanatisme destructeur et sectaire.");
         $but->setOrdre("7");
@@ -93,21 +93,20 @@ Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyle
 //
         $volontees = new Description();
         $volontees->setNom("Nos volontés");
-        $volontees->setDescription("Notre volonté est de permettre à cette jeunesse plein de promesse, triplement 
-        déracinée, d’abord de Mossoul vers la vallée de Ninive, puis de là vers le nord Kurdistan, souvent à Erbil, 
-        dans des camps, et enfin de là-bas, séparés de leurs familles vers Kirkuk afin de poursuivre leurs études et 
-        pourvoir devenir les cadres de l’Irak de demain.  Bref, dès aujourd’hui se préparer pour construire l’après 
-        Daech.
+        $volontees->setDescription("<p>Notre volont&eacute; est de permettre &agrave; cette jeunesse plein de promesse, triplement d&eacute;racin&eacute;e, d&rsquo;abord de Mossoul vers la vall&eacute;e de Ninive, puis de l&agrave; vers le nord Kurdistan, souvent &agrave; Erbil, dans des camps, et enfin de l&agrave;-bas, s&eacute;par&eacute;s de leurs familles vers Kirkuk afin de poursuivre leurs &eacute;tudes et pourvoir devenir les cadres de l&rsquo;Irak de demain.</p>
+
+<p>Bref, d&egrave;s aujourd&rsquo;hui se pr&eacute;parer pour construire l&rsquo;apr&egrave;s Daech.</p>
 ");
         $volontees->setOrdre("8");
         $manager->persist($volontees);
 
         $valeur = new Description();
         $valeur->setNom("Nos valeurs");
-        $valeur->setDescription("Notre association se donne pour mission de lever des fonds dans une démarche chrétienne
-         éthique et oblative afin de financer les actions et projets humanitaires de Mgr Yousif Thomas Mirkis en Irak.
-        Pas de frais généraux, pas de charges de publicité, de secrétariat. Notre action est le fruit d’un engagement où chaque 
-        membre prend à sa charge ses frais. La conséquence est immédiate : 1 euro collecté = 1 euro en faveur de l’Irak.");
+        $valeur->setDescription("<p>Notre association se donne pour mission de lever des fonds dans une d&eacute;marche chr&eacute;tienne &eacute;thique et oblative afin de financer les actions et projets humanitaires de Mgr Yousif Thomas Mirkis en Irak.</p>
+
+<p>Pas de frais g&eacute;n&eacute;raux, pas de charges de publicit&eacute;, de secr&eacute;tariat. Notre action est le fruit d&rsquo;un engagement o&ugrave; chaque membre prend &agrave; sa charge ses frais.</p>
+
+<p>La cons&eacute;quence est imm&eacute;diate : 1 euro collect&eacute; = 1 euro en faveur de l&rsquo;Irak.</p>");
         $valeur->setOrdre("9");
         $manager->persist($valeur);
 
@@ -146,15 +145,7 @@ Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyle
 
         $Irak1= new Description();
         $Irak1->setNom("Histoire de l'Irak");
-        $Irak1->setDescription("L'association s'intéresse à toutes 
-        les minorités menacées par Daech, tel les Yazédis, qui tirent 
-        leurs racines de l’ancienne Mésopotamie, et qui sont considérées 
-        par Daech comme des mécréants, et de ce fait sont menacés de mort. 
-        En Irak, ils étaient essentiellement concentrés dans la vallée de Lalish, 
-        au Nord de Mossoul. Beaucoup d’entre eux sont désormais réfugiés à Sulaymaniya. 
-        La situation créée par la constitution de l’état islamique et sa volonté d’éradiquer par la terreur 
-        toute autre forme de religion que la sienne peut conduire à deux attitudes pour les 
-        chrétiens : partir ou rester pour résister.");
+        $Irak1->setDescription("<p>L&#39;association s&#39;int&eacute;resse &agrave; toutes les minorit&eacute;s menac&eacute;es par Daech, pour l&#39;essentiel les chr&eacute;tiens mais aussi&nbsp;les Yaz&eacute;dis, qui tirent leurs racines de l&rsquo;ancienne M&eacute;sopotamie, et qui sont consid&eacute;r&eacute;es par Daech comme des m&eacute;cr&eacute;ants, et de ce fait sont menac&eacute;s de mort. En Irak, ils &eacute;taient essentiellement concentr&eacute;s dans la vall&eacute;e de Lalish, au Nord de Mossoul. Beaucoup d&rsquo;entre eux sont d&eacute;sormais r&eacute;fugi&eacute;s &agrave; Sulaymaniya. La situation cr&eacute;&eacute;e par la constitution de l&rsquo;&eacute;tat islamique et sa volont&eacute; d&rsquo;&eacute;radiquer par la terreur toute autre forme de religion que la sienne peut conduire &agrave; deux attitudes pour les chr&eacute;tiens : partir ou rester pour r&eacute;sister.</p>");
         $Irak1->setOrdre("14");
         $Irak1->setMedia($this->getReference('irakG_media'));
         $manager->persist($Irak1);
@@ -200,13 +191,18 @@ Préoccupé par la situation et l’action de Mgr Yousif Thomas Mirkis, B. Geyle
 
         $projetC2= new Description();
         $projetC2->setNom("Prise en charge des étudiants :");
-        $projetC2->setDescription("Année 2014/2015 : 80 étudiants
+        $projetC2->setDescription("<p>&nbsp;</p>
 
-                                   Année 2015/2016 : 420 étudiants
+<p>Ann&eacute;e 2014/2015 : 80 &eacute;tudiants</p>
 
-                                   Année 2016/2017 : 680 étudiants
+<p><br />
+Ann&eacute;e 2015/2016 : 420 &eacute;tudiants</p>
 
-                                   Année 2017/2018 : 800 étudiants");
+<p><br />
+Ann&eacute;e 2016/2017 : 680 &eacute;tudiants</p>
+
+<p><br />
+Ann&eacute;e 2017/2018 : 800 &eacute;tudiants</p>");
         $projetC2->setOrdre("19");
         $manager->persist($projetC2);
 

@@ -16,7 +16,11 @@
     <div class="DivOneAction col-xs-12 col-sm-6 col-md-6 col-lg-4">
                 <div class="OneAction col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <img  class ="pastActionImg" src="{{ asset(action.picture.path) }}" alt="Image projet passée">
-                    <h4>{{ action.nom[:50] }}</h4>
+                    {% if action.nom|length > 50 %}
+                        <h4>{{ action.nom[:46] }}...</h4>
+                    {% else %}
+                        <h4>{{ action.nom[:50] }}</h4>
+                    {% endif %}
                     <p class="DescriptionActionPast">{{ action.description[:130]|raw }}...</p>
                     <p class="DivCout">Un coût de <span class="CoutAction">{{ action.cout }}</span>€</p>
                     <p class="DatePast">{{ action.dateDebut| date('d/m/Y') }}    -    {{ action.dateFin| date('d/m/Y') }}</p>
