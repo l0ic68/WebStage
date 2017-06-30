@@ -122,7 +122,7 @@
             </div>
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 DivTextPierre">
 
-                <h3 style="font-size: xx-large; margin-left: 5%; margin-top: 5%;">{{ form_widget(form7.nom) }}</h3>
+
                 <div id="text-carousel" class="carousel slide carousel-fade" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators ftr" style="bottom: -20%;">
@@ -135,17 +135,20 @@
                         <div class="carousel-inner">
                             <div class="item active">
                                 <div class="carousel-content">
+                                    <h3 style="font-size: xx-large; margin-left: 5%;">{{ form_widget(form7.nom) }}</h3>
                                     <div>
                                         {{ form_widget(form7.description) }}
-                                        {{ form_end(form7) }}
+
                                     </div>
                                 </div>
+                                {{ form_end(form7) }}
                             </div>
 
 
                             <div class="item">
                                 {{ form_start(form8) }}
                                 <div class="carousel-content">
+                                    <h3 style="font-size: xx-large; margin-left: 5%;">{{ form_widget(form8.nom) }}</h3>
                                     <div>
                                         {{ form_widget(form8.description) }}
                                     </div>
@@ -157,6 +160,7 @@
                             <div class="item">
                                 {{ form_start(form9) }}
                                 <div class="carousel-content">
+                                    <h3 style="font-size: xx-large; margin-left: 5%;">{{ form_widget(form9.nom) }}</h3>
                                     <div>
                                         {{ form_widget(form9.description) }}
                                     </div>
