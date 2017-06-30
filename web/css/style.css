@@ -799,6 +799,7 @@ footer
     text-align: center;
     font-size: medium;
     margin-top: 18.5%;
+    /*height: auto!important;*/
 }
 button.close
 {
@@ -1412,7 +1413,7 @@ button.close:hover
 }
 
 .parallax-titleModalActionCours.text-left:before {
-    left: 11%;
+    left: 10%;
     right: auto;
 }
 
@@ -2189,7 +2190,7 @@ button.close:hover
     padding-bottom: 10px;
     padding-left: 10%;
     margin: 0px;
-    font-size: 38px;
+    font-size: xx-large;
     color: #333;
 }
 
