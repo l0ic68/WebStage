@@ -343,7 +343,6 @@ class DescriptionAdminController extends Controller
         $formTypeA = new DescriptionImageAdminType();
         $formTypeB = new DescriptionAdminType();
         $formTypeC = new BandeauAdminType();
-        $formTypeD = new IrakAdminType();
 
         $form1 = $this->get('form.factory')->createNamedBuilder('form1name',$formTypeA,$description1)
             ->getForm();
@@ -357,9 +356,9 @@ class DescriptionAdminController extends Controller
             ->getForm();
         $form7 = $this->get('form.factory')->createNamedBuilder('irak1',$formTypeA,$irak1)
             ->getForm();
-        $form8 = $this->get('form.factory')->createNamedBuilder('irak2',$formTypeD,$irak2)
+        $form8 = $this->get('form.factory')->createNamedBuilder('irak2',$formTypeB,$irak2)
             ->getForm();
-        $form9 = $this->get('form.factory')->createNamedBuilder('irak3',$formTypeD,$irak3)
+        $form9 = $this->get('form.factory')->createNamedBuilder('irak3',$formTypeB,$irak3)
             ->getForm();
 
         if('POST' === $request->getMethod()) {
